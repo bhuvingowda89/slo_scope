@@ -1,0 +1,20 @@
+[project]
+name = "sloscope"
+version = "0.1.0"
+description = "Deterministic SLOScope research harness foundation"
+requires-python = ">=3.11"
+dependencies = [
+  "pyarrow>=15",
+  "psutil>=5.9",
+]
+
+[project.scripts]
+sloscope = "sloscope.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
