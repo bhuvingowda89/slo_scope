@@ -1,0 +1,33 @@
+{
+  "checks": [
+    "git_dirty_false",
+    "source_tree_sha256_matches_frozen",
+    "campaign_freeze_sha256_matches",
+    "slo_calibration_artifact_present_and_hashed",
+    "runtime_model_build_and_commit_match",
+    "server_arguments_match",
+    "prompt_cache_disabled",
+    "sufficient_free_disk",
+    "services_ready",
+    "expected_run_directories_absent",
+    "config_hashes_match"
+  ],
+  "expected_freeze_hash_source": "campaign-manifest.json:campaign_freeze_sha256",
+  "freeze_hash_algorithm": "sha256 over canonical frozen input set; campaign-manifest hash fields excluded",
+  "freeze_hash_input_manifest": [
+    "campaigns/phase5/campaign-manifest.json",
+    "campaigns/phase5/campaign-manifest.csv",
+    "campaigns/phase5/mechanism-definitions.json",
+    "campaigns/phase5/slo-definitions.json",
+    "campaigns/phase5/analysis-plan.json",
+    "campaigns/phase5/telemetry-schema.json",
+    "campaigns/phase5/confound-validity-rules.json",
+    "campaigns/phase5/factorial-design.json",
+    "campaigns/phase5/slo-calibration.json",
+    "campaigns/phase5/repetition-justification.json",
+    "campaigns/phase5/phase6-preflight.json",
+    "configs/phase5/**/*.yaml"
+  ],
+  "frozen_source_tree_sha256": "3a3eef468db5c1c4dcfbeeb67f55081e25d78d9bb621bb658c318cceb1dfc6fc",
+  "schema_version": "sloscope.phase6_preflight.v1"
+}

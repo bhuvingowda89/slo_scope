@@ -1,0 +1,90 @@
+{
+  "compound_interaction": {
+    "additivity_assumption": "Do not assume additivity; report additive residuals descriptively.",
+    "comparisons": "Compare each compound against its two component singles and matched controls.",
+    "metrics": [
+      "compound observed effect",
+      "dominance",
+      "masking",
+      "super_additive_delta",
+      "sub_additive_delta"
+    ]
+  },
+  "confidence_intervals": "95% Student-t intervals across repetitions",
+  "cross_runtime_scope": {
+    "deferred": [
+      "CPU contention as primary Metal degradation",
+      "memory pressure",
+      "I/O pressure"
+    ],
+    "primary_campaign": "Mac/Darwin arm64 llama.cpp Metal with Qwen2.5-0.5B Q4_K_M",
+    "secondary_generalization_campaign": "future non-Metal or cross-model repetition"
+  },
+  "csd_scope": {
+    "execute_in_phase5": false,
+    "ground_truth_labels": [
+      "active_mechanisms",
+      "mechanism_levels",
+      "compound_degree",
+      "campaign_condition_id"
+    ],
+    "inputs": [
+      "frozen SLO aggregates",
+      "mechanism ground truth",
+      "telemetry feature table"
+    ],
+    "name": "Compound SLO Decomposition",
+    "outputs": [
+      "compound-vs-single decomposition summaries",
+      "candidate mechanism attribution features"
+    ]
+  },
+  "degraded_telemetry_scope": {
+    "execute_in_phase5": false,
+    "modes": [
+      "remove_queue_telemetry",
+      "remove_downstream_telemetry",
+      "remove_token_timing",
+      "sample_request_telemetry_10_percent"
+    ]
+  },
+  "effect_sizes": [
+    "absolute delta",
+    "ratio to matched control",
+    "paired standardized effect where appropriate"
+  ],
+  "multiple_comparisons": "Holm correction within predefined families: isolated mechanisms, pairwise compounds, and telemetry-ablation diagnostics.",
+  "paired_analysis": "Conditions are paired by repetition block where the same repetition contains baseline, singles, and compounds.",
+  "practical_significance": "Report SLO boundary crossing and magnitude of violation before interpreting p-values.",
+  "pre_registered_expectations": {
+    "downstream": "Configured and observed dependency latency with total-latency increase.",
+    "input": "Increased prompt tokens with stronger TTFT effect than decode-duration effect.",
+    "load": "Direct queue evidence with strong TTFT inflation.",
+    "output": "Increased output tokens with stronger post-first-token duration effect."
+  },
+  "rca_scope": {
+    "candidate_metrics": [
+      "top-1 accuracy",
+      "top-k accuracy",
+      "MRR"
+    ],
+    "execute_in_phase5": false,
+    "required_labels": [
+      "active_mechanisms",
+      "mechanism_family",
+      "mechanism_levels"
+    ],
+    "target_output": "ranked root-cause mechanisms"
+  },
+  "replication_unit": "run/repetition",
+  "research_questions": {
+    "RQ1": "Can isolated mechanisms produce distinct, reproducible SLO-degradation signatures on commodity LLM inference systems?",
+    "RQ2": "How do compound mechanisms interact to produce single versus compound SLO violations?",
+    "RQ3": "Can lightweight telemetry distinguish the mechanisms responsible for compound SLO degradation?",
+    "RQ4": "How robust are mechanism signatures under predefined telemetry degradation?"
+  },
+  "telemetry_cost_scope": {
+    "reason": "No validated low-overhead collection method exists yet for telemetry overhead attribution.",
+    "status": "DEFERRED"
+  }
+}

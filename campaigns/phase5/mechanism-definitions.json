@@ -1,0 +1,116 @@
+{
+  "CPU_CONTENTION": {
+    "mechanism_id": "cpu_contention",
+    "name": "CPU contention",
+    "reason": "Verified injectable, weak SLO effect under current llama.cpp + Metal configuration.",
+    "status": "DEFERRED"
+  },
+  "M1_INPUT_PREFILL": {
+    "control_level": {
+      "observed_prompt_tokens": "about 75",
+      "prompt_profile": "synthetic-input-small"
+    },
+    "direct_evidence": [
+      "server_prompt_tokens"
+    ],
+    "known_confounds": [
+      "queue buildup if requests_deferred_max exceeds zero in non-load conditions"
+    ],
+    "mechanism_id": "input_medium",
+    "medium_level": {
+      "observed_prompt_tokens": "about 267",
+      "prompt_profile": "synthetic-input-medium"
+    },
+    "name": "Input/prefill pressure",
+    "optional_strong_level": {
+      "prompt_profile": "synthetic-input-large",
+      "status": "not primary; Phase 4B queue-confounded"
+    },
+    "primary_slo_effect": "TTFT",
+    "secondary_effects": [
+      "total_latency"
+    ],
+    "status": "PRIMARY"
+  },
+  "M2_OUTPUT_DECODE": {
+    "control_level": {
+      "prompt_profile": "synthetic-continuation",
+      "target_output_tokens": 16
+    },
+    "direct_evidence": [
+      "server_output_tokens",
+      "post_first_token_duration"
+    ],
+    "known_confounds": [
+      "queue buildup; output-48 was queue-confounded in one Phase 4C repetition"
+    ],
+    "mechanism_id": "output_32",
+    "medium_level": {
+      "prompt_profile": "synthetic-continuation",
+      "target_output_tokens": 32
+    },
+    "name": "Output/decode pressure",
+    "optional_strong_level": {
+      "status": "optional strong; not medium reference",
+      "target_output_tokens": 64
+    },
+    "primary_slo_effect": "post_first_token_duration",
+    "secondary_effects": [
+      "total_latency"
+    ],
+    "status": "PRIMARY"
+  },
+  "M3_LOAD_QUEUE": {
+    "control_level": {
+      "offered_rps": 4
+    },
+    "direct_evidence": [
+      "llamacpp:requests_deferred",
+      "requests_deferred_max"
+    ],
+    "known_confounds": [
+      "client admission failures mean client-side throttling, not pure server queueing"
+    ],
+    "mechanism_id": "load_12rps",
+    "medium_level": {
+      "offered_rps": 12
+    },
+    "name": "Queue/load pressure",
+    "optional_strong_level": {
+      "offered_rps": 16,
+      "status": "not primary; Phase 4B strong queueing"
+    },
+    "primary_slo_effect": "TTFT",
+    "secondary_effects": [
+      "total_latency",
+      "observed_throughput"
+    ],
+    "status": "PRIMARY"
+  },
+  "M4_DOWNSTREAM_LATENCY": {
+    "control_level": {
+      "dependency_delay_ms": 0
+    },
+    "direct_evidence": [
+      "configured_delay_ms",
+      "dependency_duration"
+    ],
+    "known_confounds": [
+      "unexpected queue buildup must be flagged as secondary effect"
+    ],
+    "mechanism_id": "downstream_100ms",
+    "medium_level": {
+      "dependency_delay_ms": 100
+    },
+    "name": "Downstream dependency latency",
+    "optional_strong_level": {
+      "dependency_delay_ms": 200,
+      "status": "available from Phase 4A, not primary"
+    },
+    "primary_slo_effect": "total_latency",
+    "secondary_effects": [
+      "TTFT when dependency precedes llama dispatch"
+    ],
+    "status": "PRIMARY"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "INPUT_DOWNSTREAM": {
+    "A0B0": "BASELINE",
+    "A0B1": "DOWNSTREAM_MEDIUM",
+    "A1B0": "INPUT_MEDIUM",
+    "A1B1": "INPUT_DOWNSTREAM",
+    "factor_a": "input_medium",
+    "factor_b": "downstream_100ms"
+  },
+  "INPUT_LOAD": {
+    "A0B0": "BASELINE",
+    "A0B1": "LOAD_MEDIUM",
+    "A1B0": "INPUT_MEDIUM",
+    "A1B1": "INPUT_LOAD",
+    "factor_a": "input_medium",
+    "factor_b": "load_12rps"
+  },
+  "LOAD_DOWNSTREAM": {
+    "A0B0": "BASELINE",
+    "A0B1": "DOWNSTREAM_MEDIUM",
+    "A1B0": "LOAD_MEDIUM",
+    "A1B1": "LOAD_DOWNSTREAM",
+    "factor_a": "load_12rps",
+    "factor_b": "downstream_100ms"
+  },
+  "OUTPUT_DOWNSTREAM": {
+    "A0B0": "OUTPUT_CONTROL",
+    "A0B1": "OUTPUT_DOWNSTREAM_CONTROL",
+    "A1B0": "OUTPUT_MEDIUM",
+    "A1B1": "OUTPUT_DOWNSTREAM",
+    "factor_a": "output_32",
+    "factor_b": "downstream_100ms"
+  },
+  "OUTPUT_LOAD": {
+    "A0B0": "OUTPUT_CONTROL",
+    "A0B1": "OUTPUT_LOAD_CONTROL",
+    "A1B0": "OUTPUT_MEDIUM",
+    "A1B1": "OUTPUT_LOAD",
+    "factor_a": "output_32",
+    "factor_b": "load_12rps"
+  },
+  "deferred": {
+    "INPUT_OUTPUT": "Deferred because Phase 4C input and output references use different prompt families; a matched continuation-small/medium calibration is required before claiming a factorial input-output interaction."
+  }
+}

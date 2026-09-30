@@ -10,6 +10,7 @@ from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional
 
 from sloscope.config import ExperimentConfig
+from sloscope.provenance import git_dirty, source_tree_sha256
 from sloscope.telemetry.schemas import REQUEST_COLUMNS, RUNTIME_METRIC_COLUMNS, SYSTEM_METRIC_COLUMNS, TRACE_COLUMNS
 
 ARTIFACT_SCHEMA_VERSION = "phase3b.artifacts.v1"
@@ -91,6 +92,7 @@ class ArtifactWriter:
         start_wall_time: str,
         end_wall_time: str,
         runtime_metadata: Optional[dict] = None,
+        experimental_condition: Optional[dict] = None,
     ) -> dict:
         cfg = config.with_hash()
         write_json(self.root / "config.json", cfg.to_dict(include_hash=True))
@@ -103,6 +105,8 @@ class ArtifactWriter:
         write_jsonl(self.root / "events.jsonl", [asdict(e) if hasattr(e, "__dataclass_fields__") else e for e in events])
         if runtime_metadata is not None:
             write_json(self.root / "runtime_metadata.json", runtime_metadata)
+        if experimental_condition is not None:
+            write_json(self.root / "experimental_condition.json", experimental_condition)
         write_json(self.root / "validation.json", validation)
         inventory = sorted(p.name for p in self.root.iterdir() if p.is_file() and p.name != "manifest.json")
         hashed = [
@@ -117,6 +121,8 @@ class ArtifactWriter:
         ]
         if runtime_metadata is not None:
             hashed.append("runtime_metadata.json")
+        if experimental_condition is not None:
+            hashed.append("experimental_condition.json")
         artifact_hashes = {name: sha256_file(self.root / name) for name in hashed if (self.root / name).exists()}
         manifest = {
             "artifact_schema_version": ARTIFACT_SCHEMA_VERSION,
@@ -126,6 +132,8 @@ class ArtifactWriter:
             "python_version": sys.version.split()[0],
             "platform": platform.platform(),
             "git_revision": git_revision(),
+            "git_dirty": git_dirty(),
+            "source_tree_sha256": source_tree_sha256(),
             "start_timestamp": start_wall_time,
             "end_timestamp": end_wall_time,
             "final_lifecycle_state": final_state,

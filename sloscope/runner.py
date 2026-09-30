@@ -15,6 +15,7 @@ from sloscope.runtime.mock import MockRuntimeAdapter
 from sloscope.telemetry.schemas import RequestRecord
 from sloscope.telemetry.system import SystemTelemetryCollector
 from sloscope.workload import generate_workload_plan
+from sloscope.workload import RequestPlan
 
 
 class ExperimentRunner:
@@ -33,6 +34,13 @@ class ExperimentRunner:
         self.injectors = [create_injector(mech, self.clock) for mech in self.config.mechanisms]
         self.ground_truth = GroundTruthLedger(self.config.mechanisms)
         self.accounting = {"planned": 0, "emitted": 0, "runtime_accepted": 0, "successful": 0, "failed": 0}
+        self.warmup_metadata = {
+            "warmup_request_count": int(self.config.runtime.parameters.get("warmup_request_count", 0)),
+            "warmup_success_count": 0,
+            "warmup_failure_count": 0,
+            "warmup_start_time": None,
+            "warmup_end_time": None,
+        }
 
     def _advance_to(self, timestamp: float) -> None:
         if timestamp < self.clock.monotonic():
@@ -46,6 +54,55 @@ class ExperimentRunner:
             return asyncio.run(self._run_llamacpp())
         return self._run_mock()
 
+    def _run_dir(self) -> Path:
+        run_dir = self.runs_root / self.config.run_id
+        if run_dir.exists():
+            raise FileExistsError(f"run directory already exists: {run_dir}")
+        return run_dir
+
+    def _warmup_plan(self, sequence: int, scheduled: float) -> RequestPlan:
+        prompt_id = f"{self.config.workload.prompt_profile}:warmup-{sequence}"
+        return RequestPlan(
+            request_id=f"{self.config.run_id}-warmup-{sequence:06d}",
+            sequence=sequence,
+            scheduled_arrival=scheduled,
+            prompt_profile=self.config.workload.prompt_profile,
+            prompt_id=prompt_id,
+            target_output_tokens=self.config.workload.target_output_tokens,
+        )
+
+    def _run_warmup_sync(self) -> None:
+        count = self.warmup_metadata["warmup_request_count"]
+        self.warmup_metadata["warmup_start_time"] = self.clock.monotonic()
+        self.lifecycle.event("warmup_start", "warmup requests starting", {"warmup_request_count": count})
+        for seq in range(count):
+            actual = self.clock.monotonic()
+            rec = self.runtime.execute(self._warmup_plan(seq, actual), actual)
+            if rec.status == "success":
+                self.warmup_metadata["warmup_success_count"] += 1
+            else:
+                self.warmup_metadata["warmup_failure_count"] += 1
+        self.warmup_metadata["warmup_end_time"] = self.clock.monotonic()
+        self.lifecycle.event("warmup_complete", "warmup requests complete", dict(self.warmup_metadata))
+        if self.warmup_metadata["warmup_failure_count"]:
+            raise RuntimeError("warmup request failure")
+
+    async def _run_warmup_async(self) -> None:
+        count = self.warmup_metadata["warmup_request_count"]
+        self.warmup_metadata["warmup_start_time"] = self.clock.monotonic()
+        self.lifecycle.event("warmup_start", "warmup requests starting", {"warmup_request_count": count})
+        for seq in range(count):
+            actual = self.clock.monotonic()
+            rec = await self.runtime.execute_async(self._warmup_plan(seq, actual), actual)
+            if rec.status == "success":
+                self.warmup_metadata["warmup_success_count"] += 1
+            else:
+                self.warmup_metadata["warmup_failure_count"] += 1
+        self.warmup_metadata["warmup_end_time"] = self.clock.monotonic()
+        self.lifecycle.event("warmup_complete", "warmup requests complete", dict(self.warmup_metadata))
+        if self.warmup_metadata["warmup_failure_count"]:
+            raise RuntimeError("warmup request failure")
+
     def _write_artifacts(
         self,
         run_dir: Path,
@@ -57,7 +114,9 @@ class ExperimentRunner:
         final_state,
         start_wall,
         runtime_metadata=None,
+        experimental_condition=None,
     ) -> None:
+        experimental_condition = experimental_condition or self.config.runtime.parameters.get("experimental_condition")
         preliminary = {
             "valid": True,
             "issues": [],
@@ -80,6 +139,7 @@ class ExperimentRunner:
             start_wall,
             self.clock.wall_time(),
             runtime_metadata=runtime_metadata,
+            experimental_condition=experimental_condition,
         )
         validation = validate_run(run_dir)
         from sloscope.artifacts.writer import write_json
@@ -87,7 +147,7 @@ class ExperimentRunner:
         write_json(run_dir / "validation.json", validation)
 
     def _run_mock(self) -> Path:
-        run_dir = self.runs_root / self.config.run_id
+        run_dir = self._run_dir()
         start_wall = self.clock.wall_time()
         workload = generate_workload_plan(self.config)
         self.accounting["planned"] = len(workload)
@@ -138,6 +198,7 @@ class ExperimentRunner:
                 raise RuntimeError("runtime healthcheck failed")
             self.lifecycle.transition(ExperimentState.WARMUP, "warmup")
             self.runtime.warmup()
+            self._run_warmup_sync()
             self.lifecycle.transition(ExperimentState.BASELINE, "baseline")
             if self.injectors:
                 self.lifecycle.transition(ExperimentState.INJECTING, "starting degradation mechanisms")
@@ -223,13 +284,14 @@ class ExperimentRunner:
                     self.lifecycle.transition(ExperimentState.FAILED, "cleanup/shutdown failure")
                 except Exception:
                     self.lifecycle.event("failure", "cleanup/shutdown failure")
-            self._write_artifacts(run_dir, workload, requests, [], runtime_metrics, [], final_state, start_wall)
+            runtime_metadata = {"warmup": dict(self.warmup_metadata)}
+            self._write_artifacts(run_dir, workload, requests, [], runtime_metrics, [], final_state, start_wall, runtime_metadata=runtime_metadata)
         if error:
             raise error
         return run_dir
 
     async def _run_llamacpp(self) -> Path:
-        run_dir = self.runs_root / self.config.run_id
+        run_dir = self._run_dir()
         start_wall = self.clock.wall_time()
         workload = generate_workload_plan(self.config)
         self.accounting["planned"] = len(workload)
@@ -241,9 +303,11 @@ class ExperimentRunner:
         error = None
         telemetry_stop = asyncio.Event()
         telemetry_task = None
-        mechanism_task = None
+        mechanism_tasks: list[asyncio.Task] = []
+        watchdog_task = None
         mechanism_failed = None
         injecting_start = None
+        stopped = set()
         try:
             self.lifecycle.transition(ExperimentState.PREPARING, "preparing llama.cpp runtime")
             self.runtime.prepare()
@@ -253,10 +317,20 @@ class ExperimentRunner:
                 raise RuntimeError("llama.cpp runtime healthcheck failed")
             self.lifecycle.transition(ExperimentState.WARMUP, "warmup")
             self.runtime.warmup()
+            await self._run_warmup_async()
+            reset_gateway = getattr(self.runtime, "reset_gateway_telemetry", None)
+            if callable(reset_gateway):
+                reset_result = await asyncio.to_thread(reset_gateway)
+                self.lifecycle.event("warmup_gateway_reset", "gateway telemetry reset after warmup", {"gateway_reset": reset_result})
             self.lifecycle.transition(ExperimentState.BASELINE, "baseline")
             collector = None
             if self.config.telemetry.system_metrics:
-                collector = SystemTelemetryCollector(self.clock, self.config.runtime.parameters.get("server_pid"))
+                collector = SystemTelemetryCollector(
+                    self.clock,
+                    self.config.runtime.parameters.get("server_pid"),
+                    self.config.runtime.parameters.get("gateway_pid"),
+                    self.config.runtime.parameters.get("dependency_pid"),
+                )
             interval = max(0.01, float(self.config.runtime.parameters.get("telemetry_interval_seconds", 0.25)))
 
             async def telemetry_loop() -> None:
@@ -282,44 +356,65 @@ class ExperimentRunner:
             outstanding = 0
             lock = asyncio.Lock()
             verified = set()
-            stopped = set()
+            active = set()
             mechanism_failure_event = asyncio.Event()
 
-            async def mechanism_scheduler() -> None:
+            async def mechanism_lifecycle(inj) -> None:
                 nonlocal mechanism_failed
                 try:
-                    for inj in sorted(self.injectors, key=lambda item: (item.config.scheduled_onset, item.mechanism_id)):
-                        delay = base + inj.config.scheduled_onset - self.clock.monotonic()
-                        if delay > 0:
-                            await asyncio.sleep(delay)
-                        await asyncio.to_thread(inj.start)
-                        evidence = await asyncio.to_thread(inj.verify)
-                        self.ground_truth.mark_verified(inj.mechanism_id, evidence)
-                        self.lifecycle.event("mechanism_verification", inj.mechanism_id, evidence.to_dict())
-                        if not evidence.verified:
-                            mechanism_failed = RuntimeError(f"mechanism verification failed: {inj.mechanism_id}")
-                            mechanism_failure_event.set()
-                            return
-                        verified.add(inj.mechanism_id)
-                    for inj in sorted(self.injectors, key=lambda item: (item.config.scheduled_stop, item.mechanism_id)):
-                        delay = base + inj.config.scheduled_stop - self.clock.monotonic()
-                        if delay > 0:
-                            await asyncio.sleep(delay)
-                        active_failure = getattr(inj, "active_failure", lambda: None)()
-                        if active_failure:
-                            mechanism_failed = RuntimeError(active_failure)
-                            self.lifecycle.event("mechanism_failure", active_failure, {"mechanism_id": inj.mechanism_id})
-                            mechanism_failure_event.set()
-                        await asyncio.to_thread(inj.stop)
-                        stopped.add(inj.mechanism_id)
-                        self.ground_truth.mark_stopped(inj.mechanism_id, self.clock.monotonic())
+                    delay = base + inj.config.scheduled_onset - self.clock.monotonic()
+                    if delay > 0:
+                        await asyncio.sleep(delay)
+                    if mechanism_failure_event.is_set():
+                        return
+                    await asyncio.to_thread(inj.start)
+                    evidence = await asyncio.to_thread(inj.verify)
+                    self.ground_truth.mark_verified(inj.mechanism_id, evidence)
+                    self.lifecycle.event("mechanism_verification", inj.mechanism_id, evidence.to_dict())
+                    if not evidence.verified:
+                        mechanism_failed = RuntimeError(f"mechanism verification failed: {inj.mechanism_id}")
+                        mechanism_failure_event.set()
+                        return
+                    verified.add(inj.mechanism_id)
+                    active.add(inj.mechanism_id)
+                    delay = base + inj.config.scheduled_stop - self.clock.monotonic()
+                    if delay > 0:
+                        await asyncio.sleep(delay)
+                    active_failure = await asyncio.to_thread(getattr(inj, "active_failure", lambda: None))
+                    if active_failure:
+                        mechanism_failed = RuntimeError(active_failure)
+                        self.lifecycle.event("mechanism_failure", active_failure, {"mechanism_id": inj.mechanism_id})
+                        mechanism_failure_event.set()
+                    await asyncio.to_thread(inj.stop)
+                    active.discard(inj.mechanism_id)
+                    stopped.add(inj.mechanism_id)
+                    self.ground_truth.mark_stopped(inj.mechanism_id, self.clock.monotonic())
                 except Exception as exc:
                     mechanism_failed = exc
                     self.lifecycle.event("mechanism_failure", str(exc))
                     mechanism_failure_event.set()
 
+            async def mechanism_watchdog() -> None:
+                nonlocal mechanism_failed
+                interval = max(0.01, float(self.config.safety.mechanism_watchdog_interval_seconds))
+                try:
+                    while not mechanism_failure_event.is_set():
+                        await asyncio.sleep(interval)
+                        for inj in self.injectors:
+                            if inj.mechanism_id not in active or inj.mechanism_id in stopped:
+                                continue
+                            active_failure = await asyncio.to_thread(getattr(inj, "active_failure", lambda: None))
+                            if active_failure:
+                                mechanism_failed = RuntimeError(active_failure)
+                                self.lifecycle.event("mechanism_failure", active_failure, {"mechanism_id": inj.mechanism_id, "source": "watchdog"})
+                                mechanism_failure_event.set()
+                                return
+                except asyncio.CancelledError:
+                    return
+
             if self.injectors:
-                mechanism_task = asyncio.create_task(mechanism_scheduler())
+                mechanism_tasks = [asyncio.create_task(mechanism_lifecycle(inj)) for inj in self.injectors]
+                watchdog_task = asyncio.create_task(mechanism_watchdog())
                 first_offset = min((p.scheduled_arrival for p in workload), default=0.0)
                 early = [inj for inj in self.injectors if inj.config.scheduled_onset <= first_offset]
                 while any(inj.mechanism_id not in verified for inj in early):
@@ -385,8 +480,14 @@ class ExperimentRunner:
                         outstanding -= 1
 
             await asyncio.wait_for(asyncio.gather(*(run_one(plan) for plan in workload)), timeout=self.config.safety.experiment_timeout)
-            if mechanism_task is not None:
-                await asyncio.wait_for(mechanism_task, timeout=self.config.safety.experiment_timeout)
+            if mechanism_tasks:
+                await asyncio.wait_for(asyncio.gather(*mechanism_tasks), timeout=self.config.safety.experiment_timeout)
+            if watchdog_task is not None:
+                watchdog_task.cancel()
+                try:
+                    await watchdog_task
+                except asyncio.CancelledError:
+                    pass
             if mechanism_failed is not None:
                 raise mechanism_failed
             telemetry_stop.set()
@@ -395,6 +496,8 @@ class ExperimentRunner:
                 system_metrics.append(collector.sample())
             if self.config.telemetry.runtime_metrics:
                 runtime_metrics.extend(await asyncio.to_thread(getattr(self.runtime, "collect_runtime_metric_rows"), self.clock.monotonic()))
+            if self.config.telemetry.traces and hasattr(self.runtime, "collect_trace_rows"):
+                traces.extend(await asyncio.to_thread(getattr(self.runtime, "collect_trace_rows")))
             self.lifecycle.transition(ExperimentState.RECOVERY, "workload complete")
             final_state = ExperimentState.COMPLETE
         except asyncio.TimeoutError as exc:
@@ -413,9 +516,14 @@ class ExperimentRunner:
             final_state = ExperimentState.FAILED
             telemetry_stop.set()
         finally:
+            for task in mechanism_tasks:
+                if not task.done():
+                    task.cancel()
+            if watchdog_task is not None and not watchdog_task.done():
+                watchdog_task.cancel()
             for inj in self.injectors:
                 try:
-                    if getattr(inj, "activation_time", None) is not None and getattr(inj, "mechanism_id", None) not in locals().get("stopped", set()):
+                    if getattr(inj, "activation_time", None) is not None and getattr(inj, "mechanism_id", None) not in stopped:
                         try:
                             await asyncio.to_thread(inj.stop)
                             self.ground_truth.mark_stopped(inj.mechanism_id, self.clock.monotonic())
@@ -452,6 +560,7 @@ class ExperimentRunner:
                 except Exception as telemetry_exc:
                     self.lifecycle.event("telemetry_error", str(telemetry_exc), {"operation": "telemetry_loop"})
             runtime_metadata = dict(getattr(self.runtime, "runtime_metadata", {}))
+            runtime_metadata["warmup"] = dict(self.warmup_metadata)
             if "base" in locals():
                 runtime_metadata["workload_time_origin"] = base
             self._write_artifacts(run_dir, workload, requests, system_metrics, runtime_metrics, traces, final_state, start_wall, runtime_metadata)

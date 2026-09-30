@@ -1,0 +1,75 @@
+{
+  "calculations": [
+    {
+      "candidate_n": 5,
+      "metric": "baseline_ttft",
+      "relative_half_width": 0.03132844796944068
+    },
+    {
+      "candidate_n": 6,
+      "metric": "baseline_ttft",
+      "relative_half_width": 0.027031965239479695
+    },
+    {
+      "candidate_n": 8,
+      "metric": "baseline_ttft",
+      "relative_half_width": 0.02201078721390774
+    },
+    {
+      "candidate_n": 10,
+      "metric": "baseline_ttft",
+      "relative_half_width": 0.019048337924342556
+    },
+    {
+      "candidate_n": 5,
+      "metric": "baseline_total_latency",
+      "relative_half_width": 0.026551195671820436
+    },
+    {
+      "candidate_n": 6,
+      "metric": "baseline_total_latency",
+      "relative_half_width": 0.02290988047564259
+    },
+    {
+      "candidate_n": 8,
+      "metric": "baseline_total_latency",
+      "relative_half_width": 0.018654378243612095
+    },
+    {
+      "candidate_n": 10,
+      "metric": "baseline_total_latency",
+      "relative_half_width": 0.01614367069653488
+    },
+    {
+      "candidate_n": 5,
+      "metric": "output_control_decode",
+      "relative_half_width": 0.0083688118142908
+    },
+    {
+      "candidate_n": 6,
+      "metric": "output_control_decode",
+      "relative_half_width": 0.007221086415781829
+    },
+    {
+      "candidate_n": 8,
+      "metric": "output_control_decode",
+      "relative_half_width": 0.005879772156516462
+    },
+    {
+      "candidate_n": 10,
+      "metric": "output_control_decode",
+      "relative_half_width": 0.0050884089636147895
+    }
+  ],
+  "candidate_repetitions": [
+    5,
+    6,
+    8,
+    10
+  ],
+  "rationale": "n=5 met the nominal Phase-4 precision target for several control metrics; n=8 is conservatively frozen for improved precision and compound-analysis stability within acceptable campaign cost.",
+  "schema_version": "sloscope.repetition_justification.v1",
+  "selected_repetitions": 8,
+  "source": "accepted Phase 4C run-level matched-control summaries",
+  "target_relative_half_width": 0.075
+}

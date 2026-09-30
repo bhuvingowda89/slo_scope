@@ -151,6 +151,8 @@ class LlamaCppRuntimeAdapter(RuntimeAdapter):
         self.last_health: Optional[LlamaHealth] = None
         self.model_metadata: Dict[str, Any] = {}
         self.runtime_metadata: Dict[str, Any] = {}
+        self.gateway_telemetry_enabled = bool(self.params.get("gateway_telemetry_enabled", True))
+        self._trace_rows: List[dict] = []
 
     def _advance_epsilon(self) -> None:
         advance = getattr(self.clock, "advance", None)
@@ -161,6 +163,14 @@ class LlamaCppRuntimeAdapter(RuntimeAdapter):
         return f"{self.base_url}{path}"
 
     def _health(self) -> LlamaHealth:
+        try:
+            status, payload = _json_request("GET", self._url("/ready"), self.health_timeout)
+            if status == 200 and isinstance(payload, dict) and str(payload.get("status", "")).lower() == "ok":
+                return LlamaHealth("healthy", {"http_status": status, "payload": payload, "endpoint": "/ready"})
+            if status == 503 and isinstance(payload, dict) and {"gateway_alive", "dependency_reachable", "llama_reachable"} & set(payload):
+                return LlamaHealth("unavailable", {"http_status": status, "payload": payload, "endpoint": "/ready"})
+        except Exception:
+            pass
         try:
             status, payload = _json_request("GET", self._url("/health"), self.health_timeout)
         except Exception as exc:
@@ -181,7 +191,19 @@ class LlamaCppRuntimeAdapter(RuntimeAdapter):
             return LlamaHealth("loading", {"http_status": status, "payload": payload})
         return LlamaHealth("malformed", {"http_status": status, "payload": payload})
 
+    def reset_gateway_telemetry(self) -> Optional[dict]:
+        if not self.gateway_telemetry_enabled:
+            return None
+        try:
+            status, payload = _json_request("POST", self._url("/sloscope/reset"), min(self.health_timeout, 2.0), {})
+        except Exception:
+            return None
+        if status == 200 and isinstance(payload, dict) and payload.get("gateway") == "sloscope":
+            return payload
+        return None
+
     def prepare(self) -> None:
+        gateway_reset = self.reset_gateway_telemetry()
         health = self._health()
         self.last_health = health
         if health.state != "healthy":
@@ -203,6 +225,8 @@ class LlamaCppRuntimeAdapter(RuntimeAdapter):
             "server_command": self.params.get("server_command"),
             "server_arguments": self.params.get("server_arguments"),
             "prompt_cache_enabled": False if "--no-cache-prompt" in (self.params.get("server_arguments") or []) else self.params.get("prompt_cache_enabled"),
+            "gateway_telemetry_enabled": self.gateway_telemetry_enabled,
+            "gateway_reset": gateway_reset,
         }
 
     def healthcheck(self) -> bool:
@@ -266,7 +290,7 @@ class LlamaCppRuntimeAdapter(RuntimeAdapter):
                 self._url(self.endpoint),
                 data=json.dumps(payload).encode("utf-8"),
                 method="POST",
-                headers={"Content-Type": "application/json", "Accept": "text/event-stream"},
+                headers={"Content-Type": "application/json", "Accept": "text/event-stream", "X-SLOScope-Request-Id": request.request_id},
             )
             with urllib.request.urlopen(req, timeout=self.request_timeout) as resp:
                 http_status = int(resp.status)
@@ -294,6 +318,7 @@ class LlamaCppRuntimeAdapter(RuntimeAdapter):
                 raise LlamaCppRuntimeError("stream completed without a content-bearing token")
             with self._counter_lock:
                 self.succeeded += 1
+            gateway_timing = self._gateway_timing(request.request_id)
             return RequestRecord(
                 request.request_id,
                 request.sequence,
@@ -315,6 +340,7 @@ class LlamaCppRuntimeAdapter(RuntimeAdapter):
                 finish_reason=finish_reason,
                 scheduler_slip=actual_arrival - request.scheduled_arrival,
                 token_count_source="runtime_reported" if usage.get("server_prompt_tokens") is not None or usage.get("server_output_tokens") is not None else None,
+                **gateway_timing,
             )
         except TimeoutError as exc:
             return self._failed_record(request, actual_arrival, dispatch, "timeout", str(exc), http_status)
@@ -345,7 +371,42 @@ class LlamaCppRuntimeAdapter(RuntimeAdapter):
             error_type=error_type,
             error_message=message,
             scheduler_slip=actual_arrival - request.scheduled_arrival,
+            **self._gateway_timing(request.request_id),
         )
+
+    def _gateway_timing(self, request_id: str) -> Dict[str, Any]:
+        if not self.gateway_telemetry_enabled:
+            return {}
+        try:
+            status, payload = _json_request("GET", self._url(f"/sloscope/requests/{request_id}"), min(self.health_timeout, 2.0))
+            if status >= 400 or not isinstance(payload, dict):
+                return {}
+            return {
+                "gateway_receive_time": payload.get("gateway_receive_time"),
+                "dependency_start_time": payload.get("dependency_start_time"),
+                "dependency_end_time": payload.get("dependency_end_time"),
+                "llama_dispatch_time": payload.get("llama_dispatch_time"),
+                "llama_first_token_time": payload.get("llama_first_token_time"),
+                "gateway_completion_time": payload.get("gateway_completion_time"),
+                "dependency_duration": payload.get("dependency_duration"),
+            }
+        except Exception:
+            return {}
+
+    def collect_trace_rows(self) -> List[dict]:
+        if not self.gateway_telemetry_enabled:
+            return []
+        try:
+            status, payload = _json_request("GET", self._url("/sloscope/traces"), min(self.health_timeout, 2.0))
+            if status >= 400 or not isinstance(payload, dict):
+                return []
+            rows = payload.get("spans") or []
+            if not isinstance(rows, list):
+                return []
+            self._trace_rows = [row for row in rows if isinstance(row, dict)]
+            return list(self._trace_rows)
+        except Exception:
+            return []
 
     def scrape_metrics(self, timestamp: float) -> List[dict]:
         try:

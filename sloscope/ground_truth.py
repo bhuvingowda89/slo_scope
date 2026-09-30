@@ -12,6 +12,8 @@ class MechanismTruth:
     mechanism_id: str
     mechanism_type: str
     intensity: float
+    magnitude_value: Optional[float]
+    magnitude_unit: Optional[str]
     target: str
     scheduled_onset: float
     scheduled_stop: float
@@ -28,11 +30,20 @@ class MechanismTruth:
 
 class GroundTruthLedger:
     def __init__(self, mechanisms: List[MechanismConfig]) -> None:
+        def magnitude(mech: MechanismConfig) -> tuple[float, str]:
+            if mech.mechanism_type == "cpu_contention":
+                return float(mech.intensity), "logical_cpu_worker_fraction"
+            if mech.mechanism_type == "downstream_latency":
+                return float(mech.parameters.get("delay_ms", mech.intensity)), "ms"
+            return float(mech.intensity), "intensity"
+
         self.records = {
             mech.mechanism_id: MechanismTruth(
                 mechanism_id=mech.mechanism_id,
                 mechanism_type=mech.mechanism_type,
                 intensity=mech.intensity,
+                magnitude_value=magnitude(mech)[0],
+                magnitude_unit=magnitude(mech)[1],
                 target=mech.target,
                 scheduled_onset=mech.scheduled_onset,
                 scheduled_stop=mech.scheduled_stop,
@@ -64,3 +75,14 @@ class GroundTruthLedger:
             "run_condition": "HEALTHY_NO_DEGRADATION" if not self.records else "DEGRADATION_INJECTED",
             "mechanisms": [record.to_dict() for record in self.records.values()],
         }
+
+
+def active_mechanism_set(ground_truth: Dict[str, Any]) -> set[str]:
+    mechanisms = ground_truth.get("mechanisms", []) if isinstance(ground_truth, dict) else []
+    return {
+        str(mech.get("mechanism_type"))
+        for mech in mechanisms
+        if isinstance(mech, dict)
+        and mech.get("verification_state") == "STOPPED"
+        and mech.get("verification_evidence", {}).get("verified") is True
+    }

@@ -100,7 +100,7 @@ class CPUContentionInjector(DegradationInjector):
         deltas = {pid: max(0.0, after.get(pid, 0.0) - before.get(pid, 0.0)) for pid in self.worker_pids}
         all_alive = all(proc.is_alive() for proc in self.processes)
         total_delta = sum(deltas.values())
-        verified = all_alive and len(self.worker_pids) == self.worker_count and total_delta > 0
+        verified = (not self.exit_immediately) and all_alive and len(self.worker_pids) == self.worker_count and total_delta > 0
         evidence = VerificationEvidence(
             verified=verified,
             evidence_type="cpu-contention-worker-cputime",
@@ -108,6 +108,7 @@ class CPUContentionInjector(DegradationInjector):
                 "logical_cpu_count": self.logical_cpu_count,
                 "configured_intensity": self.intensity,
                 "actual_worker_count": len(self.worker_pids),
+                "actual_worker_fraction": len(self.worker_pids) / self.logical_cpu_count,
                 "worker_pids": list(self.worker_pids),
                 "verification_interval_seconds": self.verification_interval_seconds,
                 "per_worker_cpu_time_delta": deltas,

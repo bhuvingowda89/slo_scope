@@ -1,0 +1,181 @@
+{
+  "order": [
+    {
+      "attempt": 1,
+      "block_id": "slo-cal-block-01",
+      "calibration_id": "phase5.2-slo",
+      "calibration_order": 1,
+      "condition_id": "OUTPUT_CONTROL",
+      "repetition": 1,
+      "run_id": "slo-cal-r01-output-control-a01",
+      "status": "PLANNED",
+      "within_block_order": 1
+    },
+    {
+      "attempt": 1,
+      "block_id": "slo-cal-block-01",
+      "calibration_id": "phase5.2-slo",
+      "calibration_order": 2,
+      "condition_id": "BASELINE",
+      "repetition": 1,
+      "run_id": "slo-cal-r01-baseline-a01",
+      "status": "PLANNED",
+      "within_block_order": 2
+    },
+    {
+      "attempt": 1,
+      "block_id": "slo-cal-block-02",
+      "calibration_id": "phase5.2-slo",
+      "calibration_order": 3,
+      "condition_id": "OUTPUT_CONTROL",
+      "repetition": 2,
+      "run_id": "slo-cal-r02-output-control-a01",
+      "status": "PLANNED",
+      "within_block_order": 1
+    },
+    {
+      "attempt": 1,
+      "block_id": "slo-cal-block-02",
+      "calibration_id": "phase5.2-slo",
+      "calibration_order": 4,
+      "condition_id": "BASELINE",
+      "repetition": 2,
+      "run_id": "slo-cal-r02-baseline-a01",
+      "status": "PLANNED",
+      "within_block_order": 2
+    },
+    {
+      "attempt": 1,
+      "block_id": "slo-cal-block-03",
+      "calibration_id": "phase5.2-slo",
+      "calibration_order": 5,
+      "condition_id": "BASELINE",
+      "repetition": 3,
+      "run_id": "slo-cal-r03-baseline-a01",
+      "status": "PLANNED",
+      "within_block_order": 1
+    },
+    {
+      "attempt": 1,
+      "block_id": "slo-cal-block-03",
+      "calibration_id": "phase5.2-slo",
+      "calibration_order": 6,
+      "condition_id": "OUTPUT_CONTROL",
+      "repetition": 3,
+      "run_id": "slo-cal-r03-output-control-a01",
+      "status": "PLANNED",
+      "within_block_order": 2
+    },
+    {
+      "attempt": 1,
+      "block_id": "slo-cal-block-04",
+      "calibration_id": "phase5.2-slo",
+      "calibration_order": 7,
+      "condition_id": "BASELINE",
+      "repetition": 4,
+      "run_id": "slo-cal-r04-baseline-a01",
+      "status": "PLANNED",
+      "within_block_order": 1
+    },
+    {
+      "attempt": 1,
+      "block_id": "slo-cal-block-04",
+      "calibration_id": "phase5.2-slo",
+      "calibration_order": 8,
+      "condition_id": "OUTPUT_CONTROL",
+      "repetition": 4,
+      "run_id": "slo-cal-r04-output-control-a01",
+      "status": "PLANNED",
+      "within_block_order": 2
+    },
+    {
+      "attempt": 1,
+      "block_id": "slo-cal-block-05",
+      "calibration_id": "phase5.2-slo",
+      "calibration_order": 9,
+      "condition_id": "OUTPUT_CONTROL",
+      "repetition": 5,
+      "run_id": "slo-cal-r05-output-control-a01",
+      "status": "PLANNED",
+      "within_block_order": 1
+    },
+    {
+      "attempt": 1,
+      "block_id": "slo-cal-block-05",
+      "calibration_id": "phase5.2-slo",
+      "calibration_order": 10,
+      "condition_id": "BASELINE",
+      "repetition": 5,
+      "run_id": "slo-cal-r05-baseline-a01",
+      "status": "PLANNED",
+      "within_block_order": 2
+    },
+    {
+      "attempt": 1,
+      "block_id": "slo-cal-block-06",
+      "calibration_id": "phase5.2-slo",
+      "calibration_order": 11,
+      "condition_id": "OUTPUT_CONTROL",
+      "repetition": 6,
+      "run_id": "slo-cal-r06-output-control-a01",
+      "status": "PLANNED",
+      "within_block_order": 1
+    },
+    {
+      "attempt": 1,
+      "block_id": "slo-cal-block-06",
+      "calibration_id": "phase5.2-slo",
+      "calibration_order": 12,
+      "condition_id": "BASELINE",
+      "repetition": 6,
+      "run_id": "slo-cal-r06-baseline-a01",
+      "status": "PLANNED",
+      "within_block_order": 2
+    },
+    {
+      "attempt": 1,
+      "block_id": "slo-cal-block-07",
+      "calibration_id": "phase5.2-slo",
+      "calibration_order": 13,
+      "condition_id": "OUTPUT_CONTROL",
+      "repetition": 7,
+      "run_id": "slo-cal-r07-output-control-a01",
+      "status": "PLANNED",
+      "within_block_order": 1
+    },
+    {
+      "attempt": 1,
+      "block_id": "slo-cal-block-07",
+      "calibration_id": "phase5.2-slo",
+      "calibration_order": 14,
+      "condition_id": "BASELINE",
+      "repetition": 7,
+      "run_id": "slo-cal-r07-baseline-a01",
+      "status": "PLANNED",
+      "within_block_order": 2
+    },
+    {
+      "attempt": 1,
+      "block_id": "slo-cal-block-08",
+      "calibration_id": "phase5.2-slo",
+      "calibration_order": 15,
+      "condition_id": "BASELINE",
+      "repetition": 8,
+      "run_id": "slo-cal-r08-baseline-a01",
+      "status": "PLANNED",
+      "within_block_order": 1
+    },
+    {
+      "attempt": 1,
+      "block_id": "slo-cal-block-08",
+      "calibration_id": "phase5.2-slo",
+      "calibration_order": 16,
+      "condition_id": "OUTPUT_CONTROL",
+      "repetition": 8,
+      "run_id": "slo-cal-r08-output-control-a01",
+      "status": "PLANNED",
+      "within_block_order": 2
+    }
+  ],
+  "seed": 90210
+}

@@ -2,12 +2,15 @@ from __future__ import annotations
 
 import hashlib
 import json
+import os
 from dataclasses import asdict, dataclass, field
 from pathlib import Path
 from typing import Any, Dict, List, Mapping, Optional, Union
 from .prompts import PROMPT_CORPUS
 
-SUPPORTED_SCHEMA_VERSION = "phase3a.v1"
+SUPPORTED_SCHEMA_VERSION = "sloscope.config.v1"
+LEGACY_SCHEMA_VERSIONS = {"phase3a.v1"}
+SUPPORTED_SCHEMA_VERSIONS = {SUPPORTED_SCHEMA_VERSION, *LEGACY_SCHEMA_VERSIONS}
 
 
 def _canonical_json(data: Mapping[str, Any]) -> str:
@@ -68,6 +71,8 @@ class SafetyConfig:
     maximum_disk_io: int = 0
     experiment_timeout: float = 60.0
     require_requests_within_mechanism_window: bool = False
+    maximum_dependency_delay_ms: int = 0
+    mechanism_watchdog_interval_seconds: float = 0.25
 
 
 @dataclass(frozen=True)
@@ -98,7 +103,7 @@ class ExperimentConfig:
         return ExperimentConfig.from_dict({**self.to_dict(include_hash=False), "config_hash": self.compute_hash()})
 
     def validate(self) -> None:
-        if self.schema_version != SUPPORTED_SCHEMA_VERSION:
+        if self.schema_version not in SUPPORTED_SCHEMA_VERSIONS:
             raise ValueError(f"unknown schema_version: {self.schema_version}")
         if not self.run_id:
             raise ValueError("run_id must be non-empty")
@@ -133,8 +138,6 @@ class ExperimentConfig:
                 raise ValueError("max_outstanding_requests must be >= 1")
             if not self.telemetry.request_telemetry:
                 raise ValueError("llamacpp Phase 3B runs require request_telemetry=true")
-            if self.telemetry.traces:
-                raise ValueError("llamacpp Phase 3B runs require traces=false")
         ids = [m.mechanism_id for m in self.mechanisms]
         if len(ids) != len(set(ids)):
             raise ValueError("duplicate mechanism_id")
@@ -148,6 +151,21 @@ class ExperimentConfig:
                     raise ValueError("cpu_contention intensity must satisfy 0 < intensity <= 1.0")
                 if mech.intensity > self.safety.maximum_cpu_stress:
                     raise ValueError("cpu_contention intensity exceeds safety.maximum_cpu_stress")
+                logical_cpu_count = int(mech.parameters.get("logical_cpu_count") or (os.cpu_count() or 1))
+                worker_count = int(mech.parameters.get("worker_count") or max(1, round(logical_cpu_count * mech.intensity)))
+                if worker_count < 1:
+                    raise ValueError("cpu_contention worker_count must be >= 1")
+                effective_worker_fraction = worker_count / logical_cpu_count
+                if effective_worker_fraction > self.safety.maximum_cpu_stress:
+                    raise ValueError("cpu_contention effective worker fraction exceeds safety.maximum_cpu_stress")
+            elif mech.mechanism_type == "downstream_latency":
+                if mech.target != "synthetic_dependency":
+                    raise ValueError("downstream_latency target must be synthetic_dependency")
+                delay_ms = int(mech.parameters.get("delay_ms", mech.intensity))
+                if delay_ms < 0:
+                    raise ValueError("downstream_latency delay_ms must be non-negative")
+                if delay_ms > self.safety.maximum_dependency_delay_ms:
+                    raise ValueError("downstream_latency delay_ms exceeds safety.maximum_dependency_delay_ms")
         if self.safety.maximum_cpu_stress < 0:
             raise ValueError("maximum_cpu_stress must be non-negative")
         if self.safety.maximum_allocated_pressure_memory < 0:
@@ -156,6 +174,10 @@ class ExperimentConfig:
             raise ValueError("maximum_disk_io must be non-negative")
         if self.safety.experiment_timeout <= 0:
             raise ValueError("experiment_timeout must be positive")
+        if self.safety.maximum_dependency_delay_ms < 0:
+            raise ValueError("maximum_dependency_delay_ms must be non-negative")
+        if self.safety.mechanism_watchdog_interval_seconds <= 0:
+            raise ValueError("mechanism_watchdog_interval_seconds must be positive")
         if self.config_hash is not None and self.config_hash != self.compute_hash():
             raise ValueError("config_hash mismatch")
 

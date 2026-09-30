@@ -1,0 +1,32 @@
+{
+  "invalidation_rules": [
+    "service health/readiness failure",
+    "model/runtime version, build, commit, or required flag mismatch",
+    "git_dirty is true for publication campaign execution",
+    "missing mandatory telemetry or trace artifacts",
+    "request-count mismatch",
+    "any admission failure unless the specific analysis explicitly models admission control",
+    "port or service contamination",
+    "artifact corruption or hash mismatch",
+    "incorrect mechanism configuration or failed mechanism verification",
+    "downstream cleanup cannot restore delay_ms=0",
+    "owned process cleanup failure",
+    "insufficient disk space below frozen guard"
+  ],
+  "queue_confounded": {
+    "downstream": "requests_deferred_max > 0 is VALID_WITH_SECONDARY_EFFECT unless it causes mandatory validity failure",
+    "input": "requests_deferred_max > 0",
+    "load": "not a confound; queueing is the intended mechanism",
+    "output": "requests_deferred_max > 0"
+  },
+  "rerun_policy": {
+    "invalid_runs": "May be rerun with a new attempt ID; preserve invalid artifacts and reason.",
+    "valid_surprising_runs": "Must not be silently rerun; surprising valid data are retained."
+  },
+  "states": {
+    "CONFUNDED": "Mechanism was applied but a predefined secondary mechanism appeared.",
+    "INVALID": "Mandatory validity criterion failed.",
+    "VALID": "All mandatory validity criteria pass and no disallowed confound is present.",
+    "VALID_WITH_SECONDARY_EFFECT": "Run is usable for mechanism execution but excluded from pure-isolation claims."
+  }
+}

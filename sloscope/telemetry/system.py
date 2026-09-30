@@ -7,7 +7,7 @@ from sloscope.lifecycle import Clock
 
 
 class SystemTelemetryCollector:
-    def __init__(self, clock: Clock, server_pid: int | None = None) -> None:
+    def __init__(self, clock: Clock, server_pid: int | None = None, gateway_pid: int | None = None, dependency_pid: int | None = None) -> None:
         self.clock = clock
         try:
             import psutil
@@ -16,10 +16,18 @@ class SystemTelemetryCollector:
         self.psutil = psutil
         self.client_process = psutil.Process(os.getpid())
         self.server_pid = server_pid
+        self.gateway_pid = gateway_pid
+        self.dependency_pid = dependency_pid
         self.server_process = psutil.Process(server_pid) if server_pid is not None else None
+        self.gateway_process = psutil.Process(gateway_pid) if gateway_pid is not None else None
+        self.dependency_process = psutil.Process(dependency_pid) if dependency_pid is not None else None
         self.client_process.cpu_percent(None)
         if self.server_process is not None:
             self.server_process.cpu_percent(None)
+        if self.gateway_process is not None:
+            self.gateway_process.cpu_percent(None)
+        if self.dependency_process is not None:
+            self.dependency_process.cpu_percent(None)
         psutil.cpu_percent(None)
 
     def sample(self) -> Dict[str, Any]:
@@ -44,4 +52,10 @@ class SystemTelemetryCollector:
             "server_pid": self.server_pid,
             "server_process_cpu_percent": None if self.server_process is None else float(self.server_process.cpu_percent(None)),
             "server_process_rss_bytes": None if self.server_process is None else float(self.server_process.memory_info().rss),
+            "gateway_pid": self.gateway_pid,
+            "gateway_process_cpu_percent": None if self.gateway_process is None else float(self.gateway_process.cpu_percent(None)),
+            "gateway_process_rss_bytes": None if self.gateway_process is None else float(self.gateway_process.memory_info().rss),
+            "dependency_pid": self.dependency_pid,
+            "dependency_process_cpu_percent": None if self.dependency_process is None else float(self.dependency_process.cpu_percent(None)),
+            "dependency_process_rss_bytes": None if self.dependency_process is None else float(self.dependency_process.memory_info().rss),
         }

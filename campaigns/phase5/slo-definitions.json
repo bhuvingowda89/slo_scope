@@ -1,0 +1,79 @@
+{
+  "DECODE_DURATION_SLO": {
+    "aggregation_level": "run-level p95 over successful requests",
+    "baseline_source": "dedicated Phase 5.2 pre-campaign OUTPUT_CONTROL calibration repetitions only",
+    "justification": "Decode service time must be evaluated against the same continuation prompt family.",
+    "metric": "post_first_token_duration",
+    "threshold": {
+      "procedure": "Calibrate in a dedicated pre-campaign SLO calibration step before Phase 6 formal outcomes exist. Use one-sided future-run prediction limits with alpha=0.05. Formal Phase 6 outcome data must not be used to set thresholds.",
+      "source_conditions": [
+        "OUTPUT_CONTROL"
+      ]
+    },
+    "unit": "seconds",
+    "violation_definition": "run-level p95 post-first-token duration > calibrated threshold"
+  },
+  "SECONDS_PER_OUTPUT_TOKEN_DIAGNOSTIC": {
+    "aggregation_level": "run-level median over successful requests with output tokens",
+    "baseline_source": "publication campaign output matched-control repetitions",
+    "justification": "Token-normalized decode descriptor is highly redundant with post-first-token duration for this campaign.",
+    "metric": "observed_seconds_per_output_token",
+    "threshold": {
+      "procedure": "diagnostic reference only; not counted as an independent SLO violation"
+    },
+    "unit": "seconds/token",
+    "violation_definition": "not counted toward single/compound SLO violation status"
+  },
+  "THROUGHPUT_DIAGNOSTIC": {
+    "aggregation_level": "run-level successful completions divided by measured arrival-to-completion window",
+    "baseline_source": "diagnostic is computed per run from offered load and successful completions; no universal throughput SLO threshold is calibrated",
+    "justification": "Raw throughput is demand-dependent and cannot be a universal counted SLO when offered load varies.",
+    "metric": "observed_throughput",
+    "threshold": {
+      "procedure": "diagnostic/capacity metric only; not counted as a universal SLO"
+    },
+    "unit": "successful requests/second",
+    "violation_definition": "not counted toward single/compound SLO violation status"
+  },
+  "TOTAL_LATENCY_SLO": {
+    "aggregation_level": "run-level p95 over successful requests",
+    "baseline_source": "dedicated Phase 5.2 pre-campaign healthy-envelope calibration: BASELINE and OUTPUT_CONTROL families calibrated separately; final threshold is the maximum of the two family prediction limits",
+    "justification": "End-to-end request completion latency captures downstream and combined effects.",
+    "metric": "total_request_latency",
+    "threshold": {
+      "procedure": "Calibrate in a dedicated pre-campaign SLO calibration step before Phase 6 formal outcomes exist. Use one-sided future-run prediction limits with alpha=0.05. Formal Phase 6 outcome data must not be used to set thresholds.",
+      "source_conditions": [
+        "BASELINE",
+        "OUTPUT_CONTROL"
+      ]
+    },
+    "unit": "seconds",
+    "violation_definition": "run-level p95 total latency > calibrated threshold"
+  },
+  "TTFT_SLO": {
+    "aggregation_level": "run-level p95 over successful requests",
+    "baseline_source": "dedicated Phase 5.2 pre-campaign healthy-envelope calibration: BASELINE and OUTPUT_CONTROL families calibrated separately; final threshold is the maximum of the two family prediction limits",
+    "justification": "TTFT is the primary user-visible prefill/queue symptom.",
+    "metric": "time_to_first_token",
+    "threshold": {
+      "procedure": "Calibrate in a dedicated pre-campaign SLO calibration step before Phase 6 formal outcomes exist. Use one-sided future-run prediction limits with alpha=0.05. Formal Phase 6 outcome data must not be used to set thresholds.",
+      "source_conditions": [
+        "BASELINE",
+        "OUTPUT_CONTROL"
+      ]
+    },
+    "unit": "seconds",
+    "violation_definition": "run-level p95 TTFT > calibrated threshold"
+  },
+  "compound_violation_definition": {
+    "compound_slo_violation": "Two or more frozen SLOs are violated by run-level aggregates in the same measured run.",
+    "counted_slos": [
+      "TTFT_SLO",
+      "TOTAL_LATENCY_SLO",
+      "DECODE_DURATION_SLO"
+    ],
+    "single_slo_violation": "Exactly one frozen SLO is violated by a run-level aggregate.",
+    "statistical_unit": "run/repetition, not individual requests",
+    "window": "whole measured run after unscored warm-up; request-level rows support diagnosis but do not define independent repetitions"
+  }
+}

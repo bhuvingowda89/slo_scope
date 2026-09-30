@@ -1,0 +1,298 @@
+{
+  "alpha": 0.05,
+  "baseline_repetitions": 8,
+  "control_sanity": [
+    {
+      "condition_id": "BASELINE",
+      "decode_crossed": false,
+      "run_id": "slo-cal-r01-baseline-a01",
+      "total_latency_crossed": false,
+      "ttft_crossed": false
+    },
+    {
+      "condition_id": "BASELINE",
+      "decode_crossed": false,
+      "run_id": "slo-cal-r02-baseline-a01",
+      "total_latency_crossed": false,
+      "ttft_crossed": false
+    },
+    {
+      "condition_id": "BASELINE",
+      "decode_crossed": false,
+      "run_id": "slo-cal-r03-baseline-a01",
+      "total_latency_crossed": false,
+      "ttft_crossed": false
+    },
+    {
+      "condition_id": "BASELINE",
+      "decode_crossed": false,
+      "run_id": "slo-cal-r04-baseline-a01",
+      "total_latency_crossed": false,
+      "ttft_crossed": false
+    },
+    {
+      "condition_id": "BASELINE",
+      "decode_crossed": false,
+      "run_id": "slo-cal-r05-baseline-a01",
+      "total_latency_crossed": false,
+      "ttft_crossed": false
+    },
+    {
+      "condition_id": "BASELINE",
+      "decode_crossed": false,
+      "run_id": "slo-cal-r06-baseline-a01",
+      "total_latency_crossed": false,
+      "ttft_crossed": false
+    },
+    {
+      "condition_id": "BASELINE",
+      "decode_crossed": false,
+      "run_id": "slo-cal-r07-baseline-a01",
+      "total_latency_crossed": false,
+      "ttft_crossed": false
+    },
+    {
+      "condition_id": "BASELINE",
+      "decode_crossed": false,
+      "run_id": "slo-cal-r08-baseline-a01",
+      "total_latency_crossed": false,
+      "ttft_crossed": false
+    },
+    {
+      "condition_id": "OUTPUT_CONTROL",
+      "decode_crossed": false,
+      "run_id": "slo-cal-r01-output-control-a01",
+      "total_latency_crossed": false,
+      "ttft_crossed": false
+    },
+    {
+      "condition_id": "OUTPUT_CONTROL",
+      "decode_crossed": false,
+      "run_id": "slo-cal-r02-output-control-a01",
+      "total_latency_crossed": false,
+      "ttft_crossed": false
+    },
+    {
+      "condition_id": "OUTPUT_CONTROL",
+      "decode_crossed": false,
+      "run_id": "slo-cal-r03-output-control-a01",
+      "total_latency_crossed": false,
+      "ttft_crossed": false
+    },
+    {
+      "condition_id": "OUTPUT_CONTROL",
+      "decode_crossed": false,
+      "run_id": "slo-cal-r04-output-control-a01",
+      "total_latency_crossed": false,
+      "ttft_crossed": false
+    },
+    {
+      "condition_id": "OUTPUT_CONTROL",
+      "decode_crossed": false,
+      "run_id": "slo-cal-r05-output-control-a01",
+      "total_latency_crossed": false,
+      "ttft_crossed": false
+    },
+    {
+      "condition_id": "OUTPUT_CONTROL",
+      "decode_crossed": false,
+      "run_id": "slo-cal-r06-output-control-a01",
+      "total_latency_crossed": false,
+      "ttft_crossed": false
+    },
+    {
+      "condition_id": "OUTPUT_CONTROL",
+      "decode_crossed": false,
+      "run_id": "slo-cal-r07-output-control-a01",
+      "total_latency_crossed": false,
+      "ttft_crossed": false
+    },
+    {
+      "condition_id": "OUTPUT_CONTROL",
+      "decode_crossed": false,
+      "run_id": "slo-cal-r08-output-control-a01",
+      "total_latency_crossed": false,
+      "ttft_crossed": false
+    }
+  ],
+  "dedicated_calibration": true,
+  "family_limits": {
+    "DECODE_DURATION_SLO": {
+      "output_control": {
+        "alpha": 0.05,
+        "mean": 0.17519048540179935,
+        "n": 8,
+        "prediction_margin": 0.02643390002578778,
+        "sd": 0.013154436921653339,
+        "source_hashes": [
+          "a8aca7b531e2f893ffafd0ae5e2468e84bac4535c75594f9278e5eff9ac82d6a",
+          "5a6960690e4c77cd5695a97a3b030ed4e3e3522e25a83aea06bca3c7a07b1bea",
+          "9d580d9f1913ddab3d4c3260b1271c0cc1f90069a8387783baef29e8aea39b5c",
+          "ba174f0377a769e55a569f5e4692b071855e1078bd74e2ee3d828cfbaf8306f8",
+          "8dac6b494e7c73086fab0c662a885e27d110c399bb89915d0daad3ddc7107361",
+          "76b80f231961314947e2788a1bdd4dfae417762c1ef8490a1c2244b583070365",
+          "36dbfcc0ba681c42fcbb7fe445c4484fbc0c4f08238966f39e85a7856af1c949",
+          "9f57788cc6d2f453443fe83bec0ac3d7b357d5c40759126055f1a008335bbc5e"
+        ],
+        "source_run_ids": [
+          "slo-cal-r01-output-control-a01",
+          "slo-cal-r02-output-control-a01",
+          "slo-cal-r03-output-control-a01",
+          "slo-cal-r04-output-control-a01",
+          "slo-cal-r05-output-control-a01",
+          "slo-cal-r06-output-control-a01",
+          "slo-cal-r07-output-control-a01",
+          "slo-cal-r08-output-control-a01"
+        ],
+        "t_critical": 1.894579,
+        "threshold": 0.20162438542758712
+      }
+    },
+    "TOTAL_LATENCY_SLO": {
+      "baseline": {
+        "alpha": 0.05,
+        "mean": 0.17156854486906922,
+        "n": 8,
+        "prediction_margin": 0.01680030234854592,
+        "sd": 0.00836042041821506,
+        "source_hashes": [
+          "70e1d558e3c5e57f2c865c83d4cfa8c383a2bf5ca2c4f4126bd8a2d7a2e5f819",
+          "ae7f004d453be00652c6def2017c2c2e740c1ab6dac614819faf6acc055ac90e",
+          "650cc5775b47e1b4514956cba7516be0340b7b58c130afe19ad3e4767119f4d2",
+          "877a47aa580bf2b6f905982820c130c288cc7dd9497462281c45f06c5a1b5069",
+          "211cde3e168cf7a647a8da32b5fbb6d1a68de3760f49435867a9db2e6229f5b2",
+          "e09e810f3fb2ae8685820222d399f176313ca93901b43ca3f88b20c53158bba3",
+          "13f195dce2a73544b4f5ef677f9eb9c1624ab7966307599f9d3c870676da896e",
+          "005f3b540a69938b1ffd5d23d6649d9168025a39e89140502066d6203dcbfbd4"
+        ],
+        "source_run_ids": [
+          "slo-cal-r01-baseline-a01",
+          "slo-cal-r02-baseline-a01",
+          "slo-cal-r03-baseline-a01",
+          "slo-cal-r04-baseline-a01",
+          "slo-cal-r05-baseline-a01",
+          "slo-cal-r06-baseline-a01",
+          "slo-cal-r07-baseline-a01",
+          "slo-cal-r08-baseline-a01"
+        ],
+        "t_critical": 1.894579,
+        "threshold": 0.18836884721761515
+      },
+      "output_control": {
+        "alpha": 0.05,
+        "mean": 0.23057275901355748,
+        "n": 8,
+        "prediction_margin": 0.03722140488134578,
+        "sd": 0.018522678158324122,
+        "source_hashes": [
+          "a8aca7b531e2f893ffafd0ae5e2468e84bac4535c75594f9278e5eff9ac82d6a",
+          "5a6960690e4c77cd5695a97a3b030ed4e3e3522e25a83aea06bca3c7a07b1bea",
+          "9d580d9f1913ddab3d4c3260b1271c0cc1f90069a8387783baef29e8aea39b5c",
+          "ba174f0377a769e55a569f5e4692b071855e1078bd74e2ee3d828cfbaf8306f8",
+          "8dac6b494e7c73086fab0c662a885e27d110c399bb89915d0daad3ddc7107361",
+          "76b80f231961314947e2788a1bdd4dfae417762c1ef8490a1c2244b583070365",
+          "36dbfcc0ba681c42fcbb7fe445c4484fbc0c4f08238966f39e85a7856af1c949",
+          "9f57788cc6d2f453443fe83bec0ac3d7b357d5c40759126055f1a008335bbc5e"
+        ],
+        "source_run_ids": [
+          "slo-cal-r01-output-control-a01",
+          "slo-cal-r02-output-control-a01",
+          "slo-cal-r03-output-control-a01",
+          "slo-cal-r04-output-control-a01",
+          "slo-cal-r05-output-control-a01",
+          "slo-cal-r06-output-control-a01",
+          "slo-cal-r07-output-control-a01",
+          "slo-cal-r08-output-control-a01"
+        ],
+        "t_critical": 1.894579,
+        "threshold": 0.26779416389490324
+      }
+    },
+    "TTFT_SLO": {
+      "baseline": {
+        "alpha": 0.05,
+        "mean": 0.05186651956782952,
+        "n": 8,
+        "prediction_margin": 0.008329940535275658,
+        "sd": 0.004145270929583208,
+        "source_hashes": [
+          "70e1d558e3c5e57f2c865c83d4cfa8c383a2bf5ca2c4f4126bd8a2d7a2e5f819",
+          "ae7f004d453be00652c6def2017c2c2e740c1ab6dac614819faf6acc055ac90e",
+          "650cc5775b47e1b4514956cba7516be0340b7b58c130afe19ad3e4767119f4d2",
+          "877a47aa580bf2b6f905982820c130c288cc7dd9497462281c45f06c5a1b5069",
+          "211cde3e168cf7a647a8da32b5fbb6d1a68de3760f49435867a9db2e6229f5b2",
+          "e09e810f3fb2ae8685820222d399f176313ca93901b43ca3f88b20c53158bba3",
+          "13f195dce2a73544b4f5ef677f9eb9c1624ab7966307599f9d3c870676da896e",
+          "005f3b540a69938b1ffd5d23d6649d9168025a39e89140502066d6203dcbfbd4"
+        ],
+        "source_run_ids": [
+          "slo-cal-r01-baseline-a01",
+          "slo-cal-r02-baseline-a01",
+          "slo-cal-r03-baseline-a01",
+          "slo-cal-r04-baseline-a01",
+          "slo-cal-r05-baseline-a01",
+          "slo-cal-r06-baseline-a01",
+          "slo-cal-r07-baseline-a01",
+          "slo-cal-r08-baseline-a01"
+        ],
+        "t_critical": 1.894579,
+        "threshold": 0.06019646010310518
+      },
+      "output_control": {
+        "alpha": 0.05,
+        "mean": 0.05584742953051317,
+        "n": 8,
+        "prediction_margin": 0.009282043612481741,
+        "sd": 0.004619070855428475,
+        "source_hashes": [
+          "a8aca7b531e2f893ffafd0ae5e2468e84bac4535c75594f9278e5eff9ac82d6a",
+          "5a6960690e4c77cd5695a97a3b030ed4e3e3522e25a83aea06bca3c7a07b1bea",
+          "9d580d9f1913ddab3d4c3260b1271c0cc1f90069a8387783baef29e8aea39b5c",
+          "ba174f0377a769e55a569f5e4692b071855e1078bd74e2ee3d828cfbaf8306f8",
+          "8dac6b494e7c73086fab0c662a885e27d110c399bb89915d0daad3ddc7107361",
+          "76b80f231961314947e2788a1bdd4dfae417762c1ef8490a1c2244b583070365",
+          "36dbfcc0ba681c42fcbb7fe445c4484fbc0c4f08238966f39e85a7856af1c949",
+          "9f57788cc6d2f453443fe83bec0ac3d7b357d5c40759126055f1a008335bbc5e"
+        ],
+        "source_run_ids": [
+          "slo-cal-r01-output-control-a01",
+          "slo-cal-r02-output-control-a01",
+          "slo-cal-r03-output-control-a01",
+          "slo-cal-r04-output-control-a01",
+          "slo-cal-r05-output-control-a01",
+          "slo-cal-r06-output-control-a01",
+          "slo-cal-r07-output-control-a01",
+          "slo-cal-r08-output-control-a01"
+        ],
+        "t_critical": 1.894579,
+        "threshold": 0.06512947314299491
+      }
+    }
+  },
+  "formal_campaign_outcomes_used": false,
+  "formula": "UPL = mean + t_(0.95,n-1) * s * sqrt(1 + 1/n)",
+  "metrics": {
+    "DECODE_DURATION_SLO": {
+      "direction": "upper",
+      "final_numeric_threshold": 0.20162438542758712,
+      "selected_family": "output_control"
+    },
+    "TOTAL_LATENCY_SLO": {
+      "direction": "upper",
+      "final_numeric_threshold": 0.26779416389490324,
+      "selected_family": "output_control"
+    },
+    "TTFT_SLO": {
+      "direction": "upper",
+      "final_numeric_threshold": 0.06512947314299491,
+      "selected_family": "output_control"
+    }
+  },
+  "output_control_repetitions": 8,
+  "schema_version": "sloscope.slo_calibration.v1",
+  "status": "DEDICATED_PRECAMPAIGN_CALIBRATION_COMPLETE",
+  "throughput": {
+    "reason": "Raw successful requests/sec is demand-dependent and not a counted universal SLO.",
+    "status": "DIAGNOSTIC_ONLY"
+  }
+}

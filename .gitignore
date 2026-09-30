@@ -10,9 +10,12 @@ htmlcov/
 
 runs/
 logs/
+results/
+pilot_runs/
 
 .DS_Store
 .idea/
+slo_scope.iml
 
 *.swp
 *.swo
