@@ -29,6 +29,9 @@ from sloscope.runner import ExperimentRunner
 
 
 PHASE5_ID = "phase5-campaign-freeze"
+PUBLICATION_CAMPAIGN_ID = "sloscope-phase6-v2"
+PUBLICATION_RUN_PREFIX = "phase6v2"
+PUBLICATION_RUN_ROOT = "runs/phase6-v2"
 SCHEMA_VERSION = "sloscope.config.v1"
 ORDER_SEED = 5150
 REPETITIONS = 8
@@ -86,7 +89,7 @@ def condition_slug(condition_id: str) -> str:
 
 
 def run_id_for(condition_id: str, repetition: int, attempt: int = 1) -> str:
-    return f"phase6-r{repetition:02d}-{condition_slug(condition_id)}-a{attempt:02d}"
+    return f"{PUBLICATION_RUN_PREFIX}-r{repetition:02d}-{condition_slug(condition_id)}-a{attempt:02d}"
 
 
 def one_sided_t_critical(alpha: float, df: int) -> float:
@@ -951,7 +954,7 @@ def _mechanism_config(condition: Condition) -> list[MechanismConfig]:
 
 def experimental_condition_for(condition: Condition, repetition: int, attempt: int, run_id: str) -> dict[str, Any]:
     return {
-        "campaign_id": "phase6-publication-campaign",
+        "campaign_id": PUBLICATION_CAMPAIGN_ID,
         "campaign_condition_id": condition.condition_id,
         "condition_id": condition.condition_id,
         "mechanism_family": condition.mechanism_family,
@@ -991,6 +994,8 @@ def config_for_condition(condition: Condition, *, repetition: int = 1, attempt: 
                 "model_ref": MODEL_REF,
                 "prompt_cache": "disabled",
                 "warmup_request_count": WARMUP_REQUESTS,
+                "gateway_timing_reconciliation_timeout_seconds": 1.0,
+                "gateway_timing_poll_interval_seconds": 0.01,
                 "cooldown_seconds": COOLDOWN_SECONDS,
                 "dependency_delay_ms": condition.dependency_delay_ms,
                 "offered_rps": condition.offered_rps,
@@ -1039,7 +1044,7 @@ def campaign_rows(revision: str | None = None) -> list[dict[str, Any]]:
             run_id = run_id_for(condition.condition_id, repetition, attempt)
             rows.append(
                 {
-                    "campaign_id": "phase6-publication-campaign",
+                    "campaign_id": PUBLICATION_CAMPAIGN_ID,
                     "condition_id": condition.condition_id,
                     "run_id": run_id,
                     "mechanism_family": condition.mechanism_family,
@@ -1050,7 +1055,7 @@ def campaign_rows(revision: str | None = None) -> list[dict[str, Any]]:
                     "attempt": attempt,
                     "campaign_order": order,
                     "config_path": f"configs/phase5/runs/{run_id}.yaml",
-                    "run_directory": f"runs/phase6/{run_id}",
+                    "run_directory": f"{PUBLICATION_RUN_ROOT}/{run_id}",
                     "expected_control_id": condition.expected_control_id or "",
                     "source_commit": revision or "",
                     "status": "PLANNED",
@@ -1100,6 +1105,10 @@ def freeze_hash(paths: list[Path], root: Path) -> str:
             manifest.pop("campaign_freeze_sha256", None)
             manifest.pop("campaign_manifest_sha256", None)
             data = _canonical_json(manifest).encode("utf-8")
+        elif path.name == "execution-integrity-amendment.json" and path.parent.name == "phase5":
+            amendment = json.loads(path.read_text(encoding="utf-8"))
+            amendment.pop("new_campaign_freeze_sha256", None)
+            data = _canonical_json(amendment).encode("utf-8")
         else:
             data = path.read_bytes()
         digest.update(len(rel).to_bytes(8, "big"))
@@ -1131,6 +1140,7 @@ def freeze_input_paths(root: Path) -> list[Path]:
         campaigns_dir / "slo-calibration.json",
         campaigns_dir / "repetition-justification.json",
         campaigns_dir / "phase6-preflight.json",
+        campaigns_dir / "execution-integrity-amendment.json",
         *sorted(configs_dir.glob("*.yaml")),
         *sorted((configs_dir / "runs").glob("*.yaml")),
     ]
@@ -1173,6 +1183,12 @@ def validate_freeze(root: Path = Path(".")) -> list[str]:
     config_paths = [r["config_path"] for r in rows]
     if len(config_paths) != len(set(config_paths)):
         issues.append("duplicate config output destination")
+    if any(not r["run_id"].startswith(f"{PUBLICATION_RUN_PREFIX}-") for r in rows):
+        issues.append("campaign run IDs do not use Phase 6 v2 prefix")
+    if any(not r["run_directory"].startswith(f"{PUBLICATION_RUN_ROOT}/") for r in rows):
+        issues.append("campaign run directories do not use Phase 6 v2 root")
+    if any(r["campaign_id"] != PUBLICATION_CAMPAIGN_ID for r in rows):
+        issues.append("campaign rows do not use Phase 6 v2 campaign ID")
     seen = {(r["condition_id"], r["repetition"]) for r in rows}
     for cond in ids:
         for rep in range(1, REPETITIONS + 1):
@@ -1210,6 +1226,7 @@ def validate_freeze(root: Path = Path(".")) -> list[str]:
             root / "campaigns" / "phase5" / "repetition-justification.json",
             root / "campaigns" / "phase5" / "factorial-design.json",
             root / "campaigns" / "phase5" / "phase6-preflight.json",
+            root / "campaigns" / "phase5" / "execution-integrity-amendment.json",
         ]
         for path in required:
             if not path.exists():
@@ -1309,8 +1326,9 @@ run/repetition. Formal Phase 6 outcomes must not be used to set thresholds.
   output matched-control threshold.
 - observed seconds per output token: retained as a diagnostic decode metric, not a
   counted independent SLO, because it is highly redundant with decode duration here.
-- THROUGHPUT_SLO: run-level observed throughput; violation when below the calibrated
-  baseline lower threshold.
+- THROUGHPUT_DIAGNOSTIC: run-level observed throughput/goodput is retained for
+  capacity analysis but is not a counted universal SLO because offered load varies
+  by condition.
 
 Single SLO violation means exactly one frozen SLO is violated in a measured run.
 Compound SLO violation means two or more frozen SLOs are violated in the same
@@ -1441,6 +1459,9 @@ def generate(root: Path = Path(".")) -> dict[str, Any]:
         "campaign_id": PHASE5_ID,
         "schema_version": "sloscope.campaign.v1",
         "purpose": "publication_campaign_freeze",
+        "publication_campaign_id": PUBLICATION_CAMPAIGN_ID,
+        "publication_run_prefix": PUBLICATION_RUN_PREFIX,
+        "publication_run_root": PUBLICATION_RUN_ROOT,
         "run_order_seed": ORDER_SEED,
         "repetitions": REPETITIONS,
         "primary_attempt": 1,
@@ -1481,6 +1502,27 @@ def generate(root: Path = Path(".")) -> dict[str, Any]:
     write_json(campaigns_dir / "slo-calibration.json", load_slo_calibration_for_freeze(root))
     write_json(campaigns_dir / "repetition-justification.json", repetition_justification())
     write_json(campaigns_dir / "phase6-preflight.json", preflight_spec(src_sha))
+    amendment = {
+        "schema_version": "sloscope.execution_integrity_amendment.v1",
+        "original_source_tree_sha256": "3a3eef468db5c1c4dcfbeeb67f55081e25d78d9bb621bb658c318cceb1dfc6fc",
+        "new_source_tree_sha256": src_sha,
+        "original_campaign_freeze_sha256": "82b61df32669f6731e31b1379d07d3d50291c1c000247251df2a4e14c60f0adb",
+        "new_campaign_freeze_sha256": None,
+        "defect_classification": "runner snapshot race",
+        "scientific_design_changed": False,
+        "metric_definitions_changed": False,
+        "slo_thresholds_changed": False,
+        "mechanisms_changed": False,
+        "workloads_changed": False,
+        "formal_run_count_changed": False,
+        "execution_collector_changed": True,
+        "original_formal_execution_superseded": True,
+        "superseded_execution_root": "runs/phase6",
+        "new_execution_campaign_id": PUBLICATION_CAMPAIGN_ID,
+        "new_execution_root": PUBLICATION_RUN_ROOT,
+        "rationale": "Gateway timing reconciliation occurs after measured request completion and before artifact finalization; SLO thresholds and scientific request metrics are unchanged.",
+    }
+    write_json(campaigns_dir / "execution-integrity-amendment.json", amendment)
 
     hash_inputs = freeze_input_paths(root)
     freeze_sha = freeze_hash(hash_inputs, root)
@@ -1493,6 +1535,8 @@ def generate(root: Path = Path(".")) -> dict[str, Any]:
     manifest["campaign_freeze_sha256"] = freeze_sha
     manifest["campaign_manifest_sha256"] = manifest_sha
     write_json(campaigns_dir / "campaign-manifest.json", manifest)
+    amendment["new_campaign_freeze_sha256"] = freeze_sha
+    write_json(campaigns_dir / "execution-integrity-amendment.json", amendment)
 
     (docs_dir / "phase5-campaign-freeze.md").write_text(
         _doc_text(freeze_sha, manifest_sha, src_sha, dirty, rev),

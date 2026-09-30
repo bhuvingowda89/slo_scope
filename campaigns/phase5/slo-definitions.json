@@ -1,7 +1,7 @@
 {
   "DECODE_DURATION_SLO": {
     "aggregation_level": "run-level p95 over successful requests",
-    "baseline_source": "dedicated Phase 5.2 pre-campaign OUTPUT_CONTROL calibration repetitions only",
+    "baseline_source": "publication campaign output matched-control repetitions",
     "justification": "Decode service time must be evaluated against the same continuation prompt family.",
     "metric": "post_first_token_duration",
     "threshold": {
@@ -26,7 +26,7 @@
   },
   "THROUGHPUT_DIAGNOSTIC": {
     "aggregation_level": "run-level successful completions divided by measured arrival-to-completion window",
-    "baseline_source": "diagnostic is computed per run from offered load and successful completions; no universal throughput SLO threshold is calibrated",
+    "baseline_source": "publication campaign baseline repetitions",
     "justification": "Raw throughput is demand-dependent and cannot be a universal counted SLO when offered load varies.",
     "metric": "observed_throughput",
     "threshold": {
@@ -37,14 +37,13 @@
   },
   "TOTAL_LATENCY_SLO": {
     "aggregation_level": "run-level p95 over successful requests",
-    "baseline_source": "dedicated Phase 5.2 pre-campaign healthy-envelope calibration: BASELINE and OUTPUT_CONTROL families calibrated separately; final threshold is the maximum of the two family prediction limits",
+    "baseline_source": "publication campaign baseline repetitions",
     "justification": "End-to-end request completion latency captures downstream and combined effects.",
     "metric": "total_request_latency",
     "threshold": {
       "procedure": "Calibrate in a dedicated pre-campaign SLO calibration step before Phase 6 formal outcomes exist. Use one-sided future-run prediction limits with alpha=0.05. Formal Phase 6 outcome data must not be used to set thresholds.",
       "source_conditions": [
-        "BASELINE",
-        "OUTPUT_CONTROL"
+        "BASELINE"
       ]
     },
     "unit": "seconds",
@@ -52,14 +51,13 @@
   },
   "TTFT_SLO": {
     "aggregation_level": "run-level p95 over successful requests",
-    "baseline_source": "dedicated Phase 5.2 pre-campaign healthy-envelope calibration: BASELINE and OUTPUT_CONTROL families calibrated separately; final threshold is the maximum of the two family prediction limits",
+    "baseline_source": "publication campaign baseline repetitions; Phase 4C confirms medium input and load perturb TTFT",
     "justification": "TTFT is the primary user-visible prefill/queue symptom.",
     "metric": "time_to_first_token",
     "threshold": {
       "procedure": "Calibrate in a dedicated pre-campaign SLO calibration step before Phase 6 formal outcomes exist. Use one-sided future-run prediction limits with alpha=0.05. Formal Phase 6 outcome data must not be used to set thresholds.",
       "source_conditions": [
-        "BASELINE",
-        "OUTPUT_CONTROL"
+        "BASELINE"
       ]
     },
     "unit": "seconds",

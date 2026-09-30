@@ -4,6 +4,7 @@ import asyncio
 import json
 import re
 import threading
+import time
 import urllib.error
 import urllib.request
 from dataclasses import dataclass
@@ -19,6 +20,17 @@ from sloscope.workload import RequestPlan
 
 class LlamaCppRuntimeError(RuntimeError):
     pass
+
+
+GATEWAY_TIMING_FIELDS = (
+    "gateway_receive_time",
+    "dependency_start_time",
+    "dependency_end_time",
+    "llama_dispatch_time",
+    "llama_first_token_time",
+    "gateway_completion_time",
+    "dependency_duration",
+)
 
 
 @dataclass(frozen=True)
@@ -152,6 +164,8 @@ class LlamaCppRuntimeAdapter(RuntimeAdapter):
         self.model_metadata: Dict[str, Any] = {}
         self.runtime_metadata: Dict[str, Any] = {}
         self.gateway_telemetry_enabled = bool(self.params.get("gateway_telemetry_enabled", True))
+        self.gateway_timing_reconciliation_timeout = float(self.params.get("gateway_timing_reconciliation_timeout_seconds", 1.0))
+        self.gateway_timing_poll_interval = float(self.params.get("gateway_timing_poll_interval_seconds", 0.01))
         self._trace_rows: List[dict] = []
 
     def _advance_epsilon(self) -> None:
@@ -227,6 +241,14 @@ class LlamaCppRuntimeAdapter(RuntimeAdapter):
             "prompt_cache_enabled": False if "--no-cache-prompt" in (self.params.get("server_arguments") or []) else self.params.get("prompt_cache_enabled"),
             "gateway_telemetry_enabled": self.gateway_telemetry_enabled,
             "gateway_reset": gateway_reset,
+            "gateway_timing_reconciliation": {
+                "timeout_seconds": self.gateway_timing_reconciliation_timeout,
+                "poll_interval_seconds": self.gateway_timing_poll_interval,
+                "required_count": 0,
+                "resolved_count": 0,
+                "unresolved_count": 0,
+                "duration_seconds": 0.0,
+            },
         }
 
     def healthcheck(self) -> bool:
@@ -392,6 +414,65 @@ class LlamaCppRuntimeAdapter(RuntimeAdapter):
             }
         except Exception:
             return {}
+
+    @staticmethod
+    def _has_complete_gateway_timing(row: Dict[str, Any]) -> bool:
+        return all(row.get(field) is not None for field in GATEWAY_TIMING_FIELDS)
+
+    def reconcile_gateway_timings(self, request_rows: List[Dict[str, Any]]) -> Dict[str, Any]:
+        """Fill missing gateway timings after measured workload completion.
+
+        This deliberately runs outside the request execution path. It may mutate
+        only gateway-side telemetry fields in the provided request dictionaries.
+        """
+        started = time.monotonic()
+        if not self.gateway_telemetry_enabled:
+            result = {
+                "required_count": 0,
+                "resolved_count": 0,
+                "unresolved_count": 0,
+                "duration_seconds": 0.0,
+                "timeout_seconds": self.gateway_timing_reconciliation_timeout,
+                "poll_interval_seconds": self.gateway_timing_poll_interval,
+                "polled_request_ids": [],
+            }
+            self.runtime_metadata["gateway_timing_reconciliation"] = result
+            return result
+        by_id = {
+            row.get("request_id"): row
+            for row in request_rows
+            if row.get("status") == "success"
+            and row.get("request_id")
+            and not self._has_complete_gateway_timing(row)
+        }
+        unresolved = set(by_id)
+        required_count = len(unresolved)
+        polled: list[str] = []
+        deadline = started + max(0.0, self.gateway_timing_reconciliation_timeout)
+        while unresolved:
+            for request_id in list(unresolved):
+                polled.append(str(request_id))
+                timing = self._gateway_timing(str(request_id))
+                if all(timing.get(field) is not None for field in GATEWAY_TIMING_FIELDS):
+                    for field in GATEWAY_TIMING_FIELDS:
+                        by_id[request_id][field] = timing.get(field)
+                    unresolved.remove(request_id)
+            if not unresolved or time.monotonic() >= deadline:
+                break
+            time.sleep(max(0.001, self.gateway_timing_poll_interval))
+        ended = time.monotonic()
+        result = {
+            "required_count": required_count,
+            "resolved_count": required_count - len(unresolved),
+            "unresolved_count": len(unresolved),
+            "duration_seconds": ended - started,
+            "timeout_seconds": self.gateway_timing_reconciliation_timeout,
+            "poll_interval_seconds": self.gateway_timing_poll_interval,
+            "polled_request_ids": polled,
+            "unresolved_request_ids": sorted(str(item) for item in unresolved),
+        }
+        self.runtime_metadata["gateway_timing_reconciliation"] = result
+        return result
 
     def collect_trace_rows(self) -> List[dict]:
         if not self.gateway_telemetry_enabled:

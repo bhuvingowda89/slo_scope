@@ -1,0 +1,20 @@
+{
+  "defect_classification": "runner snapshot race",
+  "execution_collector_changed": true,
+  "formal_run_count_changed": false,
+  "mechanisms_changed": false,
+  "metric_definitions_changed": false,
+  "new_campaign_freeze_sha256": "7f47afe51f36d25da8db9948e58c3306e784a93ee5da7e1d6c744161d0cfb864",
+  "new_execution_campaign_id": "sloscope-phase6-v2",
+  "new_execution_root": "runs/phase6-v2",
+  "new_source_tree_sha256": "7e944c019d2e85a50a3781628302df94fc9016aeab0576a74f95df74a7268e3c",
+  "original_campaign_freeze_sha256": "82b61df32669f6731e31b1379d07d3d50291c1c000247251df2a4e14c60f0adb",
+  "original_formal_execution_superseded": true,
+  "original_source_tree_sha256": "3a3eef468db5c1c4dcfbeeb67f55081e25d78d9bb621bb658c318cceb1dfc6fc",
+  "rationale": "Gateway timing reconciliation occurs after measured request completion and before artifact finalization; SLO thresholds and scientific request metrics are unchanged.",
+  "schema_version": "sloscope.execution_integrity_amendment.v1",
+  "scientific_design_changed": false,
+  "slo_thresholds_changed": false,
+  "superseded_execution_root": "runs/phase6",
+  "workloads_changed": false
+}

@@ -1,0 +1,43 @@
+{
+  "condition": "LOAD_DOWNSTREAM diagnostic workload",
+  "created_at": "2026-09-30T23:19:13.865520+00:00",
+  "formal_campaign": false,
+  "measured_style_requests_per_run": 40,
+  "pids": {
+    "dependency": 12921,
+    "gateway": 12925,
+    "llama": 12922
+  },
+  "ports": {
+    "dependency": 8091,
+    "gateway": 8090,
+    "llama": 8080
+  },
+  "purpose": "non_formal_gateway_timing_reconciliation_stress",
+  "requested_repetitions": 10,
+  "runtime": {
+    "build": "11146",
+    "commit": "7fe450e19",
+    "raw": "0.00.000.523 I srv  llama_server: initializing ...\nversion: 0.5.0 (build 11146, commit 7fe450e19)\nbuilt with AppleClang 17.0.0.17000604 for Darwin arm64",
+    "target": "Darwin arm64",
+    "version": "0.5.0"
+  },
+  "schema_version": "sloscope.phase6b2_diagnostic_stress.v1",
+  "server_arguments": [
+    "-hf",
+    "Qwen/Qwen2.5-0.5B-Instruct-GGUF:Q4_K_M",
+    "--alias",
+    "sloscope-qwen2.5-0.5b",
+    "--host",
+    "127.0.0.1",
+    "--port",
+    "8080",
+    "--metrics",
+    "--parallel",
+    "2",
+    "--ctx-size",
+    "2048",
+    "--no-cache-prompt"
+  ],
+  "services_ready_at": "2026-09-30T23:19:16.414034+00:00"
+}

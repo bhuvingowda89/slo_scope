@@ -1,0 +1,264 @@
+{
+  "affected_missing_gateway_fields": [
+    "gateway_receive_time",
+    "dependency_start_time",
+    "dependency_end_time",
+    "llama_dispatch_time",
+    "llama_first_token_time",
+    "gateway_completion_time",
+    "dependency_duration"
+  ],
+  "affected_request": {
+    "actual_arrival": 42514.730148875,
+    "completion_time": 42515.731576041,
+    "dependency_duration": null,
+    "dependency_end_time": null,
+    "dependency_start_time": null,
+    "dispatch_time": 42514.730283041,
+    "error_message": null,
+    "error_type": null,
+    "first_token_time": 42515.543010083,
+    "gateway_completion_time": null,
+    "gateway_receive_time": null,
+    "llama_dispatch_time": null,
+    "llama_first_token_time": null,
+    "model_id": "sloscope-qwen2.5-0.5b",
+    "request_id": "phase6-r03-load-downstream-a01-req-000023",
+    "runtime_id": "llamacpp-local",
+    "scheduled_arrival": 42514.728041875,
+    "scheduler_slip": 0.0021070000002509914,
+    "sequence": 23,
+    "server_output_tokens": 16,
+    "server_prompt_tokens": 75,
+    "status": "success"
+  },
+  "affected_total_latency": 1.0014271659965743,
+  "affected_traces": [
+    {
+      "attributes": "{\"gateway_port\":8090,\"request_id\":\"phase6-r03-load-downstream-a01-req-000023\"}",
+      "attributes_json": {
+        "gateway_port": 8090,
+        "request_id": "phase6-r03-load-downstream-a01-req-000023"
+      },
+      "duration": 1.0007509580027545,
+      "end_time": 42515.732298208,
+      "parent_span_id": null,
+      "span_id": "c76a4f784de02d78",
+      "span_name": "gateway request",
+      "start_time": 42514.73154725,
+      "status": "ok",
+      "trace_id": "298fcb8979a67e15f8ac6b0f3be84f8e"
+    },
+    {
+      "attributes": "{\"dependency_port\":8091,\"request_id\":\"phase6-r03-load-downstream-a01-req-000023\"}",
+      "attributes_json": {
+        "dependency_port": 8091,
+        "request_id": "phase6-r03-load-downstream-a01-req-000023"
+      },
+      "duration": 0.1041537499986589,
+      "end_time": 42514.83575425,
+      "parent_span_id": "c76a4f784de02d78",
+      "span_id": "d51561b9726f23e4",
+      "span_name": "dependency call",
+      "start_time": 42514.7316005,
+      "status": "ok",
+      "trace_id": "298fcb8979a67e15f8ac6b0f3be84f8e"
+    },
+    {
+      "attributes": "{\"llama_base_url\":\"http://127.0.0.1:8080\",\"request_id\":\"phase6-r03-load-downstream-a01-req-000023\"}",
+      "attributes_json": {
+        "llama_base_url": "http://127.0.0.1:8080",
+        "request_id": "phase6-r03-load-downstream-a01-req-000023"
+      },
+      "duration": 0.89654279199749,
+      "end_time": 42515.732298208,
+      "parent_span_id": "c76a4f784de02d78",
+      "span_id": "c43c8c14852df173",
+      "span_name": "llama call",
+      "start_time": 42514.835755416,
+      "status": "ok",
+      "trace_id": "298fcb8979a67e15f8ac6b0f3be84f8e"
+    }
+  ],
+  "affected_ttft": 0.8128612079963204,
+  "all_executed_audit": {
+    "duplicate_request_ids": [],
+    "foreign_trace_request_ids": [],
+    "latent_partial_records": [
+      {
+        "missing": [
+          "gateway_receive_time",
+          "dependency_start_time",
+          "dependency_end_time",
+          "llama_dispatch_time",
+          "llama_first_token_time",
+          "gateway_completion_time",
+          "dependency_duration"
+        ],
+        "request_id": "phase6-r03-load-downstream-a01-req-000023",
+        "run_id": "phase6-r03-load-downstream-a01",
+        "trace_count": 3
+      }
+    ],
+    "missing_gateway_by_run": {
+      "phase6-r03-load-downstream-a01": 1
+    },
+    "partial_gateway_missing_patterns": {
+      "gateway_receive_time,dependency_start_time,dependency_end_time,llama_dispatch_time,llama_first_token_time,gateway_completion_time,dependency_duration": 1
+    },
+    "requests_missing_any_gateway_timing": 1,
+    "requests_with_all_gateway_timing": 1439,
+    "requests_with_gateway_timing_but_missing_trace": 0,
+    "requests_with_traces_but_missing_gateway_timing": 1,
+    "runs_audited": 36,
+    "successful_requests": 1440
+  },
+  "invalid_run_validation": {
+    "accounted_requests": 40,
+    "issues": [
+      {
+        "code": "missing_gateway_timing",
+        "message": "phase6-r03-load-downstream-a01-req-000023: gateway_receive_time,dependency_start_time,dependency_end_time,llama_dispatch_time,gateway_completion_time,dependency_duration"
+      }
+    ],
+    "planned_requests": 40,
+    "run_id": "phase6-r03-load-downstream-a01",
+    "valid": false
+  },
+  "neighbor_window": [
+    {
+      "actual_arrival": 42514.478847083,
+      "completion_time": 42515.418046375,
+      "dependency_duration": 0.1022105840020231,
+      "dependency_span_duration": 0.1022105840020231,
+      "first_token_time": 42515.230413625,
+      "gateway_span_duration": 0.9384688749996712,
+      "llama_span_duration": 0.8362307920033345,
+      "missing_gateway_fields": [],
+      "request_id": "phase6-r03-load-downstream-a01-req-000020",
+      "scheduled_arrival": 42514.478041875,
+      "scheduler_slip": 0.0008052080011111684,
+      "sequence": 20,
+      "status": "success",
+      "total_latency": 0.9391992919991026,
+      "trace_count": 3,
+      "ttft": 0.7515665419996367
+    },
+    {
+      "actual_arrival": 42514.561868791,
+      "completion_time": 42515.501563416,
+      "dependency_duration": 0.10254100000020117,
+      "dependency_span_duration": 0.10254100000020117,
+      "first_token_time": 42515.317172375,
+      "gateway_span_duration": 0.9390261250009644,
+      "llama_span_duration": 0.836430957999255,
+      "missing_gateway_fields": [],
+      "request_id": "phase6-r03-load-downstream-a01-req-000021",
+      "scheduled_arrival": 42514.561375208,
+      "scheduler_slip": 0.0004935830002068542,
+      "sequence": 21,
+      "status": "success",
+      "total_latency": 0.9396946249980829,
+      "trace_count": 3,
+      "ttft": 0.7553035839955555
+    },
+    {
+      "actual_arrival": 42514.646558791,
+      "completion_time": 42515.647684791,
+      "dependency_duration": 0.10314249999646563,
+      "dependency_span_duration": 0.10314249999646563,
+      "first_token_time": 42515.462387,
+      "gateway_span_duration": 1.0002290839984198,
+      "llama_span_duration": 0.8970589999953518,
+      "missing_gateway_fields": [],
+      "request_id": "phase6-r03-load-downstream-a01-req-000022",
+      "scheduled_arrival": 42514.644708541,
+      "scheduler_slip": 0.0018502499951864593,
+      "sequence": 22,
+      "status": "success",
+      "total_latency": 1.0011260000028415,
+      "trace_count": 3,
+      "ttft": 0.815828209000756
+    },
+    {
+      "actual_arrival": 42514.730148875,
+      "completion_time": 42515.731576041,
+      "dependency_duration": null,
+      "dependency_span_duration": 0.1041537499986589,
+      "first_token_time": 42515.543010083,
+      "gateway_span_duration": 1.0007509580027545,
+      "llama_span_duration": 0.89654279199749,
+      "missing_gateway_fields": [
+        "gateway_receive_time",
+        "dependency_start_time",
+        "dependency_end_time",
+        "llama_dispatch_time",
+        "llama_first_token_time",
+        "gateway_completion_time",
+        "dependency_duration"
+      ],
+      "request_id": "phase6-r03-load-downstream-a01-req-000023",
+      "scheduled_arrival": 42514.728041875,
+      "scheduler_slip": 0.0021070000002509914,
+      "sequence": 23,
+      "status": "success",
+      "total_latency": 1.0014271659965743,
+      "trace_count": 3,
+      "ttft": 0.8128612079963204
+    },
+    {
+      "actual_arrival": 42514.813471875,
+      "completion_time": 42515.871053708,
+      "dependency_duration": 0.10329670799546875,
+      "dependency_span_duration": 0.10329670799546875,
+      "first_token_time": 42515.692860541,
+      "gateway_span_duration": 1.0567930420002085,
+      "llama_span_duration": 0.9534610000046086,
+      "missing_gateway_fields": [],
+      "request_id": "phase6-r03-load-downstream-a01-req-000024",
+      "scheduled_arrival": 42514.811375208,
+      "scheduler_slip": 0.0020966669981135055,
+      "sequence": 24,
+      "status": "success",
+      "total_latency": 1.0575818329962203,
+      "trace_count": 3,
+      "ttft": 0.8793886659987038
+    },
+    {
+      "actual_arrival": 42514.896774416,
+      "completion_time": 42515.955363041,
+      "dependency_duration": 0.10179924999829382,
+      "dependency_span_duration": 0.10179924999829382,
+      "first_token_time": 42515.774761541,
+      "gateway_span_duration": 1.058201291001751,
+      "llama_span_duration": 0.9563740410012542,
+      "missing_gateway_fields": [],
+      "request_id": "phase6-r03-load-downstream-a01-req-000025",
+      "scheduled_arrival": 42514.894708541,
+      "scheduler_slip": 0.002065874999971129,
+      "sequence": 25,
+      "status": "success",
+      "total_latency": 1.0585886249973555,
+      "trace_count": 3,
+      "ttft": 0.877987124993524
+    },
+    {
+      "actual_arrival": 42514.978504541,
+      "completion_time": 42516.099427916,
+      "dependency_duration": 0.10201166600018041,
+      "dependency_span_duration": 0.10201166600018041,
+      "first_token_time": 42515.914845625,
+      "gateway_span_duration": 1.120386916998541,
+      "llama_span_duration": 1.0183468329996685,
+      "missing_gateway_fields": [],
+      "request_id": "phase6-r03-load-downstream-a01-req-000026",
+      "scheduled_arrival": 42514.978041875,
+      "scheduler_slip": 0.000462666001112666,
+      "sequence": 26,
+      "status": "success",
+      "total_latency": 1.1209233749978011,
+      "trace_count": 3,
+      "ttft": 0.9363410839941935
+    }
+  ]
+}

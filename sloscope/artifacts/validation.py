@@ -329,7 +329,10 @@ def validate_run(run_dir: Union[str, Path]) -> Dict[str, Any]:
                 _issue(issues, "unexpected_dependency_process_telemetry", "dependency telemetry present without configured dependency_pid")
             if dependency_pid is not None and row.get("dependency_pid") != dependency_pid:
                 _issue(issues, "dependency_pid_mismatch", f"expected {dependency_pid}, got {row.get('dependency_pid')}")
-        if config.mechanisms and any(m.mechanism_type == "downstream_latency" for m in config.mechanisms):
+        gateway_timing_required = bool(config.telemetry.traces) or (
+            bool(config.mechanisms) and any(m.mechanism_type == "downstream_latency" for m in config.mechanisms)
+        )
+        if gateway_timing_required:
             for row in requests:
                 if row.get("status") != "success":
                     continue
@@ -338,6 +341,7 @@ def validate_run(run_dir: Union[str, Path]) -> Dict[str, Any]:
                     "dependency_start_time",
                     "dependency_end_time",
                     "llama_dispatch_time",
+                    "llama_first_token_time",
                     "gateway_completion_time",
                     "dependency_duration",
                 ]

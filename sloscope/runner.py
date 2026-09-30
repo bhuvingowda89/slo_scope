@@ -496,6 +496,10 @@ class ExperimentRunner:
                 system_metrics.append(collector.sample())
             if self.config.telemetry.runtime_metrics:
                 runtime_metrics.extend(await asyncio.to_thread(getattr(self.runtime, "collect_runtime_metric_rows"), self.clock.monotonic()))
+            reconcile_gateway = getattr(self.runtime, "reconcile_gateway_timings", None)
+            if callable(reconcile_gateway):
+                reconciliation = await asyncio.to_thread(reconcile_gateway, requests)
+                self.lifecycle.event("gateway_timing_reconciliation", "gateway timing reconciliation complete", reconciliation)
             if self.config.telemetry.traces and hasattr(self.runtime, "collect_trace_rows"):
                 traces.extend(await asyncio.to_thread(getattr(self.runtime, "collect_trace_rows")))
             self.lifecycle.transition(ExperimentState.RECOVERY, "workload complete")

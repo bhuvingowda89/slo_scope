@@ -1,0 +1,112 @@
+{
+  "a02_safe_under_current_frozen_source": false,
+  "affected_request_id": "phase6-r03-load-downstream-a01-req-000023",
+  "all_executed_audit": {
+    "duplicate_request_ids": [],
+    "foreign_trace_request_ids": [],
+    "latent_partial_records": [
+      {
+        "missing": [
+          "gateway_receive_time",
+          "dependency_start_time",
+          "dependency_end_time",
+          "llama_dispatch_time",
+          "llama_first_token_time",
+          "gateway_completion_time",
+          "dependency_duration"
+        ],
+        "request_id": "phase6-r03-load-downstream-a01-req-000023",
+        "run_id": "phase6-r03-load-downstream-a01",
+        "trace_count": 3
+      }
+    ],
+    "missing_gateway_by_run": {
+      "phase6-r03-load-downstream-a01": 1
+    },
+    "partial_gateway_missing_patterns": {
+      "gateway_receive_time,dependency_start_time,dependency_end_time,llama_dispatch_time,llama_first_token_time,gateway_completion_time,dependency_duration": 1
+    },
+    "requests_missing_any_gateway_timing": 1,
+    "requests_with_all_gateway_timing": 1439,
+    "requests_with_gateway_timing_but_missing_trace": 0,
+    "requests_with_traces_but_missing_gateway_timing": 1,
+    "runs_audited": 36,
+    "successful_requests": 1440
+  },
+  "basis": [
+    "Gateway publishes request_timings and trace_rows together only in _handle_completion finally block after streaming/upstream cleanup.",
+    "Client runtime breaks out of the SSE read loop on [DONE], records completion, then immediately performs a single /sloscope/requests/{request_id} lookup.",
+    "The single lookup returns empty timing if the gateway finally block has not yet inserted request_timings; there is no retry/eventual consistency wait.",
+    "Trace rows for the same request were later collected after workload completion, proving the gateway ultimately finalized spans for the exact request ID.",
+    "Identifier bytes match across workload, requests.parquet, and trace attributes; logs show no gateway/service exception."
+  ],
+  "diagnostic_reproduction_performed": false,
+  "formal_artifacts_modified": false,
+  "incident": "phase6-r03-load-downstream-a01 missing gateway timing for one successful request",
+  "missing_fields": [
+    "gateway_receive_time",
+    "dependency_start_time",
+    "dependency_end_time",
+    "llama_dispatch_time",
+    "llama_first_token_time",
+    "gateway_completion_time",
+    "dependency_duration"
+  ],
+  "recommended_continuation_path": "PATH 2 \u2014 SOURCE FIX REQUIRED",
+  "request_success_evidence": {
+    "server_output_tokens": 16,
+    "server_prompt_tokens": 75,
+    "status": "success",
+    "total_latency": 1.0014271659965743,
+    "ttft": 0.8128612079963204
+  },
+  "root_cause_classification": "B. RUNNER SNAPSHOT RACE",
+  "source_defect_exists": true,
+  "trace_evidence": [
+    {
+      "attributes": "{\"gateway_port\":8090,\"request_id\":\"phase6-r03-load-downstream-a01-req-000023\"}",
+      "attributes_json": {
+        "gateway_port": 8090,
+        "request_id": "phase6-r03-load-downstream-a01-req-000023"
+      },
+      "duration": 1.0007509580027545,
+      "end_time": 42515.732298208,
+      "parent_span_id": null,
+      "span_id": "c76a4f784de02d78",
+      "span_name": "gateway request",
+      "start_time": 42514.73154725,
+      "status": "ok",
+      "trace_id": "298fcb8979a67e15f8ac6b0f3be84f8e"
+    },
+    {
+      "attributes": "{\"dependency_port\":8091,\"request_id\":\"phase6-r03-load-downstream-a01-req-000023\"}",
+      "attributes_json": {
+        "dependency_port": 8091,
+        "request_id": "phase6-r03-load-downstream-a01-req-000023"
+      },
+      "duration": 0.1041537499986589,
+      "end_time": 42514.83575425,
+      "parent_span_id": "c76a4f784de02d78",
+      "span_id": "d51561b9726f23e4",
+      "span_name": "dependency call",
+      "start_time": 42514.7316005,
+      "status": "ok",
+      "trace_id": "298fcb8979a67e15f8ac6b0f3be84f8e"
+    },
+    {
+      "attributes": "{\"llama_base_url\":\"http://127.0.0.1:8080\",\"request_id\":\"phase6-r03-load-downstream-a01-req-000023\"}",
+      "attributes_json": {
+        "llama_base_url": "http://127.0.0.1:8080",
+        "request_id": "phase6-r03-load-downstream-a01-req-000023"
+      },
+      "duration": 0.89654279199749,
+      "end_time": 42515.732298208,
+      "parent_span_id": "c76a4f784de02d78",
+      "span_id": "c43c8c14852df173",
+      "span_name": "llama call",
+      "start_time": 42514.835755416,
+      "status": "ok",
+      "trace_id": "298fcb8979a67e15f8ac6b0f3be84f8e"
+    }
+  ]
+}

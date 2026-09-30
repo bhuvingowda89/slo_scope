@@ -6,11 +6,11 @@ experiments are executed by Phase 5.
 
 ## Freeze Identity
 
-- campaign_freeze_sha256: `82b61df32669f6731e31b1379d07d3d50291c1c000247251df2a4e14c60f0adb`
-- campaign_manifest_sha256: `082ec774ea3ab514846a844f60f9c4adae2b2394dad5e6b9060fa70c6f38ce5c`
-- git_revision: `0b73db598558b0df41b1b28654f5f568c65e7b35`
+- campaign_freeze_sha256: `7f47afe51f36d25da8db9948e58c3306e784a93ee5da7e1d6c744161d0cfb864`
+- campaign_manifest_sha256: `b759e635e2c9138ea0b1c7bffbd38640b04af0d2c81c7c4ee5866dac82571009`
+- git_revision: `bd2078f3841b2f80cb74d04bd28cde6d38cde4e0`
 - git_dirty_at_freeze_generation: `True`
-- source_tree_sha256_at_generation: `3a3eef468db5c1c4dcfbeeb67f55081e25d78d9bb621bb658c318cceb1dfc6fc`
+- source_tree_sha256_at_generation: `7e944c019d2e85a50a3781628302df94fc9016aeab0576a74f95df74a7268e3c`
 
 Publication execution requires `git_dirty=false`; the Phase 5 repository may still
 contain uncommitted freeze artifacts until the user commits them.
@@ -40,17 +40,14 @@ run/repetition. Formal Phase 6 outcomes must not be used to set thresholds.
   output matched-control threshold.
 - observed seconds per output token: retained as a diagnostic decode metric, not a
   counted independent SLO, because it is highly redundant with decode duration here.
-- THROUGHPUT_DIAGNOSTIC: run-level observed successful throughput is retained for
-  capacity and RCA analysis, but it is demand-dependent and does not contribute to
-  single/compound SLO violation counts.
+- THROUGHPUT_DIAGNOSTIC: run-level observed throughput/goodput is retained for
+  capacity analysis but is not a counted universal SLO because offered load varies
+  by condition.
 
 Single SLO violation means exactly one frozen SLO is violated in a measured run.
 Compound SLO violation means two or more frozen SLOs are violated in the same
 measured run. Request rows are observations within a run, not independent
 experimental repetitions.
-
-The counted SLO set is exactly: `TTFT_SLO`, `TOTAL_LATENCY_SLO`, and
-`DECODE_DURATION_SLO`.
 
 ## Frozen Mechanisms
 

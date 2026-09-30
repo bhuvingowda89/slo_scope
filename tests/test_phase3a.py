@@ -53,7 +53,7 @@ from sloscope.campaign_phase5 import (
     validate_freeze as validate_phase5_freeze,
 )
 from sloscope.pilot_phase4c import build_blocks as build_phase4c_blocks, choose_output_reference, is_queue_confounded
-from sloscope.runtime.llamacpp import LlamaCppRuntimeAdapter, content_from_chunk, parse_prometheus_metrics, parse_sse_payload
+from sloscope.runtime.llamacpp import GATEWAY_TIMING_FIELDS, LlamaCppRuntimeAdapter, content_from_chunk, parse_prometheus_metrics, parse_sse_payload
 from sloscope.runner import ExperimentRunner
 from sloscope.telemetry.schemas import RequestRecord, TRACE_COLUMNS
 from sloscope.workload import generate_workload_plan
@@ -1930,7 +1930,7 @@ def test_phase5_unique_run_ids_for_every_manifest_attempt():
     run_ids = [row["run_id"] for row in rows]
     assert len(run_ids) == len(set(run_ids))
     assert all(row["attempt"] == 1 for row in rows)
-    assert all(row["run_id"].startswith(f"phase6-r{int(row['repetition']):02d}-") for row in rows)
+    assert all(row["run_id"].startswith(f"phase6v2-r{int(row['repetition']):02d}-") for row in rows)
 
 
 def test_phase5_experimental_condition_artifact_and_hash(tmp_path):
@@ -2135,3 +2135,209 @@ def test_phase5_validator_detects_duplicate_output_destination(monkeypatch):
     from sloscope.campaign_phase5 import validate_freeze
 
     assert "duplicate run output destination" in validate_freeze()
+
+
+def timing_payload(request_id="req", base=100.0):
+    return {
+        "request_id": request_id,
+        "gateway_receive_time": base,
+        "dependency_start_time": base + 0.01,
+        "dependency_end_time": base + 0.11,
+        "llama_dispatch_time": base + 0.11,
+        "llama_first_token_time": base + 0.20,
+        "gateway_completion_time": base + 0.30,
+        "dependency_duration": 0.10,
+    }
+
+
+def request_row(request_id, *, status="success", with_timing=False, base=100.0):
+    row = RequestRecord(
+        request_id,
+        0,
+        1.0,
+        1.0,
+        1.0,
+        1.1 if status == "success" else None,
+        1.2,
+        None,
+        None,
+        status,
+        "llama-runtime",
+        "fake-gguf",
+    ).to_dict()
+    if with_timing:
+        row.update({k: v for k, v in timing_payload(request_id, base).items() if k in GATEWAY_TIMING_FIELDS})
+    return row
+
+
+def with_traces_enabled(config):
+    data = config.to_dict(include_hash=False)
+    data["telemetry"] = {**data.get("telemetry", {}), "traces": True}
+    return ExperimentConfig.from_dict(data)
+
+
+def test_gateway_timing_reconciliation_fills_missing_without_changing_scientific_times(monkeypatch):
+    adapter = LlamaCppRuntimeAdapter(llama_cfg("http://fake").runtime, SystemClock(), 1)
+    row = request_row("r1")
+    before = {k: row[k] for k in ["scheduled_arrival", "actual_arrival", "dispatch_time", "first_token_time", "completion_time", "scheduler_slip"]}
+    calls = []
+
+    def fake_timing(request_id):
+        calls.append(request_id)
+        return {} if len(calls) == 1 else timing_payload(request_id)
+
+    monkeypatch.setattr(adapter, "_gateway_timing", fake_timing)
+    adapter.gateway_timing_poll_interval = 0.001
+    result = adapter.reconcile_gateway_timings([row])
+    assert result["required_count"] == 1
+    assert result["resolved_count"] == 1
+    assert result["unresolved_count"] == 0
+    assert len(calls) == 2
+    assert all(row[field] is not None for field in GATEWAY_TIMING_FIELDS)
+    assert {k: row[k] for k in before} == before
+
+
+def test_gateway_timing_reconciliation_timeout_leaves_run_invalid(monkeypatch):
+    adapter = LlamaCppRuntimeAdapter(llama_cfg("http://fake").runtime, SystemClock(), 1)
+    adapter.gateway_timing_reconciliation_timeout = 0.0
+    row = request_row("never")
+    monkeypatch.setattr(adapter, "_gateway_timing", lambda request_id: {})
+    result = adapter.reconcile_gateway_timings([row])
+    assert result["required_count"] == 1
+    assert result["resolved_count"] == 0
+    assert result["unresolved_count"] == 1
+    assert all(row[field] is None for field in GATEWAY_TIMING_FIELDS)
+
+
+def test_gateway_timing_reconciliation_multiple_missing_join_correctly(monkeypatch):
+    adapter = LlamaCppRuntimeAdapter(llama_cfg("http://fake").runtime, SystemClock(), 1)
+    rows = [request_row("r1"), request_row("r2"), request_row("r3", with_timing=True, base=300.0)]
+    seen = []
+
+    def fake_timing(request_id):
+        seen.append(request_id)
+        return timing_payload(request_id, 100.0 if request_id == "r1" else 200.0)
+
+    monkeypatch.setattr(adapter, "_gateway_timing", fake_timing)
+    result = adapter.reconcile_gateway_timings(rows)
+    assert result["required_count"] == 2
+    assert result["resolved_count"] == 2
+    assert set(seen) == {"r1", "r2"}
+    assert "r3" not in seen
+    assert rows[0]["gateway_receive_time"] == 100.0
+    assert rows[1]["gateway_receive_time"] == 200.0
+    assert rows[2]["gateway_receive_time"] == 300.0
+
+
+def install_fake_llama_with_gateway_timing(monkeypatch, *, delayed_once=None, never=None, request_count=1):
+    delayed_once = set(delayed_once or [])
+    never = set(never or [])
+    lookups = []
+    completions = []
+    trace_ids = []
+
+    def spans_for(request_id):
+        return [
+            {"trace_id": f"{abs(hash(request_id)) % (16**32):032x}", "span_id": f"{abs(hash(request_id + 'g')) % (16**16):016x}", "parent_span_id": None, "span_name": "gateway request", "start_time": 1.0, "end_time": 1.3, "duration": 0.3, "status": "ok", "attributes": json.dumps({"request_id": request_id})},
+            {"trace_id": f"{abs(hash(request_id)) % (16**32):032x}", "span_id": f"{abs(hash(request_id + 'd')) % (16**16):016x}", "parent_span_id": f"{abs(hash(request_id + 'g')) % (16**16):016x}", "span_name": "dependency call", "start_time": 1.01, "end_time": 1.11, "duration": 0.1, "status": "ok", "attributes": json.dumps({"request_id": request_id})},
+            {"trace_id": f"{abs(hash(request_id)) % (16**32):032x}", "span_id": f"{abs(hash(request_id + 'l')) % (16**16):016x}", "parent_span_id": f"{abs(hash(request_id + 'g')) % (16**16):016x}", "span_name": "llama call", "start_time": 1.11, "end_time": 1.3, "duration": 0.19, "status": "ok", "attributes": json.dumps({"request_id": request_id})},
+        ]
+
+    timing_lookup_counts = {}
+
+    def fake_urlopen(req, timeout=None):
+        url = req.full_url if hasattr(req, "full_url") else str(req)
+        if url.endswith("/health"):
+            return FakeHTTPResponse(body=b'{"status":"ok"}')
+        if url.endswith("/v1/models"):
+            return FakeHTTPResponse(body=b'{"data":[{"id":"fake-gguf"}]}')
+        if url.endswith("/metrics"):
+            return FakeHTTPResponse(body=b"llamacpp:requests_processing 0\n")
+        if url.endswith("/sloscope/reset"):
+            return FakeHTTPResponse(body=b'{"status":"ok","gateway":"sloscope"}')
+        if url.endswith("/sloscope/traces"):
+            spans = []
+            for request_id in trace_ids:
+                spans.extend(spans_for(request_id))
+            return FakeHTTPResponse(body=json.dumps({"spans": spans}).encode("utf-8"))
+        if "/sloscope/requests/" in url:
+            request_id = url.rsplit("/", 1)[-1]
+            lookups.append(request_id)
+            timing_lookup_counts[request_id] = timing_lookup_counts.get(request_id, 0) + 1
+            if request_id in never:
+                raise FakeHTTPError(url, 404, b'{"error":"not found"}')
+            if request_id in delayed_once and timing_lookup_counts[request_id] == 1:
+                raise FakeHTTPError(url, 404, b'{"error":"not found"}')
+            return FakeHTTPResponse(body=json.dumps(timing_payload(request_id)).encode("utf-8"))
+        if url.endswith("/v1/completions"):
+            request_id = req.get_header("X-SLOScope-Request-Id")
+            if request_id is None:
+                request_id = next((value for key, value in req.headers.items() if key.lower() == "x-sloscope-request-id"), None)
+            completions.append(request_id)
+            trace_ids.append(request_id)
+            return FakeHTTPResponse(
+                lines=[
+                    b"data: {\"choices\":[{\"text\":\"x\",\"finish_reason\":null}]}\n\n",
+                    b"data: {\"choices\":[{\"text\":\"y\",\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":4,\"completion_tokens\":2}}\n\n",
+                    b"data: [DONE]\n\n",
+                ]
+            )
+        raise FakeHTTPError(url, 404, b'{"error":"not found"}')
+
+    monkeypatch.setattr("sloscope.runtime.llamacpp.urllib.request.urlopen", fake_urlopen)
+    return {"lookups": lookups, "completions": completions}
+
+
+def test_runner_reconciles_delayed_gateway_timing_after_workload(monkeypatch, tmp_path):
+    run_id = "race-reconciled"
+    request_id = f"{run_id}-req-000000"
+    observed = install_fake_llama_with_gateway_timing(monkeypatch, delayed_once={request_id})
+    cfg = llama_cfg("http://fake", run_id=run_id, request_count=1, metrics_enabled=True)
+    cfg.runtime.parameters["gateway_timing_reconciliation_timeout_seconds"] = 0.1
+    cfg.runtime.parameters["gateway_timing_poll_interval_seconds"] = 0.001
+    cfg = with_traces_enabled(cfg)
+    run_dir = ExperimentRunner(cfg, tmp_path).run()
+    result = validate_run(run_dir)
+    _, rows = read_table(run_dir / "requests.parquet")
+    metadata = read_json(run_dir / "runtime_metadata.json")
+    assert result["valid"]
+    assert rows[0]["status"] == "success"
+    assert all(rows[0][field] is not None for field in GATEWAY_TIMING_FIELDS)
+    assert metadata["gateway_timing_reconciliation"]["required_count"] == 1
+    assert metadata["gateway_timing_reconciliation"]["resolved_count"] == 1
+    assert observed["lookups"].count(request_id) >= 2
+
+
+def test_runner_permanent_missing_gateway_timing_remains_invalid(monkeypatch, tmp_path):
+    run_id = "race-unresolved"
+    request_id = f"{run_id}-req-000000"
+    install_fake_llama_with_gateway_timing(monkeypatch, never={request_id})
+    cfg = llama_cfg("http://fake", run_id=run_id, request_count=1, metrics_enabled=True)
+    cfg.runtime.parameters["gateway_timing_reconciliation_timeout_seconds"] = 0.0
+    cfg = with_traces_enabled(cfg)
+    run_dir = ExperimentRunner(cfg, tmp_path).run()
+    result = validate_run(run_dir)
+    _, rows = read_table(run_dir / "requests.parquet")
+    metadata = read_json(run_dir / "runtime_metadata.json")
+    assert not result["valid"]
+    assert "missing_gateway_timing" in codes(result)
+    assert all(rows[0][field] is None for field in GATEWAY_TIMING_FIELDS)
+    assert metadata["gateway_timing_reconciliation"]["unresolved_count"] == 1
+
+
+def test_reconciliation_does_not_delay_open_loop_or_completion(monkeypatch, tmp_path):
+    run_id = "race-schedule"
+    delayed = {f"{run_id}-req-{idx:06d}" for idx in range(3)}
+    observed = install_fake_llama_with_gateway_timing(monkeypatch, delayed_once=delayed)
+    cfg = llama_cfg("http://fake", run_id=run_id, request_count=3, inter_arrival=0.01, max_outstanding=3)
+    cfg.runtime.parameters["gateway_timing_reconciliation_timeout_seconds"] = 0.1
+    cfg.runtime.parameters["gateway_timing_poll_interval_seconds"] = 0.001
+    cfg = with_traces_enabled(cfg)
+    run_dir = ExperimentRunner(cfg, tmp_path).run()
+    _, rows = read_table(run_dir / "requests.parquet")
+    metadata = read_json(run_dir / "runtime_metadata.json")
+    assert validate_run(run_dir)["valid"]
+    assert rows[1]["actual_arrival"] - rows[0]["actual_arrival"] < 0.04
+    assert len(observed["completions"]) == 3
+    assert metadata["gateway_timing_reconciliation"]["required_count"] == 3
+    assert metadata["gateway_timing_reconciliation"]["resolved_count"] == 3
