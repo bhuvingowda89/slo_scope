@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="420"><style>text{font-family:Arial;font-size:10px}.title{font-size:15px;font-weight:bold}</style><text class="title" x="20" y="24">Figure 11. Single-to-compound gap</text>
+<text x="20" y="55">{'fold': 1, 'P1_complete_cause_recall': 0.4, 'P2_complete_cause_recall': 1.0, 'difference': 0.6}</text>
+<text x="20" y="75">{'fold': 2, 'P1_complete_cause_recall': 0.6, 'P2_complete_cause_recall': 1.0, 'difference': 0.4}</text>
+<text x="20" y="95">{'fold': 3, 'P1_complete_cause_recall': 0.6, 'P2_complete_cause_recall': 1.0, 'difference': 0.4}</text>
+<text x="20" y="115">{'fold': 4, 'P1_complete_cause_recall': 0.6, 'P2_complete_cause_recall': 1.0, 'difference': 0.4}</text>
+<text x="20" y="135">{'fold': 5, 'P1_complete_cause_recall': 0.6, 'P2_complete_cause_recall': 1.0, 'difference': 0.4}</text>
+<text x="20" y="155">{'fold': 6, 'P1_complete_cause_recall': 0.6, 'P2_complete_cause_recall': 1.0, 'difference': 0.4}</text>
+<text x="20" y="175">{'fold': 7, 'P1_complete_cause_recall': 0.6, 'P2_complete_cause_recall': 1.0, 'difference': 0.4}</text>
+<text x="20" y="195">{'fold': 8, 'P1_complete_cause_recall': 0.6, 'P2_complete_cause_recall': 1.0, 'difference': 0.4}</text>
+<text x="20" y="215">{'fold': 'SUMMARY', 'P1_complete_cause_recall': None, 'P2_complete_cause_recall': None, 'difference': 0.42500000000000004, 'median_difference': 0.4, 'ci_low': 0.36588439371018044, 'ci_high': 0.48411560628981964, 'exact_signflip_p': 0.0078125}</text>
+</svg>

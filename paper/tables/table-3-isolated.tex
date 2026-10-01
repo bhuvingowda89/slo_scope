@@ -1,0 +1,15 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Primary isolated mechanism effects from matched controls.}
+\begin{tabular}{lllll}
+\hline
+Mechanism & Metric & Mean delta (s) & 95\% CI & Holm p \\
+\hline
+INPUT & ttft\_p95 & 0.0456 & 0.0455991 [0.0438061, 0.0473921] & 2.77e-10 \\
+OUTPUT & post\_first\_token\_duration\_p95 & 0.2239 & 0.223907 [0.205725, 0.24209] & 1.45e-08 \\
+LOAD & ttft\_p95 & 1.0841 & 1.08412 [1.04523, 1.123] & 1.94e-10 \\
+DOWNSTREAM & total\_latency\_p95 & 0.1041 & 0.10412 [0.0993925, 0.108847] & 5.04e-10 \\
+\hline
+\end{tabular}
+\end{table}

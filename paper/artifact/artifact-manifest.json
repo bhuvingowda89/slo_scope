@@ -1,0 +1,60 @@
+{
+  "generated_at": "2026-10-01T18:57:04.221273+00:00",
+  "items": [
+    {
+      "bytes": 55888,
+      "path": "runs/phase6-v2/publication-run-index.jsonl",
+      "sha256": "dee0eb1927a84af8c02f8ef26bec55fe697decba9df2e351c45cffef59c491d8"
+    },
+    {
+      "bytes": 47868,
+      "path": "runs/phase7d-qwen15b/publication-run-index.jsonl",
+      "sha256": "3f8333dc8c1c6b916dbc1db554ed5f847653486013457be790813124eb900a71"
+    },
+    {
+      "bytes": 1157,
+      "path": "analysis/phase7a1/table-2-isolated-effects.csv",
+      "sha256": "5cddeb3ef304ef1baf9473c1890cd9d85813d297e2ced35dfa9e3bd3e76751f8"
+    },
+    {
+      "bytes": 3585,
+      "path": "analysis/phase7a1/table-3-factorial-interactions.csv",
+      "sha256": "391799bf9deec7f75ba2c0eb12918eb1d590e33dc20342b7701e4f169e646359"
+    },
+    {
+      "bytes": 1411,
+      "path": "analysis/phase7b/table-4-csd-summary.csv",
+      "sha256": "99ecdcf7c6560b6464b69ff39ab971d07788622cdd3a263cf8a87b6b20f6d102"
+    },
+    {
+      "bytes": 7397,
+      "path": "analysis/phase7c/table-6-rca-baselines.csv",
+      "sha256": "7accf3e016dc117362ff058e25605978c82c5f98d00f81a580a99d4335a80c90"
+    },
+    {
+      "bytes": 2983,
+      "path": "analysis/phase7c1a/table-9a-mesr-corrected-primary.csv",
+      "sha256": "a63148bdbe8ca5e1e1066ad513240013528b0138d534bb41f6438b6bcb9f7c43"
+    },
+    {
+      "bytes": 644,
+      "path": "analysis/phase7d2a/table-12a-zero-shot-generalization.csv",
+      "sha256": "0585673871b27ed8693f169cf5fd3a838717eae5fb67325f088b3a0950abcf12"
+    },
+    {
+      "bytes": 5224,
+      "path": "analysis/phase7e/table-16-telemetry-missingness.csv",
+      "sha256": "1a52ceb6bf6b9eccc96c97c3126dff5f5b57a069f9940b9c34edb3f6b16484e2"
+    },
+    {
+      "bytes": 880,
+      "path": "analysis/phase7f/table-21-quality-cost-frontier.csv",
+      "sha256": "c4321b437687db0f67d36734c499ae9dfdb43108f0fa2bceea2d019ae97f0225"
+    },
+    {
+      "bytes": 45066,
+      "path": "paper/provenance/result-registry.json",
+      "sha256": "430ced273a443e7ddbad35ec964a2d0b79f777fba80d55270be9515576c600d2"
+    }
+  ]
+}

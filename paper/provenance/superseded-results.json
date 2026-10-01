@@ -1,0 +1,24 @@
+{
+  "authoritative_replacements": [
+    {
+      "context": "Phase 7D.2a exact sklearn M2/F2T target compound exact",
+      "value": 0.2
+    }
+  ],
+  "blacklisted_authoritative_sources": [
+    "analysis/phase7a/",
+    "analysis/phase7c1/",
+    "analysis/phase7d2/",
+    "runs/phase6/"
+  ],
+  "blacklisted_values": [
+    {
+      "context": "Phase 7D.2 provisional in-house optimizer M2/F2T target compound exact",
+      "value": 0.4
+    },
+    {
+      "context": "superseded by corrected Phase 7C.1a",
+      "value": "Phase 7C.1 MESR"
+    }
+  ]
+}

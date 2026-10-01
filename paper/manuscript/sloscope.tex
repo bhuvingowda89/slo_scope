@@ -1,0 +1,129 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\title{SLOScope: Benchmarking Compound SLO Degradation and Diagnosis in Commodity LLM Inference Systems}
+\author{Anonymous for review}
+\date{}
+\begin{document}
+\maketitle
+\begin{abstract}
+Large-language-model inference services expose coupled latency stages: input prefill, output decoding, queueing under load, and downstream service calls. SLO failures in such systems may therefore arise from simultaneous mechanisms whose observable signatures need not compose additively. We present SLOScope, a reproducible benchmark and empirical study of single and compound degradation in a commodity llama.cpp/Metal inference service. Across 104 source-domain formal runs, matched factorial analysis shows that isolated mechanisms produce strong observable effects, but compound behavior is selective rather than universal: INPUT+LOAD and OUTPUT+LOAD show Holm-supported multivariate Compound Signature Divergence, while three other retained pairs do not. Multi-label RCA exhibits a significant compositional gap: a single-fault-trained logistic baseline recovers 57.5\% of compound cause sets, versus 97.5\% with compound training. Temporal features improve in-domain diagnosis to 82.5\%, but fall to 20.0\% under zero-shot transfer to a larger Qwen model, revealing model-sensitive signatures. An interpretable mechanism-evidence ranker is useful for analysis but is not the best-performing RCA method. Degraded-observability experiments separate clean accuracy from robustness, and a final telemetry cost study finds 14--17\% host-telemetry storage savings with preserved diagnosis quality, but the pre-specified service non-regression guard is not satisfied. The results position compound SLO diagnosis as a benchmark and measurement problem, not merely a classifier problem.
+\end{abstract}
+
+\section{Introduction}
+LLM inference services expose multiple latency stages and telemetry views. A request may wait in the scheduler, spend time in prompt prefill before first token, generate tokens through autoregressive decoding, and call external services through an application gateway. In production, these mechanisms can overlap: longer prompts can arrive during high load; longer completions can coincide with queueing; dependency delay can be hidden behind or amplified by model-side work. SLOScope asks whether performance signatures compose, whether diagnosis composes, whether learned diagnostic relationships transfer across model configurations, and what diagnosis quality costs in telemetry.
+
+The central thesis of this paper is empirical: compound degradation in LLM inference systems cannot always be understood as a simple composition of isolated faults. However, the evidence is deliberately nuanced. Some compound pairs show strong non-additivity; others do not. Some diagnostic features help in-domain; the same features may transfer poorly. Reduced telemetry can preserve offline diagnosis quality; proving live service non-regression is harder.
+
+This paper makes five contributions. First, it provides a reproducible commodity-hardware benchmark methodology for controlled single and compound degradation in LLM inference services. Second, it introduces a matched factorial protocol and Compound Signature Divergence (CSD) analysis showing selective multivariate non-additivity. Third, it provides a systematic multi-label RCA study showing a statistically supported single-fault to compound-diagnosis gap. Fourth, it evaluates cross-model transfer and degraded observability, showing that temporal logistic features are strong in-domain but model-sensitive. Fifth, it quantifies a telemetry quality/cost frontier, finding meaningful storage reductions but a negative final H5 result under a frozen service-performance guard.
+
+\section{Background and Motivation}
+LLM serving work often separates prefill and decode behavior because they stress different resources and latency objectives \cite{distserve2024,sarathi2024}. SLO-oriented systems increasingly reason about TTFT, token generation, throughput, and goodput. Separately, microservice RCA research has produced trace, metric, graph, and benchmark-oriented approaches \cite{microRCA2020,rcaeval2025}. SLOScope studies the intersection: controlled compound degradation and diagnosis in an LLM inference service with gateway, dependency, runtime, trace, and system telemetry.
+
+\section{Research Questions and Experimental Principles}
+We organize the study around five research questions. RQ1 asks how individual mechanisms affect observable behavior. RQ2 asks how simultaneously active mechanisms interact. RQ3 asks how accurately causes can be recovered and how diagnosis transfers across model configurations. RQ4 asks how diagnosis degrades under missing, sampled, noisy, delayed, or absent telemetry. RQ5 asks which telemetry reductions preserve quality and what storage/service tradeoffs result.
+
+The statistical unit is never the individual request when testing campaign-level hypotheses. Source-domain factorial and RCA analyses use run/repetition-level units; target generalization uses six target repetition blocks; telemetry cost uses matched repetition-by-workload blocks. Exact sign-flip tests, Holm corrections, bootstrap intervals, and Student-t intervals are used where pre-specified.
+
+\section{SLOScope Design}
+SLOScope consists of a load generator, an instrumented gateway, a synthetic dependency service, a llama.cpp server, and an artifact pipeline. Figure~\ref{fig:architecture} shows the architecture. The benchmark records ground-truth mechanism activation from frozen condition contracts, not from telemetry. Mechanisms are experimental interventions; observable signatures are measured outcomes.
+
+\begin{figure}[t]
+\centering
+\fbox{\parbox{0.92\linewidth}{Architecture asset: \texttt{paper/figures/figure-1-architecture.svg}.}}
+\caption{SLOScope architecture and controlled mechanism injection points.}
+\label{fig:architecture}
+\end{figure}
+
+\input{../tables/table-1-mechanisms.tex}
+\input{../tables/table-2-campaigns.tex}
+
+CPU contention calibration was evaluated but deferred because it did not create a useful controlled degradation regime on the Metal setup. This is a scope decision rather than a hidden negative result.
+
+\section{Experimental Methodology}
+The source campaign uses Qwen2.5-0.5B-Instruct GGUF Q4\_K\_M with llama.cpp 0.5.0 on Darwin arm64/Metal. It contains 104 publication runs, 13 conditions, eight repetitions, and 4160 measured requests. The target model-holdout campaign uses Qwen2.5-1.5B-Instruct GGUF Q4\_K\_M with the same runtime and mechanism settings, producing 66 valid runs and 2640 measured requests. The final telemetry cost campaign contains 48 runs and 1920 measured requests and is not used for RCA training or accuracy estimation.
+
+Warm-up requests are excluded from scientific aggregates. Every formal campaign writes publication indices, manifests, validation artifacts, trace accounting, gateway timing reconciliation summaries, and provenance hashes. Pilot and diagnostic data are excluded from formal analysis.
+
+\section{Single-Mechanism Effects and Compound Interactions}
+RQ1 is answered by matched control comparisons in Phase 7A.1. Table~\ref{tab:isolated} reports the primary isolated effects. INPUT primarily increases TTFT, OUTPUT primarily increases post-first-token duration, LOAD strongly increases TTFT, and DOWNSTREAM increases total latency through the dependency channel. Formal LOAD queue-depth metrics were unavailable; queue depth is therefore not inferred from latency.
+
+\input{../tables/table-3-isolated.tex}
+
+The OUTPUT control drift is a methodological result. The calibration control had no crossings, but formal OUTPUT\_CONTROL shifted by approximately 15.6\% in total latency and 20.4\% in decode duration, producing threshold crossings. For OUTPUT-family analyses, matched contemporaneous controls are therefore more reliable than absolute SLO crossings alone.
+
+RQ2 begins with metric-level factorial interactions. Across fifteen pre-defined interactions, five show SUPER\_ADDITIVE\_EVIDENCE, one shows SUB\_ADDITIVE\_EVIDENCE, and nine are uncertain. Holm-supported univariate interactions occur for INPUT\_LOAD TTFT, total latency, and decode duration, and for OUTPUT\_LOAD TTFT and total latency.
+
+CSD extends the univariate contrast to multivariate standardized signatures:
+\[
+\Delta_{rj}=X_{A1B1,rj}-X_{A1B0,rj}-X_{A0B1,rj}+X_{A0B0,rj},
+\quad
+CSD=\sqrt{\frac{1}{d}\sum_j \bar{Z}_j^2}.
+\]
+Table~\ref{tab:compound} shows that INPUT\_LOAD and OUTPUT\_LOAD have Holm-supported CSD; the other retained pairs do not. All five compounds produced frequent compound-SLO violations, so SLO severity is not the same concept as signature non-additivity.
+
+\input{../tables/table-4-compound.tex}
+
+\section{Compound Diagnosis}
+RQ3 first asks whether diagnosis composes. The primary Phase 7C baseline, one-vs-rest logistic regression with F2 performance+telemetry features, recovers 57.5\% of compound cause sets when trained only on zero/single faults. Mixed training reaches 97.5\% compound exact recovery and 100\% complete cause recall. The fold-level complete-cause-recall improvement is 0.425 with exact sign-flip \(p=0.0078125\), supporting H2.
+
+The error structure is pair-specific. Under single-fault training, INPUT\_LOAD and INPUT\_DOWNSTREAM have 0/8 exact recovery, whereas OUTPUT\_DOWNSTREAM and LOAD\_DOWNSTREAM have 8/8 and OUTPUT\_LOAD has 7/8. The dominant error is MISS\_INPUT with single-cause prediction.
+
+Temporal features are useful in-domain: M2/F2 reaches 57.5\% source compound exact recovery and M2/F2T reaches 82.5\%. However, the temporal result is not a general victory; it becomes a model-transfer liability in Section~\ref{sec:generalization}.
+
+MESR, reported as corrected D4-FULL, is an interpretable mechanism-evidence experiment. It reaches 60.0\% source compound exact recovery, close to M2/F2 but below M2/F2T. Corrected D4-FULL does not outperform D4-SM, so H3 is not supported.
+
+\section{Cross-Model Generalization}
+\label{sec:generalization}
+The target campaign changes the model from Qwen2.5-0.5B to Qwen2.5-1.5B while holding runtime, hardware, instrumentation, and mechanism semantics fixed. Table~\ref{tab:rca} reports zero-shot transfer. M2/F2 transfers from 57.5\% to 60.0\%; M2/F2T drops from 82.5\% to 20.0\%; D4-FULL remains 60.0\%; D4-FULL-F3 drops from 80.0\% to 60.0\%. H4 is not supported: D4-FULL and M2/F2 have identical target fold exact accuracies and the exact sign-flip p-value is 1.0.
+
+\input{../tables/table-5-rca.tex}
+
+Feature shift is substantial, especially for temporal/performance features. The largest standardized mean shifts include total\_latency\_early\_median at about 3.96 source SD, ttft\_early\_median at 3.72, prefill\_proxy\_early\_median at 3.53, total\_latency\_median at 3.27, and total\_latency\_p95 at 3.20. This is consistent with the M2/F2T transfer degradation, but does not prove causation.
+
+Compound-only accuracy is insufficient. Target control false alarms are high: M2/F2 flags 11/12 controls, M2/F2T flags 8/12, D4-FULL flags 7/12, and D4-FULL-F3 flags 6/12. Naive target-control normalization does not solve transfer: target compound exact recovery is 20.0\% for M2/F2 and 23.3\% for M2/F2T after the pre-frozen secondary normalization.
+
+\section{Robustness to Degraded Observability}
+RQ4 evaluates missingness, temporal sampling, noise, delay, and whole-channel loss without retraining. Table~\ref{tab:robustness} gives the 50\% missingness snapshot. D4-FULL is not the clean-accuracy winner, but its degraded-observability profile is comparatively stable across model shift. For M2/F2T, target-minus-source robustness AUC differences are -0.421 for missingness, -0.699 for noise, -0.419 for temporal sampling, and -0.317 for delay. For D4-FULL, the corresponding differences are approximately -0.008, -0.041, -0.013, and 0.000. These are descriptive robustness contrasts rather than formal superiority tests.
+
+\input{../tables/table-6-robustness.tex}
+
+The INPUT failure analysis separates pre-existing failure from degradation-induced failure. When clean diagnosis already misses INPUT in INPUT\_LOAD or INPUT\_DOWNSTREAM, degraded telemetry is not credited as the original cause of that miss.
+
+\section{Telemetry Quality/Cost Tradeoffs}
+RQ5 combines Phase 7E quality with Phase 7F live telemetry cost. Table~\ref{tab:cost} reports the frozen frontier. FULL optional telemetry costs 603.04 bytes/request; NO\_HOST costs 508.26; NO\_RUNTIME costs 545.16; LIGHT costs 448.32. For the primary NO\_HOST comparison, storage reduction is positive in all 12 matched live comparisons: 17.26\% mean under BASELINE and 14.05\% under LOAD\_MEDIUM.
+
+\input{../tables/table-7-cost.tex}
+
+Quality preservation passes for M2/F2+NO\_HOST: source exact is 0.575 under FULL and 0.600 under NO\_HOST; target exact is 0.600 under both. Control false alarms do not increase. This should not be read as proof that removing host telemetry improves RCA; it satisfies the frozen quality screen.
+
+H5 is nevertheless not supported. The service-performance guard required the upper bound of the 95\% paired CI for total-latency-p95 relative change to be at most +5\%. NO\_HOST vs FULL has mean -2.52\% under BASELINE with CI [-10.83\%, +5.79\%], and mean -0.45\% under LOAD with CI [-8.02\%, +7.13\%]. This is not evidence that NO\_HOST slows the service; it means non-regression was not established under the pre-specified bound.
+
+The target storage projection estimates that host telemetry accounts for 804,979 bytes over 66 target runs, 304.92 bytes/request, or 40.90\% of optional telemetry storage. This is an offline storage projection, not a target live-overhead measurement. T3\_LIGHT is the only non-dominated frozen quality/cost point, but the primary H5 candidate remains NO\_HOST as specified before the cost results.
+
+\section{Discussion}
+Several themes emerge. First, compound SLO violation is not equivalent to compound signature interaction: every retained compound can violate SLOs, yet only two have supported multivariate CSD. Second, single-fault diagnostic success does not imply compositional diagnosis. Third, temporal evidence can improve in-domain diagnosis while reducing cross-model portability. Fourth, interpretability, clean accuracy, transfer, and robustness are distinct axes. Fifth, more telemetry is not automatically better, but proving operational savings requires live measurement, not only offline feature ablation. Finally, control stability matters: OUTPUT\_CONTROL drift made matched comparisons essential.
+
+\section{Threats to Validity}
+\textbf{Construct validity.} Synthetic mechanisms approximate production causes but do not exhaust them. Queue-depth metrics were unavailable in formal runtime telemetry. CSD depends on the frozen feature set and standardization. SLO calibration drift, especially OUTPUT\_CONTROL, limits absolute threshold interpretation.
+
+\textbf{Internal validity.} The experiments run on a single commodity Mac/Metal environment. Thermal state and background system activity may affect latency despite blocking and randomization. Instrumentation and gateway timing reconciliation are part of the measured system. Repetitions are limited.
+
+\textbf{External validity.} Results cover llama.cpp, Qwen 0.5B/1.5B GGUF models, four mechanisms, and a single-host architecture. There is no primary CPU mechanism, no multi-node inference, and no real production traffic.
+
+\textbf{Statistical conclusion validity.} The source campaign has eight repetitions; target and cost campaigns have six. Exact sign-flip tests have limited resolution. Multiple comparisons were controlled only for pre-specified families. Classifier estimates are finite-sample baselines.
+
+\textbf{RCA validity.} F3 direct evidence exposes workload mechanisms and is not the primary fair method. Single-to-compound training distribution shift is intentionally severe. Target control false alarms show that cross-domain calibration remains unsolved.
+
+\section{Related Work}
+LLM serving systems such as DistServe and Sarathi-Serve highlight the distinct prefill and decode stages and throughput-latency tradeoffs \cite{distserve2024,sarathi2024}. Benchmarking tools such as vLLM serving benchmarks focus on latency and throughput measurement rather than controlled compound diagnosis \cite{vllmbench}. Operational systems such as LatencyPrism and StriaTrace address latency analysis and diagnosis in production LLM settings \cite{latencyprism2026,striatrace2026}. Microservice RCA work, including MicroRCA and RCAEval, studies telemetry-driven fault localization and benchmark design in distributed services \cite{microRCA2020,rcaeval2025}. SLOScope differs by combining controlled LLM-serving mechanisms, matched compound-fault factorial analysis, multi-label cause-set RCA, model-holdout transfer, degraded observability, and telemetry cost.
+
+\section{Conclusion}
+SLOScope shows that compound degradation and diagnosis in commodity LLM inference are not reducible to isolated effects. Some compound signatures are strongly non-additive, single-fault-trained RCA loses cause-set recall on compounds, temporal evidence is useful but model-sensitive, and telemetry reduction has a measurable quality/cost frontier. Negative results are central: H3, H4, and H5 are not supported under their frozen definitions. The artifact is designed to support reproduction of the benchmark, results, and manuscript-facing evidence.
+
+\bibliographystyle{plain}
+\bibliography{references}
+\end{document}

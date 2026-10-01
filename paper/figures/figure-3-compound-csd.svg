@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="360" viewBox="0 0 900 360">
+<style>text{font-family:Arial,sans-serif;font-size:10px}.title{font-size:15px;font-weight:bold}.axis{stroke:#333}.ci{stroke:#111;stroke-width:2}.supported{fill:#238b45}.plain{fill:#6baed6}.zero{stroke:#333;stroke-dasharray:4 3}.pos{fill:#de2d26}.neg{fill:#3182bd}</style>
+<text class="title" x="20" y="24">Figure 6. Primary CSD summary</text>
+<line class="axis" x1="180" y1="290" x2="850" y2="290"/>
+<text x="20" y="59">INPUT_LOAD</text>
+<line class="ci" x1="759.29" y1="55" x2="778.21" y2="55"/>
+<circle class="supported" cx="768.26" cy="55" r="5"/>
+<text x="20" y="101">INPUT_DOWNSTREAM</text>
+<line class="ci" x1="184.46" y1="97" x2="197.09" y2="97"/>
+<circle class="plain" cx="188.10" cy="97" r="5"/>
+<text x="20" y="143">OUTPUT_LOAD</text>
+<line class="ci" x1="518.34" y1="139" x2="543.57" y2="139"/>
+<circle class="supported" cx="531.38" cy="139" r="5"/>
+<text x="20" y="185">OUTPUT_DOWNSTREAM</text>
+<line class="ci" x1="186.89" y1="181" x2="195.84" y2="181"/>
+<circle class="plain" cx="189.04" cy="181" r="5"/>
+<text x="20" y="227">LOAD_DOWNSTREAM</text>
+<line class="ci" x1="188.37" y1="223" x2="202.09" y2="223"/>
+<circle class="plain" cx="190.82" cy="223" r="5"/>
+</svg>

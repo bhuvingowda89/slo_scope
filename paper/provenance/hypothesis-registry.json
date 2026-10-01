@@ -1,0 +1,42 @@
+{
+  "H1": {
+    "evidence": [
+      "INPUT_LOAD and OUTPUT_LOAD have Holm-supported multivariate CSD.",
+      "Other retained pairs do not."
+    ],
+    "hypothesis": "Compound signatures can be non-additive.",
+    "status": "SUPPORTED FOR SPECIFIC COMPOUND PAIRS, NOT UNIVERSALLY"
+  },
+  "H2": {
+    "evidence": [
+      "M2/F2 fold-level complete-cause-recall difference mean 0.425.",
+      "Exact sign-flip p = 0.0078125."
+    ],
+    "hypothesis": "Single-fault-trained RCA loses complete-cause recall on compound mechanisms.",
+    "status": "SUPPORTED"
+  },
+  "H3": {
+    "evidence": [
+      "Corrected D4-FULL does not outperform D4-SM."
+    ],
+    "hypothesis": "Temporal ordering/evolution plus contradiction evidence improves cause-set diagnosis in MESR.",
+    "status": "NOT_SUPPORTED"
+  },
+  "H4": {
+    "evidence": [
+      "D4-FULL and M2/F2 both achieve target compound exact recovery 0.600.",
+      "Primary fold differences all zero."
+    ],
+    "hypothesis": "Mechanism-oriented evidence transfers better than purely statistical signatures under model holdout.",
+    "status": "NOT_SUPPORTED"
+  },
+  "H5": {
+    "evidence": [
+      "Quality screen passes.",
+      "Storage reduction passes.",
+      "Service-performance non-regression not established under +5% CI guard."
+    ],
+    "hypothesis": "Reduced telemetry preserves most RCA quality at lower cost without violating the frozen service-performance guard.",
+    "status": "NOT_SUPPORTED"
+  }
+}

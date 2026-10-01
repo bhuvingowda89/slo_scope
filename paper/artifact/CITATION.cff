@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use SLOScope, please cite this artifact and the associated paper."
+title: "SLOScope: Benchmarking Compound SLO Degradation and Diagnosis in Commodity LLM Inference Systems"
+authors:
+  - family-names: "TBD"
+    given-names: "TBD"
+version: "0.1.0-pre-submission"
+date-released: "2026-10-01"
+repository-code: "TBD"
+doi: "TBD"

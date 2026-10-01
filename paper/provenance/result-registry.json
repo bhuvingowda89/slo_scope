@@ -1,0 +1,1292 @@
+{
+  "generated_at": "2026-10-01T18:57:04.219796+00:00",
+  "results": [
+    {
+      "analysis_phase": "7A.1",
+      "column": "mean paired delta",
+      "description": "Isolated INPUT primary paired effect",
+      "hypothesis_or_RQ_relation": "RQ1",
+      "notes": "",
+      "numeric_value": 0.0455990699505491,
+      "primary_secondary_exploratory": "primary",
+      "result_id": "R_RQ1_INPUT_TTFT_DELTA",
+      "row_filter": {
+        "mechanism": "INPUT"
+      },
+      "source_artifact": "analysis/phase7a1/table-2-isolated-effects.csv",
+      "source_target_domain": "source",
+      "units": "seconds"
+    },
+    {
+      "analysis_phase": "7A.1",
+      "column": "Holm p",
+      "description": "Isolated INPUT Holm-adjusted p",
+      "hypothesis_or_RQ_relation": "RQ1",
+      "notes": "",
+      "numeric_value": 2.7689683880200624e-10,
+      "primary_secondary_exploratory": "primary",
+      "result_id": "R_RQ1_INPUT_TTFT_DELTA_HOLM_P",
+      "row_filter": {
+        "mechanism": "INPUT"
+      },
+      "source_artifact": "analysis/phase7a1/table-2-isolated-effects.csv",
+      "source_target_domain": "source",
+      "units": "p-value"
+    },
+    {
+      "analysis_phase": "7A.1",
+      "column": "mean paired delta",
+      "description": "Isolated OUTPUT primary paired effect",
+      "hypothesis_or_RQ_relation": "RQ1",
+      "notes": "",
+      "numeric_value": 0.223907480601656,
+      "primary_secondary_exploratory": "primary",
+      "result_id": "R_RQ1_OUTPUT_DECODE_DELTA",
+      "row_filter": {
+        "mechanism": "OUTPUT"
+      },
+      "source_artifact": "analysis/phase7a1/table-2-isolated-effects.csv",
+      "source_target_domain": "source",
+      "units": "seconds"
+    },
+    {
+      "analysis_phase": "7A.1",
+      "column": "Holm p",
+      "description": "Isolated OUTPUT Holm-adjusted p",
+      "hypothesis_or_RQ_relation": "RQ1",
+      "notes": "",
+      "numeric_value": 1.4500731466937097e-08,
+      "primary_secondary_exploratory": "primary",
+      "result_id": "R_RQ1_OUTPUT_DECODE_DELTA_HOLM_P",
+      "row_filter": {
+        "mechanism": "OUTPUT"
+      },
+      "source_artifact": "analysis/phase7a1/table-2-isolated-effects.csv",
+      "source_target_domain": "source",
+      "units": "p-value"
+    },
+    {
+      "analysis_phase": "7A.1",
+      "column": "mean paired delta",
+      "description": "Isolated LOAD primary paired effect",
+      "hypothesis_or_RQ_relation": "RQ1",
+      "notes": "",
+      "numeric_value": 1.0841179360256317,
+      "primary_secondary_exploratory": "primary",
+      "result_id": "R_RQ1_LOAD_TTFT_DELTA",
+      "row_filter": {
+        "mechanism": "LOAD"
+      },
+      "source_artifact": "analysis/phase7a1/table-2-isolated-effects.csv",
+      "source_target_domain": "source",
+      "units": "seconds"
+    },
+    {
+      "analysis_phase": "7A.1",
+      "column": "Holm p",
+      "description": "Isolated LOAD Holm-adjusted p",
+      "hypothesis_or_RQ_relation": "RQ1",
+      "notes": "",
+      "numeric_value": 1.941408204441509e-10,
+      "primary_secondary_exploratory": "primary",
+      "result_id": "R_RQ1_LOAD_TTFT_DELTA_HOLM_P",
+      "row_filter": {
+        "mechanism": "LOAD"
+      },
+      "source_artifact": "analysis/phase7a1/table-2-isolated-effects.csv",
+      "source_target_domain": "source",
+      "units": "p-value"
+    },
+    {
+      "analysis_phase": "7A.1",
+      "column": "mean paired delta",
+      "description": "Isolated DOWNSTREAM primary paired effect",
+      "hypothesis_or_RQ_relation": "RQ1",
+      "notes": "",
+      "numeric_value": 0.1041198072184215,
+      "primary_secondary_exploratory": "primary",
+      "result_id": "R_RQ1_DOWNSTREAM_TOTAL_DELTA",
+      "row_filter": {
+        "mechanism": "DOWNSTREAM"
+      },
+      "source_artifact": "analysis/phase7a1/table-2-isolated-effects.csv",
+      "source_target_domain": "source",
+      "units": "seconds"
+    },
+    {
+      "analysis_phase": "7A.1",
+      "column": "Holm p",
+      "description": "Isolated DOWNSTREAM Holm-adjusted p",
+      "hypothesis_or_RQ_relation": "RQ1",
+      "notes": "",
+      "numeric_value": 5.041601257161114e-10,
+      "primary_secondary_exploratory": "primary",
+      "result_id": "R_RQ1_DOWNSTREAM_TOTAL_DELTA_HOLM_P",
+      "row_filter": {
+        "mechanism": "DOWNSTREAM"
+      },
+      "source_artifact": "analysis/phase7a1/table-2-isolated-effects.csv",
+      "source_target_domain": "source",
+      "units": "p-value"
+    },
+    {
+      "analysis_phase": "7A.1",
+      "column": null,
+      "description": "Count of SUPER_ADDITIVE_EVIDENCE univariate interactions",
+      "hypothesis_or_RQ_relation": "RQ2",
+      "notes": "",
+      "numeric_value": 5,
+      "primary_secondary_exploratory": "primary",
+      "result_id": "R_RQ2_SUPER_ADDITIVE_EVIDENCE",
+      "row_filter": {},
+      "source_artifact": "analysis/phase7a1/table-3-factorial-interactions.csv",
+      "source_target_domain": "source",
+      "units": "count"
+    },
+    {
+      "analysis_phase": "7A.1",
+      "column": null,
+      "description": "Count of SUB_ADDITIVE_EVIDENCE univariate interactions",
+      "hypothesis_or_RQ_relation": "RQ2",
+      "notes": "",
+      "numeric_value": 1,
+      "primary_secondary_exploratory": "primary",
+      "result_id": "R_RQ2_SUB_ADDITIVE_EVIDENCE",
+      "row_filter": {},
+      "source_artifact": "analysis/phase7a1/table-3-factorial-interactions.csv",
+      "source_target_domain": "source",
+      "units": "count"
+    },
+    {
+      "analysis_phase": "7A.1",
+      "column": null,
+      "description": "Count of INTERACTION_UNCERTAIN univariate interactions",
+      "hypothesis_or_RQ_relation": "RQ2",
+      "notes": "",
+      "numeric_value": 9,
+      "primary_secondary_exploratory": "primary",
+      "result_id": "R_RQ2_INTERACTION_UNCERTAIN",
+      "row_filter": {},
+      "source_artifact": "analysis/phase7a1/table-3-factorial-interactions.csv",
+      "source_target_domain": "source",
+      "units": "count"
+    },
+    {
+      "analysis_phase": "7B",
+      "column": "CSD",
+      "description": "INPUT_LOAD primary CSD",
+      "hypothesis_or_RQ_relation": "H1/RQ2",
+      "notes": "",
+      "numeric_value": 51.58348661609123,
+      "primary_secondary_exploratory": "primary",
+      "result_id": "R_CSD_INPUT_LOAD",
+      "row_filter": {
+        "compound": "INPUT_LOAD"
+      },
+      "source_artifact": "analysis/phase7b/table-4-csd-summary.csv",
+      "source_target_domain": "source",
+      "units": "standardized RMS"
+    },
+    {
+      "analysis_phase": "7B",
+      "column": "Holm_p",
+      "description": "INPUT_LOAD CSD Holm p",
+      "hypothesis_or_RQ_relation": "H1/RQ2",
+      "notes": "",
+      "numeric_value": 0.0390625,
+      "primary_secondary_exploratory": "primary",
+      "result_id": "R_CSD_INPUT_LOAD_HOLM_P",
+      "row_filter": {
+        "compound": "INPUT_LOAD"
+      },
+      "source_artifact": "analysis/phase7b/table-4-csd-summary.csv",
+      "source_target_domain": "source",
+      "units": "p-value"
+    },
+    {
+      "analysis_phase": "7B",
+      "column": "CSD",
+      "description": "OUTPUT_LOAD primary CSD",
+      "hypothesis_or_RQ_relation": "H1/RQ2",
+      "notes": "",
+      "numeric_value": 30.81137250215851,
+      "primary_secondary_exploratory": "primary",
+      "result_id": "R_CSD_OUTPUT_LOAD",
+      "row_filter": {
+        "compound": "OUTPUT_LOAD"
+      },
+      "source_artifact": "analysis/phase7b/table-4-csd-summary.csv",
+      "source_target_domain": "source",
+      "units": "standardized RMS"
+    },
+    {
+      "analysis_phase": "7B",
+      "column": "Holm_p",
+      "description": "OUTPUT_LOAD CSD Holm p",
+      "hypothesis_or_RQ_relation": "H1/RQ2",
+      "notes": "",
+      "numeric_value": 0.0390625,
+      "primary_secondary_exploratory": "primary",
+      "result_id": "R_CSD_OUTPUT_LOAD_HOLM_P",
+      "row_filter": {
+        "compound": "OUTPUT_LOAD"
+      },
+      "source_artifact": "analysis/phase7b/table-4-csd-summary.csv",
+      "source_target_domain": "source",
+      "units": "p-value"
+    },
+    {
+      "analysis_phase": "7B",
+      "column": "CSD",
+      "description": "INPUT_DOWNSTREAM primary CSD",
+      "hypothesis_or_RQ_relation": "H1/RQ2",
+      "notes": "",
+      "numeric_value": 0.7103793040402966,
+      "primary_secondary_exploratory": "primary",
+      "result_id": "R_CSD_INPUT_DOWNSTREAM",
+      "row_filter": {
+        "compound": "INPUT_DOWNSTREAM"
+      },
+      "source_artifact": "analysis/phase7b/table-4-csd-summary.csv",
+      "source_target_domain": "source",
+      "units": "standardized RMS"
+    },
+    {
+      "analysis_phase": "7B",
+      "column": "Holm_p",
+      "description": "INPUT_DOWNSTREAM CSD Holm p",
+      "hypothesis_or_RQ_relation": "H1/RQ2",
+      "notes": "",
+      "numeric_value": 0.3046875,
+      "primary_secondary_exploratory": "primary",
+      "result_id": "R_CSD_INPUT_DOWNSTREAM_HOLM_P",
+      "row_filter": {
+        "compound": "INPUT_DOWNSTREAM"
+      },
+      "source_artifact": "analysis/phase7b/table-4-csd-summary.csv",
+      "source_target_domain": "source",
+      "units": "p-value"
+    },
+    {
+      "analysis_phase": "7B",
+      "column": "CSD",
+      "description": "OUTPUT_DOWNSTREAM primary CSD",
+      "hypothesis_or_RQ_relation": "H1/RQ2",
+      "notes": "",
+      "numeric_value": 0.7929589559932935,
+      "primary_secondary_exploratory": "primary",
+      "result_id": "R_CSD_OUTPUT_DOWNSTREAM",
+      "row_filter": {
+        "compound": "OUTPUT_DOWNSTREAM"
+      },
+      "source_artifact": "analysis/phase7b/table-4-csd-summary.csv",
+      "source_target_domain": "source",
+      "units": "standardized RMS"
+    },
+    {
+      "analysis_phase": "7B",
+      "column": "Holm_p",
+      "description": "OUTPUT_DOWNSTREAM CSD Holm p",
+      "hypothesis_or_RQ_relation": "H1/RQ2",
+      "notes": "",
+      "numeric_value": 0.3046875,
+      "primary_secondary_exploratory": "primary",
+      "result_id": "R_CSD_OUTPUT_DOWNSTREAM_HOLM_P",
+      "row_filter": {
+        "compound": "OUTPUT_DOWNSTREAM"
+      },
+      "source_artifact": "analysis/phase7b/table-4-csd-summary.csv",
+      "source_target_domain": "source",
+      "units": "p-value"
+    },
+    {
+      "analysis_phase": "7B",
+      "column": "CSD",
+      "description": "LOAD_DOWNSTREAM primary CSD",
+      "hypothesis_or_RQ_relation": "H1/RQ2",
+      "notes": "",
+      "numeric_value": 0.948765593247025,
+      "primary_secondary_exploratory": "primary",
+      "result_id": "R_CSD_LOAD_DOWNSTREAM",
+      "row_filter": {
+        "compound": "LOAD_DOWNSTREAM"
+      },
+      "source_artifact": "analysis/phase7b/table-4-csd-summary.csv",
+      "source_target_domain": "source",
+      "units": "standardized RMS"
+    },
+    {
+      "analysis_phase": "7B",
+      "column": "Holm_p",
+      "description": "LOAD_DOWNSTREAM CSD Holm p",
+      "hypothesis_or_RQ_relation": "H1/RQ2",
+      "notes": "",
+      "numeric_value": 0.3046875,
+      "primary_secondary_exploratory": "primary",
+      "result_id": "R_CSD_LOAD_DOWNSTREAM_HOLM_P",
+      "row_filter": {
+        "compound": "LOAD_DOWNSTREAM"
+      },
+      "source_artifact": "analysis/phase7b/table-4-csd-summary.csv",
+      "source_target_domain": "source",
+      "units": "p-value"
+    },
+    {
+      "analysis_phase": "7C",
+      "column": "exact_set_accuracy",
+      "description": "R M2F2 SOURCE P1 COMPOUND EXACT",
+      "hypothesis_or_RQ_relation": "H2/RQ3",
+      "notes": "",
+      "numeric_value": 0.575,
+      "primary_secondary_exploratory": "primary",
+      "result_id": "R_M2F2_SOURCE_P1_COMPOUND_EXACT",
+      "row_filter": {
+        "feature_tier": "F2",
+        "model": "M2",
+        "subset": "compound-only",
+        "training_protocol": "P1"
+      },
+      "source_artifact": "analysis/phase7c/table-6-rca-baselines.csv",
+      "source_target_domain": "source",
+      "units": "fraction"
+    },
+    {
+      "analysis_phase": "7C",
+      "column": "exact_set_accuracy",
+      "description": "R M2F2 SOURCE P2 COMPOUND EXACT",
+      "hypothesis_or_RQ_relation": "H2/RQ3",
+      "notes": "",
+      "numeric_value": 0.975,
+      "primary_secondary_exploratory": "primary",
+      "result_id": "R_M2F2_SOURCE_P2_COMPOUND_EXACT",
+      "row_filter": {
+        "feature_tier": "F2",
+        "model": "M2",
+        "subset": "compound-only",
+        "training_protocol": "P2"
+      },
+      "source_artifact": "analysis/phase7c/table-6-rca-baselines.csv",
+      "source_target_domain": "source",
+      "units": "fraction"
+    },
+    {
+      "analysis_phase": "7C",
+      "column": "complete_cause_recall",
+      "description": "R M2F2 SOURCE P1 COMPLETE RECALL",
+      "hypothesis_or_RQ_relation": "H2/RQ3",
+      "notes": "",
+      "numeric_value": 0.575,
+      "primary_secondary_exploratory": "primary",
+      "result_id": "R_M2F2_SOURCE_P1_COMPLETE_RECALL",
+      "row_filter": {
+        "feature_tier": "F2",
+        "model": "M2",
+        "subset": "compound-only",
+        "training_protocol": "P1"
+      },
+      "source_artifact": "analysis/phase7c/table-6-rca-baselines.csv",
+      "source_target_domain": "source",
+      "units": "fraction"
+    },
+    {
+      "analysis_phase": "7C",
+      "column": "complete_cause_recall",
+      "description": "R M2F2 SOURCE P2 COMPLETE RECALL",
+      "hypothesis_or_RQ_relation": "H2/RQ3",
+      "notes": "",
+      "numeric_value": 1.0,
+      "primary_secondary_exploratory": "primary",
+      "result_id": "R_M2F2_SOURCE_P2_COMPLETE_RECALL",
+      "row_filter": {
+        "feature_tier": "F2",
+        "model": "M2",
+        "subset": "compound-only",
+        "training_protocol": "P2"
+      },
+      "source_artifact": "analysis/phase7c/table-6-rca-baselines.csv",
+      "source_target_domain": "source",
+      "units": "fraction"
+    },
+    {
+      "analysis_phase": "7C",
+      "column": "difference",
+      "description": "H2 mean complete-cause-recall difference",
+      "hypothesis_or_RQ_relation": "H2",
+      "notes": "",
+      "numeric_value": 0.425,
+      "primary_secondary_exploratory": "primary",
+      "result_id": "R_H2_MEAN_DIFF",
+      "row_filter": {
+        "fold": "SUMMARY"
+      },
+      "source_artifact": "analysis/phase7c/table-8-single-vs-mixed-training.csv",
+      "source_target_domain": "source",
+      "units": "fraction"
+    },
+    {
+      "analysis_phase": "7C",
+      "column": "exact_signflip_p",
+      "description": "H2 exact sign-flip p",
+      "hypothesis_or_RQ_relation": "H2",
+      "notes": "",
+      "numeric_value": 0.0078125,
+      "primary_secondary_exploratory": "primary",
+      "result_id": "R_H2_PVALUE",
+      "row_filter": {
+        "fold": "SUMMARY"
+      },
+      "source_artifact": "analysis/phase7c/table-8-single-vs-mixed-training.csv",
+      "source_target_domain": "source",
+      "units": "p-value"
+    },
+    {
+      "analysis_phase": "7C.1a",
+      "column": "exact_set_accuracy",
+      "description": "D4-FULL source P1 compound exact",
+      "hypothesis_or_RQ_relation": "H3/RQ3",
+      "notes": "",
+      "numeric_value": 0.6,
+      "primary_secondary_exploratory": "primary",
+      "result_id": "R_D4_FULL_SOURCE_EXACT",
+      "row_filter": {
+        "method": "D4-FULL",
+        "subset": "P1-COMPOUND"
+      },
+      "source_artifact": "analysis/phase7c1a/table-9a-mesr-corrected-primary.csv",
+      "source_target_domain": "source",
+      "units": "fraction"
+    },
+    {
+      "analysis_phase": "7C.1a",
+      "column": "exact_set_accuracy",
+      "description": "D4-FULL-F3 source P1 compound exact",
+      "hypothesis_or_RQ_relation": "H3/RQ3",
+      "notes": "",
+      "numeric_value": 0.8,
+      "primary_secondary_exploratory": "primary",
+      "result_id": "R_D4_FULL_F3_SOURCE_EXACT",
+      "row_filter": {
+        "method": "D4-FULL-F3",
+        "subset": "P1-COMPOUND"
+      },
+      "source_artifact": "analysis/phase7c1a/table-9a-mesr-corrected-primary.csv",
+      "source_target_domain": "source",
+      "units": "fraction"
+    },
+    {
+      "analysis_phase": "7C.1a",
+      "column": "exact_set_accuracy",
+      "description": "D4-SM source P1 compound exact",
+      "hypothesis_or_RQ_relation": "H3/RQ3",
+      "notes": "",
+      "numeric_value": 0.6,
+      "primary_secondary_exploratory": "primary",
+      "result_id": "R_D4_SM_SOURCE_EXACT",
+      "row_filter": {
+        "method": "D4-SM",
+        "subset": "P1-COMPOUND"
+      },
+      "source_artifact": "analysis/phase7c1a/table-9a-mesr-corrected-primary.csv",
+      "source_target_domain": "source",
+      "units": "fraction"
+    },
+    {
+      "analysis_phase": "7D.2a",
+      "column": "source_compound_exact",
+      "description": "M2/F2 source compound exact",
+      "hypothesis_or_RQ_relation": "RQ3",
+      "notes": "",
+      "numeric_value": 0.575,
+      "primary_secondary_exploratory": "primary",
+      "result_id": "R_M2F2_SOURCE_EXACT",
+      "row_filter": {
+        "method": "M2/F2"
+      },
+      "source_artifact": "analysis/phase7d2a/table-12a-zero-shot-generalization.csv",
+      "source_target_domain": "source",
+      "units": "fraction"
+    },
+    {
+      "analysis_phase": "7D.2a",
+      "column": "target_compound_exact",
+      "description": "M2/F2 target compound exact",
+      "hypothesis_or_RQ_relation": "H4/RQ3",
+      "notes": "",
+      "numeric_value": 0.6,
+      "primary_secondary_exploratory": "primary",
+      "result_id": "R_M2F2_TARGET_EXACT",
+      "row_filter": {
+        "method": "M2/F2"
+      },
+      "source_artifact": "analysis/phase7d2a/table-12a-zero-shot-generalization.csv",
+      "source_target_domain": "target",
+      "units": "fraction"
+    },
+    {
+      "analysis_phase": "7D.2a",
+      "column": "target_control_false_alarm_rate",
+      "description": "M2/F2 target control false-alarm rate",
+      "hypothesis_or_RQ_relation": "RQ3",
+      "notes": "",
+      "numeric_value": 0.9166666666666666,
+      "primary_secondary_exploratory": "primary",
+      "result_id": "R_M2F2_TARGET_CFA",
+      "row_filter": {
+        "method": "M2/F2"
+      },
+      "source_artifact": "analysis/phase7d2a/table-12a-zero-shot-generalization.csv",
+      "source_target_domain": "target",
+      "units": "fraction"
+    },
+    {
+      "analysis_phase": "7D.2a",
+      "column": "source_compound_exact",
+      "description": "M2/F2T source compound exact",
+      "hypothesis_or_RQ_relation": "RQ3",
+      "notes": "",
+      "numeric_value": 0.825,
+      "primary_secondary_exploratory": "primary",
+      "result_id": "R_M2F2T_SOURCE_EXACT",
+      "row_filter": {
+        "method": "M2/F2T"
+      },
+      "source_artifact": "analysis/phase7d2a/table-12a-zero-shot-generalization.csv",
+      "source_target_domain": "source",
+      "units": "fraction"
+    },
+    {
+      "analysis_phase": "7D.2a",
+      "column": "target_compound_exact",
+      "description": "M2/F2T target compound exact",
+      "hypothesis_or_RQ_relation": "H4/RQ3",
+      "notes": "",
+      "numeric_value": 0.2,
+      "primary_secondary_exploratory": "primary",
+      "result_id": "R_M2F2T_TARGET_EXACT",
+      "row_filter": {
+        "method": "M2/F2T"
+      },
+      "source_artifact": "analysis/phase7d2a/table-12a-zero-shot-generalization.csv",
+      "source_target_domain": "target",
+      "units": "fraction"
+    },
+    {
+      "analysis_phase": "7D.2a",
+      "column": "target_control_false_alarm_rate",
+      "description": "M2/F2T target control false-alarm rate",
+      "hypothesis_or_RQ_relation": "RQ3",
+      "notes": "",
+      "numeric_value": 0.6666666666666666,
+      "primary_secondary_exploratory": "primary",
+      "result_id": "R_M2F2T_TARGET_CFA",
+      "row_filter": {
+        "method": "M2/F2T"
+      },
+      "source_artifact": "analysis/phase7d2a/table-12a-zero-shot-generalization.csv",
+      "source_target_domain": "target",
+      "units": "fraction"
+    },
+    {
+      "analysis_phase": "7D.2a",
+      "column": "source_compound_exact",
+      "description": "D4-FULL source compound exact",
+      "hypothesis_or_RQ_relation": "RQ3",
+      "notes": "",
+      "numeric_value": 0.6,
+      "primary_secondary_exploratory": "primary",
+      "result_id": "R_D4_FULL_SOURCE_EXACT",
+      "row_filter": {
+        "method": "D4-FULL"
+      },
+      "source_artifact": "analysis/phase7d2a/table-12a-zero-shot-generalization.csv",
+      "source_target_domain": "source",
+      "units": "fraction"
+    },
+    {
+      "analysis_phase": "7D.2a",
+      "column": "target_compound_exact",
+      "description": "D4-FULL target compound exact",
+      "hypothesis_or_RQ_relation": "H4/RQ3",
+      "notes": "",
+      "numeric_value": 0.6,
+      "primary_secondary_exploratory": "primary",
+      "result_id": "R_D4_FULL_TARGET_EXACT",
+      "row_filter": {
+        "method": "D4-FULL"
+      },
+      "source_artifact": "analysis/phase7d2a/table-12a-zero-shot-generalization.csv",
+      "source_target_domain": "target",
+      "units": "fraction"
+    },
+    {
+      "analysis_phase": "7D.2a",
+      "column": "target_control_false_alarm_rate",
+      "description": "D4-FULL target control false-alarm rate",
+      "hypothesis_or_RQ_relation": "RQ3",
+      "notes": "",
+      "numeric_value": 0.5833333333333334,
+      "primary_secondary_exploratory": "primary",
+      "result_id": "R_D4_FULL_TARGET_CFA",
+      "row_filter": {
+        "method": "D4-FULL"
+      },
+      "source_artifact": "analysis/phase7d2a/table-12a-zero-shot-generalization.csv",
+      "source_target_domain": "target",
+      "units": "fraction"
+    },
+    {
+      "analysis_phase": "7D.2a",
+      "column": "source_compound_exact",
+      "description": "D4-FULL-F3 source compound exact",
+      "hypothesis_or_RQ_relation": "RQ3",
+      "notes": "",
+      "numeric_value": 0.8,
+      "primary_secondary_exploratory": "primary",
+      "result_id": "R_D4_FULL_F3_SOURCE_EXACT",
+      "row_filter": {
+        "method": "D4-FULL-F3"
+      },
+      "source_artifact": "analysis/phase7d2a/table-12a-zero-shot-generalization.csv",
+      "source_target_domain": "source",
+      "units": "fraction"
+    },
+    {
+      "analysis_phase": "7D.2a",
+      "column": "target_compound_exact",
+      "description": "D4-FULL-F3 target compound exact",
+      "hypothesis_or_RQ_relation": "H4/RQ3",
+      "notes": "",
+      "numeric_value": 0.6,
+      "primary_secondary_exploratory": "primary",
+      "result_id": "R_D4_FULL_F3_TARGET_EXACT",
+      "row_filter": {
+        "method": "D4-FULL-F3"
+      },
+      "source_artifact": "analysis/phase7d2a/table-12a-zero-shot-generalization.csv",
+      "source_target_domain": "target",
+      "units": "fraction"
+    },
+    {
+      "analysis_phase": "7D.2a",
+      "column": "target_control_false_alarm_rate",
+      "description": "D4-FULL-F3 target control false-alarm rate",
+      "hypothesis_or_RQ_relation": "RQ3",
+      "notes": "",
+      "numeric_value": 0.5,
+      "primary_secondary_exploratory": "primary",
+      "result_id": "R_D4_FULL_F3_TARGET_CFA",
+      "row_filter": {
+        "method": "D4-FULL-F3"
+      },
+      "source_artifact": "analysis/phase7d2a/table-12a-zero-shot-generalization.csv",
+      "source_target_domain": "target",
+      "units": "fraction"
+    },
+    {
+      "analysis_phase": "7D.2a",
+      "column": "exact_p_D4_vs_M2F2",
+      "description": "H4 D4 vs M2/F2 exact sign-flip p",
+      "hypothesis_or_RQ_relation": "H4",
+      "notes": "",
+      "numeric_value": 1.0,
+      "primary_secondary_exploratory": "primary",
+      "result_id": "R_H4_PVALUE",
+      "row_filter": {
+        "repetition": "SUMMARY"
+      },
+      "source_artifact": "analysis/phase7d2a/table-14a-h4-cross-model.csv",
+      "source_target_domain": "target",
+      "units": "p-value"
+    },
+    {
+      "analysis_phase": "7D.2a",
+      "column": "D4_minus_M2F2",
+      "description": "H4 D4 minus M2/F2 mean target exact difference",
+      "hypothesis_or_RQ_relation": "H4",
+      "notes": "",
+      "numeric_value": 0.0,
+      "primary_secondary_exploratory": "primary",
+      "result_id": "R_H4_MEAN_DIFF",
+      "row_filter": {
+        "repetition": "SUMMARY"
+      },
+      "source_artifact": "analysis/phase7d2a/table-14a-h4-cross-model.csv",
+      "source_target_domain": "target",
+      "units": "fraction"
+    },
+    {
+      "analysis_phase": "7D.2a",
+      "column": "exact_set_accuracy",
+      "description": "M2/F2-control-normalized target compound exact",
+      "hypothesis_or_RQ_relation": "RQ3 secondary",
+      "notes": "",
+      "numeric_value": 0.2,
+      "primary_secondary_exploratory": "secondary",
+      "result_id": "R_M2F2_control_normalized_TARGET_EXACT",
+      "row_filter": {
+        "method": "M2/F2-control-normalized",
+        "subset": "TARGET-COMPOUND"
+      },
+      "source_artifact": "analysis/phase7d2a/control-normalized-summary.csv",
+      "source_target_domain": "target",
+      "units": "fraction"
+    },
+    {
+      "analysis_phase": "7D.2a",
+      "column": "exact_set_accuracy",
+      "description": "M2/F2T-control-normalized target compound exact",
+      "hypothesis_or_RQ_relation": "RQ3 secondary",
+      "notes": "",
+      "numeric_value": 0.2333333333333333,
+      "primary_secondary_exploratory": "secondary",
+      "result_id": "R_M2F2T_control_normalized_TARGET_EXACT",
+      "row_filter": {
+        "method": "M2/F2T-control-normalized",
+        "subset": "TARGET-COMPOUND"
+      },
+      "source_artifact": "analysis/phase7d2a/control-normalized-summary.csv",
+      "source_target_domain": "target",
+      "units": "fraction"
+    },
+    {
+      "analysis_phase": "7E",
+      "column": "compound_exact",
+      "description": "source M2/F2 50 percent missingness exact",
+      "hypothesis_or_RQ_relation": "RQ4",
+      "notes": "",
+      "numeric_value": 0.2825,
+      "primary_secondary_exploratory": "primary",
+      "result_id": "R_MISSING50_source_M2F2",
+      "row_filter": {
+        "domain": "source",
+        "method": "M2/F2",
+        "severity": 0.5
+      },
+      "source_artifact": "analysis/phase7e/table-16-telemetry-missingness.csv",
+      "source_target_domain": "source",
+      "units": "fraction"
+    },
+    {
+      "analysis_phase": "7E",
+      "column": "compound_exact",
+      "description": "source M2/F2T 50 percent missingness exact",
+      "hypothesis_or_RQ_relation": "RQ4",
+      "notes": "",
+      "numeric_value": 0.4525,
+      "primary_secondary_exploratory": "primary",
+      "result_id": "R_MISSING50_source_M2F2T",
+      "row_filter": {
+        "domain": "source",
+        "method": "M2/F2T",
+        "severity": 0.5
+      },
+      "source_artifact": "analysis/phase7e/table-16-telemetry-missingness.csv",
+      "source_target_domain": "source",
+      "units": "fraction"
+    },
+    {
+      "analysis_phase": "7E",
+      "column": "compound_exact",
+      "description": "source D4-FULL 50 percent missingness exact",
+      "hypothesis_or_RQ_relation": "RQ4",
+      "notes": "",
+      "numeric_value": 0.5349999999999999,
+      "primary_secondary_exploratory": "primary",
+      "result_id": "R_MISSING50_source_D4_FULL",
+      "row_filter": {
+        "domain": "source",
+        "method": "D4-FULL",
+        "severity": 0.5
+      },
+      "source_artifact": "analysis/phase7e/table-16-telemetry-missingness.csv",
+      "source_target_domain": "source",
+      "units": "fraction"
+    },
+    {
+      "analysis_phase": "7E",
+      "column": "compound_exact",
+      "description": "target M2/F2 50 percent missingness exact",
+      "hypothesis_or_RQ_relation": "RQ4",
+      "notes": "",
+      "numeric_value": 0.2166666666666667,
+      "primary_secondary_exploratory": "primary",
+      "result_id": "R_MISSING50_target_M2F2",
+      "row_filter": {
+        "domain": "target",
+        "method": "M2/F2",
+        "severity": 0.5
+      },
+      "source_artifact": "analysis/phase7e/table-16-telemetry-missingness.csv",
+      "source_target_domain": "target",
+      "units": "fraction"
+    },
+    {
+      "analysis_phase": "7E",
+      "column": "compound_exact",
+      "description": "target M2/F2T 50 percent missingness exact",
+      "hypothesis_or_RQ_relation": "RQ4",
+      "notes": "",
+      "numeric_value": 0.2066666666666667,
+      "primary_secondary_exploratory": "primary",
+      "result_id": "R_MISSING50_target_M2F2T",
+      "row_filter": {
+        "domain": "target",
+        "method": "M2/F2T",
+        "severity": 0.5
+      },
+      "source_artifact": "analysis/phase7e/table-16-telemetry-missingness.csv",
+      "source_target_domain": "target",
+      "units": "fraction"
+    },
+    {
+      "analysis_phase": "7E",
+      "column": "compound_exact",
+      "description": "target D4-FULL 50 percent missingness exact",
+      "hypothesis_or_RQ_relation": "RQ4",
+      "notes": "",
+      "numeric_value": 0.5133333333333333,
+      "primary_secondary_exploratory": "primary",
+      "result_id": "R_MISSING50_target_D4_FULL",
+      "row_filter": {
+        "domain": "target",
+        "method": "D4-FULL",
+        "severity": 0.5
+      },
+      "source_artifact": "analysis/phase7e/table-16-telemetry-missingness.csv",
+      "source_target_domain": "target",
+      "units": "fraction"
+    },
+    {
+      "analysis_phase": "7E",
+      "column": "target_minus_source_auc",
+      "description": "M2/F2T target-minus-source robustness AUC for missingness",
+      "hypothesis_or_RQ_relation": "RQ4",
+      "notes": "",
+      "numeric_value": -0.4209583333333333,
+      "primary_secondary_exploratory": "secondary",
+      "result_id": "R_AUCDIFF_M2F2T_missingness",
+      "row_filter": {
+        "degradation_family": "missingness",
+        "method": "M2/F2T"
+      },
+      "source_artifact": "analysis/phase7e/source-target-robustness-differences.csv",
+      "source_target_domain": "both",
+      "units": "AUC difference"
+    },
+    {
+      "analysis_phase": "7E",
+      "column": "target_minus_source_auc",
+      "description": "M2/F2T target-minus-source robustness AUC for noise",
+      "hypothesis_or_RQ_relation": "RQ4",
+      "notes": "",
+      "numeric_value": -0.698,
+      "primary_secondary_exploratory": "secondary",
+      "result_id": "R_AUCDIFF_M2F2T_noise",
+      "row_filter": {
+        "degradation_family": "noise",
+        "method": "M2/F2T"
+      },
+      "source_artifact": "analysis/phase7e/source-target-robustness-differences.csv",
+      "source_target_domain": "both",
+      "units": "AUC difference"
+    },
+    {
+      "analysis_phase": "7E",
+      "column": "target_minus_source_auc",
+      "description": "M2/F2T target-minus-source robustness AUC for temporal_sampling",
+      "hypothesis_or_RQ_relation": "RQ4",
+      "notes": "",
+      "numeric_value": -0.4188888888888888,
+      "primary_secondary_exploratory": "secondary",
+      "result_id": "R_AUCDIFF_M2F2T_temporal_sampling",
+      "row_filter": {
+        "degradation_family": "temporal_sampling",
+        "method": "M2/F2T"
+      },
+      "source_artifact": "analysis/phase7e/source-target-robustness-differences.csv",
+      "source_target_domain": "both",
+      "units": "AUC difference"
+    },
+    {
+      "analysis_phase": "7E",
+      "column": "target_minus_source_auc",
+      "description": "M2/F2T target-minus-source robustness AUC for delay",
+      "hypothesis_or_RQ_relation": "RQ4",
+      "notes": "",
+      "numeric_value": -0.3166666666666666,
+      "primary_secondary_exploratory": "secondary",
+      "result_id": "R_AUCDIFF_M2F2T_delay",
+      "row_filter": {
+        "degradation_family": "delay",
+        "method": "M2/F2T"
+      },
+      "source_artifact": "analysis/phase7e/source-target-robustness-differences.csv",
+      "source_target_domain": "both",
+      "units": "AUC difference"
+    },
+    {
+      "analysis_phase": "7E",
+      "column": "target_minus_source_auc",
+      "description": "D4-FULL target-minus-source robustness AUC for missingness",
+      "hypothesis_or_RQ_relation": "RQ4",
+      "notes": "",
+      "numeric_value": -0.0075833333333333,
+      "primary_secondary_exploratory": "secondary",
+      "result_id": "R_AUCDIFF_D4_FULL_missingness",
+      "row_filter": {
+        "degradation_family": "missingness",
+        "method": "D4-FULL"
+      },
+      "source_artifact": "analysis/phase7e/source-target-robustness-differences.csv",
+      "source_target_domain": "both",
+      "units": "AUC difference"
+    },
+    {
+      "analysis_phase": "7E",
+      "column": "target_minus_source_auc",
+      "description": "D4-FULL target-minus-source robustness AUC for noise",
+      "hypothesis_or_RQ_relation": "RQ4",
+      "notes": "",
+      "numeric_value": -0.0409166666666667,
+      "primary_secondary_exploratory": "secondary",
+      "result_id": "R_AUCDIFF_D4_FULL_noise",
+      "row_filter": {
+        "degradation_family": "noise",
+        "method": "D4-FULL"
+      },
+      "source_artifact": "analysis/phase7e/source-target-robustness-differences.csv",
+      "source_target_domain": "both",
+      "units": "AUC difference"
+    },
+    {
+      "analysis_phase": "7E",
+      "column": "target_minus_source_auc",
+      "description": "D4-FULL target-minus-source robustness AUC for temporal_sampling",
+      "hypothesis_or_RQ_relation": "RQ4",
+      "notes": "",
+      "numeric_value": -0.0134722222222223,
+      "primary_secondary_exploratory": "secondary",
+      "result_id": "R_AUCDIFF_D4_FULL_temporal_sampling",
+      "row_filter": {
+        "degradation_family": "temporal_sampling",
+        "method": "D4-FULL"
+      },
+      "source_artifact": "analysis/phase7e/source-target-robustness-differences.csv",
+      "source_target_domain": "both",
+      "units": "AUC difference"
+    },
+    {
+      "analysis_phase": "7E",
+      "column": "target_minus_source_auc",
+      "description": "D4-FULL target-minus-source robustness AUC for delay",
+      "hypothesis_or_RQ_relation": "RQ4",
+      "notes": "",
+      "numeric_value": 0.0,
+      "primary_secondary_exploratory": "secondary",
+      "result_id": "R_AUCDIFF_D4_FULL_delay",
+      "row_filter": {
+        "degradation_family": "delay",
+        "method": "D4-FULL"
+      },
+      "source_artifact": "analysis/phase7e/source-target-robustness-differences.csv",
+      "source_target_domain": "both",
+      "units": "AUC difference"
+    },
+    {
+      "analysis_phase": "7F",
+      "column": "optional_telemetry_bytes_per_request",
+      "description": "T0_FULL optional telemetry bytes/request",
+      "hypothesis_or_RQ_relation": "RQ5",
+      "notes": "",
+      "numeric_value": 603.0375,
+      "primary_secondary_exploratory": "primary",
+      "result_id": "R_T0_FULL_OPTIONAL_BYTES_PER_REQUEST",
+      "row_filter": {
+        "telemetry_config": "T0_FULL"
+      },
+      "source_artifact": "analysis/phase7f/table-21-quality-cost-frontier.csv",
+      "source_target_domain": "source",
+      "units": "bytes/request"
+    },
+    {
+      "analysis_phase": "7F",
+      "column": "storage_reduction_vs_FULL",
+      "description": "T0_FULL storage reduction vs FULL",
+      "hypothesis_or_RQ_relation": "RQ5",
+      "notes": "",
+      "numeric_value": 0.0,
+      "primary_secondary_exploratory": "primary",
+      "result_id": "R_T0_FULL_STORAGE_REDUCTION",
+      "row_filter": {
+        "telemetry_config": "T0_FULL"
+      },
+      "source_artifact": "analysis/phase7f/table-21-quality-cost-frontier.csv",
+      "source_target_domain": "source",
+      "units": "fraction"
+    },
+    {
+      "analysis_phase": "7F",
+      "column": "optional_telemetry_bytes_per_request",
+      "description": "T1_NO_HOST optional telemetry bytes/request",
+      "hypothesis_or_RQ_relation": "RQ5",
+      "notes": "",
+      "numeric_value": 508.25625,
+      "primary_secondary_exploratory": "primary",
+      "result_id": "R_T1_NO_HOST_OPTIONAL_BYTES_PER_REQUEST",
+      "row_filter": {
+        "telemetry_config": "T1_NO_HOST"
+      },
+      "source_artifact": "analysis/phase7f/table-21-quality-cost-frontier.csv",
+      "source_target_domain": "source",
+      "units": "bytes/request"
+    },
+    {
+      "analysis_phase": "7F",
+      "column": "storage_reduction_vs_FULL",
+      "description": "T1_NO_HOST storage reduction vs FULL",
+      "hypothesis_or_RQ_relation": "RQ5",
+      "notes": "",
+      "numeric_value": 0.1571730613767801,
+      "primary_secondary_exploratory": "primary",
+      "result_id": "R_T1_NO_HOST_STORAGE_REDUCTION",
+      "row_filter": {
+        "telemetry_config": "T1_NO_HOST"
+      },
+      "source_artifact": "analysis/phase7f/table-21-quality-cost-frontier.csv",
+      "source_target_domain": "source",
+      "units": "fraction"
+    },
+    {
+      "analysis_phase": "7F",
+      "column": "optional_telemetry_bytes_per_request",
+      "description": "T2_NO_RUNTIME optional telemetry bytes/request",
+      "hypothesis_or_RQ_relation": "RQ5",
+      "notes": "",
+      "numeric_value": 545.1625,
+      "primary_secondary_exploratory": "primary",
+      "result_id": "R_T2_NO_RUNTIME_OPTIONAL_BYTES_PER_REQUEST",
+      "row_filter": {
+        "telemetry_config": "T2_NO_RUNTIME"
+      },
+      "source_artifact": "analysis/phase7f/table-21-quality-cost-frontier.csv",
+      "source_target_domain": "source",
+      "units": "bytes/request"
+    },
+    {
+      "analysis_phase": "7F",
+      "column": "storage_reduction_vs_FULL",
+      "description": "T2_NO_RUNTIME storage reduction vs FULL",
+      "hypothesis_or_RQ_relation": "RQ5",
+      "notes": "",
+      "numeric_value": 0.0959724726903384,
+      "primary_secondary_exploratory": "primary",
+      "result_id": "R_T2_NO_RUNTIME_STORAGE_REDUCTION",
+      "row_filter": {
+        "telemetry_config": "T2_NO_RUNTIME"
+      },
+      "source_artifact": "analysis/phase7f/table-21-quality-cost-frontier.csv",
+      "source_target_domain": "source",
+      "units": "fraction"
+    },
+    {
+      "analysis_phase": "7F",
+      "column": "optional_telemetry_bytes_per_request",
+      "description": "T3_LIGHT optional telemetry bytes/request",
+      "hypothesis_or_RQ_relation": "RQ5",
+      "notes": "",
+      "numeric_value": 448.3229166666667,
+      "primary_secondary_exploratory": "primary",
+      "result_id": "R_T3_LIGHT_OPTIONAL_BYTES_PER_REQUEST",
+      "row_filter": {
+        "telemetry_config": "T3_LIGHT"
+      },
+      "source_artifact": "analysis/phase7f/table-21-quality-cost-frontier.csv",
+      "source_target_domain": "source",
+      "units": "bytes/request"
+    },
+    {
+      "analysis_phase": "7F",
+      "column": "storage_reduction_vs_FULL",
+      "description": "T3_LIGHT storage reduction vs FULL",
+      "hypothesis_or_RQ_relation": "RQ5",
+      "notes": "",
+      "numeric_value": 0.2565588099137007,
+      "primary_secondary_exploratory": "primary",
+      "result_id": "R_T3_LIGHT_STORAGE_REDUCTION",
+      "row_filter": {
+        "telemetry_config": "T3_LIGHT"
+      },
+      "source_artifact": "analysis/phase7f/table-21-quality-cost-frontier.csv",
+      "source_target_domain": "source",
+      "units": "fraction"
+    },
+    {
+      "analysis_phase": "7F",
+      "column": null,
+      "description": "NO_HOST baseline total-latency-p95 relative change",
+      "hypothesis_or_RQ_relation": "H5/RQ5",
+      "notes": "",
+      "numeric_value": -0.02521196677861311,
+      "primary_secondary_exploratory": "primary",
+      "result_id": "R_H5_BASELINE_LATENCY_MEAN",
+      "row_filter": {},
+      "source_artifact": "analysis/phase7f/h5-final-evaluation.json",
+      "source_target_domain": "source",
+      "units": "relative change"
+    },
+    {
+      "analysis_phase": "7F",
+      "column": null,
+      "description": "NO_HOST baseline latency CI high",
+      "hypothesis_or_RQ_relation": "H5/RQ5",
+      "notes": "",
+      "numeric_value": 0.05792015036012546,
+      "primary_secondary_exploratory": "primary",
+      "result_id": "R_H5_BASELINE_LATENCY_CI_HIGH",
+      "row_filter": {},
+      "source_artifact": "analysis/phase7f/h5-final-evaluation.json",
+      "source_target_domain": "source",
+      "units": "relative change"
+    },
+    {
+      "analysis_phase": "7F",
+      "column": null,
+      "description": "NO_HOST load total-latency-p95 relative change",
+      "hypothesis_or_RQ_relation": "H5/RQ5",
+      "notes": "",
+      "numeric_value": -0.004454916177263624,
+      "primary_secondary_exploratory": "primary",
+      "result_id": "R_H5_LOAD_LATENCY_MEAN",
+      "row_filter": {},
+      "source_artifact": "analysis/phase7f/h5-final-evaluation.json",
+      "source_target_domain": "source",
+      "units": "relative change"
+    },
+    {
+      "analysis_phase": "7F",
+      "column": null,
+      "description": "NO_HOST load latency CI high",
+      "hypothesis_or_RQ_relation": "H5/RQ5",
+      "notes": "",
+      "numeric_value": 0.07130429949396101,
+      "primary_secondary_exploratory": "primary",
+      "result_id": "R_H5_LOAD_LATENCY_CI_HIGH",
+      "row_filter": {},
+      "source_artifact": "analysis/phase7f/h5-final-evaluation.json",
+      "source_target_domain": "source",
+      "units": "relative change"
+    },
+    {
+      "analysis_phase": "7F",
+      "column": null,
+      "description": "Target host telemetry storage projection",
+      "hypothesis_or_RQ_relation": "RQ5",
+      "notes": "",
+      "numeric_value": 804979.0,
+      "primary_secondary_exploratory": "secondary",
+      "result_id": "R_TARGET_NO_HOST_BYTES",
+      "row_filter": {},
+      "source_artifact": "analysis/phase7f/target-storage-projection.csv",
+      "source_target_domain": "target",
+      "units": "bytes"
+    },
+    {
+      "analysis_phase": "7F",
+      "column": null,
+      "description": "Target host telemetry bytes/request projection",
+      "hypothesis_or_RQ_relation": "RQ5",
+      "notes": "",
+      "numeric_value": 304.9162878787879,
+      "primary_secondary_exploratory": "secondary",
+      "result_id": "R_TARGET_NO_HOST_BYTES_PER_REQUEST",
+      "row_filter": {},
+      "source_artifact": "analysis/phase7f/target-storage-projection.csv",
+      "source_target_domain": "target",
+      "units": "bytes/request"
+    },
+    {
+      "analysis_phase": "7F",
+      "column": null,
+      "description": "Target host telemetry share of optional storage",
+      "hypothesis_or_RQ_relation": "RQ5",
+      "notes": "",
+      "numeric_value": 0.4089573652094704,
+      "primary_secondary_exploratory": "secondary",
+      "result_id": "R_TARGET_NO_HOST_OPTIONAL_PCT",
+      "row_filter": {},
+      "source_artifact": "analysis/phase7f/target-storage-projection.csv",
+      "source_target_domain": "target",
+      "units": "fraction"
+    },
+    {
+      "analysis_phase": "7D.2a",
+      "column": null,
+      "description": "Source-to-target standardized mean shift for total_latency_early_median",
+      "hypothesis_or_RQ_relation": "RQ3",
+      "notes": "Phase 7D.2a accepted feature-shift hash; detailed shift table was historical artifact.",
+      "numeric_value": 3.96,
+      "primary_secondary_exploratory": "descriptive",
+      "result_id": "R_SHIFT_TOTAL_LATENCY_EARLY_MEDIAN",
+      "row_filter": {},
+      "source_artifact": "analysis/phase7d2a/phase7d2a-report.json",
+      "source_target_domain": "both",
+      "units": "source SD"
+    },
+    {
+      "analysis_phase": "7D.2a",
+      "column": null,
+      "description": "Source-to-target standardized mean shift for ttft_early_median",
+      "hypothesis_or_RQ_relation": "RQ3",
+      "notes": "Phase 7D.2a accepted feature-shift hash; detailed shift table was historical artifact.",
+      "numeric_value": 3.72,
+      "primary_secondary_exploratory": "descriptive",
+      "result_id": "R_SHIFT_TTFT_EARLY_MEDIAN",
+      "row_filter": {},
+      "source_artifact": "analysis/phase7d2a/phase7d2a-report.json",
+      "source_target_domain": "both",
+      "units": "source SD"
+    },
+    {
+      "analysis_phase": "7D.2a",
+      "column": null,
+      "description": "Source-to-target standardized mean shift for prefill_proxy_early_median",
+      "hypothesis_or_RQ_relation": "RQ3",
+      "notes": "Phase 7D.2a accepted feature-shift hash; detailed shift table was historical artifact.",
+      "numeric_value": 3.53,
+      "primary_secondary_exploratory": "descriptive",
+      "result_id": "R_SHIFT_PREFILL_PROXY_EARLY_MEDIAN",
+      "row_filter": {},
+      "source_artifact": "analysis/phase7d2a/phase7d2a-report.json",
+      "source_target_domain": "both",
+      "units": "source SD"
+    },
+    {
+      "analysis_phase": "7D.2a",
+      "column": null,
+      "description": "Source-to-target standardized mean shift for total_latency_median",
+      "hypothesis_or_RQ_relation": "RQ3",
+      "notes": "Phase 7D.2a accepted feature-shift hash; detailed shift table was historical artifact.",
+      "numeric_value": 3.27,
+      "primary_secondary_exploratory": "descriptive",
+      "result_id": "R_SHIFT_TOTAL_LATENCY_MEDIAN",
+      "row_filter": {},
+      "source_artifact": "analysis/phase7d2a/phase7d2a-report.json",
+      "source_target_domain": "both",
+      "units": "source SD"
+    },
+    {
+      "analysis_phase": "7D.2a",
+      "column": null,
+      "description": "Source-to-target standardized mean shift for total_latency_p95",
+      "hypothesis_or_RQ_relation": "RQ3",
+      "notes": "Phase 7D.2a accepted feature-shift hash; detailed shift table was historical artifact.",
+      "numeric_value": 3.2,
+      "primary_secondary_exploratory": "descriptive",
+      "result_id": "R_SHIFT_TOTAL_LATENCY_P95",
+      "row_filter": {},
+      "source_artifact": "analysis/phase7d2a/phase7d2a-report.json",
+      "source_target_domain": "both",
+      "units": "source SD"
+    }
+  ]
+}

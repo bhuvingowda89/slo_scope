@@ -1,0 +1,51 @@
+{
+  "generated_at": "2026-10-01T18:57:04.222968+00:00",
+  "main_figures": [
+    "figures/figure-1-architecture.svg",
+    "figures/figure-2-isolated-effects.svg",
+    "figures/figure-3-compound-csd.svg",
+    "figures/figure-4-rca-gap.svg",
+    "figures/figure-5-source-target-rca.svg",
+    "figures/figure-6-feature-shift.svg",
+    "figures/figure-7-degraded-telemetry.svg",
+    "figures/figure-8-quality-cost-frontier.svg"
+  ],
+  "main_tables": [
+    "tables/table-1-mechanisms.tex",
+    "tables/table-2-campaigns.tex",
+    "tables/table-3-isolated.tex",
+    "tables/table-4-compound.tex",
+    "tables/table-5-rca.tex",
+    "tables/table-6-robustness.tex",
+    "tables/table-7-cost.tex"
+  ],
+  "readiness_note": "Journal-neutral compact manuscript skeleton and publication artifact are ready for review; substantial prose expansion remains before venue-specific submission.",
+  "sections": [
+    "Introduction",
+    "Background and Motivation",
+    "Research Questions and Experimental Principles",
+    "SLOScope Design",
+    "Experimental Methodology",
+    "Single-Mechanism Effects and Compound Interactions",
+    "Compound Diagnosis",
+    "Cross-Model Generalization",
+    "Robustness to Degraded Observability",
+    "Telemetry Quality/Cost Tradeoffs",
+    "Discussion",
+    "Threats to Validity",
+    "Related Work",
+    "Conclusion"
+  ],
+  "title_candidates": [
+    "SLOScope: Benchmarking Compound SLO Degradation and Diagnosis in Commodity LLM Inference Systems",
+    "SLOScope: Compound Performance Degradation, Diagnosis, and Observability in Commodity LLM Inference"
+  ],
+  "validation": {
+    "artifact_verification": "passed: 11 files",
+    "existing_tests": "155 passed with python3.11 -m pytest -q outside sandbox; sandbox run failed only on local socket bind PermissionError",
+    "latex_build": "not run: pdflatex, latexmk, and tectonic are unavailable in this environment",
+    "latex_structural_audit": "passed: no missing inputs, missing bib keys, or manuscript TODO/placeholders",
+    "manuscript_number_audit": "passed: 80 registered results"
+  },
+  "word_count_approx": 2230
+}

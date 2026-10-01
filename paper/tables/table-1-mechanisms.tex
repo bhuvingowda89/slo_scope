@@ -1,0 +1,15 @@
+\begin{table}[t]
+\centering
+\small
+\caption{SLOScope mechanisms and experimental roles.}
+\begin{tabular}{lllll}
+\hline
+Mechanism & Operational definition & Direct evidence & Primary stage & Compound partners \\
+\hline
+INPUT & Synthetic input-medium prompt & Observed prompt/prefill timing & Prefill/TTFT & LOAD, DOWNSTREAM \\
+OUTPUT & Continuation workload requesting 32 output tokens & Observed decode/output timing & Decode & LOAD, DOWNSTREAM \\
+LOAD & 12 rps offered load & Arrival schedule and scheduler slip; queue-depth metric unavailable & Queue/contention & INPUT, OUTPUT, DOWNSTREAM \\
+DOWNSTREAM & Synthetic dependency delay of 100 ms & Dependency timing & Gateway/dependency & INPUT, OUTPUT, LOAD \\
+\hline
+\end{tabular}
+\end{table}
