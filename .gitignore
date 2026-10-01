@@ -14,6 +14,7 @@ results/
 pilot_runs/
 campaigns/phase5/final-launch-preflight.json
 campaigns/phase5/final-v2-launch-preflight.json
+campaigns/phase7d-qwen15b/final-launch-preflight.json
 
 .DS_Store
 .idea/
