@@ -1,0 +1,32 @@
+{
+  "actual_collection_channel": {
+    "C1_HOST_CPU": {
+      "collected_through": "telemetry.system_metrics",
+      "live_configuration": "T1_NO_HOST",
+      "phase7f_primary_candidate": true
+    }
+  },
+  "analysis_derived_features": [
+    "C4_TEMPORAL_EVOLUTION",
+    "C5_THROUGHPUT_SCHEDULER",
+    "C6_LATENCY_P95",
+    "C7_MEDIAN_LATENCY"
+  ],
+  "collection_artifact_channel": {
+    "C3_TRACE_SPAN": {
+      "limitation": "would measure trace retrieval/storage/artifact cost under the existing implementation, not full tracing instrumentation cost",
+      "phase7f_primary_live": false,
+      "switch": "telemetry.traces=false"
+    }
+  },
+  "not_independently_switchable_without_source_change": [
+    "C2_DEPENDENCY"
+  ],
+  "runtime_metrics_cost_only": {
+    "live_configurations": [
+      "T2_NO_RUNTIME",
+      "T3_LIGHT"
+    ],
+    "reason": "formal RCA features do not rely on unavailable llama.cpp queue metric rows"
+  }
+}

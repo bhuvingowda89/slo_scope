@@ -1,0 +1,52 @@
+{
+  "analysis_seed": 12101,
+  "campaign_id": "sloscope-telemetry-cost-v1",
+  "measured_requests_per_run": 40,
+  "model_alias": "sloscope-qwen2.5-0.5b",
+  "model_ref": "Qwen/Qwen2.5-0.5B-Instruct-GGUF:Q4_K_M",
+  "phase7f_cost_spec_sha256": "254c69d2a425c36c2c90971a778943128522edabb99eefc4b6d2f532283d6f8e",
+  "primary_cost_metric": "optional_telemetry_bytes_per_measured_request",
+  "primary_h5_candidate": {
+    "comparison": "T1_NO_HOST vs T0_FULL",
+    "method": "M2/F2"
+  },
+  "randomization_seed": 11731,
+  "repetitions": 6,
+  "run_root": "runs/phase7f-cost",
+  "service_performance_guard": {
+    "metric": "total_latency_p95",
+    "paired_ci": "95% Student-t",
+    "relative_margin": 0.05
+  },
+  "telemetry_configurations": {
+    "T0_FULL": {
+      "request_telemetry": true,
+      "runtime_metrics": true,
+      "system_metrics": true,
+      "traces": true
+    },
+    "T1_NO_HOST": {
+      "request_telemetry": true,
+      "runtime_metrics": true,
+      "system_metrics": false,
+      "traces": true
+    },
+    "T2_NO_RUNTIME": {
+      "request_telemetry": true,
+      "runtime_metrics": false,
+      "system_metrics": true,
+      "traces": true
+    },
+    "T3_LIGHT": {
+      "request_telemetry": true,
+      "runtime_metrics": false,
+      "system_metrics": false,
+      "traces": true
+    }
+  },
+  "warmup_requests_per_run": 5,
+  "workloads": [
+    "BASELINE",
+    "LOAD_MEDIUM"
+  ]
+}
