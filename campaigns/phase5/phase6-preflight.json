@@ -28,6 +28,6 @@
     "campaigns/phase5/phase6-preflight.json",
     "configs/phase5/**/*.yaml"
   ],
-  "frozen_source_tree_sha256": "7e944c019d2e85a50a3781628302df94fc9016aeab0576a74f95df74a7268e3c",
+  "frozen_source_tree_sha256": "8e442c813619586072c27a4ec30d7e65d367c3fc1375922935f67c72e2122582",
   "schema_version": "sloscope.phase6_preflight.v1"
 }

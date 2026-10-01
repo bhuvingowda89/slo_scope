@@ -1,7 +1,7 @@
 {
-  "campaign_freeze_sha256": "7f47afe51f36d25da8db9948e58c3306e784a93ee5da7e1d6c744161d0cfb864",
+  "campaign_freeze_sha256": "65d9798ea033bc910a832c624324fe068e48552b2a16e6ed639f33763ca028e0",
   "campaign_id": "phase5-campaign-freeze",
-  "campaign_manifest_sha256": "b759e635e2c9138ea0b1c7bffbd38640b04af0d2c81c7c4ee5866dac82571009",
+  "campaign_manifest_sha256": "84869b81c906b1c1ea93ca25f5de46fc76a6fbe05973a781ade619722d6efaee",
   "campaign_order": [
     {
       "active_mechanisms": "[\"input_medium\"]",
@@ -17,7 +17,7 @@
       "repetition": 1,
       "run_directory": "runs/phase6-v2/phase6v2-r01-input-medium-a01",
       "run_id": "phase6v2-r01-input-medium-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -34,7 +34,7 @@
       "repetition": 1,
       "run_directory": "runs/phase6-v2/phase6v2-r01-input-load-a01",
       "run_id": "phase6v2-r01-input-load-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -51,7 +51,7 @@
       "repetition": 1,
       "run_directory": "runs/phase6-v2/phase6v2-r01-output-medium-a01",
       "run_id": "phase6v2-r01-output-medium-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -68,7 +68,7 @@
       "repetition": 1,
       "run_directory": "runs/phase6-v2/phase6v2-r01-load-downstream-a01",
       "run_id": "phase6v2-r01-load-downstream-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -85,7 +85,7 @@
       "repetition": 1,
       "run_directory": "runs/phase6-v2/phase6v2-r01-output-downstream-control-a01",
       "run_id": "phase6v2-r01-output-downstream-control-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -102,7 +102,7 @@
       "repetition": 1,
       "run_directory": "runs/phase6-v2/phase6v2-r01-downstream-medium-a01",
       "run_id": "phase6v2-r01-downstream-medium-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -119,7 +119,7 @@
       "repetition": 1,
       "run_directory": "runs/phase6-v2/phase6v2-r01-output-load-control-a01",
       "run_id": "phase6v2-r01-output-load-control-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -136,7 +136,7 @@
       "repetition": 1,
       "run_directory": "runs/phase6-v2/phase6v2-r01-input-downstream-a01",
       "run_id": "phase6v2-r01-input-downstream-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -153,7 +153,7 @@
       "repetition": 1,
       "run_directory": "runs/phase6-v2/phase6v2-r01-output-control-a01",
       "run_id": "phase6v2-r01-output-control-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -170,7 +170,7 @@
       "repetition": 1,
       "run_directory": "runs/phase6-v2/phase6v2-r01-output-downstream-a01",
       "run_id": "phase6v2-r01-output-downstream-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -187,7 +187,7 @@
       "repetition": 1,
       "run_directory": "runs/phase6-v2/phase6v2-r01-baseline-a01",
       "run_id": "phase6v2-r01-baseline-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -204,7 +204,7 @@
       "repetition": 1,
       "run_directory": "runs/phase6-v2/phase6v2-r01-output-load-a01",
       "run_id": "phase6v2-r01-output-load-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -221,7 +221,7 @@
       "repetition": 1,
       "run_directory": "runs/phase6-v2/phase6v2-r01-load-medium-a01",
       "run_id": "phase6v2-r01-load-medium-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -238,7 +238,7 @@
       "repetition": 2,
       "run_directory": "runs/phase6-v2/phase6v2-r02-output-control-a01",
       "run_id": "phase6v2-r02-output-control-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -255,7 +255,7 @@
       "repetition": 2,
       "run_directory": "runs/phase6-v2/phase6v2-r02-input-downstream-a01",
       "run_id": "phase6v2-r02-input-downstream-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -272,7 +272,7 @@
       "repetition": 2,
       "run_directory": "runs/phase6-v2/phase6v2-r02-baseline-a01",
       "run_id": "phase6v2-r02-baseline-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -289,7 +289,7 @@
       "repetition": 2,
       "run_directory": "runs/phase6-v2/phase6v2-r02-output-medium-a01",
       "run_id": "phase6v2-r02-output-medium-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -306,7 +306,7 @@
       "repetition": 2,
       "run_directory": "runs/phase6-v2/phase6v2-r02-input-medium-a01",
       "run_id": "phase6v2-r02-input-medium-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -323,7 +323,7 @@
       "repetition": 2,
       "run_directory": "runs/phase6-v2/phase6v2-r02-output-load-a01",
       "run_id": "phase6v2-r02-output-load-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -340,7 +340,7 @@
       "repetition": 2,
       "run_directory": "runs/phase6-v2/phase6v2-r02-output-downstream-a01",
       "run_id": "phase6v2-r02-output-downstream-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -357,7 +357,7 @@
       "repetition": 2,
       "run_directory": "runs/phase6-v2/phase6v2-r02-output-downstream-control-a01",
       "run_id": "phase6v2-r02-output-downstream-control-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -374,7 +374,7 @@
       "repetition": 2,
       "run_directory": "runs/phase6-v2/phase6v2-r02-input-load-a01",
       "run_id": "phase6v2-r02-input-load-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -391,7 +391,7 @@
       "repetition": 2,
       "run_directory": "runs/phase6-v2/phase6v2-r02-load-downstream-a01",
       "run_id": "phase6v2-r02-load-downstream-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -408,7 +408,7 @@
       "repetition": 2,
       "run_directory": "runs/phase6-v2/phase6v2-r02-load-medium-a01",
       "run_id": "phase6v2-r02-load-medium-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -425,7 +425,7 @@
       "repetition": 2,
       "run_directory": "runs/phase6-v2/phase6v2-r02-downstream-medium-a01",
       "run_id": "phase6v2-r02-downstream-medium-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -442,7 +442,7 @@
       "repetition": 2,
       "run_directory": "runs/phase6-v2/phase6v2-r02-output-load-control-a01",
       "run_id": "phase6v2-r02-output-load-control-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -459,7 +459,7 @@
       "repetition": 3,
       "run_directory": "runs/phase6-v2/phase6v2-r03-output-downstream-a01",
       "run_id": "phase6v2-r03-output-downstream-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -476,7 +476,7 @@
       "repetition": 3,
       "run_directory": "runs/phase6-v2/phase6v2-r03-input-medium-a01",
       "run_id": "phase6v2-r03-input-medium-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -493,7 +493,7 @@
       "repetition": 3,
       "run_directory": "runs/phase6-v2/phase6v2-r03-output-load-a01",
       "run_id": "phase6v2-r03-output-load-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -510,7 +510,7 @@
       "repetition": 3,
       "run_directory": "runs/phase6-v2/phase6v2-r03-input-downstream-a01",
       "run_id": "phase6v2-r03-input-downstream-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -527,7 +527,7 @@
       "repetition": 3,
       "run_directory": "runs/phase6-v2/phase6v2-r03-input-load-a01",
       "run_id": "phase6v2-r03-input-load-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -544,7 +544,7 @@
       "repetition": 3,
       "run_directory": "runs/phase6-v2/phase6v2-r03-baseline-a01",
       "run_id": "phase6v2-r03-baseline-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -561,7 +561,7 @@
       "repetition": 3,
       "run_directory": "runs/phase6-v2/phase6v2-r03-downstream-medium-a01",
       "run_id": "phase6v2-r03-downstream-medium-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -578,7 +578,7 @@
       "repetition": 3,
       "run_directory": "runs/phase6-v2/phase6v2-r03-output-load-control-a01",
       "run_id": "phase6v2-r03-output-load-control-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -595,7 +595,7 @@
       "repetition": 3,
       "run_directory": "runs/phase6-v2/phase6v2-r03-output-medium-a01",
       "run_id": "phase6v2-r03-output-medium-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -612,7 +612,7 @@
       "repetition": 3,
       "run_directory": "runs/phase6-v2/phase6v2-r03-load-downstream-a01",
       "run_id": "phase6v2-r03-load-downstream-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -629,7 +629,7 @@
       "repetition": 3,
       "run_directory": "runs/phase6-v2/phase6v2-r03-output-downstream-control-a01",
       "run_id": "phase6v2-r03-output-downstream-control-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -646,7 +646,7 @@
       "repetition": 3,
       "run_directory": "runs/phase6-v2/phase6v2-r03-output-control-a01",
       "run_id": "phase6v2-r03-output-control-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -663,7 +663,7 @@
       "repetition": 3,
       "run_directory": "runs/phase6-v2/phase6v2-r03-load-medium-a01",
       "run_id": "phase6v2-r03-load-medium-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -680,7 +680,7 @@
       "repetition": 4,
       "run_directory": "runs/phase6-v2/phase6v2-r04-input-load-a01",
       "run_id": "phase6v2-r04-input-load-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -697,7 +697,7 @@
       "repetition": 4,
       "run_directory": "runs/phase6-v2/phase6v2-r04-output-load-a01",
       "run_id": "phase6v2-r04-output-load-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -714,7 +714,7 @@
       "repetition": 4,
       "run_directory": "runs/phase6-v2/phase6v2-r04-downstream-medium-a01",
       "run_id": "phase6v2-r04-downstream-medium-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -731,7 +731,7 @@
       "repetition": 4,
       "run_directory": "runs/phase6-v2/phase6v2-r04-output-control-a01",
       "run_id": "phase6v2-r04-output-control-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -748,7 +748,7 @@
       "repetition": 4,
       "run_directory": "runs/phase6-v2/phase6v2-r04-output-load-control-a01",
       "run_id": "phase6v2-r04-output-load-control-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -765,7 +765,7 @@
       "repetition": 4,
       "run_directory": "runs/phase6-v2/phase6v2-r04-output-downstream-control-a01",
       "run_id": "phase6v2-r04-output-downstream-control-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -782,7 +782,7 @@
       "repetition": 4,
       "run_directory": "runs/phase6-v2/phase6v2-r04-baseline-a01",
       "run_id": "phase6v2-r04-baseline-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -799,7 +799,7 @@
       "repetition": 4,
       "run_directory": "runs/phase6-v2/phase6v2-r04-input-medium-a01",
       "run_id": "phase6v2-r04-input-medium-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -816,7 +816,7 @@
       "repetition": 4,
       "run_directory": "runs/phase6-v2/phase6v2-r04-input-downstream-a01",
       "run_id": "phase6v2-r04-input-downstream-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -833,7 +833,7 @@
       "repetition": 4,
       "run_directory": "runs/phase6-v2/phase6v2-r04-output-downstream-a01",
       "run_id": "phase6v2-r04-output-downstream-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -850,7 +850,7 @@
       "repetition": 4,
       "run_directory": "runs/phase6-v2/phase6v2-r04-load-medium-a01",
       "run_id": "phase6v2-r04-load-medium-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -867,7 +867,7 @@
       "repetition": 4,
       "run_directory": "runs/phase6-v2/phase6v2-r04-load-downstream-a01",
       "run_id": "phase6v2-r04-load-downstream-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -884,7 +884,7 @@
       "repetition": 4,
       "run_directory": "runs/phase6-v2/phase6v2-r04-output-medium-a01",
       "run_id": "phase6v2-r04-output-medium-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -901,7 +901,7 @@
       "repetition": 5,
       "run_directory": "runs/phase6-v2/phase6v2-r05-output-downstream-a01",
       "run_id": "phase6v2-r05-output-downstream-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -918,7 +918,7 @@
       "repetition": 5,
       "run_directory": "runs/phase6-v2/phase6v2-r05-input-downstream-a01",
       "run_id": "phase6v2-r05-input-downstream-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -935,7 +935,7 @@
       "repetition": 5,
       "run_directory": "runs/phase6-v2/phase6v2-r05-load-downstream-a01",
       "run_id": "phase6v2-r05-load-downstream-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -952,7 +952,7 @@
       "repetition": 5,
       "run_directory": "runs/phase6-v2/phase6v2-r05-output-downstream-control-a01",
       "run_id": "phase6v2-r05-output-downstream-control-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -969,7 +969,7 @@
       "repetition": 5,
       "run_directory": "runs/phase6-v2/phase6v2-r05-output-load-control-a01",
       "run_id": "phase6v2-r05-output-load-control-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -986,7 +986,7 @@
       "repetition": 5,
       "run_directory": "runs/phase6-v2/phase6v2-r05-input-medium-a01",
       "run_id": "phase6v2-r05-input-medium-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -1003,7 +1003,7 @@
       "repetition": 5,
       "run_directory": "runs/phase6-v2/phase6v2-r05-output-control-a01",
       "run_id": "phase6v2-r05-output-control-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -1020,7 +1020,7 @@
       "repetition": 5,
       "run_directory": "runs/phase6-v2/phase6v2-r05-baseline-a01",
       "run_id": "phase6v2-r05-baseline-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -1037,7 +1037,7 @@
       "repetition": 5,
       "run_directory": "runs/phase6-v2/phase6v2-r05-input-load-a01",
       "run_id": "phase6v2-r05-input-load-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -1054,7 +1054,7 @@
       "repetition": 5,
       "run_directory": "runs/phase6-v2/phase6v2-r05-downstream-medium-a01",
       "run_id": "phase6v2-r05-downstream-medium-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -1071,7 +1071,7 @@
       "repetition": 5,
       "run_directory": "runs/phase6-v2/phase6v2-r05-load-medium-a01",
       "run_id": "phase6v2-r05-load-medium-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -1088,7 +1088,7 @@
       "repetition": 5,
       "run_directory": "runs/phase6-v2/phase6v2-r05-output-medium-a01",
       "run_id": "phase6v2-r05-output-medium-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -1105,7 +1105,7 @@
       "repetition": 5,
       "run_directory": "runs/phase6-v2/phase6v2-r05-output-load-a01",
       "run_id": "phase6v2-r05-output-load-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -1122,7 +1122,7 @@
       "repetition": 6,
       "run_directory": "runs/phase6-v2/phase6v2-r06-baseline-a01",
       "run_id": "phase6v2-r06-baseline-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -1139,7 +1139,7 @@
       "repetition": 6,
       "run_directory": "runs/phase6-v2/phase6v2-r06-input-load-a01",
       "run_id": "phase6v2-r06-input-load-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -1156,7 +1156,7 @@
       "repetition": 6,
       "run_directory": "runs/phase6-v2/phase6v2-r06-output-downstream-control-a01",
       "run_id": "phase6v2-r06-output-downstream-control-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -1173,7 +1173,7 @@
       "repetition": 6,
       "run_directory": "runs/phase6-v2/phase6v2-r06-input-medium-a01",
       "run_id": "phase6v2-r06-input-medium-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -1190,7 +1190,7 @@
       "repetition": 6,
       "run_directory": "runs/phase6-v2/phase6v2-r06-output-load-control-a01",
       "run_id": "phase6v2-r06-output-load-control-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -1207,7 +1207,7 @@
       "repetition": 6,
       "run_directory": "runs/phase6-v2/phase6v2-r06-load-downstream-a01",
       "run_id": "phase6v2-r06-load-downstream-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -1224,7 +1224,7 @@
       "repetition": 6,
       "run_directory": "runs/phase6-v2/phase6v2-r06-output-load-a01",
       "run_id": "phase6v2-r06-output-load-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -1241,7 +1241,7 @@
       "repetition": 6,
       "run_directory": "runs/phase6-v2/phase6v2-r06-downstream-medium-a01",
       "run_id": "phase6v2-r06-downstream-medium-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -1258,7 +1258,7 @@
       "repetition": 6,
       "run_directory": "runs/phase6-v2/phase6v2-r06-input-downstream-a01",
       "run_id": "phase6v2-r06-input-downstream-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -1275,7 +1275,7 @@
       "repetition": 6,
       "run_directory": "runs/phase6-v2/phase6v2-r06-load-medium-a01",
       "run_id": "phase6v2-r06-load-medium-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -1292,7 +1292,7 @@
       "repetition": 6,
       "run_directory": "runs/phase6-v2/phase6v2-r06-output-medium-a01",
       "run_id": "phase6v2-r06-output-medium-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -1309,7 +1309,7 @@
       "repetition": 6,
       "run_directory": "runs/phase6-v2/phase6v2-r06-output-control-a01",
       "run_id": "phase6v2-r06-output-control-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -1326,7 +1326,7 @@
       "repetition": 6,
       "run_directory": "runs/phase6-v2/phase6v2-r06-output-downstream-a01",
       "run_id": "phase6v2-r06-output-downstream-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -1343,7 +1343,7 @@
       "repetition": 7,
       "run_directory": "runs/phase6-v2/phase6v2-r07-output-load-a01",
       "run_id": "phase6v2-r07-output-load-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -1360,7 +1360,7 @@
       "repetition": 7,
       "run_directory": "runs/phase6-v2/phase6v2-r07-load-downstream-a01",
       "run_id": "phase6v2-r07-load-downstream-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -1377,7 +1377,7 @@
       "repetition": 7,
       "run_directory": "runs/phase6-v2/phase6v2-r07-baseline-a01",
       "run_id": "phase6v2-r07-baseline-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -1394,7 +1394,7 @@
       "repetition": 7,
       "run_directory": "runs/phase6-v2/phase6v2-r07-input-downstream-a01",
       "run_id": "phase6v2-r07-input-downstream-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -1411,7 +1411,7 @@
       "repetition": 7,
       "run_directory": "runs/phase6-v2/phase6v2-r07-output-downstream-control-a01",
       "run_id": "phase6v2-r07-output-downstream-control-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -1428,7 +1428,7 @@
       "repetition": 7,
       "run_directory": "runs/phase6-v2/phase6v2-r07-output-load-control-a01",
       "run_id": "phase6v2-r07-output-load-control-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -1445,7 +1445,7 @@
       "repetition": 7,
       "run_directory": "runs/phase6-v2/phase6v2-r07-downstream-medium-a01",
       "run_id": "phase6v2-r07-downstream-medium-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -1462,7 +1462,7 @@
       "repetition": 7,
       "run_directory": "runs/phase6-v2/phase6v2-r07-output-control-a01",
       "run_id": "phase6v2-r07-output-control-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -1479,7 +1479,7 @@
       "repetition": 7,
       "run_directory": "runs/phase6-v2/phase6v2-r07-input-load-a01",
       "run_id": "phase6v2-r07-input-load-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -1496,7 +1496,7 @@
       "repetition": 7,
       "run_directory": "runs/phase6-v2/phase6v2-r07-output-medium-a01",
       "run_id": "phase6v2-r07-output-medium-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -1513,7 +1513,7 @@
       "repetition": 7,
       "run_directory": "runs/phase6-v2/phase6v2-r07-load-medium-a01",
       "run_id": "phase6v2-r07-load-medium-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -1530,7 +1530,7 @@
       "repetition": 7,
       "run_directory": "runs/phase6-v2/phase6v2-r07-input-medium-a01",
       "run_id": "phase6v2-r07-input-medium-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -1547,7 +1547,7 @@
       "repetition": 7,
       "run_directory": "runs/phase6-v2/phase6v2-r07-output-downstream-a01",
       "run_id": "phase6v2-r07-output-downstream-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -1564,7 +1564,7 @@
       "repetition": 8,
       "run_directory": "runs/phase6-v2/phase6v2-r08-output-load-control-a01",
       "run_id": "phase6v2-r08-output-load-control-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -1581,7 +1581,7 @@
       "repetition": 8,
       "run_directory": "runs/phase6-v2/phase6v2-r08-input-medium-a01",
       "run_id": "phase6v2-r08-input-medium-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -1598,7 +1598,7 @@
       "repetition": 8,
       "run_directory": "runs/phase6-v2/phase6v2-r08-output-medium-a01",
       "run_id": "phase6v2-r08-output-medium-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -1615,7 +1615,7 @@
       "repetition": 8,
       "run_directory": "runs/phase6-v2/phase6v2-r08-output-control-a01",
       "run_id": "phase6v2-r08-output-control-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -1632,7 +1632,7 @@
       "repetition": 8,
       "run_directory": "runs/phase6-v2/phase6v2-r08-baseline-a01",
       "run_id": "phase6v2-r08-baseline-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -1649,7 +1649,7 @@
       "repetition": 8,
       "run_directory": "runs/phase6-v2/phase6v2-r08-input-load-a01",
       "run_id": "phase6v2-r08-input-load-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -1666,7 +1666,7 @@
       "repetition": 8,
       "run_directory": "runs/phase6-v2/phase6v2-r08-output-load-a01",
       "run_id": "phase6v2-r08-output-load-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -1683,7 +1683,7 @@
       "repetition": 8,
       "run_directory": "runs/phase6-v2/phase6v2-r08-downstream-medium-a01",
       "run_id": "phase6v2-r08-downstream-medium-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -1700,7 +1700,7 @@
       "repetition": 8,
       "run_directory": "runs/phase6-v2/phase6v2-r08-output-downstream-control-a01",
       "run_id": "phase6v2-r08-output-downstream-control-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -1717,7 +1717,7 @@
       "repetition": 8,
       "run_directory": "runs/phase6-v2/phase6v2-r08-load-medium-a01",
       "run_id": "phase6v2-r08-load-medium-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -1734,7 +1734,7 @@
       "repetition": 8,
       "run_directory": "runs/phase6-v2/phase6v2-r08-output-downstream-a01",
       "run_id": "phase6v2-r08-output-downstream-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -1751,7 +1751,7 @@
       "repetition": 8,
       "run_directory": "runs/phase6-v2/phase6v2-r08-input-downstream-a01",
       "run_id": "phase6v2-r08-input-downstream-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     },
     {
@@ -1768,7 +1768,7 @@
       "repetition": 8,
       "run_directory": "runs/phase6-v2/phase6v2-r08-load-downstream-a01",
       "run_id": "phase6v2-r08-load-downstream-a01",
-      "source_commit": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+      "source_commit": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
       "status": "PLANNED"
     }
   ],
@@ -2017,7 +2017,7 @@
   "formal_condition_count": 13,
   "formal_run_count": 104,
   "git_dirty": true,
-  "git_revision": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+  "git_revision": "f075b3a5b23d043abc62f89cd2fd2846902b9741",
   "minimum_free_space_bytes": 32212254720,
   "model": {
     "model_id": "sloscope-qwen2.5-0.5b",
@@ -2060,6 +2060,6 @@
     ]
   },
   "schema_version": "sloscope.campaign.v1",
-  "source_tree_sha256": "7e944c019d2e85a50a3781628302df94fc9016aeab0576a74f95df74a7268e3c",
+  "source_tree_sha256": "8e442c813619586072c27a4ec30d7e65d367c3fc1375922935f67c72e2122582",
   "warmup_request_count": 5
 }

@@ -6,11 +6,11 @@ experiments are executed by Phase 5.
 
 ## Freeze Identity
 
-- campaign_freeze_sha256: `7f47afe51f36d25da8db9948e58c3306e784a93ee5da7e1d6c744161d0cfb864`
-- campaign_manifest_sha256: `b759e635e2c9138ea0b1c7bffbd38640b04af0d2c81c7c4ee5866dac82571009`
-- git_revision: `bd2078f3841b2f80cb74d04bd28cde6d38cde4e0`
+- campaign_freeze_sha256: `65d9798ea033bc910a832c624324fe068e48552b2a16e6ed639f33763ca028e0`
+- campaign_manifest_sha256: `84869b81c906b1c1ea93ca25f5de46fc76a6fbe05973a781ade619722d6efaee`
+- git_revision: `f075b3a5b23d043abc62f89cd2fd2846902b9741`
 - git_dirty_at_freeze_generation: `True`
-- source_tree_sha256_at_generation: `7e944c019d2e85a50a3781628302df94fc9016aeab0576a74f95df74a7268e3c`
+- source_tree_sha256_at_generation: `8e442c813619586072c27a4ec30d7e65d367c3fc1375922935f67c72e2122582`
 
 Publication execution requires `git_dirty=false`; the Phase 5 repository may still
 contain uncommitted freeze artifacts until the user commits them.

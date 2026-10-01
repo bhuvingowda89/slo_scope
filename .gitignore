@@ -13,6 +13,7 @@ logs/
 results/
 pilot_runs/
 campaigns/phase5/final-launch-preflight.json
+campaigns/phase5/final-v2-launch-preflight.json
 
 .DS_Store
 .idea/

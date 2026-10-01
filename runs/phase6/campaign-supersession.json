@@ -1,0 +1,15 @@
+{
+  "status": "SUPERSEDED_EXECUTION_INTEGRITY_DEFECT",
+  "reason": "gateway timing snapshot race in frozen measurement collector",
+  "executed_primary_runs": 36,
+  "valid_primary_runs": 35,
+  "invalid_primary_runs": 1,
+  "invalid_run": "phase6-r03-load-downstream-a01",
+  "invalid_request": "phase6-r03-load-downstream-a01-req-000023",
+  "original_execution_git_revision": "bd2078f3841b2f80cb74d04bd28cde6d38cde4e0",
+  "original_source_tree_sha256": "3a3eef468db5c1c4dcfbeeb67f55081e25d78d9bb621bb658c318cceb1dfc6fc",
+  "original_campaign_freeze_sha256": "82b61df32669f6731e31b1379d07d3d50291c1c000247251df2a4e14c60f0adb",
+  "publication_analysis_eligible": false,
+  "publication_exclusion_reason": "Excluded for uniform publication provenance after source correction; this does not imply the 35 valid original runs are scientifically corrupt.",
+  "individual_formal_artifacts_modified": false
+}
