@@ -1,0 +1,19 @@
+{
+  "active_mechanisms": [
+    "load_12rps",
+    "downstream_100ms"
+  ],
+  "attempt": 1,
+  "campaign_condition_id": "LOAD_DOWNSTREAM",
+  "campaign_id": "diagnostic-phase7d0-qwen15b-pilot",
+  "compound_degree": 2,
+  "condition_id": "LOAD_DOWNSTREAM",
+  "expected_control_id": "BASELINE",
+  "mechanism_family": "compound",
+  "mechanism_levels": {
+    "downstream_100ms": "medium",
+    "load_12rps": "medium"
+  },
+  "repetition": 0,
+  "run_id": "diagnostic-phase7d0-qwen15b-07-load-downstream"
+}

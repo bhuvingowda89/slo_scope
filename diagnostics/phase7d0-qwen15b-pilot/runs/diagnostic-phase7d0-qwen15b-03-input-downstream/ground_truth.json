@@ -1,0 +1,55 @@
+{
+  "mechanisms": [
+    {
+      "actual_onset": 77726.764795458,
+      "actual_stop": 77786.766391375,
+      "cleaned_up": true,
+      "intensity": 100.0,
+      "magnitude_unit": "ms",
+      "magnitude_value": 100.0,
+      "mechanism_id": "downstream-latency-100ms",
+      "mechanism_type": "downstream_latency",
+      "scheduled_onset": 0.0,
+      "scheduled_stop": 60.0,
+      "target": "synthetic_dependency",
+      "verification_evidence": {
+        "evidence_type": "downstream-latency-control-state",
+        "evidence_value": {
+          "activation_time": 77726.764795458,
+          "cleanup": {
+            "cleaned": true,
+            "cleanup_time": 77786.770089708,
+            "observed_control_state": {
+              "delay_ms": 0,
+              "maximum_delay_ms": 500,
+              "port": 8091,
+              "service_id": "synthetic_dependency",
+              "status": "ok"
+            },
+            "stop_time": 77786.766263166
+          },
+          "configured_delay_ms": 100,
+          "dependency_port": 8091,
+          "dependency_service_id": "synthetic_dependency",
+          "observed_control_state": {
+            "delay_ms": 100,
+            "maximum_delay_ms": 500,
+            "port": 8091,
+            "service_id": "synthetic_dependency",
+            "status": "ok"
+          },
+          "observed_dependency_request_duration": 0.10187949999817647,
+          "verification_start_time": 77726.765660583,
+          "verification_time": 77726.867553958,
+          "verified": true,
+          "verify_minimum_duration": 0.08000000000000002
+        },
+        "timestamp": 77726.867553958,
+        "verified": true
+      },
+      "verification_state": "STOPPED",
+      "verification_time": 77726.867553958
+    }
+  ],
+  "run_condition": "DEGRADATION_INJECTED"
+}

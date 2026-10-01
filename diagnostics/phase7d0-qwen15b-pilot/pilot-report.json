@@ -1,0 +1,16 @@
+{
+  "exact_source_settings_operationally_viable": true,
+  "generated_at": "2026-10-01T05:49:46.079702+00:00",
+  "schema_version": "phase7d0.pilot_report.v1",
+  "totals": {
+    "admission_failures": 0,
+    "executed_runs": 11,
+    "intended_runs": 11,
+    "invalid_runs": 0,
+    "measured_successes": 132,
+    "reconciliation_required": 1,
+    "reconciliation_resolved": 1,
+    "reconciliation_unresolved": 0,
+    "valid_runs": 11
+  }
+}

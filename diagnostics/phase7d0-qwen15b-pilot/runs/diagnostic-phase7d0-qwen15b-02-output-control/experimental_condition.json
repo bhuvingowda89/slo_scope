@@ -1,0 +1,13 @@
+{
+  "active_mechanisms": [],
+  "attempt": 1,
+  "campaign_condition_id": "OUTPUT_CONTROL",
+  "campaign_id": "diagnostic-phase7d0-qwen15b-pilot",
+  "compound_degree": 0,
+  "condition_id": "OUTPUT_CONTROL",
+  "expected_control_id": null,
+  "mechanism_family": "control",
+  "mechanism_levels": {},
+  "repetition": 0,
+  "run_id": "diagnostic-phase7d0-qwen15b-02-output-control"
+}

@@ -1,0 +1,57 @@
+{
+  "model_alias": "sloscope-qwen2.5-1.5b",
+  "model_ref": "Qwen/Qwen2.5-1.5B-Instruct-GGUF:Q4_K_M",
+  "models": {
+    "data": [
+      {
+        "aliases": [
+          "sloscope-qwen2.5-1.5b"
+        ],
+        "created": 1790833502,
+        "id": "sloscope-qwen2.5-1.5b",
+        "meta": {
+          "ftype": "Q4_K - Medium",
+          "n_ctx": 1024,
+          "n_ctx_train": 32768,
+          "n_embd": 1536,
+          "n_params": 1777088000,
+          "n_vocab": 151936,
+          "size": 1111370240,
+          "vocab_type": 2
+        },
+        "object": "model",
+        "owned_by": "llamacpp",
+        "tags": []
+      }
+    ],
+    "models": [
+      {
+        "capabilities": [
+          "completion"
+        ],
+        "description": "",
+        "details": {
+          "families": [
+            ""
+          ],
+          "family": "",
+          "format": "gguf",
+          "parameter_size": "",
+          "parent_model": "",
+          "quantization_level": ""
+        },
+        "digest": "",
+        "model": "sloscope-qwen2.5-1.5b",
+        "modified_at": "",
+        "name": "sloscope-qwen2.5-1.5b",
+        "parameters": "",
+        "size": "",
+        "tags": [
+          ""
+        ],
+        "type": "model"
+      }
+    ],
+    "object": "list"
+  }
+}

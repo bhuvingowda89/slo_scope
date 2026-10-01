@@ -1,0 +1,100 @@
+{
+  "requests": [
+    {
+      "prompt_id": "synthetic-continuation:0",
+      "prompt_profile": "synthetic-continuation",
+      "request_id": "diagnostic-phase7d0-qwen15b-08-output-medium-req-000000",
+      "scheduled_arrival": 1.0,
+      "sequence": 0,
+      "target_output_tokens": 32
+    },
+    {
+      "prompt_id": "synthetic-continuation:1",
+      "prompt_profile": "synthetic-continuation",
+      "request_id": "diagnostic-phase7d0-qwen15b-08-output-medium-req-000001",
+      "scheduled_arrival": 1.5,
+      "sequence": 1,
+      "target_output_tokens": 32
+    },
+    {
+      "prompt_id": "synthetic-continuation:2",
+      "prompt_profile": "synthetic-continuation",
+      "request_id": "diagnostic-phase7d0-qwen15b-08-output-medium-req-000002",
+      "scheduled_arrival": 2.0,
+      "sequence": 2,
+      "target_output_tokens": 32
+    },
+    {
+      "prompt_id": "synthetic-continuation:0",
+      "prompt_profile": "synthetic-continuation",
+      "request_id": "diagnostic-phase7d0-qwen15b-08-output-medium-req-000003",
+      "scheduled_arrival": 2.5,
+      "sequence": 3,
+      "target_output_tokens": 32
+    },
+    {
+      "prompt_id": "synthetic-continuation:1",
+      "prompt_profile": "synthetic-continuation",
+      "request_id": "diagnostic-phase7d0-qwen15b-08-output-medium-req-000004",
+      "scheduled_arrival": 3.0,
+      "sequence": 4,
+      "target_output_tokens": 32
+    },
+    {
+      "prompt_id": "synthetic-continuation:2",
+      "prompt_profile": "synthetic-continuation",
+      "request_id": "diagnostic-phase7d0-qwen15b-08-output-medium-req-000005",
+      "scheduled_arrival": 3.5,
+      "sequence": 5,
+      "target_output_tokens": 32
+    },
+    {
+      "prompt_id": "synthetic-continuation:0",
+      "prompt_profile": "synthetic-continuation",
+      "request_id": "diagnostic-phase7d0-qwen15b-08-output-medium-req-000006",
+      "scheduled_arrival": 4.0,
+      "sequence": 6,
+      "target_output_tokens": 32
+    },
+    {
+      "prompt_id": "synthetic-continuation:1",
+      "prompt_profile": "synthetic-continuation",
+      "request_id": "diagnostic-phase7d0-qwen15b-08-output-medium-req-000007",
+      "scheduled_arrival": 4.5,
+      "sequence": 7,
+      "target_output_tokens": 32
+    },
+    {
+      "prompt_id": "synthetic-continuation:2",
+      "prompt_profile": "synthetic-continuation",
+      "request_id": "diagnostic-phase7d0-qwen15b-08-output-medium-req-000008",
+      "scheduled_arrival": 5.0,
+      "sequence": 8,
+      "target_output_tokens": 32
+    },
+    {
+      "prompt_id": "synthetic-continuation:0",
+      "prompt_profile": "synthetic-continuation",
+      "request_id": "diagnostic-phase7d0-qwen15b-08-output-medium-req-000009",
+      "scheduled_arrival": 5.5,
+      "sequence": 9,
+      "target_output_tokens": 32
+    },
+    {
+      "prompt_id": "synthetic-continuation:1",
+      "prompt_profile": "synthetic-continuation",
+      "request_id": "diagnostic-phase7d0-qwen15b-08-output-medium-req-000010",
+      "scheduled_arrival": 6.0,
+      "sequence": 10,
+      "target_output_tokens": 32
+    },
+    {
+      "prompt_id": "synthetic-continuation:2",
+      "prompt_profile": "synthetic-continuation",
+      "request_id": "diagnostic-phase7d0-qwen15b-08-output-medium-req-000011",
+      "scheduled_arrival": 6.5,
+      "sequence": 11,
+      "target_output_tokens": 32
+    }
+  ]
+}

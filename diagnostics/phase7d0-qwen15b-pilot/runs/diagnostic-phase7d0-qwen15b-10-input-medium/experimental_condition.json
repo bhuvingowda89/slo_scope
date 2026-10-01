@@ -1,0 +1,17 @@
+{
+  "active_mechanisms": [
+    "input_medium"
+  ],
+  "attempt": 1,
+  "campaign_condition_id": "INPUT_MEDIUM",
+  "campaign_id": "diagnostic-phase7d0-qwen15b-pilot",
+  "compound_degree": 1,
+  "condition_id": "INPUT_MEDIUM",
+  "expected_control_id": "BASELINE",
+  "mechanism_family": "input",
+  "mechanism_levels": {
+    "input_medium": "medium"
+  },
+  "repetition": 0,
+  "run_id": "diagnostic-phase7d0-qwen15b-10-input-medium"
+}

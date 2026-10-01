@@ -1,0 +1,100 @@
+{
+  "requests": [
+    {
+      "prompt_id": "synthetic-input-medium:0",
+      "prompt_profile": "synthetic-input-medium",
+      "request_id": "diagnostic-phase7d0-qwen15b-06-input-load-req-000000",
+      "scheduled_arrival": 1.0,
+      "sequence": 0,
+      "target_output_tokens": 16
+    },
+    {
+      "prompt_id": "synthetic-input-medium:1",
+      "prompt_profile": "synthetic-input-medium",
+      "request_id": "diagnostic-phase7d0-qwen15b-06-input-load-req-000001",
+      "scheduled_arrival": 1.083333333,
+      "sequence": 1,
+      "target_output_tokens": 16
+    },
+    {
+      "prompt_id": "synthetic-input-medium:2",
+      "prompt_profile": "synthetic-input-medium",
+      "request_id": "diagnostic-phase7d0-qwen15b-06-input-load-req-000002",
+      "scheduled_arrival": 1.166666667,
+      "sequence": 2,
+      "target_output_tokens": 16
+    },
+    {
+      "prompt_id": "synthetic-input-medium:0",
+      "prompt_profile": "synthetic-input-medium",
+      "request_id": "diagnostic-phase7d0-qwen15b-06-input-load-req-000003",
+      "scheduled_arrival": 1.25,
+      "sequence": 3,
+      "target_output_tokens": 16
+    },
+    {
+      "prompt_id": "synthetic-input-medium:1",
+      "prompt_profile": "synthetic-input-medium",
+      "request_id": "diagnostic-phase7d0-qwen15b-06-input-load-req-000004",
+      "scheduled_arrival": 1.333333333,
+      "sequence": 4,
+      "target_output_tokens": 16
+    },
+    {
+      "prompt_id": "synthetic-input-medium:2",
+      "prompt_profile": "synthetic-input-medium",
+      "request_id": "diagnostic-phase7d0-qwen15b-06-input-load-req-000005",
+      "scheduled_arrival": 1.416666667,
+      "sequence": 5,
+      "target_output_tokens": 16
+    },
+    {
+      "prompt_id": "synthetic-input-medium:0",
+      "prompt_profile": "synthetic-input-medium",
+      "request_id": "diagnostic-phase7d0-qwen15b-06-input-load-req-000006",
+      "scheduled_arrival": 1.5,
+      "sequence": 6,
+      "target_output_tokens": 16
+    },
+    {
+      "prompt_id": "synthetic-input-medium:1",
+      "prompt_profile": "synthetic-input-medium",
+      "request_id": "diagnostic-phase7d0-qwen15b-06-input-load-req-000007",
+      "scheduled_arrival": 1.583333333,
+      "sequence": 7,
+      "target_output_tokens": 16
+    },
+    {
+      "prompt_id": "synthetic-input-medium:2",
+      "prompt_profile": "synthetic-input-medium",
+      "request_id": "diagnostic-phase7d0-qwen15b-06-input-load-req-000008",
+      "scheduled_arrival": 1.666666667,
+      "sequence": 8,
+      "target_output_tokens": 16
+    },
+    {
+      "prompt_id": "synthetic-input-medium:0",
+      "prompt_profile": "synthetic-input-medium",
+      "request_id": "diagnostic-phase7d0-qwen15b-06-input-load-req-000009",
+      "scheduled_arrival": 1.75,
+      "sequence": 9,
+      "target_output_tokens": 16
+    },
+    {
+      "prompt_id": "synthetic-input-medium:1",
+      "prompt_profile": "synthetic-input-medium",
+      "request_id": "diagnostic-phase7d0-qwen15b-06-input-load-req-000010",
+      "scheduled_arrival": 1.833333333,
+      "sequence": 10,
+      "target_output_tokens": 16
+    },
+    {
+      "prompt_id": "synthetic-input-medium:2",
+      "prompt_profile": "synthetic-input-medium",
+      "request_id": "diagnostic-phase7d0-qwen15b-06-input-load-req-000011",
+      "scheduled_arrival": 1.916666667,
+      "sequence": 11,
+      "target_output_tokens": 16
+    }
+  ]
+}

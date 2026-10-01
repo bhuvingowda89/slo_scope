@@ -1,0 +1,157 @@
+{
+  "artifact_hashes": {
+    "config.json": "95e725663d4425316036f7c2ea27c2279f5e4b7bb0319a417ff1ec2e0813ba1a",
+    "events.jsonl": "fd7180e4267c9691a0953fe2d0f26705c0f274e500dbb65bdc28b04b6700c458",
+    "experimental_condition.json": "009b9bdc58aedfe02d9956bf7ba8f8b7ea3e1fc4d45bac6c11ef9c0b7d0d929a",
+    "ground_truth.json": "83309664a4f25c88158c30ff8cc79b99d93f29234747da55644e119365061a58",
+    "requests.parquet": "11967dbec4e89813b0d6872656b797fa208b8e43c77201ad89d781f4626fa1c7",
+    "runtime_metadata.json": "056e723f75ab3b4f3ddc74a14e6304fc34799ddddcec30f6b9d45598346127c2",
+    "runtime_metrics.parquet": "c6f220d6cb9dbee4f1bc1b224063d3846e5aeb82cdf0b8355236f0a344e05b2b",
+    "system_metrics.parquet": "3db1fc3b68c903b794d821c9a347f8263de46afa163d95b47260e13c62113588",
+    "traces.parquet": "2f334c14641c78b2a4917a3bb7dce169f822b31d8775e0a8f14b3962472ea01d",
+    "workload.json": "96e2bb4f789136adad9ac2d7647cad89bd10c0efe229f08306c608b7718b6e67"
+  },
+  "artifact_inventory": [
+    "config.json",
+    "events.jsonl",
+    "experimental_condition.json",
+    "ground_truth.json",
+    "requests.parquet",
+    "runtime_metadata.json",
+    "runtime_metrics.parquet",
+    "system_metrics.parquet",
+    "traces.parquet",
+    "validation.json",
+    "workload.json",
+    "manifest.json"
+  ],
+  "artifact_schema_version": "phase3b.artifacts.v1",
+  "config_hash": "c2f70852c1cb6a08012cd021d228b8520c56fc7cf5765bc8ac43e8bc7243d9d1",
+  "end_timestamp": "2026-10-01T05:49:45Z",
+  "final_lifecycle_state": "COMPLETE",
+  "git_dirty": true,
+  "git_revision": "16893e098abd4267d6521f63c0925cb3920ebbcf",
+  "platform": "macOS-15.5-arm64-arm-64bit",
+  "python_version": "3.11.16",
+  "run_id": "diagnostic-phase7d0-qwen15b-11-load-medium",
+  "runtime_metadata": {
+    "base_url": "http://127.0.0.1:8090",
+    "expected_model_id": "sloscope-qwen2.5-1.5b",
+    "gateway_reset": {
+      "cleared_request_timings": 12,
+      "cleared_trace_rows": 36,
+      "gateway": "sloscope",
+      "reset_count": 19,
+      "status": "ok"
+    },
+    "gateway_telemetry_enabled": true,
+    "gateway_timing_reconciliation": {
+      "duration_seconds": 1.4082994312047958e-05,
+      "poll_interval_seconds": 0.01,
+      "polled_request_ids": [],
+      "required_count": 0,
+      "resolved_count": 0,
+      "timeout_seconds": 1.0,
+      "unresolved_count": 0,
+      "unresolved_request_ids": []
+    },
+    "llama_cpp_build_number": "11146",
+    "llama_cpp_revision": "7fe450e19",
+    "model_metadata": {
+      "architecture": null,
+      "embedding_dimension": 1536,
+      "ftype": "Q4_K - Medium",
+      "model_size": 1111370240,
+      "n_ctx": 1024,
+      "n_vocab": 151936,
+      "parameter_count": 1777088000,
+      "raw": {
+        "data": [
+          {
+            "aliases": [
+              "sloscope-qwen2.5-1.5b"
+            ],
+            "created": 1790833781,
+            "id": "sloscope-qwen2.5-1.5b",
+            "meta": {
+              "ftype": "Q4_K - Medium",
+              "n_ctx": 1024,
+              "n_ctx_train": 32768,
+              "n_embd": 1536,
+              "n_params": 1777088000,
+              "n_vocab": 151936,
+              "size": 1111370240,
+              "vocab_type": 2
+            },
+            "object": "model",
+            "owned_by": "llamacpp",
+            "tags": []
+          }
+        ],
+        "models": [
+          {
+            "capabilities": [
+              "completion"
+            ],
+            "description": "",
+            "details": {
+              "families": [
+                ""
+              ],
+              "family": "",
+              "format": "gguf",
+              "parameter_size": "",
+              "parent_model": "",
+              "quantization_level": ""
+            },
+            "digest": "",
+            "model": "sloscope-qwen2.5-1.5b",
+            "modified_at": "",
+            "name": "sloscope-qwen2.5-1.5b",
+            "parameters": "",
+            "size": "",
+            "tags": [
+              ""
+            ],
+            "type": "model"
+          }
+        ],
+        "object": "list"
+      },
+      "selected_model_id": "sloscope-qwen2.5-1.5b",
+      "training_context_size": 32768,
+      "vocab_type": 2
+    },
+    "prompt_cache_enabled": false,
+    "runtime_type": "llamacpp",
+    "server_arguments": [
+      "-hf",
+      "Qwen/Qwen2.5-1.5B-Instruct-GGUF:Q4_K_M",
+      "--alias",
+      "sloscope-qwen2.5-1.5b",
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "8080",
+      "--metrics",
+      "--parallel",
+      "2",
+      "--ctx-size",
+      "2048",
+      "--no-cache-prompt"
+    ],
+    "server_command": "llama-server",
+    "server_metadata": {},
+    "warmup": {
+      "warmup_end_time": 77997.928441083,
+      "warmup_failure_count": 0,
+      "warmup_request_count": 2,
+      "warmup_start_time": 77997.33704375,
+      "warmup_success_count": 2
+    },
+    "workload_time_origin": 77997.929464833
+  },
+  "seed": 4242,
+  "source_tree_sha256": "8e442c813619586072c27a4ec30d7e65d367c3fc1375922935f67c72e2122582",
+  "start_timestamp": "2026-10-01T05:49:41Z"
+}

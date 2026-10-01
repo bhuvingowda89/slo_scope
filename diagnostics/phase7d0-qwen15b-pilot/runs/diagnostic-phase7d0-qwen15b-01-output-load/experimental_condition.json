@@ -1,0 +1,19 @@
+{
+  "active_mechanisms": [
+    "output_32",
+    "load_12rps"
+  ],
+  "attempt": 1,
+  "campaign_condition_id": "OUTPUT_LOAD",
+  "campaign_id": "diagnostic-phase7d0-qwen15b-pilot",
+  "compound_degree": 2,
+  "condition_id": "OUTPUT_LOAD",
+  "expected_control_id": "OUTPUT_CONTROL",
+  "mechanism_family": "compound",
+  "mechanism_levels": {
+    "load_12rps": "medium",
+    "output_32": "medium"
+  },
+  "repetition": 0,
+  "run_id": "diagnostic-phase7d0-qwen15b-01-output-load"
+}

@@ -1,0 +1,47 @@
+{
+  "control_normalized_transfer": "secondary future analysis using unlabeled target BASELINE and OUTPUT_CONTROL only for simple feature location/scale shift; not primary",
+  "csd_policy": "Do not run target CSD in this 11-condition RCA-transfer campaign.",
+  "feature_shift_audit": {
+    "labels_used": false,
+    "metrics": [
+      "source mean",
+      "target mean",
+      "source SD",
+      "target SD",
+      "standardized mean shift",
+      "range overlap"
+    ]
+  },
+  "generalization_drop": "source-domain P1 compound exact accuracy - target-model zero-shot P1 compound exact accuracy",
+  "h4_primary_comparison": "corrected D4-FULL vs M2/F2 on target P1-COMPOUND exact set accuracy",
+  "h4_test": "two-sided exact sign-flip over 2^6 fold differences",
+  "hypotheses": {
+    "H4": "Mechanism-oriented evidence transfers better than purely statistical signatures under configuration holdouts."
+  },
+  "primary_methods": [
+    "M2/F2",
+    "M2/F2T",
+    "corrected D4-FULL",
+    "D4-FULL-F3 sensitivity"
+  ],
+  "primary_outcomes": [
+    "P1-COMPOUND exact cause-set recovery",
+    "complete cause recall",
+    "Jaccard",
+    "control false-alarm rate",
+    "per-cause recall",
+    "pair-specific exact recovery"
+  ],
+  "rq": "RQ3A - UNSEEN MODEL TRANSFER",
+  "schema_version": "phase7d.generalization_analysis.v1",
+  "secondary_comparison": "corrected D4-FULL vs M2/F2T descriptive plus optional secondary exact sign-flip p-value",
+  "slo_policy": "Do not treat Phase-5.2 Qwen-0.5B SLO thresholds as universal target-model objectives; primary RCA transfer does not depend on target SLO classification.",
+  "source_domain_reference": {
+    "D4-FULL-F3": 0.8,
+    "M2/F2": 0.575,
+    "M2/F2T": 0.825,
+    "corrected D4-FULL": 0.6
+  },
+  "statistical_unit": "target repetition block, n=6",
+  "training_contract": "zero-shot: source Phase6-V2 Qwen-0.5B only; no target labeled data for fitting, scaling, imputation, MESR distributions, thresholds, or tuning"
+}

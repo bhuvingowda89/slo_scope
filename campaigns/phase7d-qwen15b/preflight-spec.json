@@ -1,0 +1,18 @@
+{
+  "checks": [
+    "git clean",
+    "HEAD at phase7d design commit",
+    "measurement source hash unchanged",
+    "target runtime version/build/commit match",
+    "target model ref and alias match",
+    "server args match",
+    "dependency delay 0",
+    "gateway ready",
+    "no formal run directory exists",
+    "all 66 configs validate",
+    "run ids/config paths/run directories unique",
+    "free disk sufficient"
+  ],
+  "no_formal_execution_in_phase7d0": true,
+  "schema_version": "phase7d.preflight.v1"
+}

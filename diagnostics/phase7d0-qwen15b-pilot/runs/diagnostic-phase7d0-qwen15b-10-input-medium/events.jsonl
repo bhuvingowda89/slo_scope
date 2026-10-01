@@ -1,0 +1,11 @@
+{"details":null,"event_type":"state","message":"initial","monotonic_time":77989.962752125,"state":"PLANNED","wall_time":"2026-10-01T05:49:33Z"}
+{"details":null,"event_type":"state","message":"preparing llama.cpp runtime","monotonic_time":77989.963050666,"state":"PREPARING","wall_time":"2026-10-01T05:49:33Z"}
+{"details":null,"event_type":"state","message":"warmup","monotonic_time":77989.969896416,"state":"WARMUP","wall_time":"2026-10-01T05:49:33Z"}
+{"details":{"warmup_request_count":2},"event_type":"warmup_start","message":"warmup requests starting","monotonic_time":77989.969902833,"state":"WARMUP","wall_time":"2026-10-01T05:49:33Z"}
+{"details":{"warmup_end_time":77990.944768875,"warmup_failure_count":0,"warmup_request_count":2,"warmup_start_time":77989.969902125,"warmup_success_count":2},"event_type":"warmup_complete","message":"warmup requests complete","monotonic_time":77990.944780791,"state":"WARMUP","wall_time":"2026-10-01T05:49:34Z"}
+{"details":{"gateway_reset":{"cleared_request_timings":2,"cleared_trace_rows":6,"gateway":"sloscope","reset_count":18,"status":"ok"}},"event_type":"warmup_gateway_reset","message":"gateway telemetry reset after warmup","monotonic_time":77990.945605916,"state":"WARMUP","wall_time":"2026-10-01T05:49:34Z"}
+{"details":null,"event_type":"state","message":"baseline","monotonic_time":77990.94562575,"state":"BASELINE","wall_time":"2026-10-01T05:49:34Z"}
+{"details":{"workload_time_origin":77990.946047625},"event_type":"workload_start","message":"workload time origin","monotonic_time":77990.946049125,"state":"BASELINE","wall_time":"2026-10-01T05:49:34Z"}
+{"details":{"duration_seconds":5.4500007536262274e-05,"poll_interval_seconds":0.01,"polled_request_ids":[],"required_count":0,"resolved_count":0,"timeout_seconds":1.0,"unresolved_count":0,"unresolved_request_ids":[]},"event_type":"gateway_timing_reconciliation","message":"gateway timing reconciliation complete","monotonic_time":77997.156740625,"state":"BASELINE","wall_time":"2026-10-01T05:49:41Z"}
+{"details":null,"event_type":"state","message":"workload complete","monotonic_time":77997.158026916,"state":"RECOVERY","wall_time":"2026-10-01T05:49:41Z"}
+{"details":null,"event_type":"state","message":"complete","monotonic_time":77997.158052916,"state":"COMPLETE","wall_time":"2026-10-01T05:49:41Z"}

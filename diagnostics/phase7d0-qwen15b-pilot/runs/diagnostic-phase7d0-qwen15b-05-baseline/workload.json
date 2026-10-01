@@ -1,0 +1,100 @@
+{
+  "requests": [
+    {
+      "prompt_id": "synthetic-input-small:0",
+      "prompt_profile": "synthetic-input-small",
+      "request_id": "diagnostic-phase7d0-qwen15b-05-baseline-req-000000",
+      "scheduled_arrival": 1.0,
+      "sequence": 0,
+      "target_output_tokens": 16
+    },
+    {
+      "prompt_id": "synthetic-input-small:1",
+      "prompt_profile": "synthetic-input-small",
+      "request_id": "diagnostic-phase7d0-qwen15b-05-baseline-req-000001",
+      "scheduled_arrival": 1.25,
+      "sequence": 1,
+      "target_output_tokens": 16
+    },
+    {
+      "prompt_id": "synthetic-input-small:2",
+      "prompt_profile": "synthetic-input-small",
+      "request_id": "diagnostic-phase7d0-qwen15b-05-baseline-req-000002",
+      "scheduled_arrival": 1.5,
+      "sequence": 2,
+      "target_output_tokens": 16
+    },
+    {
+      "prompt_id": "synthetic-input-small:0",
+      "prompt_profile": "synthetic-input-small",
+      "request_id": "diagnostic-phase7d0-qwen15b-05-baseline-req-000003",
+      "scheduled_arrival": 1.75,
+      "sequence": 3,
+      "target_output_tokens": 16
+    },
+    {
+      "prompt_id": "synthetic-input-small:1",
+      "prompt_profile": "synthetic-input-small",
+      "request_id": "diagnostic-phase7d0-qwen15b-05-baseline-req-000004",
+      "scheduled_arrival": 2.0,
+      "sequence": 4,
+      "target_output_tokens": 16
+    },
+    {
+      "prompt_id": "synthetic-input-small:2",
+      "prompt_profile": "synthetic-input-small",
+      "request_id": "diagnostic-phase7d0-qwen15b-05-baseline-req-000005",
+      "scheduled_arrival": 2.25,
+      "sequence": 5,
+      "target_output_tokens": 16
+    },
+    {
+      "prompt_id": "synthetic-input-small:0",
+      "prompt_profile": "synthetic-input-small",
+      "request_id": "diagnostic-phase7d0-qwen15b-05-baseline-req-000006",
+      "scheduled_arrival": 2.5,
+      "sequence": 6,
+      "target_output_tokens": 16
+    },
+    {
+      "prompt_id": "synthetic-input-small:1",
+      "prompt_profile": "synthetic-input-small",
+      "request_id": "diagnostic-phase7d0-qwen15b-05-baseline-req-000007",
+      "scheduled_arrival": 2.75,
+      "sequence": 7,
+      "target_output_tokens": 16
+    },
+    {
+      "prompt_id": "synthetic-input-small:2",
+      "prompt_profile": "synthetic-input-small",
+      "request_id": "diagnostic-phase7d0-qwen15b-05-baseline-req-000008",
+      "scheduled_arrival": 3.0,
+      "sequence": 8,
+      "target_output_tokens": 16
+    },
+    {
+      "prompt_id": "synthetic-input-small:0",
+      "prompt_profile": "synthetic-input-small",
+      "request_id": "diagnostic-phase7d0-qwen15b-05-baseline-req-000009",
+      "scheduled_arrival": 3.25,
+      "sequence": 9,
+      "target_output_tokens": 16
+    },
+    {
+      "prompt_id": "synthetic-input-small:1",
+      "prompt_profile": "synthetic-input-small",
+      "request_id": "diagnostic-phase7d0-qwen15b-05-baseline-req-000010",
+      "scheduled_arrival": 3.5,
+      "sequence": 10,
+      "target_output_tokens": 16
+    },
+    {
+      "prompt_id": "synthetic-input-small:2",
+      "prompt_profile": "synthetic-input-small",
+      "request_id": "diagnostic-phase7d0-qwen15b-05-baseline-req-000011",
+      "scheduled_arrival": 3.75,
+      "sequence": 11,
+      "target_output_tokens": 16
+    }
+  ]
+}

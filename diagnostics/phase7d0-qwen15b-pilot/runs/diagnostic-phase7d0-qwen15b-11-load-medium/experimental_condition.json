@@ -1,0 +1,17 @@
+{
+  "active_mechanisms": [
+    "load_12rps"
+  ],
+  "attempt": 1,
+  "campaign_condition_id": "LOAD_MEDIUM",
+  "campaign_id": "diagnostic-phase7d0-qwen15b-pilot",
+  "compound_degree": 1,
+  "condition_id": "LOAD_MEDIUM",
+  "expected_control_id": "BASELINE",
+  "mechanism_family": "load",
+  "mechanism_levels": {
+    "load_12rps": "medium"
+  },
+  "repetition": 0,
+  "run_id": "diagnostic-phase7d0-qwen15b-11-load-medium"
+}
