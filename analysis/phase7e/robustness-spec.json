@@ -1,0 +1,127 @@
+{
+  "degradation_families": {
+    "channel_loss": [
+      "C1_HOST_CPU",
+      "C2_DEPENDENCY",
+      "C3_TRACE_SPAN",
+      "C4_TEMPORAL_EVOLUTION",
+      "C5_THROUGHPUT_SCHEDULER",
+      "C6_LATENCY_P95",
+      "C7_MEDIAN_LATENCY",
+      "C8_MECHANISM_ANCHOR",
+      "C9_PROMPT_OUTPUT_DIRECT"
+    ],
+    "delay": [
+      1,
+      3,
+      5
+    ],
+    "missingness": [
+      0.1,
+      0.25,
+      0.5
+    ],
+    "noise": [
+      0.1,
+      0.25,
+      0.5
+    ],
+    "temporal_sampling": [
+      0.75,
+      0.5,
+      0.25
+    ]
+  },
+  "domains": [
+    "source",
+    "target"
+  ],
+  "global_seed": 10101,
+  "h5_quality_screen": {
+    "control_false_alarm_increase_max": 0.1,
+    "retention_min": 0.9
+  },
+  "methods": [
+    "M2/F2",
+    "M2/F2T",
+    "D4-FULL",
+    "D4-FULL-F3"
+  ],
+  "phase7e_robustness_spec_sha256": "979f56823140bd518d5b7f95663340767be5fb154f2e8837987c626d9e4f42dd",
+  "seeds": {
+    "source_missingness": [
+      8101,
+      8102,
+      8103,
+      8104,
+      8105,
+      8106,
+      8107,
+      8108,
+      8109,
+      8110
+    ],
+    "source_noise": [
+      8501,
+      8502,
+      8503,
+      8504,
+      8505,
+      8506,
+      8507,
+      8508,
+      8509,
+      8510
+    ],
+    "source_sampling": [
+      8301,
+      8302,
+      8303,
+      8304,
+      8305,
+      8306,
+      8307,
+      8308,
+      8309,
+      8310
+    ],
+    "target_missingness": [
+      8201,
+      8202,
+      8203,
+      8204,
+      8205,
+      8206,
+      8207,
+      8208,
+      8209,
+      8210
+    ],
+    "target_noise": [
+      8601,
+      8602,
+      8603,
+      8604,
+      8605,
+      8606,
+      8607,
+      8608,
+      8609,
+      8610
+    ],
+    "target_sampling": [
+      8401,
+      8402,
+      8403,
+      8404,
+      8405,
+      8406,
+      8407,
+      8408,
+      8409,
+      8410
+    ]
+  },
+  "source_training_policy": "source LORO for source; source-only P1 for target",
+  "test_degradation_only": true
+}

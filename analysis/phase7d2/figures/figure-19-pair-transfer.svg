@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="420">
+<text x="20" y="30" font-size="18">Figure 19 Pair Transfer</text>
+<line x1="70" y1="350" x2="910" y2="350" stroke="black"/>
+<text x="75.0" y="390" font-size="10" transform="rotate(35 75.0,390)">INPUT_LOAD</text>
+<rect x="75.0" y="350.0" width="39.0" height="0.0" fill="#3b82f6"/>
+<rect x="117.0" y="350.0" width="39.0" height="0.0" fill="#ef4444"/>
+<rect x="159.0" y="350.0" width="39.0" height="0.0" fill="#10b981"/>
+<text x="243.0" y="390" font-size="10" transform="rotate(35 243.0,390)">INPUT_DOWNSTREAM</text>
+<rect x="243.0" y="350.0" width="39.0" height="0.0" fill="#3b82f6"/>
+<rect x="285.0" y="350.0" width="39.0" height="0.0" fill="#ef4444"/>
+<rect x="327.0" y="350.0" width="39.0" height="0.0" fill="#10b981"/>
+<text x="411.0" y="390" font-size="10" transform="rotate(35 411.0,390)">OUTPUT_LOAD</text>
+<rect x="411.0" y="70.0" width="39.0" height="280.0" fill="#3b82f6"/>
+<rect x="453.0" y="70.0" width="39.0" height="280.0" fill="#ef4444"/>
+<rect x="495.0" y="70.0" width="39.0" height="280.0" fill="#10b981"/>
+<text x="579.0" y="390" font-size="10" transform="rotate(35 579.0,390)">OUTPUT_DOWNSTREAM</text>
+<rect x="579.0" y="70.0" width="39.0" height="280.0" fill="#3b82f6"/>
+<rect x="621.0" y="70.0" width="39.0" height="280.0" fill="#ef4444"/>
+<rect x="663.0" y="70.0" width="39.0" height="280.0" fill="#10b981"/>
+<text x="747.0" y="390" font-size="10" transform="rotate(35 747.0,390)">LOAD_DOWNSTREAM</text>
+<rect x="747.0" y="70.0" width="39.0" height="280.0" fill="#3b82f6"/>
+<rect x="789.0" y="350.0" width="39.0" height="0.0" fill="#ef4444"/>
+<rect x="831.0" y="70.0" width="39.0" height="280.0" fill="#10b981"/>
+<rect x="760" y="50" width="12" height="12" fill="#3b82f6"/><text x="778" y="61" font-size="12">M2/F2</text>
+<rect x="760" y="70" width="12" height="12" fill="#ef4444"/><text x="778" y="81" font-size="12">M2/F2T</text>
+<rect x="760" y="90" width="12" height="12" fill="#10b981"/><text x="778" y="101" font-size="12">D4-FULL</text>
+</svg>

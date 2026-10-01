@@ -1,0 +1,15 @@
+{
+  "analysis_spec_hash": "faca1733bab48f43d1fbe35e8eb01293763ce72db1ff6b38f6955d1a2251a57a",
+  "input_hash": "580ad72659387244129b27fefd5f7b4e97b4c7e19e697c05ceb91dae385cc75d",
+  "numpy": "2.4.6",
+  "pandas": "3.0.6",
+  "platform": "macOS-15.5-arm64-arm-64bit",
+  "pyarrow": "25.0.1",
+  "python": "3.11.16 (main, Aug 12 2026, 23:03:19) [Clang 17.0.0 (clang-1700.6.4.2)]",
+  "scipy": "1.17.1",
+  "sklearn": "1.9.1",
+  "source_campaign_freeze_sha256": "65d9798ea033bc910a832c624324fe068e48552b2a16e6ed639f33763ca028e0",
+  "source_measurement_sha256": "8e442c813619586072c27a4ec30d7e65d367c3fc1375922935f67c72e2122582",
+  "target_execution_git_revision": "ffb519a6b863ee0feecaad0fcd8ea21dd2f7f026",
+  "target_generalization_design_sha256": "d8f98c380aee45db246aaae2de2a9d1e199d79da528970d5e3586957730b041c"
+}

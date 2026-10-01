@@ -1,0 +1,9 @@
+{
+  "historical_phase7d2_input_sha256": "d155bafabb9548a63dd9dafabf496b8be32c99982127813fe86e70cba509699a",
+  "phase7d2a_input_sha256": "580ad72659387244129b27fefd5f7b4e97b4c7e19e697c05ceb91dae385cc75d",
+  "schema_version": "phase7d2a.input.v1",
+  "source_publication_index_sha256": "dee0eb1927a84af8c02f8ef26bec55fe697decba9df2e351c45cffef59c491d8",
+  "source_run_count": 104,
+  "target_publication_index_sha256": "3f8333dc8c1c6b916dbc1db554ed5f847653486013457be790813124eb900a71",
+  "target_run_count": 66
+}

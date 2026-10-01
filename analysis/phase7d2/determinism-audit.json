@@ -1,0 +1,15 @@
+{
+  "prediction_hash_run1": "6a959d555927ea4883aaf06cb70a5bbf2de0884f316ea92ae09e98fc3bbbd059",
+  "prediction_hash_run2": "6a959d555927ea4883aaf06cb70a5bbf2de0884f316ea92ae09e98fc3bbbd059",
+  "prediction_hashes_identical": true,
+  "seed": 9137,
+  "table-12-zero-shot-generalization.csv_hash_run1": "2675a40ae74de786fea0b2c2b385c04bdb9ec2ab9e7ca328dcff6f7ee89438f2",
+  "table-12-zero-shot-generalization.csv_hash_run2": "2675a40ae74de786fea0b2c2b385c04bdb9ec2ab9e7ca328dcff6f7ee89438f2",
+  "table-13-pair-transfer.csv_hash_run1": "895c29428999df93de9a356f75a6a7f455edec5e5c68d9d739ee46f72ffa7246",
+  "table-13-pair-transfer.csv_hash_run2": "895c29428999df93de9a356f75a6a7f455edec5e5c68d9d739ee46f72ffa7246",
+  "table-14-h4-cross-model.csv_hash_run1": "57eaab4814ec3b37416e2cedf9ba7dc4ab153f718cc725ad758d6630b815458d",
+  "table-14-h4-cross-model.csv_hash_run2": "57eaab4814ec3b37416e2cedf9ba7dc4ab153f718cc725ad758d6630b815458d",
+  "table-15-feature-shift.csv_hash_run1": "302f632628f21a0671b5bb62d379d2b97b5c2da03a4887e6cc2e53d0b2a5e3f4",
+  "table-15-feature-shift.csv_hash_run2": "302f632628f21a0671b5bb62d379d2b97b5c2da03a4887e6cc2e53d0b2a5e3f4",
+  "table_hashes_identical": true
+}

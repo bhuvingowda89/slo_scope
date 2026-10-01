@@ -1,0 +1,5 @@
+method,historical_target_exact,corrected_target_exact,historical_control_false_alarm,corrected_control_false_alarm,target_exact_changed
+M2/F2,0.6,0.6,0.6666666666666666,0.9166666666666666,False
+M2/F2T,0.4,0.2,0.5833333333333334,0.6666666666666666,True
+D4-FULL,0.6,0.6,0.5833333333333334,0.5833333333333334,False
+D4-FULL-F3,0.6,0.6,0.5,0.5,False

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="420">
+<text x="20" y="30" font-size="18">Figure 20 Feature Shift</text>
+<line x1="70" y1="350" x2="910" y2="350" stroke="black"/>
+<text x="75.0" y="390" font-size="10" transform="rotate(35 75.0,390)">total_latency_early_median</text>
+<rect x="75.0" y="70.0" width="18.0" height="280.0" fill="#3b82f6"/>
+<text x="117.0" y="390" font-size="10" transform="rotate(35 117.0,390)">ttft_early_median</text>
+<rect x="117.0" y="86.60700257482938" width="18.0" height="263.3929974251706" fill="#3b82f6"/>
+<text x="159.0" y="390" font-size="10" transform="rotate(35 159.0,390)">prefill_proxy_early_median</text>
+<rect x="159.0" y="100.04180945867577" width="18.0" height="249.95819054132423" fill="#3b82f6"/>
+<text x="201.0" y="390" font-size="10" transform="rotate(35 201.0,390)">total_latency_median</text>
+<rect x="201.0" y="118.67844871636649" width="18.0" height="231.3215512836335" fill="#3b82f6"/>
+<text x="243.0" y="390" font-size="10" transform="rotate(35 243.0,390)">total_latency_p95</text>
+<rect x="243.0" y="123.73798230453903" width="18.0" height="226.26201769546097" fill="#3b82f6"/>
+<text x="285.0" y="390" font-size="10" transform="rotate(35 285.0,390)">total_latency_late_median</text>
+<rect x="285.0" y="125.2556561522826" width="18.0" height="224.7443438477174" fill="#3b82f6"/>
+<text x="327.0" y="390" font-size="10" transform="rotate(35 327.0,390)">ttft_median</text>
+<rect x="327.0" y="128.9935498094657" width="18.0" height="221.0064501905343" fill="#3b82f6"/>
+<text x="369.0" y="390" font-size="10" transform="rotate(35 369.0,390)">ttft_p95</text>
+<rect x="369.0" y="131.2534508527317" width="18.0" height="218.7465491472683" fill="#3b82f6"/>
+<text x="411.0" y="390" font-size="10" transform="rotate(35 411.0,390)">ttft_late_median</text>
+<rect x="411.0" y="132.1903838955318" width="18.0" height="217.8096161044682" fill="#3b82f6"/>
+<text x="453.0" y="390" font-size="10" transform="rotate(35 453.0,390)">total_latency_normalized_slope</text>
+<rect x="453.0" y="139.59350432407322" width="18.0" height="210.40649567592678" fill="#3b82f6"/>
+<text x="495.0" y="390" font-size="10" transform="rotate(35 495.0,390)">ttft_normalized_slope</text>
+<rect x="495.0" y="139.67273108209204" width="18.0" height="210.32726891790796" fill="#3b82f6"/>
+<text x="537.0" y="390" font-size="10" transform="rotate(35 537.0,390)">total_latency_late_minus_early</text>
+<rect x="537.0" y="140.10254916882758" width="18.0" height="209.89745083117242" fill="#3b82f6"/>
+<text x="579.0" y="390" font-size="10" transform="rotate(35 579.0,390)">ttft_late_minus_early</text>
+<rect x="579.0" y="140.34233939048906" width="18.0" height="209.65766060951094" fill="#3b82f6"/>
+<text x="621.0" y="390" font-size="10" transform="rotate(35 621.0,390)">gateway_span_duration_median</text>
+<rect x="621.0" y="143.8761736091077" width="18.0" height="206.1238263908923" fill="#3b82f6"/>
+<text x="663.0" y="390" font-size="10" transform="rotate(35 663.0,390)">llama_span_duration_median</text>
+<rect x="663.0" y="147.9849763321894" width="18.0" height="202.0150236678106" fill="#3b82f6"/>
+<text x="705.0" y="390" font-size="10" transform="rotate(35 705.0,390)">gateway_span_duration_p95</text>
+<rect x="705.0" y="163.3081901190082" width="18.0" height="186.6918098809918" fill="#3b82f6"/>
+<text x="747.0" y="390" font-size="10" transform="rotate(35 747.0,390)">llama_span_duration_p95</text>
+<rect x="747.0" y="166.37689578571457" width="18.0" height="183.62310421428543" fill="#3b82f6"/>
+<text x="789.0" y="390" font-size="10" transform="rotate(35 789.0,390)">post_first_token_duration_early_median</text>
+<rect x="789.0" y="172.5314197892526" width="18.0" height="177.4685802107474" fill="#3b82f6"/>
+<text x="831.0" y="390" font-size="10" transform="rotate(35 831.0,390)">post_first_token_duration_late_median</text>
+<rect x="831.0" y="173.58701061591634" width="18.0" height="176.41298938408366" fill="#3b82f6"/>
+<text x="873.0" y="390" font-size="10" transform="rotate(35 873.0,390)">prefill_proxy_late_median</text>
+<rect x="873.0" y="174.31036539635448" width="18.0" height="175.68963460364552" fill="#3b82f6"/>
+<rect x="760" y="50" width="12" height="12" fill="#3b82f6"/><text x="778" y="61" font-size="12">SMS abs</text>
+</svg>

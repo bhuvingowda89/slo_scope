@@ -1,0 +1,13 @@
+method,metric,source_value,target_value,absolute_drop
+M2/F2,exact_set_accuracy,0.575,0.6,-0.025000000000000022
+M2/F2,complete_cause_recall,,0.6,
+M2/F2,jaccard,,0.75,
+M2/F2T,exact_set_accuracy,0.825,0.4,0.42499999999999993
+M2/F2T,complete_cause_recall,,0.8,
+M2/F2T,jaccard,,0.7166666666666667,
+D4-FULL,exact_set_accuracy,0.6,0.6,0.0
+D4-FULL,complete_cause_recall,,0.6,
+D4-FULL,jaccard,,0.7222222222222221,
+D4-FULL-F3,exact_set_accuracy,0.8,0.6,0.20000000000000007
+D4-FULL-F3,complete_cause_recall,,0.6,
+D4-FULL-F3,jaccard,,0.7222222222222221,

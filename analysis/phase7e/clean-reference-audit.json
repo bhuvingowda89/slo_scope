@@ -1,0 +1,61 @@
+{
+  "rows": [
+    {
+      "actual_compound_exact": 0.575,
+      "domain": "source",
+      "expected_compound_exact": 0.575,
+      "matches": true,
+      "method": "M2/F2"
+    },
+    {
+      "actual_compound_exact": 0.825,
+      "domain": "source",
+      "expected_compound_exact": 0.825,
+      "matches": true,
+      "method": "M2/F2T"
+    },
+    {
+      "actual_compound_exact": 0.6,
+      "domain": "source",
+      "expected_compound_exact": 0.6,
+      "matches": true,
+      "method": "D4-FULL"
+    },
+    {
+      "actual_compound_exact": 0.8,
+      "domain": "source",
+      "expected_compound_exact": 0.8,
+      "matches": true,
+      "method": "D4-FULL-F3"
+    },
+    {
+      "actual_compound_exact": 0.6,
+      "domain": "target",
+      "expected_compound_exact": 0.6,
+      "matches": true,
+      "method": "M2/F2"
+    },
+    {
+      "actual_compound_exact": 0.2,
+      "domain": "target",
+      "expected_compound_exact": 0.2,
+      "matches": true,
+      "method": "M2/F2T"
+    },
+    {
+      "actual_compound_exact": 0.6,
+      "domain": "target",
+      "expected_compound_exact": 0.6,
+      "matches": true,
+      "method": "D4-FULL"
+    },
+    {
+      "actual_compound_exact": 0.6,
+      "domain": "target",
+      "expected_compound_exact": 0.6,
+      "matches": true,
+      "method": "D4-FULL-F3"
+    }
+  ],
+  "valid": true
+}

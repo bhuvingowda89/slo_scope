@@ -1,0 +1,167 @@
+{
+  "FULL": {
+    "passes_H5_quality_screen": true
+  },
+  "reduced_candidates": [
+    {
+      "candidate": "C1_HOST_CPU",
+      "control_false_alarm_change": -0.0625,
+      "domain": "source",
+      "method": "M2/F2",
+      "passes_H5_quality_screen": true,
+      "retention": 1.0434782608695652
+    },
+    {
+      "candidate": "C1_HOST_CPU",
+      "control_false_alarm_change": 0.0,
+      "domain": "source",
+      "method": "M2/F2T",
+      "passes_H5_quality_screen": true,
+      "retention": 1.0
+    },
+    {
+      "candidate": "C2_DEPENDENCY",
+      "control_false_alarm_change": 0.0,
+      "domain": "source",
+      "method": "M2/F2T",
+      "passes_H5_quality_screen": true,
+      "retention": 0.9696969696969698
+    },
+    {
+      "candidate": "C3_TRACE_SPAN",
+      "control_false_alarm_change": -0.0625,
+      "domain": "source",
+      "method": "D4-FULL",
+      "passes_H5_quality_screen": true,
+      "retention": 0.9583333333333333
+    },
+    {
+      "candidate": "C4_TEMPORAL_EVOLUTION",
+      "control_false_alarm_change": 0.0,
+      "domain": "source",
+      "method": "M2/F2",
+      "passes_H5_quality_screen": true,
+      "retention": 1.0
+    },
+    {
+      "candidate": "C5_THROUGHPUT_SCHEDULER",
+      "control_false_alarm_change": -0.0625,
+      "domain": "source",
+      "method": "M2/F2",
+      "passes_H5_quality_screen": true,
+      "retention": 1.0
+    },
+    {
+      "candidate": "C5_THROUGHPUT_SCHEDULER",
+      "control_false_alarm_change": 0.0,
+      "domain": "source",
+      "method": "M2/F2T",
+      "passes_H5_quality_screen": true,
+      "retention": 0.9696969696969698
+    },
+    {
+      "candidate": "C7_MEDIAN_LATENCY",
+      "control_false_alarm_change": 0.0,
+      "domain": "source",
+      "method": "D4-FULL",
+      "passes_H5_quality_screen": true,
+      "retention": 1.0
+    },
+    {
+      "candidate": "C1_HOST_CPU",
+      "control_false_alarm_change": -0.33333333333333326,
+      "domain": "target",
+      "method": "M2/F2",
+      "passes_H5_quality_screen": true,
+      "retention": 1.0
+    },
+    {
+      "candidate": "C1_HOST_CPU",
+      "control_false_alarm_change": -0.16666666666666663,
+      "domain": "target",
+      "method": "M2/F2T",
+      "passes_H5_quality_screen": true,
+      "retention": 1.0
+    },
+    {
+      "candidate": "C1_HOST_CPU",
+      "control_false_alarm_change": -0.08333333333333337,
+      "domain": "target",
+      "method": "D4-FULL",
+      "passes_H5_quality_screen": true,
+      "retention": 1.0
+    },
+    {
+      "candidate": "C3_TRACE_SPAN",
+      "control_false_alarm_change": -0.08333333333333326,
+      "domain": "target",
+      "method": "M2/F2T",
+      "passes_H5_quality_screen": true,
+      "retention": 1.0
+    },
+    {
+      "candidate": "C4_TEMPORAL_EVOLUTION",
+      "control_false_alarm_change": 0.0,
+      "domain": "target",
+      "method": "M2/F2",
+      "passes_H5_quality_screen": true,
+      "retention": 1.0
+    },
+    {
+      "candidate": "C5_THROUGHPUT_SCHEDULER",
+      "control_false_alarm_change": -0.33333333333333326,
+      "domain": "target",
+      "method": "M2/F2",
+      "passes_H5_quality_screen": true,
+      "retention": 1.0
+    },
+    {
+      "candidate": "C5_THROUGHPUT_SCHEDULER",
+      "control_false_alarm_change": 0.0,
+      "domain": "target",
+      "method": "M2/F2T",
+      "passes_H5_quality_screen": true,
+      "retention": 1.0
+    },
+    {
+      "candidate": "C5_THROUGHPUT_SCHEDULER",
+      "control_false_alarm_change": 0.0,
+      "domain": "target",
+      "method": "D4-FULL",
+      "passes_H5_quality_screen": true,
+      "retention": 1.0
+    },
+    {
+      "candidate": "C6_LATENCY_P95",
+      "control_false_alarm_change": 0.0,
+      "domain": "target",
+      "method": "M2/F2T",
+      "passes_H5_quality_screen": true,
+      "retention": 1.0
+    },
+    {
+      "candidate": "C6_LATENCY_P95",
+      "control_false_alarm_change": 0.0,
+      "domain": "target",
+      "method": "D4-FULL",
+      "passes_H5_quality_screen": true,
+      "retention": 1.0
+    },
+    {
+      "candidate": "C7_MEDIAN_LATENCY",
+      "control_false_alarm_change": 0.08333333333333337,
+      "domain": "target",
+      "method": "M2/F2T",
+      "passes_H5_quality_screen": true,
+      "retention": 2.0
+    },
+    {
+      "candidate": "C7_MEDIAN_LATENCY",
+      "control_false_alarm_change": 0.0,
+      "domain": "target",
+      "method": "D4-FULL",
+      "passes_H5_quality_screen": true,
+      "retention": 1.0
+    }
+  ]
+}

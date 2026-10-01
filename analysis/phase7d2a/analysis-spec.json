@@ -1,0 +1,15 @@
+{
+  "d4_source": "analysis/phase7d2/target-predictions.csv historical D4 rows",
+  "logistic_parameters": {
+    "C": 1.0,
+    "class_weight": "balanced",
+    "penalty": "l2",
+    "random_state": 7301,
+    "solver": "liblinear",
+    "threshold": 0.5
+  },
+  "phase7d2a_analysis_spec_sha256": "faca1733bab48f43d1fbe35e8eb01293763ce72db1ff6b38f6955d1a2251a57a",
+  "schema_version": "phase7d2a.analysis_spec.v1",
+  "source_only_training": true,
+  "target_feature_source": "analysis/phase7d2/target-features.csv"
+}

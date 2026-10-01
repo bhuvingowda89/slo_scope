@@ -1,0 +1,38 @@
+{
+  "f2_mismatch_examples": [],
+  "f2_prediction_mismatches": 0,
+  "f2t_mismatch_examples": [],
+  "f2t_prediction_mismatches": 0,
+  "new_f2_prediction_hash": "71a5289066bc2bbac4dd7e75ed8f7c743feda8a80a22a257476aef9f1a63bdc4",
+  "new_f2t_prediction_hash": "d0c0cfadcc3d3b3ed4ae0e1853c86667871792a6ea185ce3771888340ab57b0f",
+  "reference_f2_prediction_hash": "71a5289066bc2bbac4dd7e75ed8f7c743feda8a80a22a257476aef9f1a63bdc4",
+  "reference_f2t_prediction_hash": "d0c0cfadcc3d3b3ed4ae0e1853c86667871792a6ea185ce3771888340ab57b0f",
+  "row_count_f2": 104,
+  "row_count_f2t": 104,
+  "source_metrics": {
+    "M2/F2": {
+      "complete_cause_recall": 0.575,
+      "control_false_alarm_rate": null,
+      "exact_set_accuracy": 0.575,
+      "jaccard": 0.7875,
+      "macro_f1": 0.7419354838709677,
+      "micro_f1": 0.881118881118881,
+      "n": 40,
+      "over_attribution": 0.0,
+      "partial_cause_recall": 0.7875,
+      "under_attribution": 0.425
+    },
+    "M2/F2T": {
+      "complete_cause_recall": 0.85,
+      "control_false_alarm_rate": null,
+      "exact_set_accuracy": 0.825,
+      "jaccard": 0.9166666666666667,
+      "macro_f1": 0.9408045977011494,
+      "micro_f1": 0.9548387096774195,
+      "n": 40,
+      "over_attribution": 0.025,
+      "partial_cause_recall": 0.925,
+      "under_attribution": 0.15
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "analysis_script_hashes": {
+    "analysis/phase7d2/phase7d2_transfer.py": "d6a8abfdd8a6775d3c28cab2b47c327782ef6215360947d516930915cfe3b315"
+  },
+  "phase7d2_analysis_spec_sha256": "d22bfb1ddcafcf830a797d5107fbf2d5752ff2b79685518f98376bac35c314ae",
+  "phase7d2_input_sha256": "d155bafabb9548a63dd9dafabf496b8be32c99982127813fe86e70cba509699a",
+  "pyarrow_version": "25.0.1",
+  "python_version": "3.11.16 (main, Aug 12 2026, 23:03:19) [Clang 17.0.0 (clang-1700.6.4.2)]",
+  "source_campaign_freeze_sha256": "65d9798ea033bc910a832c624324fe068e48552b2a16e6ed639f33763ca028e0",
+  "source_measurement_sha256": "8e442c813619586072c27a4ec30d7e65d367c3fc1375922935f67c72e2122582",
+  "source_publication_index_sha256": "dee0eb1927a84af8c02f8ef26bec55fe697decba9df2e351c45cffef59c491d8",
+  "target_generalization_design_sha256": "d8f98c380aee45db246aaae2de2a9d1e199d79da528970d5e3586957730b041c",
+  "target_publication_index_sha256": "3f8333dc8c1c6b916dbc1db554ed5f847653486013457be790813124eb900a71",
+  "timestamp": "2026-10-01T10:37:51.906824+00:00"
+}
