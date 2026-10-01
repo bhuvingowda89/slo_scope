@@ -1,0 +1,239 @@
+{
+  "cost_spec_hash": "254c69d2a425c36c2c90971a778943128522edabb99eefc4b6d2f532283d6f8e",
+  "frontier": [
+    {
+      "H5_quality_screen_pass": true,
+      "baseline_latency_relative_change": 0.0,
+      "load_latency_relative_change": 0.0,
+      "optional_telemetry_bytes_per_request": 603.0375,
+      "pareto_dominated": true,
+      "source_M2F2_compound_exact": 0.575,
+      "source_control_false_alarm": 0.6875,
+      "storage_reduction_vs_FULL": 0.0,
+      "target_M2F2_compound_exact": 0.6,
+      "target_control_false_alarm": 0.9166666666666666,
+      "telemetry_config": "T0_FULL",
+      "total_artifact_bytes_per_request": 1553.9708333333335
+    },
+    {
+      "H5_quality_screen_pass": true,
+      "baseline_latency_relative_change": -0.02848387107795225,
+      "load_latency_relative_change": -0.006618713542177135,
+      "optional_telemetry_bytes_per_request": 508.25624999999997,
+      "pareto_dominated": true,
+      "source_M2F2_compound_exact": 0.6,
+      "source_control_false_alarm": 0.625,
+      "storage_reduction_vs_FULL": 0.1571730613767801,
+      "target_M2F2_compound_exact": 0.6,
+      "target_control_false_alarm": 0.5833333333333334,
+      "telemetry_config": "T1_NO_HOST",
+      "total_artifact_bytes_per_request": 1463.1812499999999
+    },
+    {
+      "H5_quality_screen_pass": true,
+      "baseline_latency_relative_change": -0.033562426809393475,
+      "load_latency_relative_change": -0.015379211528357528,
+      "optional_telemetry_bytes_per_request": 545.1625,
+      "pareto_dominated": true,
+      "source_M2F2_compound_exact": 0.575,
+      "source_control_false_alarm": 0.6875,
+      "storage_reduction_vs_FULL": 0.09597247269033848,
+      "target_M2F2_compound_exact": 0.6,
+      "target_control_false_alarm": 0.9166666666666666,
+      "telemetry_config": "T2_NO_RUNTIME",
+      "total_artifact_bytes_per_request": 1503.9604166666668
+    },
+    {
+      "H5_quality_screen_pass": true,
+      "baseline_latency_relative_change": -0.011434646964370576,
+      "load_latency_relative_change": 0.004800842398702487,
+      "optional_telemetry_bytes_per_request": 448.3229166666667,
+      "pareto_dominated": false,
+      "source_M2F2_compound_exact": 0.6,
+      "source_control_false_alarm": 0.625,
+      "storage_reduction_vs_FULL": 0.2565588099137007,
+      "target_M2F2_compound_exact": 0.6,
+      "target_control_false_alarm": 0.5833333333333334,
+      "telemetry_config": "T3_LIGHT",
+      "total_artifact_bytes_per_request": 1400.5916666666665
+    }
+  ],
+  "h5": {
+    "criterion_A_source_quality": true,
+    "criterion_B_target_quality": true,
+    "criterion_C_measured_cost_reduction_all_12_pairs": true,
+    "criterion_D_service_performance_guard": false,
+    "final_H5_status": "NOT_SUPPORTED",
+    "service_performance_guard": [
+      {
+        "ci95_high": 0.05792015036012546,
+        "ci95_low": -0.10834408391735167,
+        "mean_relative_total_latency_p95_change": -0.02521196677861311,
+        "passes_plus_5pct_guard": false,
+        "workload": "BASELINE"
+      },
+      {
+        "ci95_high": 0.07130429949396101,
+        "ci95_low": -0.08021413184848826,
+        "mean_relative_total_latency_p95_change": -0.004454916177263624,
+        "passes_plus_5pct_guard": false,
+        "workload": "LOAD_MEDIUM"
+      }
+    ],
+    "storage_reductions": [
+      {
+        "absolute_optional_bytes_per_request_saved": 106.75,
+        "comparison": "T1_NO_HOST_vs_T0_FULL",
+        "relative_throughput_change": -0.0006333580027875207,
+        "relative_total_latency_p95_change": -0.07098076680312404,
+        "relative_ttft_p95_change": -0.12891835305465393,
+        "repetition": 1,
+        "storage_reduction": 0.17082049845981517,
+        "workload": "BASELINE"
+      },
+      {
+        "absolute_optional_bytes_per_request_saved": 106.25,
+        "comparison": "T1_NO_HOST_vs_T0_FULL",
+        "relative_throughput_change": 0.0004097414786812248,
+        "relative_total_latency_p95_change": -0.12131473332020237,
+        "relative_ttft_p95_change": -0.16717115035917718,
+        "repetition": 2,
+        "storage_reduction": 0.1700476133317329,
+        "workload": "BASELINE"
+      },
+      {
+        "absolute_optional_bytes_per_request_saved": 110.57499999999993,
+        "comparison": "T1_NO_HOST_vs_T0_FULL",
+        "relative_throughput_change": 0.0010446700486839156,
+        "relative_total_latency_p95_change": -0.0620782402154374,
+        "relative_ttft_p95_change": -0.04159680895805873,
+        "repetition": 3,
+        "storage_reduction": 0.17609587132221194,
+        "workload": "BASELINE"
+      },
+      {
+        "absolute_optional_bytes_per_request_saved": 106.35000000000002,
+        "comparison": "T1_NO_HOST_vs_T0_FULL",
+        "relative_throughput_change": -0.0013598518883058963,
+        "relative_total_latency_p95_change": 0.09857674635089753,
+        "relative_ttft_p95_change": 0.142025413571907,
+        "repetition": 4,
+        "storage_reduction": 0.17048050334629106,
+        "workload": "BASELINE"
+      },
+      {
+        "absolute_optional_bytes_per_request_saved": 106.5,
+        "comparison": "T1_NO_HOST_vs_T0_FULL",
+        "relative_throughput_change": 0.0015337982744716427,
+        "relative_total_latency_p95_change": -0.028175006156895943,
+        "relative_ttft_p95_change": -0.060687684736049685,
+        "repetition": 5,
+        "storage_reduction": 0.17034548944337813,
+        "workload": "BASELINE"
+      },
+      {
+        "absolute_optional_bytes_per_request_saved": 112.07499999999993,
+        "comparison": "T1_NO_HOST_vs_T0_FULL",
+        "relative_throughput_change": -0.0009102387121430189,
+        "relative_total_latency_p95_change": 0.03270019947308356,
+        "relative_ttft_p95_change": 0.04394383721845174,
+        "repetition": 6,
+        "storage_reduction": 0.17802398538638697,
+        "workload": "BASELINE"
+      },
+      {
+        "absolute_optional_bytes_per_request_saved": 81.10000000000002,
+        "comparison": "T1_NO_HOST_vs_T0_FULL",
+        "relative_throughput_change": 0.0332833388218301,
+        "relative_total_latency_p95_change": -0.11858997156318463,
+        "relative_ttft_p95_change": -0.1494232052732134,
+        "repetition": 1,
+        "storage_reduction": 0.14000863185153223,
+        "workload": "LOAD_MEDIUM"
+      },
+      {
+        "absolute_optional_bytes_per_request_saved": 83.07499999999999,
+        "comparison": "T1_NO_HOST_vs_T0_FULL",
+        "relative_throughput_change": 0.01886215020406934,
+        "relative_total_latency_p95_change": -0.06941955985228077,
+        "relative_ttft_p95_change": -0.08297602512885427,
+        "repetition": 2,
+        "storage_reduction": 0.14270377050588334,
+        "workload": "LOAD_MEDIUM"
+      },
+      {
+        "absolute_optional_bytes_per_request_saved": 82.04999999999995,
+        "comparison": "T1_NO_HOST_vs_T0_FULL",
+        "relative_throughput_change": -0.008394071170395145,
+        "relative_total_latency_p95_change": 0.035663762422604384,
+        "relative_ttft_p95_change": 0.06346580485171671,
+        "repetition": 3,
+        "storage_reduction": 0.14148381256196918,
+        "workload": "LOAD_MEDIUM"
+      },
+      {
+        "absolute_optional_bytes_per_request_saved": 81.09999999999997,
+        "comparison": "T1_NO_HOST_vs_T0_FULL",
+        "relative_throughput_change": -0.013982750436153157,
+        "relative_total_latency_p95_change": 0.06404016765855003,
+        "relative_ttft_p95_change": 0.04353812349517816,
+        "repetition": 4,
+        "storage_reduction": 0.13996634594641233,
+        "workload": "LOAD_MEDIUM"
+      },
+      {
+        "absolute_optional_bytes_per_request_saved": 81.30000000000001,
+        "comparison": "T1_NO_HOST_vs_T0_FULL",
+        "relative_throughput_change": -0.008288122741858861,
+        "relative_total_latency_p95_change": 0.0343137038743333,
+        "relative_ttft_p95_change": 0.043155982122841774,
+        "repetition": 5,
+        "storage_reduction": 0.13996126533247255,
+        "workload": "LOAD_MEDIUM"
+      },
+      {
+        "absolute_optional_bytes_per_request_saved": 80.25000000000006,
+        "comparison": "T1_NO_HOST_vs_T0_FULL",
+        "relative_throughput_change": -0.005754027240517545,
+        "relative_total_latency_p95_change": 0.027262400396395936,
+        "relative_ttft_p95_change": 0.035245672924521854,
+        "repetition": 6,
+        "storage_reduction": 0.1387028475132871,
+        "workload": "LOAD_MEDIUM"
+      }
+    ]
+  },
+  "input_hash": "89776f070683ffbc68503bfcaba8dea40f6d6c7184d4d6dd0201a44ddd19ca5c",
+  "target_storage_projection": {
+    "campaign": "target",
+    "campaign_total_system_bytes": 804979,
+    "runs": 66,
+    "system_bytes_per_request_mean": 304.9162878787879,
+    "system_bytes_per_run_mean": 12196.651515151516,
+    "system_pct_optional_telemetry_storage": 0.4089573652094704,
+    "trace_bytes_per_request_mean": 290.0503787878788,
+    "trace_bytes_per_run_mean": 11602.015151515152
+  },
+  "trace_storage_context": [
+    {
+      "campaign": "source",
+      "campaign_total_system_bytes": 1234984,
+      "runs": 104,
+      "system_bytes_per_request_mean": 296.87115384615385,
+      "system_bytes_per_run_mean": 11874.846153846154,
+      "system_pct_optional_telemetry_storage": 0.40140920834902966,
+      "trace_bytes_per_request_mean": 289.2240384615385,
+      "trace_bytes_per_run_mean": 11568.961538461539
+    },
+    {
+      "campaign": "target",
+      "campaign_total_system_bytes": 804979,
+      "runs": 66,
+      "system_bytes_per_request_mean": 304.9162878787879,
+      "system_bytes_per_run_mean": 12196.651515151516,
+      "system_pct_optional_telemetry_storage": 0.4089573652094704,
+      "trace_bytes_per_request_mean": 290.0503787878788,
+      "trace_bytes_per_run_mean": 11602.015151515152
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "criterion_A_source_quality": true,
+  "criterion_B_target_quality": true,
+  "criterion_C_measured_cost_reduction_all_12_pairs": true,
+  "criterion_D_service_performance_guard": false,
+  "final_H5_status": "NOT_SUPPORTED",
+  "service_performance_guard": [
+    {
+      "ci95_high": 0.05792015036012546,
+      "ci95_low": -0.10834408391735167,
+      "mean_relative_total_latency_p95_change": -0.02521196677861311,
+      "passes_plus_5pct_guard": false,
+      "workload": "BASELINE"
+    },
+    {
+      "ci95_high": 0.07130429949396101,
+      "ci95_low": -0.08021413184848826,
+      "mean_relative_total_latency_p95_change": -0.004454916177263624,
+      "passes_plus_5pct_guard": false,
+      "workload": "LOAD_MEDIUM"
+    }
+  ],
+  "storage_reductions": [
+    {
+      "absolute_optional_bytes_per_request_saved": 106.75,
+      "comparison": "T1_NO_HOST_vs_T0_FULL",
+      "relative_throughput_change": -0.0006333580027875207,
+      "relative_total_latency_p95_change": -0.07098076680312404,
+      "relative_ttft_p95_change": -0.12891835305465393,
+      "repetition": 1,
+      "storage_reduction": 0.17082049845981517,
+      "workload": "BASELINE"
+    },
+    {
+      "absolute_optional_bytes_per_request_saved": 106.25,
+      "comparison": "T1_NO_HOST_vs_T0_FULL",
+      "relative_throughput_change": 0.0004097414786812248,
+      "relative_total_latency_p95_change": -0.12131473332020237,
+      "relative_ttft_p95_change": -0.16717115035917718,
+      "repetition": 2,
+      "storage_reduction": 0.1700476133317329,
+      "workload": "BASELINE"
+    },
+    {
+      "absolute_optional_bytes_per_request_saved": 110.57499999999993,
+      "comparison": "T1_NO_HOST_vs_T0_FULL",
+      "relative_throughput_change": 0.0010446700486839156,
+      "relative_total_latency_p95_change": -0.0620782402154374,
+      "relative_ttft_p95_change": -0.04159680895805873,
+      "repetition": 3,
+      "storage_reduction": 0.17609587132221194,
+      "workload": "BASELINE"
+    },
+    {
+      "absolute_optional_bytes_per_request_saved": 106.35000000000002,
+      "comparison": "T1_NO_HOST_vs_T0_FULL",
+      "relative_throughput_change": -0.0013598518883058963,
+      "relative_total_latency_p95_change": 0.09857674635089753,
+      "relative_ttft_p95_change": 0.142025413571907,
+      "repetition": 4,
+      "storage_reduction": 0.17048050334629106,
+      "workload": "BASELINE"
+    },
+    {
+      "absolute_optional_bytes_per_request_saved": 106.5,
+      "comparison": "T1_NO_HOST_vs_T0_FULL",
+      "relative_throughput_change": 0.0015337982744716427,
+      "relative_total_latency_p95_change": -0.028175006156895943,
+      "relative_ttft_p95_change": -0.060687684736049685,
+      "repetition": 5,
+      "storage_reduction": 0.17034548944337813,
+      "workload": "BASELINE"
+    },
+    {
+      "absolute_optional_bytes_per_request_saved": 112.07499999999993,
+      "comparison": "T1_NO_HOST_vs_T0_FULL",
+      "relative_throughput_change": -0.0009102387121430189,
+      "relative_total_latency_p95_change": 0.03270019947308356,
+      "relative_ttft_p95_change": 0.04394383721845174,
+      "repetition": 6,
+      "storage_reduction": 0.17802398538638697,
+      "workload": "BASELINE"
+    },
+    {
+      "absolute_optional_bytes_per_request_saved": 81.10000000000002,
+      "comparison": "T1_NO_HOST_vs_T0_FULL",
+      "relative_throughput_change": 0.0332833388218301,
+      "relative_total_latency_p95_change": -0.11858997156318463,
+      "relative_ttft_p95_change": -0.1494232052732134,
+      "repetition": 1,
+      "storage_reduction": 0.14000863185153223,
+      "workload": "LOAD_MEDIUM"
+    },
+    {
+      "absolute_optional_bytes_per_request_saved": 83.07499999999999,
+      "comparison": "T1_NO_HOST_vs_T0_FULL",
+      "relative_throughput_change": 0.01886215020406934,
+      "relative_total_latency_p95_change": -0.06941955985228077,
+      "relative_ttft_p95_change": -0.08297602512885427,
+      "repetition": 2,
+      "storage_reduction": 0.14270377050588334,
+      "workload": "LOAD_MEDIUM"
+    },
+    {
+      "absolute_optional_bytes_per_request_saved": 82.04999999999995,
+      "comparison": "T1_NO_HOST_vs_T0_FULL",
+      "relative_throughput_change": -0.008394071170395145,
+      "relative_total_latency_p95_change": 0.035663762422604384,
+      "relative_ttft_p95_change": 0.06346580485171671,
+      "repetition": 3,
+      "storage_reduction": 0.14148381256196918,
+      "workload": "LOAD_MEDIUM"
+    },
+    {
+      "absolute_optional_bytes_per_request_saved": 81.09999999999997,
+      "comparison": "T1_NO_HOST_vs_T0_FULL",
+      "relative_throughput_change": -0.013982750436153157,
+      "relative_total_latency_p95_change": 0.06404016765855003,
+      "relative_ttft_p95_change": 0.04353812349517816,
+      "repetition": 4,
+      "storage_reduction": 0.13996634594641233,
+      "workload": "LOAD_MEDIUM"
+    },
+    {
+      "absolute_optional_bytes_per_request_saved": 81.30000000000001,
+      "comparison": "T1_NO_HOST_vs_T0_FULL",
+      "relative_throughput_change": -0.008288122741858861,
+      "relative_total_latency_p95_change": 0.0343137038743333,
+      "relative_ttft_p95_change": 0.043155982122841774,
+      "repetition": 5,
+      "storage_reduction": 0.13996126533247255,
+      "workload": "LOAD_MEDIUM"
+    },
+    {
+      "absolute_optional_bytes_per_request_saved": 80.25000000000006,
+      "comparison": "T1_NO_HOST_vs_T0_FULL",
+      "relative_throughput_change": -0.005754027240517545,
+      "relative_total_latency_p95_change": 0.027262400396395936,
+      "relative_ttft_p95_change": 0.035245672924521854,
+      "repetition": 6,
+      "storage_reduction": 0.1387028475132871,
+      "workload": "LOAD_MEDIUM"
+    }
+  ]
+}

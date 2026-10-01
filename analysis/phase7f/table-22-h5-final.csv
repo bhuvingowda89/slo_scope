@@ -1,0 +1,6 @@
+criterion,value
+criterion_A_source_quality,True
+criterion_B_target_quality,True
+criterion_C_measured_cost_reduction_all_12_pairs,True
+criterion_D_service_performance_guard,False
+final_H5_status,NOT_SUPPORTED

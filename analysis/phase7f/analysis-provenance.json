@@ -1,0 +1,11 @@
+{
+  "numpy": "2.4.6",
+  "pandas": "3.0.6",
+  "phase7f_cost_spec_sha256": "254c69d2a425c36c2c90971a778943128522edabb99eefc4b6d2f532283d6f8e",
+  "phase7f_input_sha256": "89776f070683ffbc68503bfcaba8dea40f6d6c7184d4d6dd0201a44ddd19ca5c",
+  "pyarrow": "25.0.1",
+  "python": "3.11.16 (main, Aug 12 2026, 23:03:19) [Clang 17.0.0 (clang-1700.6.4.2)]",
+  "scipy": "1.17.1",
+  "sklearn": "1.9.1",
+  "timestamp": "2026-10-01T18:36:40.933782+00:00"
+}

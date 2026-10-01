@@ -1,0 +1,2 @@
+campaign,runs,system_bytes_per_run_mean,system_bytes_per_request_mean,campaign_total_system_bytes,system_pct_optional_telemetry_storage,trace_bytes_per_run_mean,trace_bytes_per_request_mean
+target,66,12196.651515151516,304.9162878787879,804979,0.4089573652094704,11602.015151515152,290.0503787878788
