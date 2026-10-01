@@ -1,0 +1,5 @@
+mechanism,control,control compound-SLO violations,primary metric,mean paired delta,95% CI,matched ratio,dz,raw p,Holm p,direct-evidence summary,direct-evidence note
+INPUT,BASELINE,0/8,ttft_p95,0.04559906995054916,"0.0455991 [0.0438061, 0.0473921]","1.846 [1.754, 2.023]",21.261453649381604,9.229894626733542e-11,2.7689683880200624e-10,server_prompt_tokens_median median=267.0,
+OUTPUT,OUTPUT_CONTROL,4/8,post_first_token_duration_p95,0.22390748060165605,"0.223907 [0.205725, 0.24209]","2.017 [1.928, 2.618]",10.295259667231003,1.4500731466937095e-08,1.4500731466937095e-08,server_output_tokens_median median=32.0,
+LOAD,BASELINE,0/8,ttft_p95,1.0841179360256317,"1.08412 [1.04523, 1.123]","21.43 [19.84, 24.35]",23.30948827214919,4.853520511103773e-11,1.9414082044415093e-10,requests_deferred_max median=None,llama.cpp long-form requests_processing/requests_deferred metrics absent from formal runtime_metrics artifacts
+DOWNSTREAM,BASELINE,0/8,total_latency_p95,0.10411980721842155,"0.10412 [0.0993925, 0.108847]","1.56 [1.505, 1.661]",18.413408092059033,2.5208006285805577e-10,5.041601257161115e-10,dependency_duration_median median=0.10350829175149556,

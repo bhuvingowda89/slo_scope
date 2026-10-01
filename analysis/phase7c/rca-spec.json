@@ -1,0 +1,112 @@
+{
+  "cross_validation": "leave-one-repetition-out, eight folds",
+  "feature_tiers": {
+    "F0": [
+      "ttft_slo_violated",
+      "total_latency_slo_violated",
+      "decode_duration_slo_violated",
+      "ttft_violation_margin",
+      "total_latency_violation_margin",
+      "decode_duration_violation_margin"
+    ],
+    "F1": [
+      "ttft_p95",
+      "total_latency_p95",
+      "post_first_token_duration_p95",
+      "ttft_median",
+      "total_latency_median",
+      "post_first_token_duration_median",
+      "scheduler_slip_p95",
+      "successful_requests_per_second"
+    ],
+    "F2": [
+      "ttft_p95",
+      "total_latency_p95",
+      "post_first_token_duration_p95",
+      "ttft_median",
+      "total_latency_median",
+      "post_first_token_duration_median",
+      "scheduler_slip_p95",
+      "successful_requests_per_second",
+      "host_cpu_median",
+      "host_cpu_p95",
+      "dependency_duration_median",
+      "dependency_duration_p95",
+      "gateway_span_duration_median",
+      "gateway_span_duration_p95",
+      "dependency_span_duration_median",
+      "dependency_span_duration_p95",
+      "llama_span_duration_median",
+      "llama_span_duration_p95",
+      "dependency_fraction_of_gateway_median",
+      "llama_fraction_of_gateway_median"
+    ],
+    "F3": [
+      "ttft_p95",
+      "total_latency_p95",
+      "post_first_token_duration_p95",
+      "ttft_median",
+      "total_latency_median",
+      "post_first_token_duration_median",
+      "scheduler_slip_p95",
+      "successful_requests_per_second",
+      "host_cpu_median",
+      "host_cpu_p95",
+      "dependency_duration_median",
+      "dependency_duration_p95",
+      "gateway_span_duration_median",
+      "gateway_span_duration_p95",
+      "dependency_span_duration_median",
+      "dependency_span_duration_p95",
+      "llama_span_duration_median",
+      "llama_span_duration_p95",
+      "dependency_fraction_of_gateway_median",
+      "llama_fraction_of_gateway_median",
+      "server_prompt_tokens_median",
+      "server_output_tokens_median"
+    ]
+  },
+  "figures": [
+    "figure-10",
+    "figure-11",
+    "figure-12",
+    "figure-13"
+  ],
+  "ground_truth_mapping": "experimental_condition.json active_mechanisms only",
+  "h2_primary_test": "exact 2^8 sign-flip test on fold-level complete-cause-recall differences P2-P1 for M2/F2",
+  "mechanism_label_universe": [
+    "INPUT",
+    "OUTPUT",
+    "LOAD",
+    "DOWNSTREAM"
+  ],
+  "metrics": [
+    "exact_set_accuracy",
+    "jaccard",
+    "micro/macro precision recall F1",
+    "hamming_loss",
+    "complete_cause_recall",
+    "partial_cause_recall",
+    "over/under attribution",
+    "control_false_alarm_rate"
+  ],
+  "models": {
+    "M0": "SLO nearest neighbor on F0, deterministic run_id tie-break",
+    "M1": "nearest centroid in standardized feature space",
+    "M2": "one-vs-rest LogisticRegression liblinear L2 C=1.0 class_weight=balanced threshold=0.5",
+    "M3": "one-vs-rest LinearSVC class_weight=balanced decision score > 0"
+  },
+  "phase7c_rca_spec_sha256": "4c3324c6b5fbca55d3acbc0f05d22bb9e756b83abf3e89646b9450025fa3a953",
+  "preprocessing": "training-fold median imputation plus training-fold standardization",
+  "primary_baseline": {
+    "feature_tier": "F2",
+    "model": "M2",
+    "protocol": "P1/P2 comparison"
+  },
+  "protocols": {
+    "P1": "train compound_degree <= 1, test compound_degree == 2",
+    "P2": "train all seven repetitions, test all conditions in held-out repetition"
+  },
+  "random_seed": 7301,
+  "schema_version": "sloscope.phase7c.rca_spec.v1"
+}

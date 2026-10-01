@@ -1,0 +1,107 @@
+{
+  "ci_procedure": "95% two-sided Student-t CI across eight run-level repetitions using scipy.stats.t",
+  "control_transportability_audit": {
+    "calibration_source": "calibrations/phase5.2-slo",
+    "families": [
+      "BASELINE",
+      "OUTPUT_CONTROL"
+    ],
+    "metrics": [
+      "ttft_p95",
+      "total_latency_p95",
+      "post_first_token_duration_p95"
+    ]
+  },
+  "effect_definitions": {
+    "factorial_interaction_delta": "Y_A1B1 - Y_A1B0 - Y_A0B1 + Y_A0B0",
+    "matched_ratio": "condition_metric / matched_control_metric by repetition",
+    "paired_delta": "condition_metric - matched_control_metric by repetition"
+  },
+  "factorial_mappings_source": "campaigns/phase5/factorial-design.json",
+  "figures": {
+    "figure_1": "run-level SLO metric distributions with threshold lines",
+    "figure_2": "paired isolated-mechanism deltas with 95% CI",
+    "figure_3": "condition x counted-SLO violation frequency matrix",
+    "figure_4": "factorial interaction forest plot for 15 contrasts",
+    "figure_5": "dedicated calibration controls versus formal controls"
+  },
+  "holm_families": {
+    "factorial_interactions": "5 retained factorial families x 3 counted SLO metrics",
+    "isolated": [
+      "INPUT",
+      "OUTPUT",
+      "LOAD",
+      "DOWNSTREAM"
+    ]
+  },
+  "isolated_primary_comparisons": [
+    {
+      "condition": "INPUT_MEDIUM",
+      "control": "BASELINE",
+      "direct_metric": "server_prompt_tokens_median",
+      "mechanism": "INPUT",
+      "primary_metric": "ttft_p95"
+    },
+    {
+      "condition": "OUTPUT_MEDIUM",
+      "control": "OUTPUT_CONTROL",
+      "direct_metric": "server_output_tokens_median",
+      "mechanism": "OUTPUT",
+      "primary_metric": "post_first_token_duration_p95"
+    },
+    {
+      "condition": "LOAD_MEDIUM",
+      "control": "BASELINE",
+      "direct_metric": "requests_deferred_max",
+      "mechanism": "LOAD",
+      "primary_metric": "ttft_p95"
+    },
+    {
+      "condition": "DOWNSTREAM_MEDIUM",
+      "control": "BASELINE",
+      "direct_metric": "dependency_duration_median",
+      "mechanism": "DOWNSTREAM",
+      "primary_metric": "total_latency_p95"
+    }
+  ],
+  "matched_controls": {
+    "DOWNSTREAM_MEDIUM": "BASELINE",
+    "INPUT_MEDIUM": "BASELINE",
+    "LOAD_MEDIUM": "BASELINE",
+    "OUTPUT_MEDIUM": "OUTPUT_CONTROL"
+  },
+  "no_outlier_removal": true,
+  "paired_test_procedure": "two-sided paired Student-t test on eight repetition-level deltas using scipy.stats.ttest_1samp",
+  "phase7a1_analysis_spec_sha256": "135f1a170eb8640d7819a990a69c7978b087b8747b66d3a07f0222466cb8259f",
+  "request_level_role": "requests are used only to compute run-level aggregates",
+  "run_level_aggregates": [
+    "ttft_p95",
+    "total_latency_p95",
+    "post_first_token_duration_p95",
+    "ttft_median",
+    "total_latency_median",
+    "post_first_token_duration_median",
+    "scheduler_slip_p95",
+    "successful_requests_per_second",
+    "completion_fraction",
+    "server_prompt_tokens_median",
+    "server_output_tokens_median",
+    "dependency_duration_median",
+    "requests_deferred_max",
+    "requests_deferred_median",
+    "requests_processing_max",
+    "requests_processing_median"
+  ],
+  "schema_version": "sloscope.phase7a1.analysis_spec.v1",
+  "slo_violation_definitions": {
+    "COMPOUND_SLO_VIOLATION": ">=2",
+    "NO_COUNTED_SLO_VIOLATION": 0,
+    "SINGLE_SLO_VIOLATION": 1,
+    "counted_slos": [
+      "TTFT_SLO",
+      "TOTAL_LATENCY_SLO",
+      "DECODE_DURATION_SLO"
+    ]
+  },
+  "statistical_unit": "one run / repetition"
+}

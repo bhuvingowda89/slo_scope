@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="420"><style>text{font-family:Arial;font-size:10px}.title{font-size:15px;font-weight:bold}</style><text class="title" x="20" y="24">Figure 10. RCA baselines</text>
+<text x="20" y="55">{'training_protocol': 'P1', 'subset': 'all', 'exact_set_accuracy': 0.575, 'complete_cause_recall': 0.575, 'macro_f1': 0.7419354838709677}</text>
+<text x="20" y="75">{'training_protocol': 'P1', 'subset': 'single-only', 'exact_set_accuracy': None, 'complete_cause_recall': None, 'macro_f1': None}</text>
+<text x="20" y="95">{'training_protocol': 'P1', 'subset': 'compound-only', 'exact_set_accuracy': 0.575, 'complete_cause_recall': 0.575, 'macro_f1': 0.7419354838709677}</text>
+<text x="20" y="115">{'training_protocol': 'P2', 'subset': 'all', 'exact_set_accuracy': 0.8365384615384616, 'complete_cause_recall': 1.0, 'macro_f1': 0.9322877299067776}</text>
+<text x="20" y="135">{'training_protocol': 'P2', 'subset': 'single-only', 'exact_set_accuracy': 0.8541666666666666, 'complete_cause_recall': 1.0, 'macro_f1': 0.9239130434782609}</text>
+<text x="20" y="155">{'training_protocol': 'P2', 'subset': 'compound-only', 'exact_set_accuracy': 0.975, 'complete_cause_recall': 1.0, 'macro_f1': 0.9924242424242424}</text>
+</svg>

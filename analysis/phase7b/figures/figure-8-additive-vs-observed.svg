@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="540" viewBox="0 0 1120 540">
+<style>text{font-family:Arial,sans-serif;font-size:10px}.title{font-size:15px;font-weight:bold}.axis{stroke:#333}.ci{stroke:#111;stroke-width:2}.supported{fill:#238b45}.plain{fill:#6baed6}.zero{stroke:#333;stroke-dasharray:4 3}.pos{fill:#de2d26}.neg{fill:#3182bd}</style>
+<text class="title" x="20" y="24">Figure 8. Standardized additive prediction vs observed compound</text>
+<text x="70" y="48">INPUT_LOAD</text>
+<line class="axis" x1="70" y1="140" x2="106" y2="140"/>
+<circle fill="#999" cx="82" cy="70.00" r="3"/>
+<circle fill="#de2d26" cx="95" cy="70.00" r="3"/>
+<line class="axis" x1="128" y1="140" x2="164" y2="140"/>
+<circle fill="#999" cx="140" cy="70.00" r="3"/>
+<circle fill="#de2d26" cx="153" cy="70.00" r="3"/>
+<line class="axis" x1="186" y1="140" x2="222" y2="140"/>
+<circle fill="#999" cx="198" cy="70.00" r="3"/>
+<circle fill="#de2d26" cx="211" cy="70.00" r="3"/>
+<line class="axis" x1="244" y1="140" x2="280" y2="140"/>
+<circle fill="#999" cx="256" cy="70.00" r="3"/>
+<circle fill="#de2d26" cx="269" cy="70.00" r="3"/>
+<line class="axis" x1="302" y1="140" x2="338" y2="140"/>
+<circle fill="#999" cx="314" cy="70.00" r="3"/>
+<circle fill="#de2d26" cx="327" cy="70.00" r="3"/>
+<line class="axis" x1="360" y1="140" x2="396" y2="140"/>
+<circle fill="#999" cx="372" cy="70.00" r="3"/>
+<circle fill="#de2d26" cx="385" cy="70.00" r="3"/>
+<line class="axis" x1="418" y1="140" x2="454" y2="140"/>
+<circle fill="#999" cx="430" cy="125.38" r="3"/>
+<circle fill="#de2d26" cx="443" cy="124.24" r="3"/>
+<line class="axis" x1="476" y1="140" x2="512" y2="140"/>
+<circle fill="#999" cx="488" cy="70.00" r="3"/>
+<circle fill="#de2d26" cx="501" cy="70.00" r="3"/>
+<text x="70" y="165">gray=additive, red=observed</text>
+<text x="590" y="48">INPUT_DOWNSTREAM</text>
+<line class="axis" x1="590" y1="140" x2="626" y2="140"/>
+<circle fill="#999" cx="602" cy="70.00" r="3"/>
+<circle fill="#de2d26" cx="615" cy="70.00" r="3"/>
+<line class="axis" x1="648" y1="140" x2="684" y2="140"/>
+<circle fill="#999" cx="660" cy="70.00" r="3"/>
+<circle fill="#de2d26" cx="673" cy="70.00" r="3"/>
+<line class="axis" x1="706" y1="140" x2="742" y2="140"/>
+<circle fill="#999" cx="718" cy="70.00" r="3"/>
+<circle fill="#de2d26" cx="731" cy="70.00" r="3"/>
+<line class="axis" x1="764" y1="140" x2="800" y2="140"/>
+<circle fill="#999" cx="776" cy="70.00" r="3"/>
+<circle fill="#de2d26" cx="789" cy="70.00" r="3"/>
+<line class="axis" x1="822" y1="140" x2="858" y2="140"/>
+<circle fill="#999" cx="834" cy="70.00" r="3"/>
+<circle fill="#de2d26" cx="847" cy="70.00" r="3"/>
+<line class="axis" x1="880" y1="140" x2="916" y2="140"/>
+<circle fill="#999" cx="892" cy="70.00" r="3"/>
+<circle fill="#de2d26" cx="905" cy="70.00" r="3"/>
+<line class="axis" x1="938" y1="140" x2="974" y2="140"/>
+<circle fill="#999" cx="950" cy="126.76" r="3"/>
+<circle fill="#de2d26" cx="963" cy="127.58" r="3"/>
+<line class="axis" x1="996" y1="140" x2="1032" y2="140"/>
+<circle fill="#999" cx="1008" cy="70.00" r="3"/>
+<circle fill="#de2d26" cx="1021" cy="70.00" r="3"/>
+<text x="590" y="165">gray=additive, red=observed</text>
+<text x="70" y="198">OUTPUT_LOAD</text>
+<line class="axis" x1="70" y1="290" x2="106" y2="290"/>
+<circle fill="#999" cx="82" cy="267.57" r="3"/>
+<circle fill="#de2d26" cx="95" cy="220.00" r="3"/>
+<line class="axis" x1="128" y1="290" x2="164" y2="290"/>
+<circle fill="#999" cx="140" cy="251.79" r="3"/>
+<circle fill="#de2d26" cx="153" cy="220.00" r="3"/>
+<line class="axis" x1="186" y1="290" x2="222" y2="290"/>
+<circle fill="#999" cx="198" cy="220.00" r="3"/>
+<circle fill="#de2d26" cx="211" cy="220.00" r="3"/>
+<line class="axis" x1="244" y1="290" x2="280" y2="290"/>
+<circle fill="#999" cx="256" cy="272.71" r="3"/>
+<circle fill="#de2d26" cx="269" cy="220.00" r="3"/>
+<line class="axis" x1="302" y1="290" x2="338" y2="290"/>
+<circle fill="#999" cx="314" cy="251.35" r="3"/>
+<circle fill="#de2d26" cx="327" cy="220.00" r="3"/>
+<line class="axis" x1="360" y1="290" x2="396" y2="290"/>
+<circle fill="#999" cx="372" cy="220.00" r="3"/>
+<circle fill="#de2d26" cx="385" cy="220.00" r="3"/>
+<line class="axis" x1="418" y1="290" x2="454" y2="290"/>
+<circle fill="#999" cx="430" cy="277.01" r="3"/>
+<circle fill="#de2d26" cx="443" cy="275.05" r="3"/>
+<line class="axis" x1="476" y1="290" x2="512" y2="290"/>
+<circle fill="#999" cx="488" cy="220.00" r="3"/>
+<circle fill="#de2d26" cx="501" cy="220.00" r="3"/>
+<text x="70" y="315">gray=additive, red=observed</text>
+<text x="590" y="198">OUTPUT_DOWNSTREAM</text>
+<line class="axis" x1="590" y1="290" x2="626" y2="290"/>
+<circle fill="#999" cx="602" cy="220.00" r="3"/>
+<circle fill="#de2d26" cx="615" cy="220.00" r="3"/>
+<line class="axis" x1="648" y1="290" x2="684" y2="290"/>
+<circle fill="#999" cx="660" cy="220.00" r="3"/>
+<circle fill="#de2d26" cx="673" cy="220.00" r="3"/>
+<line class="axis" x1="706" y1="290" x2="742" y2="290"/>
+<circle fill="#999" cx="718" cy="220.00" r="3"/>
+<circle fill="#de2d26" cx="731" cy="220.00" r="3"/>
+<line class="axis" x1="764" y1="290" x2="800" y2="290"/>
+<circle fill="#999" cx="776" cy="220.00" r="3"/>
+<circle fill="#de2d26" cx="789" cy="220.00" r="3"/>
+<line class="axis" x1="822" y1="290" x2="858" y2="290"/>
+<circle fill="#999" cx="834" cy="220.00" r="3"/>
+<circle fill="#de2d26" cx="847" cy="220.00" r="3"/>
+<line class="axis" x1="880" y1="290" x2="916" y2="290"/>
+<circle fill="#999" cx="892" cy="220.00" r="3"/>
+<circle fill="#de2d26" cx="905" cy="220.00" r="3"/>
+<line class="axis" x1="938" y1="290" x2="974" y2="290"/>
+<circle fill="#999" cx="950" cy="279.15" r="3"/>
+<circle fill="#de2d26" cx="963" cy="278.53" r="3"/>
+<line class="axis" x1="996" y1="290" x2="1032" y2="290"/>
+<circle fill="#999" cx="1008" cy="220.00" r="3"/>
+<circle fill="#de2d26" cx="1021" cy="220.00" r="3"/>
+<text x="590" y="315">gray=additive, red=observed</text>
+<text x="70" y="348">LOAD_DOWNSTREAM</text>
+<line class="axis" x1="70" y1="440" x2="106" y2="440"/>
+<circle fill="#999" cx="82" cy="370.00" r="3"/>
+<circle fill="#de2d26" cx="95" cy="370.00" r="3"/>
+<line class="axis" x1="128" y1="440" x2="164" y2="440"/>
+<circle fill="#999" cx="140" cy="370.00" r="3"/>
+<circle fill="#de2d26" cx="153" cy="370.00" r="3"/>
+<line class="axis" x1="186" y1="440" x2="222" y2="440"/>
+<circle fill="#999" cx="198" cy="370.00" r="3"/>
+<circle fill="#de2d26" cx="211" cy="370.00" r="3"/>
+<line class="axis" x1="244" y1="440" x2="280" y2="440"/>
+<circle fill="#999" cx="256" cy="370.00" r="3"/>
+<circle fill="#de2d26" cx="269" cy="370.00" r="3"/>
+<line class="axis" x1="302" y1="440" x2="338" y2="440"/>
+<circle fill="#999" cx="314" cy="370.00" r="3"/>
+<circle fill="#de2d26" cx="327" cy="370.00" r="3"/>
+<line class="axis" x1="360" y1="440" x2="396" y2="440"/>
+<circle fill="#999" cx="372" cy="370.00" r="3"/>
+<circle fill="#de2d26" cx="385" cy="370.00" r="3"/>
+<line class="axis" x1="418" y1="440" x2="454" y2="440"/>
+<circle fill="#999" cx="430" cy="424.92" r="3"/>
+<circle fill="#de2d26" cx="443" cy="425.21" r="3"/>
+<line class="axis" x1="476" y1="440" x2="512" y2="440"/>
+<circle fill="#999" cx="488" cy="370.00" r="3"/>
+<circle fill="#de2d26" cx="501" cy="370.00" r="3"/>
+<text x="70" y="465">gray=additive, red=observed</text>
+</svg>

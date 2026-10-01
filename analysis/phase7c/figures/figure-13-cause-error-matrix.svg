@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="420"><style>text{font-family:Arial;font-size:10px}.title{font-size:15px;font-weight:bold}</style><text class="title" x="20" y="24">Figure 13. Cause error matrix</text>
+<text x="20" y="55">{'cause': 'INPUT', 'precision': 0.6153846153846154, 'recall': 1.0, 'f1': 0.761904761904762, 'false_positive_rate': 0.1875, 'false_negative_rate': 0.0}</text>
+<text x="20" y="75">{'cause': 'OUTPUT', 'precision': 0.96, 'recall': 1.0, 'f1': 0.9795918367346939, 'false_positive_rate': 0.0125, 'false_negative_rate': 0.0}</text>
+<text x="20" y="95">{'cause': 'LOAD', 'precision': 0.975609756097561, 'recall': 1.0, 'f1': 0.9876543209876543, 'false_positive_rate': 0.015625, 'false_negative_rate': 0.0}</text>
+<text x="20" y="115">{'cause': 'DOWNSTREAM', 'precision': 1.0, 'recall': 1.0, 'f1': 1.0, 'false_positive_rate': 0.0, 'false_negative_rate': 0.0}</text>
+</svg>

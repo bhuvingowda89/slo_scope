@@ -1,0 +1,25 @@
+{
+  "analysis_script_hashes": {
+    "analysis/phase7c1a/phase7c1a_mesr.py": "0d41adac4f52e3f9103f4823ce0a23f02c6a51f5ba1065cfb52c1333d6444d61"
+  },
+  "campaign_freeze_sha256": "65d9798ea033bc910a832c624324fe068e48552b2a16e6ed639f33763ca028e0",
+  "historical_phase7c1_input_sha256": "d1dda3bd2deda507b1b1189add744fe7a4641e67e1f719504bc4794fd0c10168",
+  "historical_phase7c1_mesr_spec_sha256": "559a3552da3b99bd65f39888f928be169c4bc4c973b24c5017ae28f778fef895",
+  "phase7b_csd_spec_sha256": "61cade7df4bfd64073fa8c91dee31476a9c490b464b2d25b60503384f17dd89c",
+  "phase7b_input_sha256": "4254abc08167845541700d5ca15edfd1163b241d32c520cd6831bb40b9313bfa",
+  "phase7c1a_input_sha256": "166a9460ad8b035f45dc7aa5dc5174650f3a4b3dbcd1f4aba57bcc579cf8c884",
+  "phase7c1a_mesr_spec_sha256": "2b5dd124fea19988819c3929e09b727d20bf4ac22607c45dc869050ff8a61f1d",
+  "phase7c_input_sha256": "39cea874236e2435ace9744584b96f8fb326e6b9aaee80ffce77cc69df84f9d0",
+  "phase7c_rca_spec_sha256": "4c3324c6b5fbca55d3acbc0f05d22bb9e756b83abf3e89646b9450025fa3a953",
+  "publication_run_index_sha256": "dee0eb1927a84af8c02f8ef26bec55fe697decba9df2e351c45cffef59c491d8",
+  "python_version": "3.11.16 (main, Aug 12 2026, 23:03:19) [Clang 17.0.0 (clang-1700.6.4.2)]",
+  "source_tree_sha256": "8e442c813619586072c27a4ec30d7e65d367c3fc1375922935f67c72e2122582",
+  "timestamp": "2026-10-01T05:27:27.237281+00:00",
+  "versions": {
+    "numpy": "2.4.6",
+    "pandas": "3.0.6",
+    "pyarrow": "25.0.1",
+    "scipy": "1.17.1",
+    "sklearn": "1.9.1"
+  }
+}

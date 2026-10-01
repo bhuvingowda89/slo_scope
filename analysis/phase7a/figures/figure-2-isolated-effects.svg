@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="320" viewBox="0 0 900 320">
+<style>text{font-family:Arial,sans-serif;font-size:10px}.title{font-size:14px;font-weight:bold}.axis{stroke:#333;stroke-width:1}.grid{stroke:#ddd;stroke-width:1}.threshold{stroke:#b00020;stroke-width:1.5;stroke-dasharray:4 3}.point{fill:#1f77b4;opacity:.75}.ci{stroke:#111;stroke-width:1.5}.bar{fill:#6baed6}.heat0{fill:#f7fbff}.heat1{fill:#deebf7}.heat2{fill:#9ecae1}.heat3{fill:#3182bd}</style>
+<text class="title" x="20" y="24">Figure 2. Paired isolated-mechanism primary effects</text>
+<line class="axis" x1="220" y1="280" x2="860" y2="280"/>
+<line class="threshold" x1="252.40104628742068" y1="55" x2="252.40104628742068" y2="280"/>
+<text x="20" y="84">INPUT (ttft_p95)</text>
+<line class="ci" x1="273.87" y1="80" x2="275.63" y2="80"/>
+<circle fill="#111" cx="274.75" cy="80" r="4"/>
+<circle class="point" cx="273.33" cy="72.30" r="2.5"/>
+<circle class="point" cx="274.00" cy="74.50" r="2.5"/>
+<circle class="point" cx="274.18" cy="76.70" r="2.5"/>
+<circle class="point" cx="276.69" cy="78.90" r="2.5"/>
+<circle class="point" cx="274.42" cy="81.10" r="2.5"/>
+<circle class="point" cx="274.57" cy="83.30" r="2.5"/>
+<circle class="point" cx="275.22" cy="85.50" r="2.5"/>
+<circle class="point" cx="275.60" cy="87.70" r="2.5"/>
+<text x="20" y="132">OUTPUT (post_first_token_duration_p95)</text>
+<line class="ci" x1="353.23" y1="128" x2="371.05" y2="128"/>
+<circle fill="#111" cx="362.14" cy="128" r="4"/>
+<circle class="point" cx="356.19" cy="120.30" r="2.5"/>
+<circle class="point" cx="360.12" cy="122.50" r="2.5"/>
+<circle class="point" cx="353.51" cy="124.70" r="2.5"/>
+<circle class="point" cx="361.83" cy="126.90" r="2.5"/>
+<circle class="point" cx="365.31" cy="129.10" r="2.5"/>
+<circle class="point" cx="386.75" cy="131.30" r="2.5"/>
+<circle class="point" cx="358.54" cy="133.50" r="2.5"/>
+<circle class="point" cx="354.89" cy="135.70" r="2.5"/>
+<text x="20" y="180">LOAD (ttft_p95)</text>
+<line class="ci" x1="764.69" y1="176" x2="802.81" y2="176"/>
+<circle fill="#111" cx="783.75" cy="176" r="4"/>
+<circle class="point" cx="798.04" cy="168.30" r="2.5"/>
+<circle class="point" cx="799.99" cy="170.50" r="2.5"/>
+<circle class="point" cx="806.67" cy="172.70" r="2.5"/>
+<circle class="point" cx="806.65" cy="174.90" r="2.5"/>
+<circle class="point" cx="766.86" cy="177.10" r="2.5"/>
+<circle class="point" cx="747.59" cy="179.30" r="2.5"/>
+<circle class="point" cx="760.79" cy="181.50" r="2.5"/>
+<circle class="point" cx="783.42" cy="183.70" r="2.5"/>
+<text x="20" y="228">DOWNSTREAM (total_latency_p95)</text>
+<line class="ci" x1="301.12" y1="224" x2="305.75" y2="224"/>
+<circle fill="#111" cx="303.43" cy="224" r="4"/>
+<circle class="point" cx="299.95" cy="216.30" r="2.5"/>
+<circle class="point" cx="302.82" cy="218.50" r="2.5"/>
+<circle class="point" cx="302.76" cy="220.70" r="2.5"/>
+<circle class="point" cx="305.29" cy="222.90" r="2.5"/>
+<circle class="point" cx="303.61" cy="225.10" r="2.5"/>
+<circle class="point" cx="301.92" cy="227.30" r="2.5"/>
+<circle class="point" cx="309.16" cy="229.50" r="2.5"/>
+<circle class="point" cx="301.93" cy="231.70" r="2.5"/>
+</svg>

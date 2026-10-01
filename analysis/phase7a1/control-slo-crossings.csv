@@ -1,0 +1,5 @@
+source,condition_id,n,ttft_p95_crossings,ttft_p95_threshold,total_latency_p95_crossings,total_latency_p95_threshold,post_first_token_duration_p95_crossings,post_first_token_duration_p95_threshold,any_counted_slo_crossings
+calibration,BASELINE,8,0,0.06512947314299491,0,0.26779416389490324,0,0.20162438542758712,0
+calibration,OUTPUT_CONTROL,8,0,0.06512947314299491,0,0.26779416389490324,0,0.20162438542758712,0
+formal,BASELINE,8,0,0.06512947314299491,0,0.26779416389490324,0,0.20162438542758712,0
+formal,OUTPUT_CONTROL,8,0,0.06512947314299491,4,0.26779416389490324,7,0.20162438542758712,7

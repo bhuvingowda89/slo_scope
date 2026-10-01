@@ -1,0 +1,33 @@
+{
+  "direct_mechanism_evidence": [
+    "server_prompt_tokens_median",
+    "server_output_tokens_median",
+    "dependency_duration_median"
+  ],
+  "feature_registry_path": "analysis/phase7b/feature-registry.json",
+  "labels_separate_not_features": [
+    "active_mechanisms",
+    "mechanism_levels"
+  ],
+  "performance_features": [
+    "ttft_p95",
+    "total_latency_p95",
+    "post_first_token_duration_p95",
+    "ttft_median",
+    "total_latency_median",
+    "post_first_token_duration_median",
+    "scheduler_slip_p95",
+    "successful_requests_per_second"
+  ],
+  "schema_version": "sloscope.phase7b.rca_handoff.v1",
+  "telemetry_features": [
+    "host_cpu_median",
+    "host_cpu_p95",
+    "dependency_duration_median",
+    "dependency_duration_p95"
+  ],
+  "unavailable_features": [
+    "llamacpp:requests_processing",
+    "llamacpp:requests_deferred"
+  ]
+}

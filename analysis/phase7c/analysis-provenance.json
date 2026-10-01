@@ -1,0 +1,19 @@
+{
+  "analysis_script_hashes": {
+    "analysis/phase7c/phase7c_rca.py": "850a15992e9036462c6c63b0593ecd4d0a383984f104941b57e82082344d40de"
+  },
+  "campaign_freeze_sha256": "65d9798ea033bc910a832c624324fe068e48552b2a16e6ed639f33763ca028e0",
+  "dependency_versions": {
+    "numpy": "2.4.6",
+    "pandas": "3.0.6",
+    "pyarrow": "25.0.1",
+    "scipy": "1.17.1",
+    "sklearn": "1.9.1"
+  },
+  "phase7c_input_sha256": "39cea874236e2435ace9744584b96f8fb326e6b9aaee80ffce77cc69df84f9d0",
+  "phase7c_rca_spec_sha256": "4c3324c6b5fbca55d3acbc0f05d22bb9e756b83abf3e89646b9450025fa3a953",
+  "python_version": "3.11.16 (main, Aug 12 2026, 23:03:19) [Clang 17.0.0 (clang-1700.6.4.2)]",
+  "schema_version": "sloscope.phase7c.provenance.v1",
+  "source_tree_sha256": "8e442c813619586072c27a4ec30d7e65d367c3fc1375922935f67c72e2122582",
+  "timestamp": "2026-10-01T04:12:51.133527+00:00"
+}

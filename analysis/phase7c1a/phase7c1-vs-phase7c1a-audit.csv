@@ -1,0 +1,6 @@
+method,subset,old_exact_set_accuracy,corrected_exact_set_accuracy,old_complete_cause_recall,corrected_complete_cause_recall,old_jaccard,corrected_jaccard,old_macro_f1,corrected_macro_f1,old_over_attribution,corrected_over_attribution,old_under_attribution,corrected_under_attribution,old_control_false_alarm_rate,corrected_control_false_alarm_rate,change_reason
+D4-S,P1-COMPOUND,0.0,0.2,0.0,0.2,0.3583333333333333,0.39999999999999997,0.3590704647676161,0.38095238095238093,0.25,0.6,1.0,0.8,nan,nan,specification-compliance correction
+D4-SM,P1-COMPOUND,0.6,0.6,0.6,0.6,0.7333333333333333,0.7458333333333333,0.6642857142857143,0.6764150943396227,0.4,0.325,0.4,0.4,nan,nan,specification-compliance correction
+D4-SMT,P1-COMPOUND,0.6,0.575,0.6,0.575,0.7333333333333333,0.75,0.6642857142857143,0.6872056514913658,0.4,0.225,0.4,0.425,nan,nan,specification-compliance correction
+D4-FULL,P1-COMPOUND,0.575,0.6,0.575,0.6,0.7333333333333333,0.7541666666666667,0.668722786647315,0.6852941176470588,0.325,0.275,0.425,0.4,nan,nan,specification-compliance correction
+D4-FULL-F3,P1-COMPOUND,0.7,0.8,0.7,0.8,0.8125,0.8666666666666666,0.8070444393973806,0.8666666666666667,0.225,0.2,0.3,0.2,nan,nan,specification-compliance correction

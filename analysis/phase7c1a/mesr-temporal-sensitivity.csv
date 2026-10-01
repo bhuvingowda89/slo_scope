@@ -1,0 +1,7 @@
+analysis,method,condition_id,primary_window_exact,sensitivity_window_exact,exact_changed
+first20_last20,D4-FULL,INPUT_DOWNSTREAM,0.0,0.0,False
+first20_last20,D4-FULL,INPUT_LOAD,0.0,0.0,False
+first20_last20,D4-FULL,LOAD_DOWNSTREAM,1.0,1.0,False
+first20_last20,D4-FULL,OUTPUT_DOWNSTREAM,1.0,1.0,False
+first20_last20,D4-FULL,OUTPUT_LOAD,1.0,1.0,False
+first20_last20,D4-FULL,ALL_COMPOUNDS,0.6,0.6,False

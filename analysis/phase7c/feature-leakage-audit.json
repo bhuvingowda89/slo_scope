@@ -1,0 +1,15 @@
+{
+  "issues": {
+    "F0": [],
+    "F1": [],
+    "F2": [],
+    "F3": []
+  },
+  "passed": true,
+  "primary_F2_leakage_issues": [],
+  "schema_version": "sloscope.phase7c.feature_leakage_audit.v1",
+  "unavailable_excluded": [
+    "requests_processing",
+    "requests_deferred"
+  ]
+}

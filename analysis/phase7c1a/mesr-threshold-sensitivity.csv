@@ -1,0 +1,4 @@
+threshold,method,subset,n,exact_set_accuracy,jaccard,complete_cause_recall,partial_cause_recall,micro_f1,macro_f1,over_attribution,under_attribution,control_false_alarm_rate
+0.9,D4-FULL,P1-COMPOUND,40,0.6,0.7541666666666667,0.6,0.8,0.8258064516129033,0.6852941176470588,0.275,0.4,
+0.95,D4-FULL,P1-COMPOUND,40,0.6,0.7541666666666667,0.6,0.8,0.8258064516129033,0.6852941176470588,0.275,0.4,
+0.975,D4-FULL,P1-COMPOUND,40,0.6,0.7541666666666667,0.6,0.8,0.8258064516129033,0.6852941176470588,0.275,0.4,

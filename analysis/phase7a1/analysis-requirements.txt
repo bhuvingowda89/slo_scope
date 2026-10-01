@@ -1,0 +1,11 @@
+# Phase 7A.1 analysis runtime
+#
+# These are analysis-only dependencies installed in an isolated environment.
+# Do not add them to the frozen measurement package.
+#
+# Tested with:
+#   Python 3.11
+#   scipy
+#   numpy
+#   pandas
+#   pyarrow

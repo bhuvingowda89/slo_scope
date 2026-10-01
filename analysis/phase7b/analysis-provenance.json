@@ -1,0 +1,23 @@
+{
+  "analysis_script_hashes": {
+    "analysis/phase7b/phase7b_csd.py": "c9742576ac09c99b5fcddb93923667b89971e6e8ecc03d9b062a6a7a4fa3b555",
+    "analysis/phase7b/test_phase7b_csd.py": "229fa8adb79450b15afd9a7bee368436fd456b2b53db947dabb3a9f690a4acc4"
+  },
+  "campaign_freeze_sha256": "65d9798ea033bc910a832c624324fe068e48552b2a16e6ed639f33763ca028e0",
+  "dependency_versions": {
+    "numpy": "2.4.6",
+    "pandas": "3.0.6",
+    "pyarrow": "25.0.1",
+    "scipy": "1.17.1"
+  },
+  "phase7a1_analysis_spec_sha256": "135f1a170eb8640d7819a990a69c7978b087b8747b66d3a07f0222466cb8259f",
+  "phase7a1_input_sha256": "99482c58c4e30bc8316c42b61f4ed5af2f291b1528dcfbbe539e490faa59e51c",
+  "phase7b_csd_spec_sha256": "61cade7df4bfd64073fa8c91dee31476a9c490b464b2d25b60503384f17dd89c",
+  "phase7b_input_sha256": "4254abc08167845541700d5ca15edfd1163b241d32c520cd6831bb40b9313bfa",
+  "platform": "macOS-15.5-arm64-arm-64bit",
+  "publication_run_index_sha256": "dee0eb1927a84af8c02f8ef26bec55fe697decba9df2e351c45cffef59c491d8",
+  "python_version": "3.11.16 (main, Aug 12 2026, 23:03:19) [Clang 17.0.0 (clang-1700.6.4.2)]",
+  "schema_version": "sloscope.phase7b.provenance.v1",
+  "source_tree_sha256": "8e442c813619586072c27a4ec30d7e65d367c3fc1375922935f67c72e2122582",
+  "timestamp": "2026-10-01T03:54:36.116397+00:00"
+}

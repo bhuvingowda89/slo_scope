@@ -1,0 +1,50 @@
+condition_id,metric,values,median,min,max,queue_secondary_signature,unavailable_reason
+INPUT_MEDIUM,server_prompt_tokens_median,"[267.0, 267.0, 267.0, 267.0, 267.0, 267.0, 267.0, 267.0]",267.0,267.0,267.0,False,
+INPUT_MEDIUM,server_prompt_tokens_p95,"[268.0, 268.0, 268.0, 268.0, 268.0, 268.0, 268.0, 268.0]",268.0,268.0,268.0,False,
+INPUT_MEDIUM,requests_deferred_max,[],,,,False,llama.cpp long-form requests_processing/requests_deferred metrics absent from formal runtime_metrics artifacts
+INPUT_MEDIUM,requests_deferred_median,[],,,,False,llama.cpp long-form requests_processing/requests_deferred metrics absent from formal runtime_metrics artifacts
+INPUT_MEDIUM,requests_processing_max,[],,,,False,llama.cpp long-form requests_processing/requests_deferred metrics absent from formal runtime_metrics artifacts
+INPUT_MEDIUM,requests_processing_median,[],,,,False,llama.cpp long-form requests_processing/requests_deferred metrics absent from formal runtime_metrics artifacts
+OUTPUT_MEDIUM,server_output_tokens_median,"[32.0, 32.0, 32.0, 32.0, 32.0, 32.0, 32.0, 32.0]",32.0,32.0,32.0,False,
+OUTPUT_MEDIUM,server_output_tokens_p95,"[32.0, 32.0, 32.0, 32.0, 32.0, 32.0, 32.0, 32.0]",32.0,32.0,32.0,False,
+OUTPUT_MEDIUM,requests_deferred_max,[],,,,False,llama.cpp long-form requests_processing/requests_deferred metrics absent from formal runtime_metrics artifacts
+OUTPUT_MEDIUM,requests_deferred_median,[],,,,False,llama.cpp long-form requests_processing/requests_deferred metrics absent from formal runtime_metrics artifacts
+OUTPUT_MEDIUM,requests_processing_max,[],,,,False,llama.cpp long-form requests_processing/requests_deferred metrics absent from formal runtime_metrics artifacts
+OUTPUT_MEDIUM,requests_processing_median,[],,,,False,llama.cpp long-form requests_processing/requests_deferred metrics absent from formal runtime_metrics artifacts
+LOAD_MEDIUM,requests_deferred_max,[],,,,False,llama.cpp long-form requests_processing/requests_deferred metrics absent from formal runtime_metrics artifacts
+LOAD_MEDIUM,requests_deferred_median,[],,,,False,llama.cpp long-form requests_processing/requests_deferred metrics absent from formal runtime_metrics artifacts
+LOAD_MEDIUM,requests_processing_max,[],,,,False,llama.cpp long-form requests_processing/requests_deferred metrics absent from formal runtime_metrics artifacts
+LOAD_MEDIUM,requests_processing_median,[],,,,False,llama.cpp long-form requests_processing/requests_deferred metrics absent from formal runtime_metrics artifacts
+DOWNSTREAM_MEDIUM,dependency_duration_median,"[0.1026252294977894, 0.1032228540025244, 0.10356524999951944, 0.10357154200028162, 0.10347816650028108, 0.10353841700271005, 0.10321745850160369, 0.10356645899810246]",0.10350829175149556,0.1026252294977894,0.10357154200028162,False,
+DOWNSTREAM_MEDIUM,dependency_duration_p95,"[0.10300258575225597, 0.10405228509916925, 0.10387258540285985, 0.1042132378450333, 0.10383146694875904, 0.10385299790395948, 0.10380649759645166, 0.10402269229525701]",0.10386279165340967,0.10300258575225597,0.1042132378450333,False,
+DOWNSTREAM_MEDIUM,requests_deferred_max,[],,,,False,llama.cpp long-form requests_processing/requests_deferred metrics absent from formal runtime_metrics artifacts
+DOWNSTREAM_MEDIUM,requests_deferred_median,[],,,,False,llama.cpp long-form requests_processing/requests_deferred metrics absent from formal runtime_metrics artifacts
+DOWNSTREAM_MEDIUM,requests_processing_max,[],,,,False,llama.cpp long-form requests_processing/requests_deferred metrics absent from formal runtime_metrics artifacts
+DOWNSTREAM_MEDIUM,requests_processing_median,[],,,,False,llama.cpp long-form requests_processing/requests_deferred metrics absent from formal runtime_metrics artifacts
+INPUT_LOAD,server_prompt_tokens_median,"[267.0, 267.0, 267.0, 267.0, 267.0, 267.0, 267.0, 267.0]",267.0,267.0,267.0,False,
+INPUT_LOAD,requests_deferred_max,[],,,,False,llama.cpp long-form requests_processing/requests_deferred metrics absent from formal runtime_metrics artifacts
+INPUT_LOAD,requests_deferred_median,[],,,,False,llama.cpp long-form requests_processing/requests_deferred metrics absent from formal runtime_metrics artifacts
+INPUT_LOAD,requests_processing_max,[],,,,False,llama.cpp long-form requests_processing/requests_deferred metrics absent from formal runtime_metrics artifacts
+INPUT_LOAD,requests_processing_median,[],,,,False,llama.cpp long-form requests_processing/requests_deferred metrics absent from formal runtime_metrics artifacts
+INPUT_DOWNSTREAM,server_prompt_tokens_median,"[267.0, 267.0, 267.0, 267.0, 267.0, 267.0, 267.0, 267.0]",267.0,267.0,267.0,False,
+INPUT_DOWNSTREAM,dependency_duration_median,"[0.10254497899586568, 0.1024916869973822, 0.1035627295023005, 0.1035001044983801, 0.10256925000066985, 0.1034321250008361, 0.10356006200163392, 0.10343941650353372]",0.10343577075218491,0.1024916869973822,0.1035627295023005,False,
+INPUT_DOWNSTREAM,requests_deferred_max,[],,,,False,llama.cpp long-form requests_processing/requests_deferred metrics absent from formal runtime_metrics artifacts
+INPUT_DOWNSTREAM,requests_deferred_median,[],,,,False,llama.cpp long-form requests_processing/requests_deferred metrics absent from formal runtime_metrics artifacts
+INPUT_DOWNSTREAM,requests_processing_max,[],,,,False,llama.cpp long-form requests_processing/requests_deferred metrics absent from formal runtime_metrics artifacts
+INPUT_DOWNSTREAM,requests_processing_median,[],,,,False,llama.cpp long-form requests_processing/requests_deferred metrics absent from formal runtime_metrics artifacts
+OUTPUT_LOAD,server_output_tokens_median,"[32.0, 32.0, 32.0, 32.0, 32.0, 32.0, 32.0, 32.0]",32.0,32.0,32.0,False,
+OUTPUT_LOAD,requests_deferred_max,[],,,,False,llama.cpp long-form requests_processing/requests_deferred metrics absent from formal runtime_metrics artifacts
+OUTPUT_LOAD,requests_deferred_median,[],,,,False,llama.cpp long-form requests_processing/requests_deferred metrics absent from formal runtime_metrics artifacts
+OUTPUT_LOAD,requests_processing_max,[],,,,False,llama.cpp long-form requests_processing/requests_deferred metrics absent from formal runtime_metrics artifacts
+OUTPUT_LOAD,requests_processing_median,[],,,,False,llama.cpp long-form requests_processing/requests_deferred metrics absent from formal runtime_metrics artifacts
+OUTPUT_DOWNSTREAM,server_output_tokens_median,"[32.0, 32.0, 32.0, 32.0, 32.0, 32.0, 32.0, 32.0]",32.0,32.0,32.0,False,
+OUTPUT_DOWNSTREAM,dependency_duration_median,"[0.10364560400194023, 0.10260412549905595, 0.10368989600101486, 0.10270225000203936, 0.10253710450342624, 0.10349427050095983, 0.10366422950028209, 0.10366277099819854]",0.10356993725145003,0.10253710450342624,0.10368989600101486,False,
+OUTPUT_DOWNSTREAM,requests_deferred_max,[],,,,False,llama.cpp long-form requests_processing/requests_deferred metrics absent from formal runtime_metrics artifacts
+OUTPUT_DOWNSTREAM,requests_deferred_median,[],,,,False,llama.cpp long-form requests_processing/requests_deferred metrics absent from formal runtime_metrics artifacts
+OUTPUT_DOWNSTREAM,requests_processing_max,[],,,,False,llama.cpp long-form requests_processing/requests_deferred metrics absent from formal runtime_metrics artifacts
+OUTPUT_DOWNSTREAM,requests_processing_median,[],,,,False,llama.cpp long-form requests_processing/requests_deferred metrics absent from formal runtime_metrics artifacts
+LOAD_DOWNSTREAM,requests_deferred_max,[],,,,False,llama.cpp long-form requests_processing/requests_deferred metrics absent from formal runtime_metrics artifacts
+LOAD_DOWNSTREAM,requests_deferred_median,[],,,,False,llama.cpp long-form requests_processing/requests_deferred metrics absent from formal runtime_metrics artifacts
+LOAD_DOWNSTREAM,requests_processing_max,[],,,,False,llama.cpp long-form requests_processing/requests_deferred metrics absent from formal runtime_metrics artifacts
+LOAD_DOWNSTREAM,requests_processing_median,[],,,,False,llama.cpp long-form requests_processing/requests_deferred metrics absent from formal runtime_metrics artifacts
+LOAD_DOWNSTREAM,dependency_duration_median,"[0.10212970800057519, 0.10300666650073254, 0.10248070799934794, 0.10209568749996834, 0.10303083299731952, 0.10299466650030809, 0.10302047900040634, 0.10307818799992674]",0.10300066650052031,0.10209568749996834,0.10307818799992674,False,

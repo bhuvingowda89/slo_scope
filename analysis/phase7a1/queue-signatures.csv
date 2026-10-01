@@ -1,0 +1,14 @@
+condition_id,ground_truth_load_mechanism,queueing_intended_not_confound,secondary_observed_queue_signature,requests_deferred_max_values,requests_deferred_max_median,requests_deferred_max_max,requests_processing_max_values,requests_processing_max_median,requests_processing_max_max,unavailable_reason
+BASELINE,False,False,False,[],,,[],,,llama.cpp long-form requests_processing/requests_deferred metrics absent from formal runtime_metrics artifacts
+OUTPUT_CONTROL,False,False,False,[],,,[],,,llama.cpp long-form requests_processing/requests_deferred metrics absent from formal runtime_metrics artifacts
+OUTPUT_LOAD_CONTROL,False,False,False,[],,,[],,,llama.cpp long-form requests_processing/requests_deferred metrics absent from formal runtime_metrics artifacts
+OUTPUT_DOWNSTREAM_CONTROL,False,False,False,[],,,[],,,llama.cpp long-form requests_processing/requests_deferred metrics absent from formal runtime_metrics artifacts
+INPUT_MEDIUM,False,False,False,[],,,[],,,llama.cpp long-form requests_processing/requests_deferred metrics absent from formal runtime_metrics artifacts
+OUTPUT_MEDIUM,False,False,False,[],,,[],,,llama.cpp long-form requests_processing/requests_deferred metrics absent from formal runtime_metrics artifacts
+LOAD_MEDIUM,True,True,False,[],,,[],,,llama.cpp long-form requests_processing/requests_deferred metrics absent from formal runtime_metrics artifacts
+DOWNSTREAM_MEDIUM,False,False,False,[],,,[],,,llama.cpp long-form requests_processing/requests_deferred metrics absent from formal runtime_metrics artifacts
+INPUT_LOAD,True,True,False,[],,,[],,,llama.cpp long-form requests_processing/requests_deferred metrics absent from formal runtime_metrics artifacts
+INPUT_DOWNSTREAM,False,False,False,[],,,[],,,llama.cpp long-form requests_processing/requests_deferred metrics absent from formal runtime_metrics artifacts
+OUTPUT_LOAD,True,True,False,[],,,[],,,llama.cpp long-form requests_processing/requests_deferred metrics absent from formal runtime_metrics artifacts
+OUTPUT_DOWNSTREAM,False,False,False,[],,,[],,,llama.cpp long-form requests_processing/requests_deferred metrics absent from formal runtime_metrics artifacts
+LOAD_DOWNSTREAM,True,True,False,[],,,[],,,llama.cpp long-form requests_processing/requests_deferred metrics absent from formal runtime_metrics artifacts

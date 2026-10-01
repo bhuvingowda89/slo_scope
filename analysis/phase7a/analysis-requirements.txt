@@ -1,0 +1,8 @@
+# Phase 7A analysis runtime
+#
+# The primary analysis implementation intentionally uses only the Python
+# standard library so it can be reproduced without adding dependencies to the
+# frozen measurement package.
+#
+# Tested with:
+#   Python 3.11

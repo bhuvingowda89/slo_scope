@@ -1,0 +1,90 @@
+{
+  "CORE_F2": [
+    "ttft_p95",
+    "total_latency_p95",
+    "post_first_token_duration_p95",
+    "ttft_median",
+    "total_latency_median",
+    "post_first_token_duration_median",
+    "scheduler_slip_p95",
+    "successful_requests_per_second",
+    "host_cpu_median",
+    "host_cpu_p95",
+    "dependency_duration_median",
+    "dependency_duration_p95",
+    "gateway_span_duration_median",
+    "gateway_span_duration_p95",
+    "dependency_span_duration_median",
+    "dependency_span_duration_p95",
+    "llama_span_duration_median",
+    "llama_span_duration_p95",
+    "dependency_fraction_of_gateway_median",
+    "llama_fraction_of_gateway_median"
+  ],
+  "F3_DIRECT_EVIDENCE": [
+    "server_prompt_tokens_median",
+    "server_output_tokens_median"
+  ],
+  "MECHANISM_ANCHOR": {
+    "DOWNSTREAM": [
+      "dependency_duration_median",
+      "dependency_duration_p95",
+      "dependency_span_duration_median",
+      "dependency_span_duration_p95",
+      "dependency_fraction_of_gateway_median"
+    ],
+    "INPUT": [
+      "prefill_proxy_median",
+      "prefill_proxy_p95",
+      "ttft_median",
+      "ttft_p95"
+    ],
+    "LOAD": [
+      "ttft_late_minus_early",
+      "ttft_normalized_slope",
+      "total_latency_late_minus_early",
+      "total_latency_normalized_slope",
+      "successful_requests_per_second",
+      "scheduler_slip_late_minus_early",
+      "scheduler_slip_normalized_slope"
+    ],
+    "OUTPUT": [
+      "post_first_token_duration_median",
+      "post_first_token_duration_p95",
+      "llama_span_duration_median",
+      "llama_span_duration_p95"
+    ]
+  },
+  "TEMPORAL": [
+    "ttft_early_median",
+    "ttft_late_median",
+    "ttft_late_minus_early",
+    "ttft_normalized_slope",
+    "total_latency_early_median",
+    "total_latency_late_median",
+    "total_latency_late_minus_early",
+    "total_latency_normalized_slope",
+    "post_first_token_duration_early_median",
+    "post_first_token_duration_late_median",
+    "post_first_token_duration_late_minus_early",
+    "post_first_token_duration_normalized_slope",
+    "prefill_proxy_early_median",
+    "prefill_proxy_late_median",
+    "prefill_proxy_late_minus_early",
+    "prefill_proxy_normalized_slope",
+    "dependency_duration_early_median",
+    "dependency_duration_late_median",
+    "dependency_duration_late_minus_early",
+    "dependency_duration_normalized_slope",
+    "scheduler_slip_early_median",
+    "scheduler_slip_late_median",
+    "scheduler_slip_late_minus_early",
+    "scheduler_slip_normalized_slope",
+    "gateway_span_duration_late_minus_early",
+    "gateway_span_duration_normalized_slope",
+    "llama_span_duration_late_minus_early",
+    "llama_span_duration_normalized_slope",
+    "dependency_span_duration_late_minus_early",
+    "dependency_span_duration_normalized_slope"
+  ]
+}

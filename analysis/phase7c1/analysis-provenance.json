@@ -1,0 +1,22 @@
+{
+  "analysis_script_hashes": {
+    "analysis/phase7c1/phase7c1_mesr.py": "46b0b788fa3eb298b07161e8a2584801e2168a7a718d14c972305251c5c6a01d"
+  },
+  "campaign_freeze_sha256": "65d9798ea033bc910a832c624324fe068e48552b2a16e6ed639f33763ca028e0",
+  "phase7b_csd_spec_sha256": "61cade7df4bfd64073fa8c91dee31476a9c490b464b2d25b60503384f17dd89c",
+  "phase7b_input_sha256": "4254abc08167845541700d5ca15edfd1163b241d32c520cd6831bb40b9313bfa",
+  "phase7c1_input_sha256": "d1dda3bd2deda507b1b1189add744fe7a4641e67e1f719504bc4794fd0c10168",
+  "phase7c1_mesr_spec_sha256": "559a3552da3b99bd65f39888f928be169c4bc4c973b24c5017ae28f778fef895",
+  "phase7c_input_sha256": "39cea874236e2435ace9744584b96f8fb326e6b9aaee80ffce77cc69df84f9d0",
+  "phase7c_rca_spec_sha256": "4c3324c6b5fbca55d3acbc0f05d22bb9e756b83abf3e89646b9450025fa3a953",
+  "python_version": "3.11.16 (main, Aug 12 2026, 23:03:19) [Clang 17.0.0 (clang-1700.6.4.2)]",
+  "source_tree_sha256": "8e442c813619586072c27a4ec30d7e65d367c3fc1375922935f67c72e2122582",
+  "timestamp": "2026-10-01T04:38:35.270408+00:00",
+  "versions": {
+    "numpy": "2.4.6",
+    "pandas": "3.0.6",
+    "pyarrow": "25.0.1",
+    "scipy": "1.17.1",
+    "sklearn": "1.9.1"
+  }
+}

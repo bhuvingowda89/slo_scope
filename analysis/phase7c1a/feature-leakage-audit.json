@@ -1,0 +1,10 @@
+{
+  "excluded": [
+    "condition_id",
+    "active_mechanisms",
+    "mechanism_levels",
+    "compound_degree",
+    "CSD"
+  ],
+  "primary_D4_issues": []
+}

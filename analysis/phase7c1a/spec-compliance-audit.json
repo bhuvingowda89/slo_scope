@@ -1,0 +1,17 @@
+{
+  "CSD_exclusion": "IMPLEMENTED",
+  "F3_separation": "IMPLEMENTED",
+  "abstention_sensitivity": "IMPLEMENTED",
+  "candidate_set_enumeration": "IMPLEMENTED",
+  "compound_training_exclusion": "IMPLEMENTED",
+  "contradiction_normalization": "IMPLEMENTED",
+  "diagnosis_set_margin": "IMPLEMENTED",
+  "group_normalization": "IMPLEMENTED",
+  "no_new_method_redesign_after_phase7c1a": "IMPLEMENTED",
+  "semantic_channel_grouping": "IMPLEMENTED",
+  "set_scoring": "IMPLEMENTED",
+  "temporal_sensitivity": "IMPLEMENTED",
+  "threshold_sensitivity": "IMPLEMENTED",
+  "tie_break": "IMPLEMENTED",
+  "training_only_distributions": "IMPLEMENTED"
+}

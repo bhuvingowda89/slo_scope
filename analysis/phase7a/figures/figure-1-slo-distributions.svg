@@ -1,0 +1,370 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+<style>text{font-family:Arial,sans-serif;font-size:10px}.title{font-size:14px;font-weight:bold}.axis{stroke:#333;stroke-width:1}.grid{stroke:#ddd;stroke-width:1}.threshold{stroke:#b00020;stroke-width:1.5;stroke-dasharray:4 3}.point{fill:#1f77b4;opacity:.75}.ci{stroke:#111;stroke-width:1.5}.bar{fill:#6baed6}.heat0{fill:#f7fbff}.heat1{fill:#deebf7}.heat2{fill:#9ecae1}.heat3{fill:#3182bd}</style>
+<text class="title" x="20" y="24">Figure 1. Run-level counted SLO metric distributions by condition</text>
+<text x="20" y="62">TTFT p95</text>
+<line class="axis" x1="160" y1="50" x2="160" y2="255"/>
+<line class="axis" x1="160" y1="255" x2="1180" y2="255"/>
+<line class="threshold" x1="160" y1="240.14788886551048" x2="1180" y2="240.14788886551048"/>
+<text x="1060" y="236.14788886551048">SLO threshold</text>
+<circle class="point" cx="185.23" cy="240.51" r="3"/>
+<circle class="point" cx="189.23" cy="240.64" r="3"/>
+<circle class="point" cx="193.23" cy="240.65" r="3"/>
+<circle class="point" cx="197.23" cy="240.86" r="3"/>
+<circle class="point" cx="201.23" cy="240.67" r="3"/>
+<circle class="point" cx="205.23" cy="240.64" r="3"/>
+<circle class="point" cx="209.23" cy="240.72" r="3"/>
+<circle class="point" cx="213.23" cy="240.76" r="3"/>
+<text transform="translate(194.23,329) rotate(-55)">BASELINE</text>
+<circle class="point" cx="263.69" cy="240.56" r="3"/>
+<circle class="point" cx="267.69" cy="240.52" r="3"/>
+<circle class="point" cx="271.69" cy="240.61" r="3"/>
+<circle class="point" cx="275.69" cy="240.52" r="3"/>
+<circle class="point" cx="279.69" cy="240.26" r="3"/>
+<circle class="point" cx="283.69" cy="240.62" r="3"/>
+<circle class="point" cx="287.69" cy="240.61" r="3"/>
+<circle class="point" cx="291.69" cy="240.54" r="3"/>
+<text transform="translate(272.69,329) rotate(-55)">OUTPUT_CONTROL</text>
+<circle class="point" cx="342.15" cy="218.02" r="3"/>
+<circle class="point" cx="346.15" cy="213.48" r="3"/>
+<circle class="point" cx="350.15" cy="214.56" r="3"/>
+<circle class="point" cx="354.15" cy="217.92" r="3"/>
+<circle class="point" cx="358.15" cy="219.46" r="3"/>
+<circle class="point" cx="362.15" cy="219.52" r="3"/>
+<circle class="point" cx="366.15" cy="219.23" r="3"/>
+<circle class="point" cx="370.15" cy="224.53" r="3"/>
+<text transform="translate(351.15,329) rotate(-55)">OUTPUT_LOAD_CONTROL</text>
+<circle class="point" cx="420.62" cy="236.22" r="3"/>
+<circle class="point" cx="424.62" cy="236.02" r="3"/>
+<circle class="point" cx="428.62" cy="236.00" r="3"/>
+<circle class="point" cx="432.62" cy="235.90" r="3"/>
+<circle class="point" cx="436.62" cy="236.16" r="3"/>
+<circle class="point" cx="440.62" cy="236.26" r="3"/>
+<circle class="point" cx="444.62" cy="236.10" r="3"/>
+<circle class="point" cx="448.62" cy="236.25" r="3"/>
+<text transform="translate(429.62,329) rotate(-55)">OUTPUT_DOWNSTREAM_CONTROL</text>
+<circle class="point" cx="499.08" cy="238.69" r="3"/>
+<circle class="point" cx="503.08" cy="238.75" r="3"/>
+<circle class="point" cx="507.08" cy="238.75" r="3"/>
+<circle class="point" cx="511.08" cy="238.74" r="3"/>
+<circle class="point" cx="515.08" cy="238.75" r="3"/>
+<circle class="point" cx="519.08" cy="238.70" r="3"/>
+<circle class="point" cx="523.08" cy="238.73" r="3"/>
+<circle class="point" cx="527.08" cy="238.74" r="3"/>
+<text transform="translate(508.08,329) rotate(-55)">INPUT_MEDIUM</text>
+<circle class="point" cx="577.54" cy="240.75" r="3"/>
+<circle class="point" cx="581.54" cy="240.53" r="3"/>
+<circle class="point" cx="585.54" cy="240.76" r="3"/>
+<circle class="point" cx="589.54" cy="240.61" r="3"/>
+<circle class="point" cx="593.54" cy="240.56" r="3"/>
+<circle class="point" cx="597.54" cy="240.49" r="3"/>
+<circle class="point" cx="601.54" cy="240.73" r="3"/>
+<circle class="point" cx="605.54" cy="240.43" r="3"/>
+<text transform="translate(586.54,329) rotate(-55)">OUTPUT_MEDIUM</text>
+<circle class="point" cx="656.00" cy="192.88" r="3"/>
+<circle class="point" cx="660.00" cy="192.83" r="3"/>
+<circle class="point" cx="664.00" cy="192.26" r="3"/>
+<circle class="point" cx="668.00" cy="192.48" r="3"/>
+<circle class="point" cx="672.00" cy="195.76" r="3"/>
+<circle class="point" cx="676.00" cy="197.41" r="3"/>
+<circle class="point" cx="680.00" cy="196.34" r="3"/>
+<circle class="point" cx="684.00" cy="194.41" r="3"/>
+<text transform="translate(665.00,329) rotate(-55)">LOAD_MEDIUM</text>
+<circle class="point" cx="734.46" cy="236.24" r="3"/>
+<circle class="point" cx="738.46" cy="236.18" r="3"/>
+<circle class="point" cx="742.46" cy="236.28" r="3"/>
+<circle class="point" cx="746.46" cy="236.38" r="3"/>
+<circle class="point" cx="750.46" cy="236.27" r="3"/>
+<circle class="point" cx="754.46" cy="236.29" r="3"/>
+<circle class="point" cx="758.46" cy="236.17" r="3"/>
+<circle class="point" cx="762.46" cy="236.28" r="3"/>
+<text transform="translate(743.46,329) rotate(-55)">DOWNSTREAM_MEDIUM</text>
+<circle class="point" cx="812.92" cy="108.39" r="3"/>
+<circle class="point" cx="816.92" cy="106.24" r="3"/>
+<circle class="point" cx="820.92" cy="104.40" r="3"/>
+<circle class="point" cx="824.92" cy="106.35" r="3"/>
+<circle class="point" cx="828.92" cy="106.21" r="3"/>
+<circle class="point" cx="832.92" cy="108.12" r="3"/>
+<circle class="point" cx="836.92" cy="105.04" r="3"/>
+<circle class="point" cx="840.92" cy="106.65" r="3"/>
+<text transform="translate(821.92,329) rotate(-55)">INPUT_LOAD</text>
+<circle class="point" cx="891.38" cy="234.40" r="3"/>
+<circle class="point" cx="895.38" cy="234.42" r="3"/>
+<circle class="point" cx="899.38" cy="234.35" r="3"/>
+<circle class="point" cx="903.38" cy="234.37" r="3"/>
+<circle class="point" cx="907.38" cy="234.41" r="3"/>
+<circle class="point" cx="911.38" cy="234.37" r="3"/>
+<circle class="point" cx="915.38" cy="234.33" r="3"/>
+<circle class="point" cx="919.38" cy="234.36" r="3"/>
+<text transform="translate(900.38,329) rotate(-55)">INPUT_DOWNSTREAM</text>
+<circle class="point" cx="969.85" cy="75.16" r="3"/>
+<circle class="point" cx="973.85" cy="81.39" r="3"/>
+<circle class="point" cx="977.85" cy="70.14" r="3"/>
+<circle class="point" cx="981.85" cy="79.33" r="3"/>
+<circle class="point" cx="985.85" cy="64.14" r="3"/>
+<circle class="point" cx="989.85" cy="75.26" r="3"/>
+<circle class="point" cx="993.85" cy="74.44" r="3"/>
+<circle class="point" cx="997.85" cy="69.14" r="3"/>
+<text transform="translate(978.85,329) rotate(-55)">OUTPUT_LOAD</text>
+<circle class="point" cx="1048.31" cy="236.23" r="3"/>
+<circle class="point" cx="1052.31" cy="236.45" r="3"/>
+<circle class="point" cx="1056.31" cy="236.30" r="3"/>
+<circle class="point" cx="1060.31" cy="236.40" r="3"/>
+<circle class="point" cx="1064.31" cy="236.46" r="3"/>
+<circle class="point" cx="1068.31" cy="236.38" r="3"/>
+<circle class="point" cx="1072.31" cy="236.26" r="3"/>
+<circle class="point" cx="1076.31" cy="236.33" r="3"/>
+<text transform="translate(1057.31,329) rotate(-55)">OUTPUT_DOWNSTREAM</text>
+<circle class="point" cx="1126.77" cy="190.02" r="3"/>
+<circle class="point" cx="1130.77" cy="190.05" r="3"/>
+<circle class="point" cx="1134.77" cy="189.91" r="3"/>
+<circle class="point" cx="1138.77" cy="190.38" r="3"/>
+<circle class="point" cx="1142.77" cy="187.88" r="3"/>
+<circle class="point" cx="1146.77" cy="187.45" r="3"/>
+<circle class="point" cx="1150.77" cy="192.06" r="3"/>
+<circle class="point" cx="1154.77" cy="188.05" r="3"/>
+<text transform="translate(1135.77,329) rotate(-55)">LOAD_DOWNSTREAM</text>
+<text x="20" y="282">Total latency p95</text>
+<line class="axis" x1="160" y1="270" x2="160" y2="475"/>
+<line class="axis" x1="160" y1="475" x2="1180" y2="475"/>
+<line class="threshold" x1="160" y1="456.98927338453336" x2="1180" y2="456.98927338453336"/>
+<text x="1060" y="452.98927338453336">SLO threshold</text>
+<circle class="point" cx="185.23" cy="460.08" r="3"/>
+<circle class="point" cx="189.23" cy="460.22" r="3"/>
+<circle class="point" cx="193.23" cy="460.44" r="3"/>
+<circle class="point" cx="197.23" cy="460.86" r="3"/>
+<circle class="point" cx="201.23" cy="460.53" r="3"/>
+<circle class="point" cx="205.23" cy="460.48" r="3"/>
+<circle class="point" cx="209.23" cy="460.77" r="3"/>
+<circle class="point" cx="213.23" cy="460.55" r="3"/>
+<text transform="translate(194.23,549) rotate(-55)">BASELINE</text>
+<circle class="point" cx="263.69" cy="457.12" r="3"/>
+<circle class="point" cx="267.69" cy="456.89" r="3"/>
+<circle class="point" cx="271.69" cy="457.39" r="3"/>
+<circle class="point" cx="275.69" cy="456.64" r="3"/>
+<circle class="point" cx="279.69" cy="455.65" r="3"/>
+<circle class="point" cx="283.69" cy="458.89" r="3"/>
+<circle class="point" cx="287.69" cy="457.26" r="3"/>
+<circle class="point" cx="291.69" cy="456.45" r="3"/>
+<text transform="translate(272.69,549) rotate(-55)">OUTPUT_CONTROL</text>
+<circle class="point" cx="342.15" cy="437.21" r="3"/>
+<circle class="point" cx="346.15" cy="433.03" r="3"/>
+<circle class="point" cx="350.15" cy="434.42" r="3"/>
+<circle class="point" cx="354.15" cy="437.33" r="3"/>
+<circle class="point" cx="358.15" cy="438.25" r="3"/>
+<circle class="point" cx="362.15" cy="438.67" r="3"/>
+<circle class="point" cx="366.15" cy="438.64" r="3"/>
+<circle class="point" cx="370.15" cy="444.43" r="3"/>
+<text transform="translate(351.15,549) rotate(-55)">OUTPUT_LOAD_CONTROL</text>
+<circle class="point" cx="420.62" cy="452.83" r="3"/>
+<circle class="point" cx="424.62" cy="451.88" r="3"/>
+<circle class="point" cx="428.62" cy="452.33" r="3"/>
+<circle class="point" cx="432.62" cy="452.78" r="3"/>
+<circle class="point" cx="436.62" cy="451.93" r="3"/>
+<circle class="point" cx="440.62" cy="452.98" r="3"/>
+<circle class="point" cx="444.62" cy="452.49" r="3"/>
+<circle class="point" cx="448.62" cy="453.00" r="3"/>
+<text transform="translate(429.62,549) rotate(-55)">OUTPUT_DOWNSTREAM_CONTROL</text>
+<circle class="point" cx="499.08" cy="458.79" r="3"/>
+<circle class="point" cx="503.08" cy="458.77" r="3"/>
+<circle class="point" cx="507.08" cy="458.83" r="3"/>
+<circle class="point" cx="511.08" cy="458.91" r="3"/>
+<circle class="point" cx="515.08" cy="458.73" r="3"/>
+<circle class="point" cx="519.08" cy="458.78" r="3"/>
+<circle class="point" cx="523.08" cy="458.82" r="3"/>
+<circle class="point" cx="527.08" cy="458.85" r="3"/>
+<text transform="translate(508.08,549) rotate(-55)">INPUT_MEDIUM</text>
+<circle class="point" cx="577.54" cy="448.75" r="3"/>
+<circle class="point" cx="581.54" cy="448.17" r="3"/>
+<circle class="point" cx="585.54" cy="449.23" r="3"/>
+<circle class="point" cx="589.54" cy="447.78" r="3"/>
+<circle class="point" cx="593.54" cy="446.76" r="3"/>
+<circle class="point" cx="597.54" cy="447.68" r="3"/>
+<circle class="point" cx="601.54" cy="449.15" r="3"/>
+<circle class="point" cx="605.54" cy="448.26" r="3"/>
+<text transform="translate(586.54,549) rotate(-55)">OUTPUT_MEDIUM</text>
+<circle class="point" cx="656.00" cy="412.39" r="3"/>
+<circle class="point" cx="660.00" cy="412.54" r="3"/>
+<circle class="point" cx="664.00" cy="411.96" r="3"/>
+<circle class="point" cx="668.00" cy="412.05" r="3"/>
+<circle class="point" cx="672.00" cy="415.56" r="3"/>
+<circle class="point" cx="676.00" cy="417.10" r="3"/>
+<circle class="point" cx="680.00" cy="416.06" r="3"/>
+<circle class="point" cx="684.00" cy="414.08" r="3"/>
+<text transform="translate(665.00,549) rotate(-55)">LOAD_MEDIUM</text>
+<circle class="point" cx="734.46" cy="456.12" r="3"/>
+<circle class="point" cx="738.46" cy="456.01" r="3"/>
+<circle class="point" cx="742.46" cy="456.24" r="3"/>
+<circle class="point" cx="746.46" cy="456.45" r="3"/>
+<circle class="point" cx="750.46" cy="456.26" r="3"/>
+<circle class="point" cx="754.46" cy="456.35" r="3"/>
+<circle class="point" cx="758.46" cy="456.04" r="3"/>
+<circle class="point" cx="762.46" cy="456.42" r="3"/>
+<text transform="translate(743.46,549) rotate(-55)">DOWNSTREAM_MEDIUM</text>
+<circle class="point" cx="812.92" cy="329.95" r="3"/>
+<circle class="point" cx="816.92" cy="327.58" r="3"/>
+<circle class="point" cx="820.92" cy="325.94" r="3"/>
+<circle class="point" cx="824.92" cy="327.66" r="3"/>
+<circle class="point" cx="828.92" cy="327.60" r="3"/>
+<circle class="point" cx="832.92" cy="329.32" r="3"/>
+<circle class="point" cx="836.92" cy="326.62" r="3"/>
+<circle class="point" cx="840.92" cy="328.14" r="3"/>
+<text transform="translate(821.92,549) rotate(-55)">INPUT_LOAD</text>
+<circle class="point" cx="891.38" cy="454.72" r="3"/>
+<circle class="point" cx="895.38" cy="454.73" r="3"/>
+<circle class="point" cx="899.38" cy="454.65" r="3"/>
+<circle class="point" cx="903.38" cy="454.69" r="3"/>
+<circle class="point" cx="907.38" cy="454.59" r="3"/>
+<circle class="point" cx="911.38" cy="454.54" r="3"/>
+<circle class="point" cx="915.38" cy="454.67" r="3"/>
+<circle class="point" cx="919.38" cy="454.62" r="3"/>
+<text transform="translate(900.38,549) rotate(-55)">INPUT_DOWNSTREAM</text>
+<circle class="point" cx="969.85" cy="292.14" r="3"/>
+<circle class="point" cx="973.85" cy="298.92" r="3"/>
+<circle class="point" cx="977.85" cy="288.60" r="3"/>
+<circle class="point" cx="981.85" cy="297.81" r="3"/>
+<circle class="point" cx="985.85" cy="284.14" r="3"/>
+<circle class="point" cx="989.85" cy="292.65" r="3"/>
+<circle class="point" cx="993.85" cy="293.60" r="3"/>
+<circle class="point" cx="997.85" cy="288.35" r="3"/>
+<text transform="translate(978.85,549) rotate(-55)">OUTPUT_LOAD</text>
+<circle class="point" cx="1048.31" cy="443.85" r="3"/>
+<circle class="point" cx="1052.31" cy="444.80" r="3"/>
+<circle class="point" cx="1056.31" cy="443.77" r="3"/>
+<circle class="point" cx="1060.31" cy="444.97" r="3"/>
+<circle class="point" cx="1064.31" cy="444.86" r="3"/>
+<circle class="point" cx="1068.31" cy="443.78" r="3"/>
+<circle class="point" cx="1072.31" cy="444.59" r="3"/>
+<circle class="point" cx="1076.31" cy="444.67" r="3"/>
+<text transform="translate(1057.31,549) rotate(-55)">OUTPUT_DOWNSTREAM</text>
+<circle class="point" cx="1126.77" cy="411.36" r="3"/>
+<circle class="point" cx="1130.77" cy="410.05" r="3"/>
+<circle class="point" cx="1134.77" cy="409.68" r="3"/>
+<circle class="point" cx="1138.77" cy="410.32" r="3"/>
+<circle class="point" cx="1142.77" cy="408.01" r="3"/>
+<circle class="point" cx="1146.77" cy="407.31" r="3"/>
+<circle class="point" cx="1150.77" cy="412.01" r="3"/>
+<circle class="point" cx="1154.77" cy="408.19" r="3"/>
+<text transform="translate(1135.77,549) rotate(-55)">LOAD_DOWNSTREAM</text>
+<text x="20" y="502">Decode duration p95</text>
+<line class="axis" x1="160" y1="490" x2="160" y2="695"/>
+<line class="axis" x1="160" y1="695" x2="1180" y2="695"/>
+<line class="threshold" x1="160" y1="640.8475974917067" x2="1180" y2="640.8475974917067"/>
+<text x="1060" y="636.8475974917067">SLO threshold</text>
+<circle class="point" cx="185.23" cy="674.13" r="3"/>
+<circle class="point" cx="189.23" cy="674.34" r="3"/>
+<circle class="point" cx="193.23" cy="676.44" r="3"/>
+<circle class="point" cx="197.23" cy="680.00" r="3"/>
+<circle class="point" cx="201.23" cy="678.78" r="3"/>
+<circle class="point" cx="205.23" cy="676.64" r="3"/>
+<circle class="point" cx="209.23" cy="678.76" r="3"/>
+<circle class="point" cx="213.23" cy="678.00" r="3"/>
+<text transform="translate(194.23,769) rotate(-55)">BASELINE</text>
+<circle class="point" cx="263.69" cy="637.69" r="3"/>
+<circle class="point" cx="267.69" cy="633.48" r="3"/>
+<circle class="point" cx="271.69" cy="638.06" r="3"/>
+<circle class="point" cx="275.69" cy="631.53" r="3"/>
+<circle class="point" cx="279.69" cy="622.40" r="3"/>
+<circle class="point" cx="283.69" cy="657.39" r="3"/>
+<circle class="point" cx="287.69" cy="639.08" r="3"/>
+<circle class="point" cx="291.69" cy="628.65" r="3"/>
+<text transform="translate(272.69,769) rotate(-55)">OUTPUT_CONTROL</text>
+<circle class="point" cx="342.15" cy="655.37" r="3"/>
+<circle class="point" cx="346.15" cy="640.45" r="3"/>
+<circle class="point" cx="350.15" cy="646.47" r="3"/>
+<circle class="point" cx="354.15" cy="654.03" r="3"/>
+<circle class="point" cx="358.15" cy="655.11" r="3"/>
+<circle class="point" cx="362.15" cy="655.43" r="3"/>
+<circle class="point" cx="366.15" cy="653.81" r="3"/>
+<circle class="point" cx="370.15" cy="656.06" r="3"/>
+<text transform="translate(351.15,769) rotate(-55)">OUTPUT_LOAD_CONTROL</text>
+<circle class="point" cx="420.62" cy="635.34" r="3"/>
+<circle class="point" cx="424.62" cy="623.97" r="3"/>
+<circle class="point" cx="428.62" cy="631.16" r="3"/>
+<circle class="point" cx="432.62" cy="638.03" r="3"/>
+<circle class="point" cx="436.62" cy="624.79" r="3"/>
+<circle class="point" cx="440.62" cy="636.60" r="3"/>
+<circle class="point" cx="444.62" cy="632.12" r="3"/>
+<circle class="point" cx="448.62" cy="637.07" r="3"/>
+<text transform="translate(429.62,769) rotate(-55)">OUTPUT_DOWNSTREAM_CONTROL</text>
+<circle class="point" cx="499.08" cy="680.44" r="3"/>
+<circle class="point" cx="503.08" cy="679.22" r="3"/>
+<circle class="point" cx="507.08" cy="679.53" r="3"/>
+<circle class="point" cx="511.08" cy="680.86" r="3"/>
+<circle class="point" cx="515.08" cy="679.55" r="3"/>
+<circle class="point" cx="519.08" cy="680.00" r="3"/>
+<circle class="point" cx="523.08" cy="680.26" r="3"/>
+<circle class="point" cx="527.08" cy="680.59" r="3"/>
+<text transform="translate(508.08,769) rotate(-55)">INPUT_MEDIUM</text>
+<circle class="point" cx="577.54" cy="528.98" r="3"/>
+<circle class="point" cx="581.54" cy="520.66" r="3"/>
+<circle class="point" cx="585.54" cy="532.16" r="3"/>
+<circle class="point" cx="589.54" cy="516.91" r="3"/>
+<circle class="point" cx="593.54" cy="504.14" r="3"/>
+<circle class="point" cx="597.54" cy="516.68" r="3"/>
+<circle class="point" cx="601.54" cy="527.92" r="3"/>
+<circle class="point" cx="605.54" cy="521.31" r="3"/>
+<text transform="translate(586.54,769) rotate(-55)">OUTPUT_MEDIUM</text>
+<circle class="point" cx="656.00" cy="644.14" r="3"/>
+<circle class="point" cx="660.00" cy="646.67" r="3"/>
+<circle class="point" cx="664.00" cy="646.37" r="3"/>
+<circle class="point" cx="668.00" cy="646.70" r="3"/>
+<circle class="point" cx="672.00" cy="646.47" r="3"/>
+<circle class="point" cx="676.00" cy="648.96" r="3"/>
+<circle class="point" cx="680.00" cy="647.59" r="3"/>
+<circle class="point" cx="684.00" cy="647.20" r="3"/>
+<text transform="translate(665.00,769) rotate(-55)">LOAD_MEDIUM</text>
+<circle class="point" cx="734.46" cy="675.10" r="3"/>
+<circle class="point" cx="738.46" cy="674.07" r="3"/>
+<circle class="point" cx="742.46" cy="676.69" r="3"/>
+<circle class="point" cx="746.46" cy="678.51" r="3"/>
+<circle class="point" cx="750.46" cy="675.26" r="3"/>
+<circle class="point" cx="754.46" cy="678.43" r="3"/>
+<circle class="point" cx="758.46" cy="673.49" r="3"/>
+<circle class="point" cx="762.46" cy="678.89" r="3"/>
+<text transform="translate(743.46,769) rotate(-55)">DOWNSTREAM_MEDIUM</text>
+<circle class="point" cx="812.92" cy="621.25" r="3"/>
+<circle class="point" cx="816.92" cy="619.59" r="3"/>
+<circle class="point" cx="820.92" cy="618.11" r="3"/>
+<circle class="point" cx="824.92" cy="617.36" r="3"/>
+<circle class="point" cx="828.92" cy="619.78" r="3"/>
+<circle class="point" cx="832.92" cy="619.35" r="3"/>
+<circle class="point" cx="836.92" cy="616.91" r="3"/>
+<circle class="point" cx="840.92" cy="618.66" r="3"/>
+<text transform="translate(821.92,769) rotate(-55)">INPUT_LOAD</text>
+<circle class="point" cx="891.38" cy="680.34" r="3"/>
+<circle class="point" cx="895.38" cy="680.52" r="3"/>
+<circle class="point" cx="899.38" cy="680.12" r="3"/>
+<circle class="point" cx="903.38" cy="680.56" r="3"/>
+<circle class="point" cx="907.38" cy="678.62" r="3"/>
+<circle class="point" cx="911.38" cy="679.60" r="3"/>
+<circle class="point" cx="915.38" cy="680.47" r="3"/>
+<circle class="point" cx="919.38" cy="679.90" r="3"/>
+<text transform="translate(900.38,769) rotate(-55)">INPUT_DOWNSTREAM</text>
+<circle class="point" cx="969.85" cy="548.72" r="3"/>
+<circle class="point" cx="973.85" cy="540.17" r="3"/>
+<circle class="point" cx="977.85" cy="540.51" r="3"/>
+<circle class="point" cx="981.85" cy="547.58" r="3"/>
+<circle class="point" cx="985.85" cy="533.32" r="3"/>
+<circle class="point" cx="989.85" cy="538.77" r="3"/>
+<circle class="point" cx="993.85" cy="544.75" r="3"/>
+<circle class="point" cx="997.85" cy="526.07" r="3"/>
+<text transform="translate(978.85,769) rotate(-55)">OUTPUT_LOAD</text>
+<circle class="point" cx="1048.31" cy="522.25" r="3"/>
+<circle class="point" cx="1052.31" cy="529.21" r="3"/>
+<circle class="point" cx="1056.31" cy="518.94" r="3"/>
+<circle class="point" cx="1060.31" cy="530.03" r="3"/>
+<circle class="point" cx="1064.31" cy="530.06" r="3"/>
+<circle class="point" cx="1068.31" cy="518.13" r="3"/>
+<circle class="point" cx="1072.31" cy="529.78" r="3"/>
+<circle class="point" cx="1076.31" cy="529.42" r="3"/>
+<text transform="translate(1057.31,769) rotate(-55)">OUTPUT_DOWNSTREAM</text>
+<circle class="point" cx="1126.77" cy="647.99" r="3"/>
+<circle class="point" cx="1130.77" cy="647.11" r="3"/>
+<circle class="point" cx="1134.77" cy="647.23" r="3"/>
+<circle class="point" cx="1138.77" cy="648.64" r="3"/>
+<circle class="point" cx="1142.77" cy="647.16" r="3"/>
+<circle class="point" cx="1146.77" cy="645.67" r="3"/>
+<circle class="point" cx="1150.77" cy="648.17" r="3"/>
+<circle class="point" cx="1154.77" cy="646.59" r="3"/>
+<text transform="translate(1135.77,769) rotate(-55)">LOAD_DOWNSTREAM</text>
+</svg>

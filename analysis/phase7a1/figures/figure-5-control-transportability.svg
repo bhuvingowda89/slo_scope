@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="520" viewBox="0 0 980 520">
+<style>text{font-family:Arial,sans-serif;font-size:10px}.title{font-size:14px;font-weight:bold}.axis{stroke:#333;stroke-width:1}.grid{stroke:#ddd;stroke-width:1}.threshold{stroke:#b00020;stroke-width:1.5;stroke-dasharray:4 3}.point{fill:#1f77b4;opacity:.75}.ci{stroke:#111;stroke-width:1.5}.bar{fill:#6baed6}.heat0{fill:#f7fbff}.heat1{fill:#deebf7}.heat2{fill:#9ecae1}.heat3{fill:#3182bd}</style>
+<text class="title" x="20" y="24">Figure 5. Dedicated calibration controls vs formal controls</text>
+<text x="80" y="43">BASELINE / TTFT p95</text>
+<line class="axis" x1="80" y1="225" x2="360" y2="225"/>
+<line class="axis" x1="80" y1="55" x2="80" y2="225"/>
+<line class="threshold" x1="80" y1="71.45161290322582" x2="360" y2="71.45161290322582"/>
+<line stroke="#3182bd" stroke-width="2" x1="165" y1="208.55" x2="165" y2="126.32"/>
+<circle fill="#3182bd" cx="165" cy="168.91" r="4"/>
+<text x="137" y="241">calibration</text>
+<line stroke="#de2d26" stroke-width="2" x1="275" y1="194.10" x2="275" y2="134.08"/>
+<circle fill="#de2d26" cx="275" cy="163.12" r="4"/>
+<text x="247" y="241">formal</text>
+<text x="80" y="263">OUTPUT_CONTROL / TTFT p95</text>
+<line class="axis" x1="80" y1="445" x2="360" y2="445"/>
+<line class="axis" x1="80" y1="275" x2="80" y2="445"/>
+<line class="threshold" x1="80" y1="291.4516129032258" x2="360" y2="291.4516129032258"/>
+<line stroke="#3182bd" stroke-width="2" x1="165" y1="428.55" x2="165" y2="308.98"/>
+<circle fill="#3182bd" cx="165" cy="360.67" r="4"/>
+<text x="137" y="461">calibration</text>
+<line stroke="#de2d26" stroke-width="2" x1="275" y1="373.79" x2="275" y2="311.08"/>
+<circle fill="#de2d26" cx="275" cy="358.05" r="4"/>
+<text x="247" y="461">formal</text>
+<text x="380" y="43">BASELINE / Total latency p95</text>
+<line class="axis" x1="380" y1="225" x2="660" y2="225"/>
+<line class="axis" x1="380" y1="55" x2="380" y2="225"/>
+<line class="threshold" x1="380" y1="71.45161290322582" x2="660" y2="71.45161290322582"/>
+<line stroke="#3182bd" stroke-width="2" x1="465" y1="208.55" x2="465" y2="174.93"/>
+<circle fill="#3182bd" cx="465" cy="192.36" r="4"/>
+<text x="437" y="241">calibration</text>
+<line stroke="#de2d26" stroke-width="2" x1="575" y1="190.50" x2="575" y2="166.58"/>
+<circle fill="#de2d26" cx="575" cy="179.10" r="4"/>
+<text x="547" y="241">formal</text>
+<text x="380" y="263">OUTPUT_CONTROL / Total latency p95</text>
+<line class="axis" x1="380" y1="445" x2="660" y2="445"/>
+<line class="axis" x1="380" y1="275" x2="380" y2="445"/>
+<line class="threshold" x1="380" y1="331.30484127095633" x2="660" y2="331.30484127095633"/>
+<line stroke="#3182bd" stroke-width="2" x1="465" y1="428.55" x2="465" y2="350.89"/>
+<circle fill="#3182bd" cx="465" cy="376.58" r="4"/>
+<text x="437" y="461">calibration</text>
+<line stroke="#de2d26" stroke-width="2" x1="575" y1="387.96" x2="575" y2="291.45"/>
+<circle fill="#de2d26" cx="575" cy="332.71" r="4"/>
+<text x="547" y="461">formal</text>
+<text x="680" y="43">BASELINE / Decode p95</text>
+<line class="axis" x1="680" y1="225" x2="960" y2="225"/>
+<line class="axis" x1="680" y1="55" x2="680" y2="225"/>
+<line class="threshold" x1="680" y1="71.4516129032258" x2="960" y2="71.4516129032258"/>
+<line stroke="#3182bd" stroke-width="2" x1="765" y1="208.55" x2="765" y2="181.42"/>
+<circle fill="#3182bd" cx="765" cy="196.64" r="4"/>
+<text x="737" y="241">calibration</text>
+<line stroke="#de2d26" stroke-width="2" x1="875" y1="189.37" x2="875" y2="171.67"/>
+<circle fill="#de2d26" cx="875" cy="180.73" r="4"/>
+<text x="847" y="241">formal</text>
+<text x="680" y="263">OUTPUT_CONTROL / Decode p95</text>
+<line class="axis" x1="680" y1="445" x2="960" y2="445"/>
+<line class="axis" x1="680" y1="275" x2="680" y2="445"/>
+<line class="threshold" x1="680" y1="344.1746626196748" x2="960" y2="344.1746626196748"/>
+<line stroke="#3182bd" stroke-width="2" x1="765" y1="428.55" x2="765" y2="365.76"/>
+<circle fill="#3182bd" cx="765" cy="382.95" r="4"/>
+<text x="737" y="461">calibration</text>
+<line stroke="#de2d26" stroke-width="2" x1="875" y1="391.44" x2="875" y2="291.45"/>
+<circle fill="#de2d26" cx="875" cy="330.42" r="4"/>
+<text x="847" y="461">formal</text>
+</svg>

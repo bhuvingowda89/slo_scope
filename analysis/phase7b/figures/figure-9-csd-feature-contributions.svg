@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="430" viewBox="0 0 1120 430">
+<style>text{font-family:Arial,sans-serif;font-size:10px}.title{font-size:15px;font-weight:bold}.axis{stroke:#333}.ci{stroke:#111;stroke-width:2}.supported{fill:#238b45}.plain{fill:#6baed6}.zero{stroke:#333;stroke-dasharray:4 3}.pos{fill:#de2d26}.neg{fill:#3182bd}</style>
+<text class="title" x="20" y="24">Figure 9. CSD feature contribution fractions</text>
+<text x="20" y="78">INPUT_LOAD</text>
+<rect x="190.00" y="60" width="196.19" height="24" fill="hsl(0,55%,65%)" stroke="#fff"/>
+<text x="193.00" y="76">ttft_p95</text>
+<rect x="386.19" y="60" width="185.69" height="24" fill="hsl(43,55%,65%)" stroke="#fff"/>
+<text x="389.19" y="76">total_latency_p95</text>
+<rect x="571.88" y="60" width="16.75" height="24" fill="hsl(86,55%,65%)" stroke="#fff"/>
+<rect x="588.63" y="60" width="146.20" height="24" fill="hsl(129,55%,65%)" stroke="#fff"/>
+<text x="591.63" y="76">ttft_median</text>
+<rect x="734.83" y="60" width="124.22" height="24" fill="hsl(172,55%,65%)" stroke="#fff"/>
+<text x="737.83" y="76">total_latency_median</text>
+<rect x="859.05" y="60" width="35.81" height="24" fill="hsl(215,55%,65%)" stroke="#fff"/>
+<text x="862.05" y="76">post_first_token_duration_median</text>
+<rect x="894.87" y="60" width="0.01" height="24" fill="hsl(258,55%,65%)" stroke="#fff"/>
+<rect x="894.87" y="60" width="115.13" height="24" fill="hsl(301,55%,65%)" stroke="#fff"/>
+<text x="897.87" y="76">successful_requests_per_second</text>
+<text x="20" y="142">INPUT_DOWNSTREAM</text>
+<rect x="190.00" y="124" width="202.26" height="24" fill="hsl(0,55%,65%)" stroke="#fff"/>
+<text x="193.00" y="140">ttft_p95</text>
+<rect x="392.26" y="124" width="78.31" height="24" fill="hsl(43,55%,65%)" stroke="#fff"/>
+<text x="395.26" y="140">total_latency_p95</text>
+<rect x="470.57" y="124" width="51.53" height="24" fill="hsl(86,55%,65%)" stroke="#fff"/>
+<text x="473.57" y="140">post_first_token_duration_p95</text>
+<rect x="522.09" y="124" width="109.34" height="24" fill="hsl(129,55%,65%)" stroke="#fff"/>
+<text x="525.09" y="140">ttft_median</text>
+<rect x="631.43" y="124" width="136.24" height="24" fill="hsl(172,55%,65%)" stroke="#fff"/>
+<text x="634.43" y="140">total_latency_median</text>
+<rect x="767.68" y="124" width="125.92" height="24" fill="hsl(215,55%,65%)" stroke="#fff"/>
+<text x="770.68" y="140">post_first_token_duration_median</text>
+<rect x="893.59" y="124" width="15.21" height="24" fill="hsl(258,55%,65%)" stroke="#fff"/>
+<rect x="908.80" y="124" width="101.20" height="24" fill="hsl(301,55%,65%)" stroke="#fff"/>
+<text x="911.80" y="140">successful_requests_per_second</text>
+<text x="20" y="206">OUTPUT_LOAD</text>
+<rect x="190.00" y="188" width="210.55" height="24" fill="hsl(0,55%,65%)" stroke="#fff"/>
+<text x="193.00" y="204">ttft_p95</text>
+<rect x="400.55" y="188" width="215.80" height="24" fill="hsl(43,55%,65%)" stroke="#fff"/>
+<text x="403.55" y="204">total_latency_p95</text>
+<rect x="616.36" y="188" width="0.01" height="24" fill="hsl(86,55%,65%)" stroke="#fff"/>
+<rect x="616.37" y="188" width="107.07" height="24" fill="hsl(129,55%,65%)" stroke="#fff"/>
+<text x="619.37" y="204">ttft_median</text>
+<rect x="723.44" y="188" width="96.94" height="24" fill="hsl(172,55%,65%)" stroke="#fff"/>
+<text x="726.44" y="204">total_latency_median</text>
+<rect x="820.38" y="188" width="4.20" height="24" fill="hsl(215,55%,65%)" stroke="#fff"/>
+<rect x="824.58" y="188" width="0.05" height="24" fill="hsl(258,55%,65%)" stroke="#fff"/>
+<rect x="824.63" y="188" width="185.37" height="24" fill="hsl(301,55%,65%)" stroke="#fff"/>
+<text x="827.63" y="204">successful_requests_per_second</text>
+<text x="20" y="270">OUTPUT_DOWNSTREAM</text>
+<rect x="190.00" y="252" width="315.04" height="24" fill="hsl(0,55%,65%)" stroke="#fff"/>
+<text x="193.00" y="268">ttft_p95</text>
+<rect x="505.04" y="252" width="157.26" height="24" fill="hsl(43,55%,65%)" stroke="#fff"/>
+<text x="508.04" y="268">total_latency_p95</text>
+<rect x="662.30" y="252" width="195.42" height="24" fill="hsl(86,55%,65%)" stroke="#fff"/>
+<text x="665.30" y="268">post_first_token_duration_p95</text>
+<rect x="857.73" y="252" width="32.58" height="24" fill="hsl(129,55%,65%)" stroke="#fff"/>
+<text x="860.73" y="268">ttft_median</text>
+<rect x="890.30" y="252" width="8.69" height="24" fill="hsl(172,55%,65%)" stroke="#fff"/>
+<rect x="898.99" y="252" width="1.51" height="24" fill="hsl(215,55%,65%)" stroke="#fff"/>
+<rect x="900.50" y="252" width="7.02" height="24" fill="hsl(258,55%,65%)" stroke="#fff"/>
+<rect x="907.52" y="252" width="102.48" height="24" fill="hsl(301,55%,65%)" stroke="#fff"/>
+<text x="910.52" y="268">successful_requests_per_second</text>
+<text x="20" y="334">LOAD_DOWNSTREAM</text>
+<rect x="190.00" y="316" width="11.46" height="24" fill="hsl(0,55%,65%)" stroke="#fff"/>
+<rect x="201.46" y="316" width="0.59" height="24" fill="hsl(43,55%,65%)" stroke="#fff"/>
+<rect x="202.05" y="316" width="74.42" height="24" fill="hsl(86,55%,65%)" stroke="#fff"/>
+<text x="205.05" y="332">post_first_token_duration_p95</text>
+<rect x="276.48" y="316" width="25.29" height="24" fill="hsl(129,55%,65%)" stroke="#fff"/>
+<rect x="301.76" y="316" width="13.61" height="24" fill="hsl(172,55%,65%)" stroke="#fff"/>
+<rect x="315.37" y="316" width="43.39" height="24" fill="hsl(215,55%,65%)" stroke="#fff"/>
+<text x="318.37" y="332">post_first_token_duration_median</text>
+<rect x="358.76" y="316" width="1.07" height="24" fill="hsl(258,55%,65%)" stroke="#fff"/>
+<rect x="359.83" y="316" width="650.17" height="24" fill="hsl(301,55%,65%)" stroke="#fff"/>
+<text x="362.83" y="332">successful_requests_per_second</text>
+</svg>

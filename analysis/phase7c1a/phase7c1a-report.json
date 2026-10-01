@@ -1,0 +1,659 @@
+{
+  "confirmatory": [
+    {
+      "holm_p": 1,
+      "mean_diff": 0.024999999999999994,
+      "raw_p": 1.0,
+      "test": "D4-FULL_vs_M2F2"
+    },
+    {
+      "holm_p": 1,
+      "mean_diff": 0.0,
+      "raw_p": 1.0,
+      "test": "D4-FULL_vs_D4SM"
+    }
+  ],
+  "h3_status": "NOT_SUPPORTED",
+  "input": {
+    "campaign_freeze_sha256": "65d9798ea033bc910a832c624324fe068e48552b2a16e6ed639f33763ca028e0",
+    "historical_phase7c1_input_sha256": "d1dda3bd2deda507b1b1189add744fe7a4641e67e1f719504bc4794fd0c10168",
+    "historical_phase7c1_mesr_spec_sha256": "559a3552da3b99bd65f39888f928be169c4bc4c973b24c5017ae28f778fef895",
+    "phase7a1_run_level_metrics_sha256": "991f3fa8e5b15862e59a519d1e41320e62bc647f828d977b7833252f1b789594",
+    "phase7b_csd_results_sha256": "99ecdcf7c6560b6464b69ff39ab971d07788622cdd3a263cf8a87b6b20f6d102",
+    "phase7c1a_input_sha256": "166a9460ad8b035f45dc7aa5dc5174650f3a4b3dbcd1f4aba57bcc579cf8c884",
+    "phase7c_feature_registry_sha256": "ea57d9f7f31350d239b5ba7c7f2a66df3bf2d1fcb7d027135581b5ece623aff5",
+    "phase7c_predictions_sha256": "cfd2503cf7eaefdb86ccac41758281a61342636934da7e9473c54279ad455abe",
+    "phase7c_rca_dataset_sha256": "da59092bf03044f1a70098c679e1ab621e30290b2c08b7719fd70b971eff4285",
+    "publication_run_index_sha256": "dee0eb1927a84af8c02f8ef26bec55fe697decba9df2e351c45cffef59c491d8",
+    "run_ids": [
+      "phase6v2-r01-input-medium-a01",
+      "phase6v2-r01-input-load-a01",
+      "phase6v2-r01-output-medium-a01",
+      "phase6v2-r01-load-downstream-a01",
+      "phase6v2-r01-output-downstream-control-a01",
+      "phase6v2-r01-downstream-medium-a01",
+      "phase6v2-r01-output-load-control-a01",
+      "phase6v2-r01-input-downstream-a01",
+      "phase6v2-r01-output-control-a01",
+      "phase6v2-r01-output-downstream-a01",
+      "phase6v2-r01-baseline-a01",
+      "phase6v2-r01-output-load-a01",
+      "phase6v2-r01-load-medium-a01",
+      "phase6v2-r02-output-control-a01",
+      "phase6v2-r02-input-downstream-a01",
+      "phase6v2-r02-baseline-a01",
+      "phase6v2-r02-output-medium-a01",
+      "phase6v2-r02-input-medium-a01",
+      "phase6v2-r02-output-load-a01",
+      "phase6v2-r02-output-downstream-a01",
+      "phase6v2-r02-output-downstream-control-a01",
+      "phase6v2-r02-input-load-a01",
+      "phase6v2-r02-load-downstream-a01",
+      "phase6v2-r02-load-medium-a01",
+      "phase6v2-r02-downstream-medium-a01",
+      "phase6v2-r02-output-load-control-a01",
+      "phase6v2-r03-output-downstream-a01",
+      "phase6v2-r03-input-medium-a01",
+      "phase6v2-r03-output-load-a01",
+      "phase6v2-r03-input-downstream-a01",
+      "phase6v2-r03-input-load-a01",
+      "phase6v2-r03-baseline-a01",
+      "phase6v2-r03-downstream-medium-a01",
+      "phase6v2-r03-output-load-control-a01",
+      "phase6v2-r03-output-medium-a01",
+      "phase6v2-r03-load-downstream-a01",
+      "phase6v2-r03-output-downstream-control-a01",
+      "phase6v2-r03-output-control-a01",
+      "phase6v2-r03-load-medium-a01",
+      "phase6v2-r04-input-load-a01",
+      "phase6v2-r04-output-load-a01",
+      "phase6v2-r04-downstream-medium-a01",
+      "phase6v2-r04-output-control-a01",
+      "phase6v2-r04-output-load-control-a01",
+      "phase6v2-r04-output-downstream-control-a01",
+      "phase6v2-r04-baseline-a01",
+      "phase6v2-r04-input-medium-a01",
+      "phase6v2-r04-input-downstream-a01",
+      "phase6v2-r04-output-downstream-a01",
+      "phase6v2-r04-load-medium-a01",
+      "phase6v2-r04-load-downstream-a01",
+      "phase6v2-r04-output-medium-a01",
+      "phase6v2-r05-output-downstream-a01",
+      "phase6v2-r05-input-downstream-a01",
+      "phase6v2-r05-load-downstream-a01",
+      "phase6v2-r05-output-downstream-control-a01",
+      "phase6v2-r05-output-load-control-a01",
+      "phase6v2-r05-input-medium-a01",
+      "phase6v2-r05-output-control-a01",
+      "phase6v2-r05-baseline-a01",
+      "phase6v2-r05-input-load-a01",
+      "phase6v2-r05-downstream-medium-a01",
+      "phase6v2-r05-load-medium-a01",
+      "phase6v2-r05-output-medium-a01",
+      "phase6v2-r05-output-load-a01",
+      "phase6v2-r06-baseline-a01",
+      "phase6v2-r06-input-load-a01",
+      "phase6v2-r06-output-downstream-control-a01",
+      "phase6v2-r06-input-medium-a01",
+      "phase6v2-r06-output-load-control-a01",
+      "phase6v2-r06-load-downstream-a01",
+      "phase6v2-r06-output-load-a01",
+      "phase6v2-r06-downstream-medium-a01",
+      "phase6v2-r06-input-downstream-a01",
+      "phase6v2-r06-load-medium-a01",
+      "phase6v2-r06-output-medium-a01",
+      "phase6v2-r06-output-control-a01",
+      "phase6v2-r06-output-downstream-a01",
+      "phase6v2-r07-output-load-a01",
+      "phase6v2-r07-load-downstream-a01",
+      "phase6v2-r07-baseline-a01",
+      "phase6v2-r07-input-downstream-a01",
+      "phase6v2-r07-output-downstream-control-a01",
+      "phase6v2-r07-output-load-control-a01",
+      "phase6v2-r07-downstream-medium-a01",
+      "phase6v2-r07-output-control-a01",
+      "phase6v2-r07-input-load-a01",
+      "phase6v2-r07-output-medium-a01",
+      "phase6v2-r07-load-medium-a01",
+      "phase6v2-r07-input-medium-a01",
+      "phase6v2-r07-output-downstream-a01",
+      "phase6v2-r08-output-load-control-a01",
+      "phase6v2-r08-input-medium-a01",
+      "phase6v2-r08-output-medium-a01",
+      "phase6v2-r08-output-control-a01",
+      "phase6v2-r08-baseline-a01",
+      "phase6v2-r08-input-load-a01",
+      "phase6v2-r08-output-load-a01",
+      "phase6v2-r08-downstream-medium-a01",
+      "phase6v2-r08-output-downstream-control-a01",
+      "phase6v2-r08-load-medium-a01",
+      "phase6v2-r08-output-downstream-a01",
+      "phase6v2-r08-input-downstream-a01",
+      "phase6v2-r08-load-downstream-a01"
+    ],
+    "schema_version": "phase7c1a.input.v1",
+    "source_tree_sha256": "8e442c813619586072c27a4ec30d7e65d367c3fc1375922935f67c72e2122582"
+  },
+  "primary": [
+    {
+      "complete_cause_recall": 0.7386363636363636,
+      "control_false_alarm_rate": 0.3125,
+      "exact_set_accuracy": 0.6826923076923077,
+      "jaccard": 0.766025641025641,
+      "macro_f1": 0.6914801227117706,
+      "method": "D4-FULL",
+      "micro_f1": 0.813953488372093,
+      "n": 104,
+      "over_attribution": 0.21153846153846154,
+      "partial_cause_recall": 0.8295454545454546,
+      "subset": "P1-ALL",
+      "under_attribution": 0.22115384615384615
+    },
+    {
+      "complete_cause_recall": 0.6,
+      "control_false_alarm_rate": null,
+      "exact_set_accuracy": 0.6,
+      "jaccard": 0.7541666666666667,
+      "macro_f1": 0.6852941176470588,
+      "method": "D4-FULL",
+      "micro_f1": 0.8258064516129033,
+      "n": 40,
+      "over_attribution": 0.275,
+      "partial_cause_recall": 0.8,
+      "subset": "P1-COMPOUND",
+      "under_attribution": 0.4
+    },
+    {
+      "complete_cause_recall": 0.8541666666666666,
+      "control_false_alarm_rate": null,
+      "exact_set_accuracy": 0.75,
+      "jaccard": 0.8020833333333334,
+      "macro_f1": 0.7370775423407002,
+      "method": "D4-FULL",
+      "micro_f1": 0.8541666666666666,
+      "n": 48,
+      "over_attribution": 0.125,
+      "partial_cause_recall": 0.8541666666666666,
+      "subset": "P1-SINGLE",
+      "under_attribution": 0.14583333333333334
+    },
+    {
+      "complete_cause_recall": 0.9090909090909091,
+      "control_false_alarm_rate": 0.3125,
+      "exact_set_accuracy": 0.8173076923076923,
+      "jaccard": 0.8717948717948717,
+      "macro_f1": 0.8671357231700298,
+      "method": "D4-FULL-F3",
+      "micro_f1": 0.8921933085501859,
+      "n": 104,
+      "over_attribution": 0.18269230769230768,
+      "partial_cause_recall": 0.9545454545454546,
+      "subset": "P1-ALL",
+      "under_attribution": 0.07692307692307693
+    },
+    {
+      "complete_cause_recall": 0.8,
+      "control_false_alarm_rate": null,
+      "exact_set_accuracy": 0.8,
+      "jaccard": 0.8666666666666666,
+      "macro_f1": 0.8666666666666667,
+      "method": "D4-FULL-F3",
+      "micro_f1": 0.9,
+      "n": 40,
+      "over_attribution": 0.2,
+      "partial_cause_recall": 0.9,
+      "subset": "P1-COMPOUND",
+      "under_attribution": 0.2
+    },
+    {
+      "complete_cause_recall": 1.0,
+      "control_false_alarm_rate": null,
+      "exact_set_accuracy": 0.875,
+      "jaccard": 0.9375,
+      "macro_f1": 0.938244675860775,
+      "method": "D4-FULL-F3",
+      "micro_f1": 0.9411764705882353,
+      "n": 48,
+      "over_attribution": 0.125,
+      "partial_cause_recall": 1.0,
+      "subset": "P1-SINGLE",
+      "under_attribution": 0.0
+    },
+    {
+      "complete_cause_recall": 0.38636363636363635,
+      "control_false_alarm_rate": 0.375,
+      "exact_set_accuracy": 0.36538461538461536,
+      "jaccard": 0.47115384615384615,
+      "macro_f1": 0.4322180307254934,
+      "method": "D4-S",
+      "micro_f1": 0.5714285714285714,
+      "n": 104,
+      "over_attribution": 0.34615384615384615,
+      "partial_cause_recall": 0.5227272727272727,
+      "subset": "P1-ALL",
+      "under_attribution": 0.5192307692307693
+    },
+    {
+      "complete_cause_recall": 0.2,
+      "control_false_alarm_rate": null,
+      "exact_set_accuracy": 0.2,
+      "jaccard": 0.39999999999999997,
+      "macro_f1": 0.38095238095238093,
+      "method": "D4-S",
+      "micro_f1": 0.5555555555555556,
+      "n": 40,
+      "over_attribution": 0.6,
+      "partial_cause_recall": 0.5,
+      "subset": "P1-COMPOUND",
+      "under_attribution": 0.8
+    },
+    {
+      "complete_cause_recall": 0.5416666666666666,
+      "control_false_alarm_rate": null,
+      "exact_set_accuracy": 0.4166666666666667,
+      "jaccard": 0.4791666666666667,
+      "macro_f1": 0.5390977443609023,
+      "method": "D4-S",
+      "micro_f1": 0.65,
+      "n": 48,
+      "over_attribution": 0.125,
+      "partial_cause_recall": 0.5416666666666666,
+      "subset": "P1-SINGLE",
+      "under_attribution": 0.4583333333333333
+    },
+    {
+      "complete_cause_recall": 0.7386363636363636,
+      "control_false_alarm_rate": 0.4375,
+      "exact_set_accuracy": 0.6538461538461539,
+      "jaccard": 0.7387820512820512,
+      "macro_f1": 0.6863141663641017,
+      "method": "D4-SM",
+      "micro_f1": 0.8076923076923076,
+      "n": 104,
+      "over_attribution": 0.25,
+      "partial_cause_recall": 0.8295454545454546,
+      "subset": "P1-ALL",
+      "under_attribution": 0.22115384615384615
+    },
+    {
+      "complete_cause_recall": 0.6,
+      "control_false_alarm_rate": null,
+      "exact_set_accuracy": 0.6,
+      "jaccard": 0.7458333333333333,
+      "macro_f1": 0.6764150943396227,
+      "method": "D4-SM",
+      "micro_f1": 0.8152866242038217,
+      "n": 40,
+      "over_attribution": 0.325,
+      "partial_cause_recall": 0.8,
+      "subset": "P1-COMPOUND",
+      "under_attribution": 0.4
+    },
+    {
+      "complete_cause_recall": 0.8541666666666666,
+      "control_false_alarm_rate": null,
+      "exact_set_accuracy": 0.7291666666666666,
+      "jaccard": 0.7916666666666666,
+      "macro_f1": 0.7446532999164578,
+      "method": "D4-SM",
+      "micro_f1": 0.8631578947368421,
+      "n": 48,
+      "over_attribution": 0.125,
+      "partial_cause_recall": 0.8541666666666666,
+      "subset": "P1-SINGLE",
+      "under_attribution": 0.14583333333333334
+    },
+    {
+      "complete_cause_recall": 0.7272727272727273,
+      "control_false_alarm_rate": 0.4375,
+      "exact_set_accuracy": 0.6442307692307693,
+      "jaccard": 0.7403846153846154,
+      "macro_f1": 0.6889065971216073,
+      "method": "D4-SMT",
+      "micro_f1": 0.8125,
+      "n": 104,
+      "over_attribution": 0.22115384615384615,
+      "partial_cause_recall": 0.8238636363636364,
+      "subset": "P1-ALL",
+      "under_attribution": 0.23076923076923078
+    },
+    {
+      "complete_cause_recall": 0.575,
+      "control_false_alarm_rate": null,
+      "exact_set_accuracy": 0.575,
+      "jaccard": 0.75,
+      "macro_f1": 0.6872056514913658,
+      "method": "D4-SMT",
+      "micro_f1": 0.8289473684210527,
+      "n": 40,
+      "over_attribution": 0.225,
+      "partial_cause_recall": 0.7875,
+      "subset": "P1-COMPOUND",
+      "under_attribution": 0.425
+    },
+    {
+      "complete_cause_recall": 0.8541666666666666,
+      "control_false_alarm_rate": null,
+      "exact_set_accuracy": 0.7291666666666666,
+      "jaccard": 0.7916666666666666,
+      "macro_f1": 0.7370775423407002,
+      "method": "D4-SMT",
+      "micro_f1": 0.8541666666666666,
+      "n": 48,
+      "over_attribution": 0.14583333333333334,
+      "partial_cause_recall": 0.8541666666666666,
+      "subset": "P1-SINGLE",
+      "under_attribution": 0.14583333333333334
+    },
+    {
+      "complete_cause_recall": 0.8068181818181818,
+      "control_false_alarm_rate": 0.6875,
+      "exact_set_accuracy": 0.7307692307692307,
+      "jaccard": 0.8125,
+      "macro_f1": 0.8368325265488386,
+      "method": "M2/F2",
+      "micro_f1": 0.888,
+      "n": 104,
+      "over_attribution": 0.10576923076923077,
+      "partial_cause_recall": 0.9034090909090909,
+      "subset": "P1-ALL",
+      "under_attribution": 0.16346153846153846
+    },
+    {
+      "complete_cause_recall": 0.575,
+      "control_false_alarm_rate": null,
+      "exact_set_accuracy": 0.575,
+      "jaccard": 0.7875,
+      "macro_f1": 0.7419354838709677,
+      "method": "M2/F2",
+      "micro_f1": 0.881118881118881,
+      "n": 40,
+      "over_attribution": 0.0,
+      "partial_cause_recall": 0.7875,
+      "subset": "P1-COMPOUND",
+      "under_attribution": 0.425
+    },
+    {
+      "complete_cause_recall": 1.0,
+      "control_false_alarm_rate": null,
+      "exact_set_accuracy": 1.0,
+      "jaccard": 1.0,
+      "macro_f1": 1.0,
+      "method": "M2/F2",
+      "micro_f1": 1.0,
+      "n": 48,
+      "over_attribution": 0.0,
+      "partial_cause_recall": 1.0,
+      "subset": "P1-SINGLE",
+      "under_attribution": 0.0
+    },
+    {
+      "complete_cause_recall": 0.9318181818181818,
+      "control_false_alarm_rate": 0.0625,
+      "exact_set_accuracy": 0.9134615384615384,
+      "jaccard": 0.953525641025641,
+      "macro_f1": 0.9520833333333334,
+      "method": "M2/F2T",
+      "micro_f1": 0.9644268774703557,
+      "n": 104,
+      "over_attribution": 0.028846153846153848,
+      "partial_cause_recall": 0.9659090909090909,
+      "subset": "P1-ALL",
+      "under_attribution": 0.057692307692307696
+    },
+    {
+      "complete_cause_recall": 0.85,
+      "control_false_alarm_rate": null,
+      "exact_set_accuracy": 0.825,
+      "jaccard": 0.9166666666666667,
+      "macro_f1": 0.9408045977011494,
+      "method": "M2/F2T",
+      "micro_f1": 0.9548387096774195,
+      "n": 40,
+      "over_attribution": 0.025,
+      "partial_cause_recall": 0.925,
+      "subset": "P1-COMPOUND",
+      "under_attribution": 0.15
+    },
+    {
+      "complete_cause_recall": 1.0,
+      "control_false_alarm_rate": null,
+      "exact_set_accuracy": 0.9791666666666666,
+      "jaccard": 0.9895833333333334,
+      "macro_f1": 0.9852941176470589,
+      "method": "M2/F2T",
+      "micro_f1": 0.9896907216494846,
+      "n": 48,
+      "over_attribution": 0.020833333333333332,
+      "partial_cause_recall": 1.0,
+      "subset": "P1-SINGLE",
+      "under_attribution": 0.0
+    }
+  ],
+  "spec": {
+    "ablation_definitions": [
+      "D4-S",
+      "D4-SM",
+      "D4-SMT",
+      "D4-FULL",
+      "D4-FULL-F3"
+    ],
+    "baselines": {
+      "M2/F2": "Phase-7C.1 logistic baseline over CORE_F2",
+      "M2/F2T": "same logistic baseline with temporal features"
+    },
+    "candidate_sets": [
+      "NONE",
+      "INPUT",
+      "OUTPUT",
+      "LOAD",
+      "DOWNSTREAM",
+      "INPUT+OUTPUT",
+      "INPUT+LOAD",
+      "INPUT+DOWNSTREAM",
+      "OUTPUT+LOAD",
+      "OUTPUT+DOWNSTREAM",
+      "LOAD+DOWNSTREAM"
+    ],
+    "cause_margin_formula": "margin_c = E(c) - tau_c",
+    "cause_threshold_quantile": 0.95,
+    "causes": [
+      "INPUT",
+      "OUTPUT",
+      "LOAD",
+      "DOWNSTREAM"
+    ],
+    "channel_aggregation": "mean feature z within semantic channel, then mean channels within group",
+    "confirmatory_tests": [
+      "D4-FULL vs M2/F2",
+      "D4-FULL vs D4-SM"
+    ],
+    "d4_full_formula": "E(c)=mean(available S_norm,M_norm,T_norm)-X_norm when X available",
+    "d4_s_formula": "E(c)=S_norm",
+    "d4_sm_formula": "E(c)=mean(available S_norm,M_norm)",
+    "d4_smt_formula": "negative feature evidence clipped to zero before channel aggregation, then E(c)=mean(available nonnegative S_norm,M_norm,T_norm)",
+    "f3_sensitivity": {
+      "INPUT_DIRECT_EVIDENCE_CHANNEL": [
+        "server_prompt_tokens_median"
+      ],
+      "OUTPUT_DIRECT_EVIDENCE_CHANNEL": [
+        "server_output_tokens_median"
+      ]
+    },
+    "feature_direction_rule": "sign(mean_present_cf - mean_absent_cf) from P1 training only",
+    "feature_variance_floor_fraction": 0.1,
+    "feature_z_clip": [
+      -5.0,
+      5.0
+    ],
+    "group_normalization": "(G_raw - absent_training_mean_G) / max(absent_training_sd_G, 0.10 * global_training_sd_G, numerical_floor)",
+    "group_variance_floor_fraction": 0.1,
+    "holm_family_size": 2,
+    "method": "SLOScope-MESR corrected specification-compliant implementation",
+    "non_discriminative_tolerance_global_sd": 0.05,
+    "numerical_floor": 1e-12,
+    "outer_folds": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "phase7c1a_mesr_spec_sha256": "2b5dd124fea19988819c3929e09b727d20bf4ac22607c45dc869050ff8a61f1d",
+    "primary_exclusions": [
+      "server_prompt_tokens_median",
+      "server_output_tokens_median",
+      "CSD",
+      "condition_id",
+      "active_mechanisms",
+      "mechanism_levels",
+      "compound_degree"
+    ],
+    "quantile_convention": "numpy.quantile default linear interpolation",
+    "random_seed": 8127,
+    "schema_version": "phase7c1a.mesr_spec.v1",
+    "semantic_channels": {
+      "M": {
+        "DOWNSTREAM": {
+          "DEPENDENCY_DURATION_CHANNEL": [
+            "dependency_duration_median",
+            "dependency_duration_p95",
+            "dependency_span_duration_median",
+            "dependency_span_duration_p95"
+          ],
+          "DEPENDENCY_FRACTION_CHANNEL": [
+            "dependency_fraction_of_gateway_median"
+          ]
+        },
+        "INPUT": {
+          "PREFILL_PROXY_CHANNEL": [
+            "prefill_proxy_median",
+            "prefill_proxy_p95"
+          ],
+          "TTFT_CHANNEL": [
+            "ttft_median",
+            "ttft_p95"
+          ]
+        },
+        "LOAD": {
+          "SCHEDULER_EVOLUTION_CHANNEL": [
+            "scheduler_slip_late_minus_early",
+            "scheduler_slip_normalized_slope"
+          ],
+          "THROUGHPUT_CHANNEL": [
+            "successful_requests_per_second"
+          ],
+          "TOTAL_EVOLUTION_CHANNEL": [
+            "total_latency_late_minus_early",
+            "total_latency_normalized_slope"
+          ],
+          "TTFT_EVOLUTION_CHANNEL": [
+            "ttft_late_minus_early",
+            "ttft_normalized_slope"
+          ]
+        },
+        "OUTPUT": {
+          "DECODE_DURATION_CHANNEL": [
+            "post_first_token_duration_median",
+            "post_first_token_duration_p95"
+          ],
+          "LLAMA_DURATION_CHANNEL": [
+            "llama_span_duration_median",
+            "llama_span_duration_p95"
+          ]
+        }
+      },
+      "S": {
+        "DECODE_CHANNEL": [
+          "post_first_token_duration_median",
+          "post_first_token_duration_p95"
+        ],
+        "GATEWAY_SPAN_CHANNEL": [
+          "gateway_span_duration_median",
+          "gateway_span_duration_p95"
+        ],
+        "HOST_CPU_CHANNEL": [
+          "host_cpu_median",
+          "host_cpu_p95"
+        ],
+        "LLAMA_SPAN_CHANNEL": [
+          "llama_span_duration_median",
+          "llama_span_duration_p95"
+        ],
+        "THROUGHPUT_CHANNEL": [
+          "successful_requests_per_second"
+        ],
+        "TOTAL_LATENCY_CHANNEL": [
+          "total_latency_median",
+          "total_latency_p95"
+        ],
+        "TTFT_CHANNEL": [
+          "ttft_median",
+          "ttft_p95"
+        ]
+      },
+      "T": {
+        "DOWNSTREAM": {
+          "DEPENDENCY_REQUEST_EVOLUTION": [
+            "dependency_duration_late_minus_early",
+            "dependency_duration_normalized_slope"
+          ],
+          "DEPENDENCY_TRACE_EVOLUTION": [
+            "dependency_span_duration_late_minus_early",
+            "dependency_span_duration_normalized_slope"
+          ]
+        },
+        "INPUT": {
+          "PREFILL_EVOLUTION": [
+            "prefill_proxy_late_minus_early",
+            "prefill_proxy_normalized_slope"
+          ],
+          "TTFT_EVOLUTION": [
+            "ttft_late_minus_early",
+            "ttft_normalized_slope"
+          ]
+        },
+        "LOAD": {
+          "SCHEDULER_EVOLUTION": [
+            "scheduler_slip_late_minus_early",
+            "scheduler_slip_normalized_slope"
+          ],
+          "TOTAL_LATENCY_EVOLUTION": [
+            "total_latency_late_minus_early",
+            "total_latency_normalized_slope"
+          ],
+          "TTFT_EVOLUTION": [
+            "ttft_late_minus_early",
+            "ttft_normalized_slope"
+          ]
+        },
+        "OUTPUT": {
+          "DECODE_EVOLUTION": [
+            "post_first_token_duration_late_minus_early",
+            "post_first_token_duration_normalized_slope"
+          ],
+          "LLAMA_EVOLUTION": [
+            "llama_span_duration_late_minus_early",
+            "llama_span_duration_normalized_slope"
+          ]
+        }
+      }
+    },
+    "set_scoring_formula": "sum(margin_c for c in C) - sum(max(0, margin_c) for c not in C)",
+    "temporal_sensitivity": "first20/last20 only; primary remains first10/last10",
+    "threshold_sensitivity": [
+      0.9,
+      0.95,
+      0.975
+    ],
+    "tie_break": [
+      "higher SET_SCORE",
+      "smaller cardinality",
+      "lexicographic cause-set string"
+    ],
+    "training_protocol": "leave-one-repetition-out; P1 training uses repetitions != fold and compound_degree <= 1"
+  }
+}

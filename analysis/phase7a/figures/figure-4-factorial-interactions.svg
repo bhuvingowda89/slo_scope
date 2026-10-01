@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1050" height="720" viewBox="0 0 1050 720">
+<style>text{font-family:Arial,sans-serif;font-size:10px}.title{font-size:14px;font-weight:bold}.axis{stroke:#333;stroke-width:1}.grid{stroke:#ddd;stroke-width:1}.threshold{stroke:#b00020;stroke-width:1.5;stroke-dasharray:4 3}.point{fill:#1f77b4;opacity:.75}.ci{stroke:#111;stroke-width:1.5}.bar{fill:#6baed6}.heat0{fill:#f7fbff}.heat1{fill:#deebf7}.heat2{fill:#9ecae1}.heat3{fill:#3182bd}</style>
+<text class="title" x="20" y="24">Figure 4. Factorial interaction contrasts</text>
+<line class="threshold" x1="387.37123185175534" y1="50" x2="387.37123185175534" y2="690"/>
+<text x="20" y="76">INPUT_LOAD / ttft_p95</text>
+<line class="ci" x1="701.52" y1="72" x2="714.91" y2="72"/>
+<circle fill="#238b45" cx="708.21" cy="72" r="4"/>
+<text x="20" y="118">INPUT_LOAD / total_latency_p95</text>
+<line class="ci" x1="710.55" y1="114" x2="724.24" y2="114"/>
+<circle fill="#238b45" cx="717.40" cy="114" r="4"/>
+<text x="20" y="160">INPUT_LOAD / post_first_token_duration_p95</text>
+<line class="ci" x1="396.49" y1="156" x2="397.42" y2="156"/>
+<circle fill="#238b45" cx="396.96" cy="156" r="4"/>
+<text x="20" y="202">INPUT_DOWNSTREAM / ttft_p95</text>
+<line class="ci" x1="386.92" y1="198" x2="387.34" y2="198"/>
+<circle fill="#cb181d" cx="387.13" cy="198" r="4"/>
+<text x="20" y="244">INPUT_DOWNSTREAM / total_latency_p95</text>
+<line class="ci" x1="386.23" y1="240" x2="387.74" y2="240"/>
+<circle fill="#555" cx="386.98" cy="240" r="4"/>
+<text x="20" y="286">INPUT_DOWNSTREAM / post_first_token_duration_p95</text>
+<line class="ci" x1="386.47" y1="282" x2="387.78" y2="282"/>
+<circle fill="#555" cx="387.13" cy="282" r="4"/>
+<text x="20" y="328">OUTPUT_LOAD / ttft_p95</text>
+<line class="ci" x1="903.58" y1="324" x2="952.50" y2="324"/>
+<circle fill="#238b45" cx="928.04" cy="324" r="4"/>
+<text x="20" y="370">OUTPUT_LOAD / total_latency_p95</text>
+<line class="ci" x1="898.86" y1="366" x2="946.13" y2="366"/>
+<circle fill="#238b45" cx="922.49" cy="366" r="4"/>
+<text x="20" y="412">OUTPUT_LOAD / post_first_token_duration_p95</text>
+<line class="ci" x1="382.98" y1="408" x2="390.00" y2="408"/>
+<circle fill="#555" cx="386.49" cy="408" r="4"/>
+<text x="20" y="454">OUTPUT_DOWNSTREAM / ttft_p95</text>
+<line class="ci" x1="386.12" y1="450" x2="387.41" y2="450"/>
+<circle fill="#555" cx="386.77" cy="450" r="4"/>
+<text x="20" y="496">OUTPUT_DOWNSTREAM / total_latency_p95</text>
+<line class="ci" x1="381.18" y1="492" x2="388.10" y2="492"/>
+<circle fill="#555" cx="384.64" cy="492" r="4"/>
+<text x="20" y="538">OUTPUT_DOWNSTREAM / post_first_token_duration_p95</text>
+<line class="ci" x1="381.65" y1="534" x2="387.78" y2="534"/>
+<circle fill="#555" cx="384.72" cy="534" r="4"/>
+<text x="20" y="580">LOAD_DOWNSTREAM / ttft_p95</text>
+<line class="ci" x1="379.70" y1="576" x2="398.04" y2="576"/>
+<circle fill="#555" cx="388.87" cy="576" r="4"/>
+<text x="20" y="622">LOAD_DOWNSTREAM / total_latency_p95</text>
+<line class="ci" x1="377.50" y1="618" x2="397.99" y2="618"/>
+<circle fill="#555" cx="387.74" cy="618" r="4"/>
+<text x="20" y="664">LOAD_DOWNSTREAM / post_first_token_duration_p95</text>
+<line class="ci" x1="386.03" y1="660" x2="387.85" y2="660"/>
+<circle fill="#555" cx="386.94" cy="660" r="4"/>
+</svg>

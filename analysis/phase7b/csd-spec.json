@@ -1,0 +1,72 @@
+{
+  "bootstrap": {
+    "interval": "percentile 2.5/97.5",
+    "resamples": 10000,
+    "seed": 7711
+  },
+  "csd": "sqrt(mean_j(mean_r(Delta_rj / pooled_sd_j)^2))",
+  "feature_registry": {
+    "excluded_from_csd": [
+      "condition_id",
+      "active_mechanisms",
+      "mechanism_levels",
+      "compound_degree",
+      "SLO labels"
+    ],
+    "extended_features": [
+      "host_cpu_median",
+      "host_cpu_p95",
+      "dependency_duration_median",
+      "dependency_duration_p95",
+      "server_prompt_tokens_median",
+      "server_output_tokens_median"
+    ],
+    "primary_features": [
+      "ttft_p95",
+      "total_latency_p95",
+      "post_first_token_duration_p95",
+      "ttft_median",
+      "total_latency_median",
+      "post_first_token_duration_median",
+      "scheduler_slip_p95",
+      "successful_requests_per_second"
+    ],
+    "unavailable_features": [
+      "llamacpp:requests_processing",
+      "llamacpp:requests_deferred"
+    ]
+  },
+  "figures": {
+    "figure_6": "CSD summary with bootstrap interval and Holm support",
+    "figure_7": "signed residual heatmap",
+    "figure_8": "standardized additive prediction versus observed compound signature",
+    "figure_9": "feature contribution fractions"
+  },
+  "interaction_vector": "Delta_rj = X_A1B1,rj - X_A1B0,rj - X_A0B1,rj + X_A0B0,rj",
+  "multiple_comparison_correction": "Holm across five primary CSD exact p-values",
+  "multiple_comparison_family": [
+    "INPUT_LOAD",
+    "INPUT_DOWNSTREAM",
+    "OUTPUT_LOAD",
+    "OUTPUT_DOWNSTREAM",
+    "LOAD_DOWNSTREAM"
+  ],
+  "notes": [
+    "Absolute SLO crossings are not input features.",
+    "Output-control drift is handled through matched factorial cells.",
+    "Queue metrics are unavailable and must not be inferred from latency."
+  ],
+  "permutation_test": {
+    "permutations": 256,
+    "tolerance": 1e-12,
+    "type": "exact repetition-level sign flip"
+  },
+  "phase7b_csd_spec_sha256": "61cade7df4bfd64073fa8c91dee31476a9c490b464b2d25b60503384f17dd89c",
+  "repetition_level_csd": "sqrt(mean_j((Delta_rj / pooled_sd_j)^2))",
+  "scaling": "pooled within-cell SD per factorial family and feature",
+  "schema_version": "sloscope.phase7b.csd_spec.v1",
+  "sensitivity": [
+    "robust pooled MAD scale",
+    "leave-one-feature-out"
+  ]
+}

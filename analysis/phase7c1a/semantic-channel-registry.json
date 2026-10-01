@@ -1,0 +1,135 @@
+{
+  "F3": {
+    "INPUT_DIRECT_EVIDENCE_CHANNEL": [
+      "server_prompt_tokens_median"
+    ],
+    "OUTPUT_DIRECT_EVIDENCE_CHANNEL": [
+      "server_output_tokens_median"
+    ]
+  },
+  "M": {
+    "DOWNSTREAM": {
+      "DEPENDENCY_DURATION_CHANNEL": [
+        "dependency_duration_median",
+        "dependency_duration_p95",
+        "dependency_span_duration_median",
+        "dependency_span_duration_p95"
+      ],
+      "DEPENDENCY_FRACTION_CHANNEL": [
+        "dependency_fraction_of_gateway_median"
+      ]
+    },
+    "INPUT": {
+      "PREFILL_PROXY_CHANNEL": [
+        "prefill_proxy_median",
+        "prefill_proxy_p95"
+      ],
+      "TTFT_CHANNEL": [
+        "ttft_median",
+        "ttft_p95"
+      ]
+    },
+    "LOAD": {
+      "SCHEDULER_EVOLUTION_CHANNEL": [
+        "scheduler_slip_late_minus_early",
+        "scheduler_slip_normalized_slope"
+      ],
+      "THROUGHPUT_CHANNEL": [
+        "successful_requests_per_second"
+      ],
+      "TOTAL_EVOLUTION_CHANNEL": [
+        "total_latency_late_minus_early",
+        "total_latency_normalized_slope"
+      ],
+      "TTFT_EVOLUTION_CHANNEL": [
+        "ttft_late_minus_early",
+        "ttft_normalized_slope"
+      ]
+    },
+    "OUTPUT": {
+      "DECODE_DURATION_CHANNEL": [
+        "post_first_token_duration_median",
+        "post_first_token_duration_p95"
+      ],
+      "LLAMA_DURATION_CHANNEL": [
+        "llama_span_duration_median",
+        "llama_span_duration_p95"
+      ]
+    }
+  },
+  "S": {
+    "DECODE_CHANNEL": [
+      "post_first_token_duration_median",
+      "post_first_token_duration_p95"
+    ],
+    "GATEWAY_SPAN_CHANNEL": [
+      "gateway_span_duration_median",
+      "gateway_span_duration_p95"
+    ],
+    "HOST_CPU_CHANNEL": [
+      "host_cpu_median",
+      "host_cpu_p95"
+    ],
+    "LLAMA_SPAN_CHANNEL": [
+      "llama_span_duration_median",
+      "llama_span_duration_p95"
+    ],
+    "THROUGHPUT_CHANNEL": [
+      "successful_requests_per_second"
+    ],
+    "TOTAL_LATENCY_CHANNEL": [
+      "total_latency_median",
+      "total_latency_p95"
+    ],
+    "TTFT_CHANNEL": [
+      "ttft_median",
+      "ttft_p95"
+    ]
+  },
+  "T": {
+    "DOWNSTREAM": {
+      "DEPENDENCY_REQUEST_EVOLUTION": [
+        "dependency_duration_late_minus_early",
+        "dependency_duration_normalized_slope"
+      ],
+      "DEPENDENCY_TRACE_EVOLUTION": [
+        "dependency_span_duration_late_minus_early",
+        "dependency_span_duration_normalized_slope"
+      ]
+    },
+    "INPUT": {
+      "PREFILL_EVOLUTION": [
+        "prefill_proxy_late_minus_early",
+        "prefill_proxy_normalized_slope"
+      ],
+      "TTFT_EVOLUTION": [
+        "ttft_late_minus_early",
+        "ttft_normalized_slope"
+      ]
+    },
+    "LOAD": {
+      "SCHEDULER_EVOLUTION": [
+        "scheduler_slip_late_minus_early",
+        "scheduler_slip_normalized_slope"
+      ],
+      "TOTAL_LATENCY_EVOLUTION": [
+        "total_latency_late_minus_early",
+        "total_latency_normalized_slope"
+      ],
+      "TTFT_EVOLUTION": [
+        "ttft_late_minus_early",
+        "ttft_normalized_slope"
+      ]
+    },
+    "OUTPUT": {
+      "DECODE_EVOLUTION": [
+        "post_first_token_duration_late_minus_early",
+        "post_first_token_duration_normalized_slope"
+      ],
+      "LLAMA_EVOLUTION": [
+        "llama_span_duration_late_minus_early",
+        "llama_span_duration_normalized_slope"
+      ]
+    }
+  }
+}

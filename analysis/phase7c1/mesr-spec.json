@@ -1,0 +1,48 @@
+{
+  "baseline": "M2/F2 and M2/F2T",
+  "candidate_sets": [
+    "NONE",
+    "INPUT",
+    "OUTPUT",
+    "LOAD",
+    "DOWNSTREAM",
+    "INPUT+OUTPUT",
+    "INPUT+LOAD",
+    "INPUT+DOWNSTREAM",
+    "OUTPUT+LOAD",
+    "OUTPUT+DOWNSTREAM",
+    "LOAD+DOWNSTREAM"
+  ],
+  "causes": [
+    "INPUT",
+    "OUTPUT",
+    "LOAD",
+    "DOWNSTREAM"
+  ],
+  "confirmatory_tests": [
+    "D4-FULL vs M2/F2",
+    "D4-FULL vs D4-SM"
+  ],
+  "groups": {
+    "M": "mechanism anchors",
+    "S": "general signature",
+    "T": "temporal evolution",
+    "X": "contradiction"
+  },
+  "method": "SLOScope-MESR",
+  "phase7c1_mesr_spec_sha256": "559a3552da3b99bd65f39888f928be169c4bc4c973b24c5017ae28f778fef895",
+  "primary_features_exclude": [
+    "server_prompt_tokens_median",
+    "server_output_tokens_median",
+    "CSD",
+    "condition_id",
+    "active_mechanisms",
+    "mechanism_levels",
+    "compound_degree"
+  ],
+  "primary_method": "D4-FULL",
+  "primary_training": "P1 single-fault training, compound test",
+  "schema_version": "phase7c1.mesr_spec.v1",
+  "seed": 8127,
+  "threshold": "95th percentile absent-training E(c)"
+}

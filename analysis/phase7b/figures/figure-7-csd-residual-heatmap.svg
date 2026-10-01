@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="360" viewBox="0 0 1120 360">
+<style>text{font-family:Arial,sans-serif;font-size:10px}.title{font-size:15px;font-weight:bold}.axis{stroke:#333}.ci{stroke:#111;stroke-width:2}.supported{fill:#238b45}.plain{fill:#6baed6}.zero{stroke:#333;stroke-dasharray:4 3}.pos{fill:#de2d26}.neg{fill:#3182bd}</style>
+<text class="title" x="20" y="24">Figure 7. Signed standardized CSD residuals</text>
+<text transform="translate(230,52) rotate(-35)">ttft_p95</text>
+<text transform="translate(335,52) rotate(-35)">total_latency_p95</text>
+<text transform="translate(440,52) rotate(-35)">post_first_token_duration_p95</text>
+<text transform="translate(545,52) rotate(-35)">ttft_median</text>
+<text transform="translate(650,52) rotate(-35)">total_latency_median</text>
+<text transform="translate(755,52) rotate(-35)">post_first_token_duration_median</text>
+<text transform="translate(860,52) rotate(-35)">scheduler_slip_p95</text>
+<text transform="translate(965,52) rotate(-35)">successful_requests_per_second</text>
+<text x="20" y="85">INPUT_LOAD</text>
+<rect x="210" y="60" width="102" height="39" fill="rgb(255,65,65)" stroke="#fff"/>
+<text x="218" y="84">71.37</text>
+<rect x="315" y="60" width="102" height="39" fill="rgb(255,69,69)" stroke="#fff"/>
+<text x="323" y="84">69.43</text>
+<rect x="420" y="60" width="102" height="39" fill="rgb(255,192,192)" stroke="#fff"/>
+<text x="428" y="84">20.85</text>
+<rect x="525" y="60" width="102" height="39" fill="rgb(255,89,89)" stroke="#fff"/>
+<text x="533" y="84">61.61</text>
+<rect x="630" y="60" width="102" height="39" fill="rgb(255,101,101)" stroke="#fff"/>
+<text x="638" y="84">56.79</text>
+<rect x="735" y="60" width="102" height="39" fill="rgb(255,168,168)" stroke="#fff"/>
+<text x="743" y="84">30.49</text>
+<rect x="840" y="60" width="102" height="39" fill="rgb(255,244,244)" stroke="#fff"/>
+<text x="848" y="84">0.38</text>
+<rect x="945" y="60" width="102" height="39" fill="rgb(107,107,255)" stroke="#fff"/>
+<text x="953" y="84">-54.67</text>
+<text x="20" y="127">INPUT_DOWNSTREAM</text>
+<rect x="210" y="102" width="102" height="39" fill="rgb(242,242,255)" stroke="#fff"/>
+<text x="218" y="126">-1.00</text>
+<rect x="315" y="102" width="102" height="39" fill="rgb(243,243,255)" stroke="#fff"/>
+<text x="323" y="126">-0.62</text>
+<rect x="420" y="102" width="102" height="39" fill="rgb(243,243,255)" stroke="#fff"/>
+<text x="428" y="126">-0.50</text>
+<rect x="525" y="102" width="102" height="39" fill="rgb(243,243,255)" stroke="#fff"/>
+<text x="533" y="126">-0.73</text>
+<rect x="630" y="102" width="102" height="39" fill="rgb(242,242,255)" stroke="#fff"/>
+<text x="638" y="126">-0.82</text>
+<rect x="735" y="102" width="102" height="39" fill="rgb(243,243,255)" stroke="#fff"/>
+<text x="743" y="126">-0.79</text>
+<rect x="840" y="102" width="102" height="39" fill="rgb(244,244,255)" stroke="#fff"/>
+<text x="848" y="126">-0.27</text>
+<rect x="945" y="102" width="102" height="39" fill="rgb(255,243,243)" stroke="#fff"/>
+<text x="953" y="126">0.71</text>
+<text x="20" y="169">OUTPUT_LOAD</text>
+<rect x="210" y="144" width="102" height="39" fill="rgb(255,133,133)" stroke="#fff"/>
+<text x="218" y="168">44.16</text>
+<rect x="315" y="144" width="102" height="39" fill="rgb(255,132,132)" stroke="#fff"/>
+<text x="323" y="168">44.71</text>
+<rect x="420" y="144" width="102" height="39" fill="rgb(244,244,255)" stroke="#fff"/>
+<text x="428" y="168">-0.34</text>
+<rect x="525" y="144" width="102" height="39" fill="rgb(255,165,165)" stroke="#fff"/>
+<text x="533" y="168">31.49</text>
+<rect x="630" y="144" width="102" height="39" fill="rgb(255,169,169)" stroke="#fff"/>
+<text x="638" y="168">29.96</text>
+<rect x="735" y="144" width="102" height="39" fill="rgb(229,229,255)" stroke="#fff"/>
+<text x="743" y="168">-6.24</text>
+<rect x="840" y="144" width="102" height="39" fill="rgb(255,243,243)" stroke="#fff"/>
+<text x="848" y="168">0.65</text>
+<rect x="945" y="144" width="102" height="39" fill="rgb(140,140,255)" stroke="#fff"/>
+<text x="953" y="168">-41.44</text>
+<text x="20" y="211">OUTPUT_DOWNSTREAM</text>
+<rect x="210" y="186" width="102" height="39" fill="rgb(241,241,255)" stroke="#fff"/>
+<text x="218" y="210">-1.39</text>
+<rect x="315" y="186" width="102" height="39" fill="rgb(242,242,255)" stroke="#fff"/>
+<text x="323" y="210">-0.98</text>
+<rect x="420" y="186" width="102" height="39" fill="rgb(242,242,255)" stroke="#fff"/>
+<text x="428" y="210">-1.09</text>
+<rect x="525" y="186" width="102" height="39" fill="rgb(243,243,255)" stroke="#fff"/>
+<text x="533" y="210">-0.45</text>
+<rect x="630" y="186" width="102" height="39" fill="rgb(244,244,255)" stroke="#fff"/>
+<text x="638" y="210">-0.23</text>
+<rect x="735" y="186" width="102" height="39" fill="rgb(244,244,255)" stroke="#fff"/>
+<text x="743" y="210">-0.10</text>
+<rect x="840" y="186" width="102" height="39" fill="rgb(255,244,244)" stroke="#fff"/>
+<text x="848" y="210">0.21</text>
+<rect x="945" y="186" width="102" height="39" fill="rgb(255,243,243)" stroke="#fff"/>
+<text x="953" y="210">0.79</text>
+<text x="20" y="253">LOAD_DOWNSTREAM</text>
+<rect x="210" y="228" width="102" height="39" fill="rgb(255,244,244)" stroke="#fff"/>
+<text x="218" y="252">0.32</text>
+<rect x="315" y="228" width="102" height="39" fill="rgb(255,244,244)" stroke="#fff"/>
+<text x="323" y="252">0.07</text>
+<rect x="420" y="228" width="102" height="39" fill="rgb(242,242,255)" stroke="#fff"/>
+<text x="428" y="252">-0.81</text>
+<rect x="525" y="228" width="102" height="39" fill="rgb(255,243,243)" stroke="#fff"/>
+<text x="533" y="252">0.47</text>
+<rect x="630" y="228" width="102" height="39" fill="rgb(255,244,244)" stroke="#fff"/>
+<text x="638" y="252">0.35</text>
+<rect x="735" y="228" width="102" height="39" fill="rgb(243,243,255)" stroke="#fff"/>
+<text x="743" y="252">-0.62</text>
+<rect x="840" y="228" width="102" height="39" fill="rgb(244,244,255)" stroke="#fff"/>
+<text x="848" y="252">-0.10</text>
+<rect x="945" y="228" width="102" height="39" fill="rgb(238,238,255)" stroke="#fff"/>
+<text x="953" y="252">-2.39</text>
+</svg>

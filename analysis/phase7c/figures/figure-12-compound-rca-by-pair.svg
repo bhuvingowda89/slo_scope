@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="420"><style>text{font-family:Arial;font-size:10px}.title{font-size:15px;font-weight:bold}</style><text class="title" x="20" y="24">Figure 12. Compound RCA by pair</text>
+<text x="20" y="55">{'condition_id': 'INPUT_DOWNSTREAM', 'exact_set_accuracy': 0.0, 'complete_cause_recall': 0.0, 'jaccard': 0.5}</text>
+<text x="20" y="75">{'condition_id': 'INPUT_LOAD', 'exact_set_accuracy': 0.0, 'complete_cause_recall': 0.0, 'jaccard': 0.5}</text>
+<text x="20" y="95">{'condition_id': 'LOAD_DOWNSTREAM', 'exact_set_accuracy': 1.0, 'complete_cause_recall': 1.0, 'jaccard': 1.0}</text>
+<text x="20" y="115">{'condition_id': 'OUTPUT_DOWNSTREAM', 'exact_set_accuracy': 1.0, 'complete_cause_recall': 1.0, 'jaccard': 1.0}</text>
+<text x="20" y="135">{'condition_id': 'OUTPUT_LOAD', 'exact_set_accuracy': 0.875, 'complete_cause_recall': 0.875, 'jaccard': 0.9375}</text>
+</svg>
